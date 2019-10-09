@@ -1,0 +1,11 @@
+@font-face {
+    font-family: Bebas Neue;
+    src: ("/assets/font/BebasNeue-Regular.TTF");
+    }
+    body, span, button, h1, h2, h3, h4, h5, h6 {
+        font-family: ‘Bebas Neue’ !important;
+        }
+
+    $font-family-ios-base: “Bebas Neue”;
+    $font-family-md-base:“Bebas Neue”;
+    $font-family-wp-base:“Bebas Neue”;
