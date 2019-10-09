@@ -101,4 +101,12 @@
   --ion-color-step-900: #d6daea;
   --ion-color-step-950: #e1e3ec;
 
+  @font-face {
+    font-family: Bebas Neue;
+    src: ("/assets/font/BebasNeue-Regular.TTF");
+    }
+    
+    $font-family-ios-base: “Bebas Neue”;
+    $font-family-md-base:“Bebas Neue”;
+    $font-family-wp-base:“Bebas Neue”;
 }
