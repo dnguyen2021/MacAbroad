@@ -12,7 +12,7 @@
 
   <ion-item>
     <ion-label style="font-family:Bebas Neue">Major</ion-label>
-    <ion-select multiple="Confirm" cancelText="Cancel" okText="Confirm">
+    <ion-select multiple="Confirm" cancelText="Cancel" okText="Confirm" (change)="selectChangeHandler ($event)">
       <ion-select-option value="any">Any</ion-select-option>
       <ion-select-option value="american studies">American Studies</ion-select-option>
       <ion-select-option value="anthro">Anthropology</ion-select-option>
@@ -142,7 +142,9 @@
     </ion-select>
   </ion-item>
   </ion-list>
+  <ion-label style="font-family:Bebas Neue"><p><span>You picked: </span></p><b>{{selectedMajor}}</b></ion-label>
 </ion-content>
+
 
 <ion-content style="align-content: center">
   <img src="/assets/icon/mockupMacAbroad3.png" alt="World" width="350" height="350"/>

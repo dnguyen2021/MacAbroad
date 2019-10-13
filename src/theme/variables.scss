@@ -101,6 +101,9 @@
   --ion-color-step-900: #d6daea;
   --ion-color-step-950: #e1e3ec;
 
+  $tabs-tab-color-active: color(dark);
+
+
   @font-face {
     font-family: 'Bebas Neue';
     src: ("/assets/fonts/BebasNeue-Regular.ttF");
