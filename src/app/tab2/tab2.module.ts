@@ -20,7 +20,39 @@ import { Component } from '@angular/core';
   templateUrl: 'tab2.page.html',
   styleUrls: ['./tab2.page.scss',]
 })
+
+// export class Major {
+//   name: string;
+// }
+
 export class Tab2PageModule {
+  // majors: Major[] = [
+  //   {name: 'any'},
+  //   {name: ''},
+  //   {name: ''},
+  //   {name: ''},
+  //   {name: ''},
+  //   {name: ''},
+  //   {name: ''},
+  //   {name: ''},
+  //   {name: ''},
+  //   {name: ''},
+  //   {name: ''},
+  //   {name: ''},
+  //   {name: ''},
+  //   {name: ''},
+  //   {name: ''},
+  //   {name: ''},
+  //   {name: ''},
+  //   {name: ''},
+  //   {name: ''},
+  //   {name: ''},
+  //   {name: ''},
+  //   {name: ''},
+  //   {name: ''},
+  //   {name: ''},
+
+  // ];
   selectedMajor: string = '';
   selectedLanguage: string = '';
   selectedCountry: string = '';
@@ -31,4 +63,12 @@ export class Tab2PageModule {
     this.selectedLanguage = event.target.value;
     this.selectedCountry = event.target.value;
   }
+  // public optionsFn(): void {
+  //   console.log(this.name);
+
+  //   let name = this.name;
+  
+  // }
+
 }
+
