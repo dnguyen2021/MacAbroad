@@ -6,7 +6,6 @@ import { FormsModule } from '@angular/forms';
 import { Tab2Page } from './tab2.page';
 import { Component } from '@angular/core';
 
-name
 
 @NgModule({
   imports: [
@@ -19,54 +18,57 @@ name
   
 })
 @Component({
-  selector: 'tab2.page',
+  selector: 'page-tab2',
   templateUrl: 'tab2.page.html',
-  styleUrls: ['./tab2.page.scss',]
-  
 })
 
-
 export class Tab2PageModule {
-  majors = [
-    {"name": "Any"},
-    {"name": "American Studies"},
-    {"name": "Anthropology"},
-    {"name": "Art History"},
-    {"name": "Art"},
-    {"name": "Asian Studies"},
-    {"name": "Biology"},
-    {"name": "Chemistry"},
-    {"name": "Chinese"},
-    {"name": "Classics"},
-    {"name": "Computer Science"},
-    {"name": "Economics"},
-    {"name": "Education Studies"},
-    {"name": "English"},
-    {"name": "Enviromental Studies"},
-    {"name": "French"},
-    {"name": "Geography"},
-    {"name": "Geology"},
-    {"name": "German"},
-    {"name": "History"},
-    {"name": "International Studies"},
-    {"name": "Japanese"},
-    {"name": "Latin American Studies"},
-    {"name": "Linguistics"},
-    {"name": "Math"},
-    {"name": "Media Studies"},
-    {"name": "Music"},
-    {"name": "Neuroscience"},
-    {"name": "Philosophy"},
-    {"name": "Physics"},
-    {"name": "Political Science"},
-    {"name": "Psychology"},
-    {"name": "Religious Studies"},
-    {"name": "Russian"},
-    {"name": "Sociology"},
-    {"name": "Spanish"},
-    {"name": "Theatre and Dance"},
-    {"name": "Women's, Gender and Sexuality Studies"}
-  ];
+  majors = {
+    id:0
+  }
+  majorsList = [
+    {major_id:1,
+      major_name: 'Any'},
+    {major_id:2,
+      major_name: 'American Studies'},
+    {major_id:3
+      ,major_name: 'Anthropology'}
+    // {major_name: 'Art History'},
+    // {major_name: 'Art'},
+    // {major_name: 'Asian Studies'},
+    // {major_name: 'Biology'},
+    // {major_name: 'Chemistry'},
+    // {major_name: 'Chinese'},
+    // {major_name: 'Classics'},
+    // {major_name: 'Computer Science'},
+    // {major_name: 'Economics'},
+    // {major_name: 'Education Studies'},
+    // {major_name: 'English'},
+    // {major_name: 'Enviromental Studies'},
+    // {major_name: 'French'},
+    // {major_name: 'Geography'},
+    // {major_name: 'Geology'},
+    // {major_name: 'German'},
+    // {major_name: 'History'},
+    // {major_name: 'International Studies'},
+    // {major_name: 'Japanese'},
+    // {major_name: 'Latin American Studies'},
+    // {major_name: 'Linguistics'},
+    // {major_name: 'Math'},
+    // {major_name: 'Media Studies'},
+    // {major_name: 'Music'},
+    // {major_name: 'Neuroscience'},
+    // {major_name: 'Philosophy'},
+    // {major_name: 'Physics'},
+    // {major_name: 'Political Science'},
+    // {major_name: 'Psychology'},
+    // {major_name: 'Religious Studies'},
+    // {major_name: 'Russian'},
+    // {major_name: 'Sociology'},
+    // {major_name: 'Spanish'},
+    // {major_name: 'Theatre and Dance'},
+    // {major_name: 'Womens, Gender and Sexuality Studies'}
+  ]
   constructor(public navCtrl: NavController){
 
   }
@@ -80,13 +82,9 @@ export class Tab2PageModule {
 //   this.selectedLanguage = event.target.value;
 //   this.selectedCountry = event.target.value;
 // }
-public majorsFn(): void {
-  console.log(this.Major);
-
-  let item = this.Major;
-  this.name = item.name;
-
-}
+//   public onChange(value){
+//     console.log(value);
+// }
 }
 
 
