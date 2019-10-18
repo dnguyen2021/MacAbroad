@@ -12,7 +12,7 @@
 
   <ion-item>
     <ion-label style="font-family:Bebas Neue">Major</ion-label>
-    <ion-select multiple="Confirm" cancelText="Cancel" okText="Confirm" (change)="selectChangeHandler ($event)">
+    <ion-select [(ngModel)] = 'selectedMajor' multiple="Confirm" cancelText="Cancel" okText="Confirm" (change)="selectChangeHandler ($event)">
       <ion-select-option value="any">Any</ion-select-option>
       <ion-select-option value="american studies">American Studies</ion-select-option>
       <ion-select-option value="anthro">Anthropology</ion-select-option>
@@ -51,16 +51,16 @@
       <ion-select-option value="spanish">Spanish</ion-select-option>
       <ion-select-option value="theatre and dance">Theatre and Dance</ion-select-option>
       <ion-select-option value="wgss">Women's, Gender and Sexuality Studies</ion-select-option>
-
     </ion-select>
   </ion-item>
   </ion-list>
+  <ion-label style="font-family:Bebas Neue"><p><span>You picked: </span></p><b>{{selectedMajor}}</b></ion-label>
   <ion-list>
   <ion-list-header style = "font-family:Bebas Neue; font-size:20px">Please select your preffered language(s) of instruction:</ion-list-header>
 
   <ion-item>
     <ion-label style="font-family:Bebas Neue">Language</ion-label>
-    <ion-select multiple="Confirm" cancelText="Cancel" okText="Confirm">
+    <ion-select [(ngModel)] = 'selectedLanguage' multiple="Confirm" cancelText="Cancel" okText="Confirm">
       <ion-select-option value="any">Any</ion-select-option>
       <ion-select-option value="arabic">Arabic</ion-select-option>
       <ion-select-option value="chinese">Chinese</ion-select-option>
@@ -79,13 +79,14 @@
     </ion-select>
   </ion-item>
   </ion-list>
+  <ion-label style="font-family:Bebas Neue"><p><span>You picked: </span></p><b>{{selectedLanguage}}</b></ion-label>
 
   <ion-list>
   <ion-list-header style = "font-family:Bebas Neue; font-size:20px">Please select your preffered country(s) to visit:</ion-list-header>
 
   <ion-item>
     <ion-label style="font-family:Bebas Neue">Country</ion-label>
-    <ion-select multiple="Confirm" cancelText="Cancel" okText="Confirm">
+    <ion-select [(ngModel)] = 'selectedCountry' multiple="Confirm" cancelText="Cancel" okText="Confirm">
       <ion-select-option value="Argentina">Argentina</ion-select-option>
       <ion-select-option value="Australia">Australia</ion-select-option>
       <ion-select-option value="Austria">Austria</ion-select-option>
@@ -141,10 +142,17 @@
       <ion-select-option value="Other">Other</ion-select-option>
     </ion-select>
   </ion-item>
-  </ion-list>
-  <ion-label style="font-family:Bebas Neue"><p><span>You picked: </span></p><b>{{selectedMajor}}</b></ion-label>
+ </ion-list>
+<ion-label style="font-family:Bebas Neue"><p><span>You picked: </span></p><b>{{selectedCountry}}</b></ion-label>
+
 </ion-content>
 
+
+<ion-item>
+    <ion-button ion-button icon-only (click) = "returnCountry()" > 
+      <ion-icon name = "search"></ion-icon>
+    </ion-button>
+</ion-item>
 
 <ion-content style="align-content: center">
   <img src="/assets/icon/mockupMacAbroad3.png" alt="World" width="350" height="350"/>

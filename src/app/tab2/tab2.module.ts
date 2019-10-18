@@ -5,6 +5,9 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Tab2Page } from './tab2.page';
 import { Component } from '@angular/core';
+import {SubmitComponent} from '../submit/submit.component'
+
+
 
 @NgModule({
   imports: [
@@ -13,7 +16,7 @@ import { Component } from '@angular/core';
     FormsModule,
     RouterModule.forChild([{ path: '', component: Tab2Page }])
   ],
-  declarations: [Tab2Page]
+  declarations: [Tab2Page, SubmitComponent]
 })
 @Component({
   selector: 'tab2.page',
@@ -21,14 +24,28 @@ import { Component } from '@angular/core';
   styleUrls: ['./tab2.page.scss',]
 })
 export class Tab2PageModule {
-  selectedMajor: string = '';
-  selectedLanguage: string = '';
-  selectedCountry: string = '';
+  public selectedMajor: string;
+  public selectedLanguage: string;
+  public selectedCountry: string;
   //event handler for the select element's change event
   selectChangeHandler (event: any) {
     //update the ui
     this.selectedMajor = event.target.value;
     this.selectedLanguage = event.target.value;
-    this.selectedCountry = event.target.value;
+    this.selectedCountry = event.target.value; 
+
   }
-}
+    
+  }
+
+
+
+  
+
+
+
+
+
+
+
+
