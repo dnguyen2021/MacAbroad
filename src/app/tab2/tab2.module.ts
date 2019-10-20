@@ -23,16 +23,16 @@ import { Component } from '@angular/core';
 })
 
 export class Tab2PageModule {
-  majors = {
-    id:0
-  }
-  majorsList = [
-    {major_id:1,
-      major_name: 'Any'},
-    {major_id:2,
-      major_name: 'American Studies'},
-    {major_id:3
-      ,major_name: 'Anthropology'}
+  // majors = {
+  //   id:0
+  // }
+  // majorsList = [
+  //   {major_id:1,
+  //     major_name: 'Any'},
+  //   {major_id:2,
+  //     major_name: 'American Studies'},
+  //   {major_id:3
+  //     ,major_name: 'Anthropology'}
     // {major_name: 'Art History'},
     // {major_name: 'Art'},
     // {major_name: 'Asian Studies'},
@@ -68,10 +68,10 @@ export class Tab2PageModule {
     // {major_name: 'Spanish'},
     // {major_name: 'Theatre and Dance'},
     // {major_name: 'Womens, Gender and Sexuality Studies'}
-  ]
-  constructor(public navCtrl: NavController){
+  // ]
+  // constructor(public navCtrl: NavController){
 
-  }
+  // }
 // selectedMajor: string = '';
 // selectedLanguage: string = '';
 // selectedCountry: string = '';
