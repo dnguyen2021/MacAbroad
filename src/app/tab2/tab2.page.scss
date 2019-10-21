@@ -3,5 +3,18 @@ img{
     margin-left: auto;
     margin-right: auto;
   }
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
   
+  to {
+    opacity: 1;
+  }
+}
+  
+.fadeIn {
+  animation-name: fadeIn;
+  animation-duration: 4s;
+}
 
