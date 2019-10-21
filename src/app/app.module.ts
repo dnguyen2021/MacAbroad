@@ -13,11 +13,12 @@ import { AppComponent } from './app.component';
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, HttpClientModule],
+  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],
+  //HttpClientModule
   providers: [
     StatusBar,
     SplashScreen,
-    { provide: RecommenderService, useClass: IonicRouteStrategy}
+    //{ provide: RecommenderService, useClass: IonicRouteStrategy}
   ],
   bootstrap: [AppComponent]
 })
