@@ -16,17 +16,17 @@ import { Tab1Page } from './tab1.page';
   declarations: [Tab1Page]
 })
 export class Tab1PageModule {
-  // constructor(public navCtrl: NavController){
+  constructor(public navCtrl: NavController){
 
-  // }
+  }
 
-  // goToTab2() {
-  //   const animationOptions = {
-  //     animation: 'ios-transition',
-  //     duration: 1000
-  //   }
+  goToTab2() {
+    const animationOptions = {
+      animation: 'ios-transition',
+      duration: 1000
+    }
 
-  //   this.navCtrl.navigateForward(Tab2Page, {}, animationOptions);
-  // }
+    // this.navCtrl.navigateForward(Tab2Page, {}, animationOptions);
+  }
 
 }
