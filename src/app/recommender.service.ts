@@ -8,7 +8,7 @@ import { HttpClient } from '@angular/common/http';
 
 export class RecommenderService {
 
-  configURL = '/Users/angelsylvester/MacAbroad/MacAbroad/src/assets/recommender.json';   
+  configURL = 'src/assets/recommender.json';   
 
   private major: string; 
   private location: string;  
