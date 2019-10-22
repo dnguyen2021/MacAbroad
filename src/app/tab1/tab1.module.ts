@@ -26,7 +26,7 @@ export class Tab1PageModule {
       duration: 1000
     }
 
-    this.navCtrl.navigateForward(Tab2Page, {}, animationOptions);
+    // this.navCtrl.navigateForward(Tab2Page, {}, animationOptions);
   }
 
 }
