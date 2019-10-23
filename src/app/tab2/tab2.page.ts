@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { IonicModule, NavController } from '@ionic/angular';
+
 
 
 @Component({
@@ -8,6 +10,8 @@ import { Component } from '@angular/core';
   
 })
 export class Tab2Page {
-  constructor() {}
+  constructor(public navCtrl: NavController) {
+    
+  }
 
 }

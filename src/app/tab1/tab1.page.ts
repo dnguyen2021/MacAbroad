@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { IonicModule, NavController } from '@ionic/angular';
+import { Tab2Page } from '../tab2/tab2.page';
+
 
 @Component({
   selector: 'app-tab1',
@@ -7,6 +10,17 @@ import { Component } from '@angular/core';
 })
 export class Tab1Page {
 
-  constructor() {}
+  constructor(public navCtrl: NavController) {
+
+  }
+  
+  goToTab2(){
+    const animationsOptions = {
+      animation: 'ios-transition',
+      duration: 1000
+    }
+
+    this.navCtrl.navigateForward('/tab2');
+  }
 
 }

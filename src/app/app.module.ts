@@ -11,10 +11,17 @@ import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { RecommenderService } from './recommender.service';
 
+import { Tab2Page } from './tab2/tab2.page';
+import { Tab1Page } from './tab1/tab1.page';
+import { Tab3Page } from './tab3/tab3.page';
 
 @NgModule({
   declarations: [AppComponent],
-  entryComponents: [],
+  entryComponents: [
+    // Tab1Page,
+    // Tab2Page,
+    // Tab3Page
+  ],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, HttpClientModule],
   providers: [
     StatusBar,
