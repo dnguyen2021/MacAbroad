@@ -15,12 +15,7 @@ export class Tab1Page {
   }
   
   goToTab2(){
-    const animationsOptions = {
-      animation: 'ios-transition',
-      duration: 1000
-    }
-
-    this.navCtrl.navigateForward('/tab2');
+    this.navCtrl.navigateForward('/tabs/tab2');
   }
 
 }
