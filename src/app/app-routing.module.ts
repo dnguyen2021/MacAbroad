@@ -6,7 +6,8 @@ const routes: Routes = [
     path: '',
     loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
   },
-  { path: 'idk', loadChildren: './idk/idk.module#IDKPageModule' }
+  { path: 'user-input', loadChildren: './user-input/user-input.module#UserInputPageModule' }
+
 ];
 @NgModule({
   imports: [

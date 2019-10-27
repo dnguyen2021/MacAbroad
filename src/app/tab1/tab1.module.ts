@@ -4,7 +4,6 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Tab1Page } from './tab1.page';
-// import { Tab2Page } from '../tab2/tab2.page';
 
 @NgModule({
   imports: [
@@ -20,13 +19,11 @@ export class Tab1PageModule {
 
   }
 
-  goToTab2() {
+  goToUserInput() {
     const animationOptions = {
       animation: 'ios-transition',
       duration: 1000
     }
-
-    // this.navCtrl.navigateForward(Tab2Page, {}, animationOptions);
   }
 
 }

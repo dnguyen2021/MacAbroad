@@ -18,6 +18,16 @@ const routes: Routes = [
         ]
       },
       {
+        path: 'user-input',
+        children: [
+          {
+            path: '',
+            loadChildren: () =>
+              import('../user-input/user-input.module').then(m => m.UserInputPageModule)
+          }
+        ]
+      },
+      {
         path: 'tab2',
         children: [
           {
@@ -48,7 +58,7 @@ const routes: Routes = [
     path: '',
     redirectTo: '/tabs/tab1',
     pathMatch: 'full'
-  }
+  },
 ];
 
 @NgModule({

@@ -1,22 +1,22 @@
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { IDKPage } from './idk.page';
+import { UserInputPage } from './user-input.page';
 
-describe('IDKPage', () => {
-  let component: IDKPage;
-  let fixture: ComponentFixture<IDKPage>;
+describe('UserInputPage', () => {
+  let component: UserInputPage;
+  let fixture: ComponentFixture<UserInputPage>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ IDKPage ],
+      declarations: [ UserInputPage ],
       schemas: [CUSTOM_ELEMENTS_SCHEMA],
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(IDKPage);
+    fixture = TestBed.createComponent(UserInputPage);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

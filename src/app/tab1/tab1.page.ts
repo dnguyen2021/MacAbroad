@@ -14,8 +14,8 @@ export class Tab1Page {
 
   }
   
-  goToTab2(){
-    this.navCtrl.navigateForward('/tabs/tab2');
+  goToUserInput(){
+    this.navCtrl.navigateForward('/tabs/user-input');
   }
 
 }
