@@ -10,6 +10,4 @@ import { IonicModule, NavController } from '@ionic/angular';
 
 })
 export class Tab2Page {
-  constructor(public navCtrl: NavController) {}
-
 }
