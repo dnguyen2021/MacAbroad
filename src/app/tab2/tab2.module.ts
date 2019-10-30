@@ -32,23 +32,11 @@ export class Tab2PageModule {
     //update the ui
     this.selectedMajor = event.target.value;
     this.selectedLanguage = event.target.value;
-    this.selectedCountry = event.target.value; 
+    this.selectedCountry = event.target.value;
 
   }
   constructor(public navCtrl: NavController){
-    
+
+
   }
-    
-  }
-
-
-
-  
-
-
-
-
-
-
-
-
+}
