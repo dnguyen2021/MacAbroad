@@ -1,6 +1,6 @@
 import { IonicModule } from '@ionic/angular';
 import { RouterModule } from '@angular/router';
-import { NgModule } from '@angular/core';
+import { NgModule, Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Tab2Page } from './tab2.page';
@@ -18,10 +18,11 @@ import { Tab2Page } from './tab2.page';
   ],
   declarations: [Tab2Page]
 })
-// @Component({
-//   selector: 'tab2.page',
-//   templateUrl: 'tab2.page.html',
-//   styleUrls: ['./tab2.page.scss',]
-// })
+@Component({
+  selector: 'tab2.page',
+  templateUrl: 'tab2.page.html',
+  styleUrls: ['./tab2.page.scss',]
+})
 export class Tab2PageModule {
+  
 }
