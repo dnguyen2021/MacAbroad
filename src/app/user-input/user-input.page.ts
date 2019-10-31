@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { IonicModule, NavController } from '@ionic/angular';
+import { DataService } from "../services/data.service";
 
 
 @Component({
@@ -8,11 +9,19 @@ import { IonicModule, NavController } from '@ionic/angular';
   styleUrls: ['./user-input.page.scss'],
 })
 export class UserInputPage implements OnInit {
+  public searchTerm: string = "";
+  public searchTerm2: string = "";
+  public searchTerm3: string = "";
+  public items: any = [];
 
-  constructor(public navCtrl: NavController) {
-    
+  constructor(public navCtrl: NavController, private dataService: DataService) {}
+
+  ngOnInit(){
+    this.setFilteredItems();
   }
-  ngOnInit() {
+
+  setFilteredItems() {
+    this.items = this.dataService.filterItems(this.searchTerm, this.searchTerm2, this.searchTerm3);
   }
 
 }

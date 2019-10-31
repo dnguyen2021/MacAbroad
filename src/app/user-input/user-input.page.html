@@ -14,9 +14,8 @@
     <ion-list>
     <ion-list-header style = "font-family:Bebas Neue; font-size:20px"><div class="fadeIn">Please select your major(s):</div></ion-list-header>
 
-    <ion-item>
       <ion-label style="font-family:Bebas Neue"><div class="fadeIn">Major</div></ion-label>
-      <ion-select [(ngModel)] = 'selectedMajor' multiple="Confirm" cancelText="Cancel" okText="Confirm" (change)="selectChangeHandler ($event)">
+      <ion-select [(ngModel)] = "searchTerm" (ionChange)="setFilteredItems()">
         <ion-select-option value="any">Any</ion-select-option>
         <ion-select-option value="american studies">American Studies</ion-select-option>
         <ion-select-option value="anthro">Anthropology</ion-select-option>
@@ -56,15 +55,14 @@
         <ion-select-option value="theatre and dance">Theatre and Dance</ion-select-option>
         <ion-select-option value="wgss">Women's, Gender and Sexuality Studies</ion-select-option>
       </ion-select>
-    </ion-item>
+
     </ion-list>
     <ion-label style="font-family:Bebas Neue; color: orange;"><p><span><div class="fadeIn">You Picked:</div></span></p><b>{{selectedMajor}}</b></ion-label>
     <ion-list>
     <ion-list-header style = "font-family:Bebas Neue; font-size:20px"><div class="fadeIn">Please select your preffered language(s) of instruction:</div></ion-list-header>
 
-    <ion-item>
       <ion-label style="font-family:Bebas Neue"><div class="fadeIn">Language</div></ion-label>
-      <ion-select [(ngModel)] = 'selectedLanguage' multiple="Confirm" cancelText="Cancel" okText="Confirm">
+      <ion-select [(ngModel)] ="searchTerm2" (ionChange)="setFilteredItems()">
         <ion-select-option value="any">Any</ion-select-option>
         <ion-select-option value="arabic">Arabic</ion-select-option>
         <ion-select-option value="chinese">Chinese</ion-select-option>
@@ -81,16 +79,16 @@
         <ion-select-option value="spanish">Spanish</ion-select-option>
         <ion-select-option value="other">Other</ion-select-option>
       </ion-select>
-    </ion-item>
+
     </ion-list>
     <ion-label style="font-family:Bebas Neue; color: orange;"><p><span><div class="fadeIn">You picked:</div></span></p><b>{{selectedLanguage}}</b></ion-label>
 
     <ion-list>
     <ion-list-header style = "font-family:Bebas Neue; font-size:20px"><div class="fadeIn">Please select your preffered country(s) to visit:</div></ion-list-header>
 
-    <ion-item>
+
       <ion-label style="font-family:Bebas Neue"><div class="fadeIn">Country</div></ion-label>
-      <ion-select [(ngModel)] = 'selectedCountry' multiple="Confirm" cancelText="Cancel" okText="Confirm">
+      <ion-select [(ngModel)] = "searchTerm3" (ionChange)="setFilteredItems()">
         <ion-select-option value="Argentina">Argentina</ion-select-option>
         <ion-select-option value="Australia">Australia</ion-select-option>
         <ion-select-option value="Austria">Austria</ion-select-option>
@@ -145,7 +143,7 @@
         <ion-select-option value="United States">United States</ion-select-option>
         <ion-select-option value="Other">Other</ion-select-option>
       </ion-select>
-    </ion-item>
+
   </ion-list>
   <ion-label style="font-family:Bebas Neue; color: orange;"><p><span><div class="fadeIn">You picked:</div></span></p><b>{{selectedCountry}}</b></ion-label>
 
@@ -160,8 +158,22 @@
     <button ion-button style="color: white;background-color: #4da9ff;outline-color: white; font-size:24px;" (click)="goToUserInput()">
         <div class="fadeIn">
           Search <ion-icon name = "search"></ion-icon>
-        </div>        
+        </div>
     </button>
   </div>
+
+  <ion-list>
+    <ion-item *ngFor="let item of items">
+      {{ item.program.programName}} <br>
+      {{ item.program.language }} <br>
+      {{ item.program.areaName}} <br>
+      {{ item.program.locationName}} <br>
+      {{ item.program.housing}} <br>
+      {{ item.program.GPA}} <br>
+      {{ item.program.academicFeatures}}
+
+    </ion-item>
+  </ion-list>
 </ion-content>
 
+</ion-content>
