@@ -1,164 +1,88 @@
 <ion-content padding>
+  <body>
+    <!-- <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core@4.7.4/dist/ionic/ionic.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core@4.7.4/dist/ionic/ionic.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core@4.7.4/css/ionic.bundle.css"/>
+  <body>
+    <ion-app>
+      <ion-nav root="nav-home"></ion-nav>
+    </ion-app>
+    <script>
+        customElements.define('nav-home', class NavHome extends HTMLElement {
+          connectedCallback() {
+            this.innerHTML = `
+              <ion-header translucent>
+                <ion-toolbar>
+                  <ion-title>Nav</ion-title>
+                </ion-toolbar>
+              </ion-header>
+              <ion-content fullscreen>
+                <ion-list>
+                ${techs.map(tech => `
+                    <ion-item button onclick="showDetail('${tech.title}')">
+                      <ion-icon slot="start" name="logo-${tech.icon}" style="color: ${tech.color};"></ion-icon>
+                      <ion-label>
+                        <h3>${tech.title}</h3>
+                      </ion-label>
+                    </ion-item>
+                `).join('\n')}
+                </ion-list>
+              </ion-content>
+            `;
+          }
+        });
+        const nav = document.querySelector('ion-nav');
+        function showDetail(title) {
+          const tech = techs.find(tech => tech.title === title);
+          nav.push('nav-detail', { tech });
+        }
+        customElements.define('nav-detail', class NavDetail extends HTMLElement {
+          connectedCallback() {
+            this.innerHTML = `
+              <ion-header translucent>
+                <ion-toolbar>
+                  <ion-buttons slot="start">
+                    <ion-back-button defaultHref="/"></ion-back-button>
+                  </ion-buttons>
+                  <ion-title>${this.tech.title}</ion-title>
+                </ion-toolbar>
+              </ion-header>
+              <ion-content fullscreen class="ion-padding">
+                <ion-icon name="logo-${this.tech.icon}" style="color: ${this.tech.color};" size="large"></ion-icon>
+                <p>${this.tech.description}</p>
+              </ion-content>
+            `;
+          }
+        }); -->
+        <ion-header>
+             <ion-toolbar>
+               <ion-title style = "font-family:Bebas Neue; font-size:25px; text-align: center">
+                   <div class="fadeIn">Programs</div>
+               </ion-title>
+             </ion-toolbar>
+             <div class="fadeIn"> <ion-searchbar></ion-searchbar></div>
+         </ion-header>      
+             <ion-content fullscreen>
+               <ion-list>
+                       <ion-item *ngFor="let item of items">
+                         <div class="fadeIn">
+                         {{ item.program.programName }} <br>
+                         </div>
+                         <ion-select>
+                           <ion-label>{{ item.program.programName }}</ion-label>
+                         </ion-select>
+                       </ion-item>
 
-  <!-- <ion-header>
-    <ion-toolbar>
-      <ion-title style = "font-family:Bebas Neue; font-size:25px; text-align: center">
-          <div class="fadeIn">Programs</div>
-      </ion-title>
-    </ion-toolbar>
+               <ion-item>
+                   <ion-button ion-button icon-only (click) = "returnCountry()" >
+                     <ion-icon name = "search"></ion-icon>
+                   </ion-button>
+               </ion-item> 
+               </ion-list>
 
-
-  </ion-header>
-
-  <ion-content>
-    <ion-list>
-    <ion-list-header style = "font-family:Bebas Neue; font-size:20px"><div class="fadeIn">Please select your major(s):</div></ion-list-header>
-
-    <ion-item>
-      <ion-label style="font-family:Bebas Neue"><div class="fadeIn">Major</div></ion-label>
-      <ion-select [(ngModel)] = 'selectedMajor' multiple="Confirm" cancelText="Cancel" okText="Confirm" (change)="selectChangeHandler ($event)">
-        <ion-select-option value="any">Any</ion-select-option>
-        <ion-select-option value="american studies">American Studies</ion-select-option>
-        <ion-select-option value="anthro">Anthropology</ion-select-option>
-        <ion-select-option value="art history">Art History</ion-select-option>
-        <ion-select-option value="art">Art</ion-select-option>
-        <ion-select-option value="asian studies">Asian Studies</ion-select-option>
-        <ion-select-option value="bio">Biology</ion-select-option>
-        <ion-select-option value="chem">Chemistry</ion-select-option>
-        <ion-select-option value="chinese">Chinese</ion-select-option>
-        <ion-select-option value="classics">Classics</ion-select-option>
-        <ion-select-option value="comp sci">Computer Science</ion-select-option>
-        <ion-select-option value="econ">Economics</ion-select-option>
-        <ion-select-option value="education studies">Educational Studies</ion-select-option>
-        <ion-select-option value="english">English</ion-select-option>
-        <ion-select-option value="enviro studies">Environmental Studies</ion-select-option>
-        <ion-select-option value="french">French</ion-select-option>
-        <ion-select-option value="geo">Geography</ion-select-option>
-        <ion-select-option value="geol">Geology</ion-select-option>
-        <ion-select-option value="german">German</ion-select-option>
-        <ion-select-option value="hist">History</ion-select-option>
-        <ion-select-option value="international studies">International Studies</ion-select-option>
-        <ion-select-option value="japanese">Japanese</ion-select-option>
-        <ion-select-option value="latin america studies">Latin American Studies</ion-select-option>
-        <ion-select-option value="linguistics">Linguistics</ion-select-option>
-        <ion-select-option value="math">Mathematics</ion-select-option>
-        <ion-select-option value="media studies">Media and Cultural Studies</ion-select-option>
-        <ion-select-option value="music">Music</ion-select-option>
-        <ion-select-option value="neuro">Neuroscience</ion-select-option>
-        <ion-select-option value="philosophy">Philosophy</ion-select-option>
-        <ion-select-option value="physics">Physics</ion-select-option>
-        <ion-select-option value="poli sci">Political Science</ion-select-option>
-        <ion-select-option value="psych">Psychology</ion-select-option>
-        <ion-select-option value="religious studies">Religious Studies</ion-select-option>
-        <ion-select-option value="russian">Russian</ion-select-option>
-        <ion-select-option value="sociology">Sociology</ion-select-option>
-        <ion-select-option value="spanish">Spanish</ion-select-option>
-        <ion-select-option value="theatre and dance">Theatre and Dance</ion-select-option>
-        <ion-select-option value="wgss">Women's, Gender and Sexuality Studies</ion-select-option>
-      </ion-select>
-    </ion-item>
-    </ion-list>
-    <ion-label style="font-family:Bebas Neue; color: orange;"><p><span><div class="fadeIn">You Picked:</div></span></p><b>{{selectedMajor}}</b></ion-label>
-    <ion-list>
-    <ion-list-header style = "font-family:Bebas Neue; font-size:20px"><div class="fadeIn">Please select your preffered language(s) of instruction:</div></ion-list-header>
-
-    <ion-item>
-      <ion-label style="font-family:Bebas Neue"><div class="fadeIn">Language</div></ion-label>
-      <ion-select [(ngModel)] = 'selectedLanguage' multiple="Confirm" cancelText="Cancel" okText="Confirm">
-        <ion-select-option value="any">Any</ion-select-option>
-        <ion-select-option value="arabic">Arabic</ion-select-option>
-        <ion-select-option value="chinese">Chinese</ion-select-option>
-        <ion-select-option value="english">English</ion-select-option>
-        <ion-select-option value="french">French</ion-select-option>
-        <ion-select-option value="german">German</ion-select-option>
-        <ion-select-option value="greek">Greek</ion-select-option>
-        <ion-select-option value="hebrew">Hebrew</ion-select-option>
-        <ion-select-option value="italian">Italian</ion-select-option>
-        <ion-select-option value="japanese">Japanese</ion-select-option>
-        <ion-select-option value="latin">Latin</ion-select-option>
-        <ion-select-option value="portugese">Portugese</ion-select-option>
-        <ion-select-option value="russian">Russian</ion-select-option>
-        <ion-select-option value="spanish">Spanish</ion-select-option>
-        <ion-select-option value="other">Other</ion-select-option>
-      </ion-select>
-    </ion-item>
-    </ion-list>
-    <ion-label style="font-family:Bebas Neue; color: orange;"><p><span><div class="fadeIn">You picked:</div></span></p><b>{{selectedLanguage}}</b></ion-label>
-
-    <ion-list>
-    <ion-list-header style = "font-family:Bebas Neue; font-size:20px"><div class="fadeIn">Please select your preffered country(s) to visit:</div></ion-list-header>
-
-    <ion-item>
-      <ion-label style="font-family:Bebas Neue"><div class="fadeIn">Country</div></ion-label>
-      <ion-select [(ngModel)] = 'selectedCountry' multiple="Confirm" cancelText="Cancel" okText="Confirm">
-        <ion-select-option value="Argentina">Argentina</ion-select-option>
-        <ion-select-option value="Australia">Australia</ion-select-option>
-        <ion-select-option value="Austria">Austria</ion-select-option>
-        <ion-select-option value="Belgium">Belgium</ion-select-option>
-        <ion-select-option value="Bolivia">Bolivia</ion-select-option>
-        <ion-select-option value="Botswana">Botswana</ion-select-option>
-        <ion-select-option value="Brazil">Brazil</ion-select-option>
-        <ion-select-option value="Cameroon">Cameroon</ion-select-option>
-        <ion-select-option value="Chile">Chile</ion-select-option>
-        <ion-select-option value="China">China</ion-select-option>
-        <ion-select-option value="Costa Rica">Costa Rica</ion-select-option>
-        <ion-select-option value="Cuba">Cuba</ion-select-option>
-        <ion-select-option value="Czech Republic">Czech Republic</ion-select-option>
-        <ion-select-option value="Denmark">Denmark</ion-select-option>
-        <ion-select-option value="Dominican Republic">Dominican Republic</ion-select-option>
-        <ion-select-option value="Ecuador">Ecuador</ion-select-option>
-        <ion-select-option value="Egypt">Egypt</ion-select-option>
-        <ion-select-option value="England">England</ion-select-option>
-        <ion-select-option value="France">France</ion-select-option>
-        <ion-select-option value="Germany">Germany</ion-select-option>
-        <ion-select-option value="Ghana">Ghana</ion-select-option>
-        <ion-select-option value="Greece">Greece</ion-select-option>
-        <ion-select-option value="Hungary">Hungary</ion-select-option>
-        <ion-select-option value="India">India</ion-select-option>
-        <ion-select-option value="Ireland">Ireland</ion-select-option>
-        <ion-select-option value="Israel">Israel</ion-select-option>
-        <ion-select-option value="Italy">Italy</ion-select-option>
-        <ion-select-option value="Japan">Japan</ion-select-option>
-        <ion-select-option value="Jordan">Jordan</ion-select-option>
-        <ion-select-option value="Kazakhstan">Kazakhstan</ion-select-option>
-        <ion-select-option value="Kenya">Kenya</ion-select-option>
-        <ion-select-option value="Madagascar">Madagascar</ion-select-option>
-        <ion-select-option value="Mexico">Mexico</ion-select-option>
-        <ion-select-option value="Mongolia">Mongolia</ion-select-option>
-        <ion-select-option value="Morocco">Morocco</ion-select-option>
-        <ion-select-option value="Nepal">Nepal</ion-select-option>
-        <ion-select-option value="Netherlands">Netherlands</ion-select-option>
-        <ion-select-option value="New Zealand">New Zealand</ion-select-option>
-        <ion-select-option value="Northern Ireland">Northern Ireland</ion-select-option>
-        <ion-select-option value="Norway">Norway</ion-select-option>
-        <ion-select-option value="Peru">Peru</ion-select-option>
-        <ion-select-option value="Portugal">Portugal</ion-select-option>
-        <ion-select-option value="Russia">Russia</ion-select-option>
-        <ion-select-option value="Scotland">Scotland</ion-select-option>
-        <ion-select-option value="Senegal">Senegal</ion-select-option>
-        <ion-select-option value="Serbia">Serbia</ion-select-option>
-        <ion-select-option value="Singapore">Singapore</ion-select-option>
-        <ion-select-option value="South Africa">South Africa</ion-select-option>
-        <ion-select-option value="Spain">Spain</ion-select-option>
-        <ion-select-option value="Sweden">Sweden</ion-select-option>
-        <ion-select-option value="Thailand">Thailand</ion-select-option>
-        <ion-select-option value="United States">United States</ion-select-option>
-        <ion-select-option value="Other">Other</ion-select-option>
-      </ion-select>
-    </ion-item>
-  </ion-list>
-  <ion-label style="font-family:Bebas Neue; color: orange;"><p><span><div class="fadeIn">You picked:</div></span></p><b>{{selectedCountry}}</b></ion-label>
-
-  </ion-content>
+             </ion-content>
+      <!-- </script> -->
+  </body>
+</ion-content>    
 
 
-  <ion-item>
-      <ion-button ion-button icon-only (click) = "returnCountry()" >
-        <ion-icon name = "search"></ion-icon>
-      </ion-button>
-  </ion-item> -->
-</ion-content>
-
-  <!-- <ion-content style="align-content: center">
-    <img src="/assets/icon/mockupMacAbroad3.png" alt="World" width="350" height="350"/>
-  </ion-content> -->
