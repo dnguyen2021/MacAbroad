@@ -15,18 +15,19 @@ import { DataService } from '../services/data.service';
 })
 
 
-export class Tab2Page implements OnInit {
+export class Tab2Page {
+
   public searchTerm: string = "";
   public items: any;
 
   constructor(private dataService: DataService) {}
 
-  ngOnInit(){
-    this.setFilteredItems();
-  }
+  // ngOnInit(){
+  //   this.setFilteredItems2();
+  // }
 
-  setFilteredItems() {
-    this.items = this.dataService.filterItems(this.searchTerm);
-  }
+  // setFilteredItems2() {
+  //   // this.items = this.dataService.filterItems(this.searchTerm);
+  // }
 
 }
