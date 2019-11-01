@@ -13,6 +13,7 @@ export class UserInputPage implements OnInit {
   public searchTerm2: string = "";
   public searchTerm3: string = "";
   public items: any = [];
+  public boolean;
 
   constructor(public navCtrl: NavController, private dataService: DataService) {}
 
@@ -24,10 +25,12 @@ export class UserInputPage implements OnInit {
     this.items = this.dataService.filterItems(this.searchTerm, this.searchTerm2, this.searchTerm3);
   }
 
-  goToResults(){
-    this.searchTerm;
-    this.searchTerm2;
-    this.searchTerm3
+  // goToRecommendation(){
+  //   this.navCtrl.navigateForward('/tabs/recommendation');
+  // }
+
+  show(){
+    this.boolean = true;
   }
 
 }

@@ -18,19 +18,16 @@ console.log(myJSON.default);
 })
 
 
-export class Tab2Page {
+export class Tab2Page{
 
-  public searchTerm: string = "";
-  public items: any;
-
-  constructor(private dataService: DataService) {}
-
-  ngOnInit(){
-    this.setFilteredItems2();
-  }
-
-  setFilteredItems2() {
-    this.items = this.dataService.items(this.searchTerm);
-  }
+  // constructor(private dataService: DataService) {}
+  //
+  // ngOnInit(){
+  //   this.setFilteredItems();
+  // }
+  //
+  // setFilteredItems2() {
+  //   this.items = this.dataService.filterItems2(this.searchTerm);
+  // }
 
 }
