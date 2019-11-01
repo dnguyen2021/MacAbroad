@@ -24,4 +24,10 @@ export class UserInputPage implements OnInit {
     this.items = this.dataService.filterItems(this.searchTerm, this.searchTerm2, this.searchTerm3);
   }
 
+  goToResults(){
+    this.searchTerm;
+    this.searchTerm2;
+    this.searchTerm3
+  }
+
 }
