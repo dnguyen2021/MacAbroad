@@ -3,9 +3,9 @@ import { IonicModule, NavController } from '@ionic/angular';
 import { DataService } from '../services/data.service';
 
 
-// var stringifiedData = JSON.stringify(this.myJSON);
-// var parsedData = JSON.parse(stringifiedData);
-// this.displayData = parsedData;
+var stringifiedData = JSON.stringify(this.myJSON);
+var parsedData = JSON.parse(stringifiedData);
+this.displayData = parsedData;
 
 @Component({
   selector: 'app-tab2',
@@ -15,18 +15,16 @@ import { DataService } from '../services/data.service';
 })
 
 
-export class Tab2Page implements OnInit {
-  public searchTerm: string = "";
-  public items: any;
+export class Tab2Page{
 
-  constructor(private dataService: DataService) {}
-
-  ngOnInit(){
-    this.setFilteredItems();
-  }
-
-  setFilteredItems() {
-    this.items = this.dataService.filterItems(this.searchTerm);
-  }
+  // constructor(private dataService: DataService) {}
+  //
+  // ngOnInit(){
+  //   this.setFilteredItems();
+  // }
+  //
+  // setFilteredItems2() {
+  //   this.items = this.dataService.filterItems2(this.searchTerm);
+  // }
 
 }
