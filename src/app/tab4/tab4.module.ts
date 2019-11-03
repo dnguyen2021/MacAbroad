@@ -7,7 +7,7 @@ import { IonicModule } from '@ionic/angular';
 
 import { Tab4Page } from './tab4.page';
 
-import { CalendarModule } from "ion2-calendar";
+// import { CalendarModule } from "ion2-calendar";
 
 const routes: Routes = [
   {
@@ -22,7 +22,7 @@ const routes: Routes = [
     FormsModule,
     IonicModule,
     RouterModule.forChild(routes),
-    CalendarModule
+    // CalendarModule
   ],
   declarations: [Tab4Page]
 })

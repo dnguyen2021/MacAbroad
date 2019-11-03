@@ -5,7 +5,7 @@ import * as myJSON from "../tab2/myJSON.json";
 import * as products from "./products.json";
 import { Observable } from 'rxjs';
 
-console.log(myJSON.default);
+// console.log(myJSON.default);
 // var stringifiedData = JSON.stringify(this.myJSON);
 // var parsedData = JSON.parse(stringifiedData);
 // this.displayData = parsedData;
