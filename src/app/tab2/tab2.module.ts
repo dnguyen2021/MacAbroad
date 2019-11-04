@@ -1,13 +1,9 @@
 import { IonicModule, NavController } from '@ionic/angular';
 import { RouterModule } from '@angular/router';
-import { NgModule } from '@angular/core';
+import { NgModule, Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Tab2Page } from './tab2.page';
-// import { Component } from '@angular/core';
-// import {SubmitComponent} from '../submit/submit.component'
-
-
 
 
 @NgModule({
@@ -20,11 +16,12 @@ import { Tab2Page } from './tab2.page';
   declarations: [Tab2Page]
   
 })
-<<<<<<< HEAD
+
 @Component({
   selector: 'page-tab2',
   templateUrl: 'tab2.page.html',
 })
+
 
 export class Tab2PageModule {
   // majors = {
@@ -89,16 +86,4 @@ export class Tab2PageModule {
 //   public onChange(value){
 //     console.log(value);
 // }
-=======
-// @Component({
-//   selector: 'tab2.page',
-//   templateUrl: 'tab2.page.html',
-//   styleUrls: ['./tab2.page.scss',]
-// })
-export class Tab2PageModule {
->>>>>>> f4f709e981d8c4af002c92baf8a46753f09e8f97
 }
-
-
-
-

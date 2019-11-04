@@ -7,147 +7,58 @@
 </ion-header>
 
 <ion-content>
-  <!-- <ion-searchbar
-    [(ngModel)]="searchTerm"
-    (ionChange)="setFilteredItems()"
-  ></ion-searchbar> -->
-
-  <ion-list>
-  <ion-list-header style = "font-family:Bebas Neue; font-size:20px"><div class="fadeIn">Please select your major(s):</div></ion-list-header>
-    <ion-label style="font-family:Bebas Neue"><div class="fadeIn">Major</div></ion-label>
-    <ion-select [(ngModel)]="searchTerm" (ionChange)="setFilteredItems()">
-      <ion-select-option value="any">Any</ion-select-option>
-      <ion-select-option value="american studies">American Studies</ion-select-option>
-      <ion-select-option value="anthro">Anthropology</ion-select-option>
-      <ion-select-option value="art history">Art History</ion-select-option>
-      <ion-select-option value="art">Art</ion-select-option>
-      <ion-select-option value="asian studies">Asian Studies</ion-select-option>
-      <ion-select-option value="bio">Biology</ion-select-option>
-      <ion-select-option value="chem">Chemistry</ion-select-option>
-      <ion-select-option value="chinese">Chinese</ion-select-option>
-      <ion-select-option value="classics">Classics</ion-select-option>
-      <ion-select-option value="comp sci">Computer Science</ion-select-option>
-      <ion-select-option value="econ">Economics</ion-select-option>
-      <ion-select-option value="education studies">Educational Studies</ion-select-option>
-      <ion-select-option value="english">English</ion-select-option>
-      <ion-select-option value="enviro studies">Environmental Studies</ion-select-option>
-      <ion-select-option value="french">French</ion-select-option>
-      <ion-select-option value="geo">Geography</ion-select-option>
-      <ion-select-option value="geol">Geology</ion-select-option>
-      <ion-select-option value="german">German</ion-select-option>
-      <ion-select-option value="hist">History</ion-select-option>
-      <ion-select-option value="international studies">International Studies</ion-select-option>
-      <ion-select-option value="japanese">Japanese</ion-select-option>
-      <ion-select-option value="latin america studies">Latin American Studies</ion-select-option>
-      <ion-select-option value="linguistics">Linguistics</ion-select-option>
-      <ion-select-option value="math">Mathematics</ion-select-option>
-      <ion-select-option value="media studies">Media and Cultural Studies</ion-select-option>
-      <ion-select-option value="music">Music</ion-select-option>
-      <ion-select-option value="neuro">Neuroscience</ion-select-option>
-      <ion-select-option value="philosophy">Philosophy</ion-select-option>
-      <ion-select-option value="physics">Physics</ion-select-option>
-      <ion-select-option value="poli sci">Political Science</ion-select-option>
-      <ion-select-option value="psych">Psychology</ion-select-option>
-      <ion-select-option value="religious studies">Religious Studies</ion-select-option>
-      <ion-select-option value="russian">Russian</ion-select-option>
-      <ion-select-option value="sociology">Sociology</ion-select-option>
-      <ion-select-option value="spanish">Spanish</ion-select-option>
-      <ion-select-option value="theatre and dance">Theatre and Dance</ion-select-option>
-      <ion-select-option value="wgss">Women's, Gender and Sexuality Studies</ion-select-option>
-    </ion-select>
-  </ion-list>
-
-  <ion-list>
-    <ion-list-header style = "font-family:Bebas Neue; font-size:20px"><div class="fadeIn">Please select your preffered language of instruction:</div></ion-list-header>
-    <ion-label style="font-family:Bebas Neue"><div class="fadeIn">Language</div></ion-label>
-    <ion-select [(ngModel)]="searchTerm" (ionChange)="setFilteredItems()">
-      <ion-select-option value="any">Any</ion-select-option>
-      <ion-select-option value="arabic">Arabic</ion-select-option>
-      <ion-select-option value="chinese">Chinese</ion-select-option>
-      <ion-select-option value="english">English</ion-select-option>
-      <ion-select-option value="french">French</ion-select-option>
-      <ion-select-option value="german">German</ion-select-option>
-      <ion-select-option value="greek">Greek</ion-select-option>
-      <ion-select-option value="hebrew">Hebrew</ion-select-option>
-      <ion-select-option value="italian">Italian</ion-select-option>
-      <ion-select-option value="japanese">Japanese</ion-select-option>
-      <ion-select-option value="latin">Latin</ion-select-option>
-      <ion-select-option value="portugese">Portugese</ion-select-option>
-      <ion-select-option value="russian">Russian</ion-select-option>
-      <ion-select-option value="spanish">Spanish</ion-select-option>
-      <ion-select-option value="other">Other</ion-select-option>
-    </ion-select>
-  </ion-list>
-
-
-  <ion-list>
-    <ion-item *ngFor="let item of items">
-      {{ item.program.programName}} <br>
-      {{ item.program.language }} <br>
-      {{ item.program.areaName}}
-    </ion-item>
-  </ion-list>
-</ion-content>
-
-
-
-<!-- <ion-content>
-  <ion-item *ngFor="let x of info">
-    <ion-label>
-      <p>{{x.program.programName}}</p>
-      <p>{{x.program.locationName}}</p>
-      <p>{{x.program.housing}}</p>
-      <p>{{x.program.GPA}}</p>
-      <p>{{x.program.language}}</p>
-      <p>{{x.program.areaName}}</p>
-      <p>{{x.program.academicFeatures}}</p>
-    </ion-label>
+  <ion-item>
+    <ion-label position="stacked">Enter Name <ion-text color="danger">*</ion-text></ion-label>
+    <ion-input required type="text" ></ion-input>
   </ion-item>
-</ion-content> -->
-
-<ion-content>
-      <img src="/assets/icon/mockupMacAbroad3.png" alt="World" width="500" height="500"/>
+  <ion-list>
+      <ion-label style="font-family:Bebas Neue"><div class="fadeIn">Major</div></ion-label>
+      <ion-select [(ngModel)]="searchTerm" (ionChange)="setFilteredItems()">
+        <ion-select-option value="american studies">American Studies</ion-select-option>
+        <ion-select-option value="anthro">Anthropology</ion-select-option>
+        <ion-select-option value="art history">Art History</ion-select-option>
+        <ion-select-option value="art">Art</ion-select-option>
+        <ion-select-option value="asian studies">Asian Studies</ion-select-option>
+        <ion-select-option value="bio">Biology</ion-select-option>
+        <ion-select-option value="chem">Chemistry</ion-select-option>
+        <ion-select-option value="chinese">Chinese</ion-select-option>
+        <ion-select-option value="classics">Classics</ion-select-option>
+        <ion-select-option value="comp sci">Computer Science</ion-select-option>
+        <ion-select-option value="econ">Economics</ion-select-option>
+        <ion-select-option value="education studies">Educational Studies</ion-select-option>
+        <ion-select-option value="english">English</ion-select-option>
+        <ion-select-option value="enviro studies">Environmental Studies</ion-select-option>
+        <ion-select-option value="french">French</ion-select-option>
+        <ion-select-option value="geo">Geography</ion-select-option>
+        <ion-select-option value="geol">Geology</ion-select-option>
+        <ion-select-option value="german">German</ion-select-option>
+        <ion-select-option value="hist">History</ion-select-option>
+        <ion-select-option value="international studies">International Studies</ion-select-option>
+        <ion-select-option value="japanese">Japanese</ion-select-option>
+        <ion-select-option value="latin america studies">Latin American Studies</ion-select-option>
+        <ion-select-option value="linguistics">Linguistics</ion-select-option>
+        <ion-select-option value="math">Mathematics</ion-select-option>
+        <ion-select-option value="media studies">Media and Cultural Studies</ion-select-option>
+        <ion-select-option value="music">Music</ion-select-option>
+        <ion-select-option value="neuro">Neuroscience</ion-select-option>
+        <ion-select-option value="philosophy">Philosophy</ion-select-option>
+        <ion-select-option value="physics">Physics</ion-select-option>
+        <ion-select-option value="poli sci">Political Science</ion-select-option>
+        <ion-select-option value="psych">Psychology</ion-select-option>
+        <ion-select-option value="religious studies">Religious Studies</ion-select-option>
+        <ion-select-option value="russian">Russian</ion-select-option>
+        <ion-select-option value="sociology">Sociology</ion-select-option>
+        <ion-select-option value="spanish">Spanish</ion-select-option>
+        <ion-select-option value="theatre and dance">Theatre and Dance</ion-select-option>
+        <ion-select-option value="wgss">Women's, Gender and Sexuality Studies</ion-select-option>
+      </ion-select>
+    </ion-list>
+  <ion-item>
+    <ion-label position="stacked">Summary</ion-label>
+  <ion-textarea></ion-textarea>
+  </ion-item>
+    <ion-button size="large">Post</ion-button>
 </ion-content>
 
-<ion-list>
-    <ion-list-header>Interface Options</ion-list-header>
-  
-    <ion-item>
-      <ion-label>Alert</ion-label>
-      <ion-select [interfaceOptions]="customAlertOptions" interface="alert" multiple="true" placeholder="Select One">
-        <ion-select-option value="bacon">Bacon</ion-select-option>
-        <ion-select-option value="olives">Black Olives</ion-select-option>
-        <ion-select-option value="xcheese">Extra Cheese</ion-select-option>
-        <ion-select-option value="peppers">Green Peppers</ion-select-option>
-        <ion-select-option value="mushrooms">Mushrooms</ion-select-option>
-        <ion-select-option value="onions">Onions</ion-select-option>
-        <ion-select-option value="pepperoni">Pepperoni</ion-select-option>
-        <ion-select-option value="pineapple">Pineapple</ion-select-option>
-        <ion-select-option value="sausage">Sausage</ion-select-option>
-        <ion-select-option value="Spinach">Spinach</ion-select-option>
-      </ion-select>
-    </ion-item>
-  
-    <ion-item>
-      <ion-label>Popover</ion-label>
-      <ion-select [interfaceOptions]="customPopoverOptions" interface="popover" placeholder="Select One">
-        <ion-select-option value="brown">Brown</ion-select-option>
-        <ion-select-option value="blonde">Blonde</ion-select-option>
-        <ion-select-option value="black">Black</ion-select-option>
-        <ion-select-option value="red">Red</ion-select-option>
-      </ion-select>
-    </ion-item>
-  
-    <ion-item>
-      <ion-label>Action Sheet</ion-label>
-      <ion-select [interfaceOptions]="customActionSheetOptions" interface="action-sheet" placeholder="Select One">
-        <ion-select-option value="red">Red</ion-select-option>
-        <ion-select-option value="purple">Purple</ion-select-option>
-        <ion-select-option value="yellow">Yellow</ion-select-option>
-        <ion-select-option value="orange">Orange</ion-select-option>
-        <ion-select-option value="green">Green</ion-select-option>
-      </ion-select>
-    </ion-item>
-  
-  </ion-list>
+
 

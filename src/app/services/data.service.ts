@@ -820,10 +820,16 @@ export class DataService {
    ];
  }
 
-  filterItems(searchTerm) {
+  filterItems(searchTerm, searchTerm2, searchTerm3) {
     return this.items.filter(item => {
-      return item.program.language.toLowerCase().indexOf(searchTerm.toLowerCase()) > -1;
-      return item.program.areaName.toLowerCase().indexOf(searchTerm.toLowerCase()) > -1;
+      // return item.program.areaName.toLowerCase().indexOf(searchTerm.toLowerCase()) &&
+      // item.program.language.toLowerCase().indexOf(searchTerm.toLowerCase()) > -1;
+      return item.program.areaName.toLowerCase().indexOf(searchTerm.toLowerCase()) > -1 &&
+      item.program.language.toLowerCase().indexOf(searchTerm2.toLowerCase()) > -1 &&
+      item.program.locationName.toLowerCase().indexOf(searchTerm3.toLowerCase()) > -1;
     });
   }
+
+
+
 }
