@@ -6,8 +6,11 @@ import { Routes, RouterModule } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 
 import { Tab4Page } from './tab4.page';
+import { Calendar } from '@ionic-native/calendar/ngx';
+import { NgCalendarModule  } from 'ionic2-calendar';
 
-// import { CalendarModule } from "ion2-calendar";
+import { CalendarModule } from 'ion2-calendar';
+import { ModalController } from '@ionic/angular';
 
 const routes: Routes = [
   {
@@ -22,9 +25,14 @@ const routes: Routes = [
     FormsModule,
     IonicModule,
     RouterModule.forChild(routes),
-    // CalendarModule
+    CalendarModule,
+    NgCalendarModule,
   ],
   declarations: [Tab4Page]
-})
+  
+}
+)
 
-export class Tab4PageModule {}
+export class Tab4PageModule {
+
+}
