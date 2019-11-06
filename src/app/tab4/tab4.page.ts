@@ -5,6 +5,9 @@ import { ViewChild, Inject, LOCALE_ID } from '@angular/core';
 import { AlertController } from '@ionic/angular';
 import { formatDate } from '@angular/common';
 import { ModalController } from '@ionic/angular';
+import { Observable } from 'rxjs/Observable';
+import { Subject } from 'rxjs/Subject';
+
 
 
 
@@ -36,7 +39,7 @@ export class Tab4Page implements OnInit{
   };
  
   // @ViewChild(CalendarComponent) myCal: CalendarComponent;
-  @ViewChild(CalendarComponent) myCal: CalendarComponent;
+  // @ViewChild(CalendarComponent) myCal: CalendarComponent;
  
   constructor(private alertCtrl: AlertController, @Inject(LOCALE_ID) private locale: string) { }
  
@@ -73,7 +76,7 @@ export class Tab4Page implements OnInit{
     }
  
     this.eventSource.push(eventCopy);
-    this.myCal.loadEvents();
+    // this.myCal.loadEvents();
     this.resetEvent();
   }
    // Change current month/week/day
