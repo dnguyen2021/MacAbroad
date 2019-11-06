@@ -1,4 +1,4 @@
-import { IonicModule } from '@ionic/angular';
+import { IonicModule, NavController } from '@ionic/angular';
 import { RouterModule } from '@angular/router';
 import { NgModule, Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -6,6 +6,7 @@ import { FormsModule } from '@angular/forms';
 import { Tab2Page } from './tab2.page';
 // import { Component } from '@angular/core';
 import {SubmitComponent} from '../submit/submit.component'
+
 
 
 
@@ -17,6 +18,12 @@ import {SubmitComponent} from '../submit/submit.component'
     RouterModule.forChild([{ path: '', component: Tab2Page }])
   ],
   declarations: [Tab2Page]
+
+})
+
+@Component({
+  selector: 'page-tab2',
+  templateUrl: 'tab2.page.html',
 })
 @Component({
   selector: 'tab2.page',
@@ -24,5 +31,5 @@ import {SubmitComponent} from '../submit/submit.component'
   styleUrls: ['./tab2.page.scss',]
 })
 export class Tab2PageModule {
-  
+
 }

@@ -6,82 +6,89 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core@4.7.4/css/ionic.bundle.css"/>
   <body>
     <ion-app>
-      <ion-nav root="nav-home"></ion-nav>
-    </ion-app>
-    <script>
-        customElements.define('nav-home', class NavHome extends HTMLElement {
-          connectedCallback() {
-            this.innerHTML = `
-              <ion-header translucent>
-                <ion-toolbar>
-                  <ion-title>Nav</ion-title>
-                </ion-toolbar>
-              </ion-header>
-              <ion-content fullscreen>
-                <ion-list>
-                ${techs.map(tech => `
-                    <ion-item button onclick="showDetail('${tech.title}')">
-                      <ion-icon slot="start" name="logo-${tech.icon}" style="color: ${tech.color};"></ion-icon>
-                      <ion-label>
-                        <h3>${tech.title}</h3>
-                      </ion-label>
-                    </ion-item>
-                `).join('\n')}
-                </ion-list>
-              </ion-content>
-            `;
-          }
-        });
-        const nav = document.querySelector('ion-nav');
-        function showDetail(title) {
-          const tech = techs.find(tech => tech.title === title);
-          nav.push('nav-detail', { tech });
-        }
-        customElements.define('nav-detail', class NavDetail extends HTMLElement {
-          connectedCallback() {
-            this.innerHTML = `
-              <ion-header translucent>
-                <ion-toolbar>
-                  <ion-buttons slot="start">
-                    <ion-back-button defaultHref="/"></ion-back-button>
-                  </ion-buttons>
-                  <ion-title>${this.tech.title}</ion-title>
-                </ion-toolbar>
-              </ion-header>
-              <ion-content fullscreen class="ion-padding">
-                <ion-icon name="logo-${this.tech.icon}" style="color: ${this.tech.color};" size="large"></ion-icon>
-                <p>${this.tech.description}</p>
-              </ion-content>
-            `;
-          }
-        }); -->
-        <!-- <ion-header>
-             <ion-toolbar>
-               <ion-title style = "font-family:Bebas Neue; font-size:25px; text-align: center">
-                   <div class="fadeIn">Programs</div>
-               </ion-title>
-             </ion-toolbar>
-             <div class="fadeIn"> <ion-searchbar></ion-searchbar></div>
-         </ion-header> -->
-             <!-- <ion-content fullscreen>
-               <ion-list>
-                       <ion-item *ngFor="let item of items">
-                         <div class="fadeIn">
-                         {{ item.program.programName }} <br>
-                         </div>
-                         <ion-select>
-                           <ion-label>{{ item.program.programName }}</ion-label>
-                         </ion-select>
-                       </ion-item>
+<<<<<<< HEAD
+        <ion-header>
+            <ion-toolbar>
+              <ion-title style = "font-family:Bebas Neue; font-size:25px; text-align: center">
+                  <div class="fadeIn">Programs</div>
+              </ion-title>
+            </ion-toolbar>
+        </ion-header>
+      
+            <ion-content fullscreen>
+              <ion-list>
+                <ion-item>
+                  <ion-label style="font-family:Bebas Neue"><div class="fadeIn">Group A - Exchange: Ashesi University College</div></ion-label>
+                  <ion-select>
+                  
+                  </ion-select>
+                </ion-item>
 
-               <ion-item>
-                   <ion-button ion-button icon-only (click) = "returnCountry()" >
-                     <ion-icon name = "search"></ion-icon>
-                   </ion-button>
-               </ion-item>
-               </ion-list>
 
-             </ion-content> -->
-      <!-- </script> -->
-  </body>
-</ion-content>
+<ion-content>
+  <ion-list-header style = "font-family:Bebas Neue; font-size:20px">Please select your major(s):</ion-list-header>
+
+  <ion-item>
+    <ion-label>Major</ion-label>
+    <!-- <ion-select [(ngModel)]="majors.id" (ionChange)="(majors.id)" placeholder="Please select your major(s)">     -->
+    <ion-select multiple="Confirm" cancelText="Cancel" okText="Confirm">      
+
+      <!-- <ion-select-option value="any">Any</ion-select-option> -->
+      <!-- <ion-select-option value="american studies">American Studies</ion-select-option>
+      <ion-select-option value="anthro">Anthropology</ion-select-option>
+      <ion-select-option value="art history">Art History</ion-select-option>
+      <ion-select-option value="art">Art</ion-select-option>
+      <ion-select-option value="asian studies">Asian Studies</ion-select-option>
+      <ion-select-option value="bio">Biology</ion-select-option>
+      <ion-select-option value="chem">Chemistry</ion-select-option>
+      <ion-select-option value="chinese">Chinese</ion-select-option>
+      <ion-select-option value="classics">Classics</ion-select-option>
+      <ion-select-option value="comp sci">Computer Science</ion-select-option>
+      <ion-select-option value="econ">Economics</ion-select-option>
+      <ion-select-option value="education studies">Educational Studies</ion-select-option>
+      <ion-select-option value="english">English</ion-select-option>
+      <ion-select-option value="enviro studies">Environmental Studies</ion-select-option>
+      <ion-select-option value="french">French</ion-select-option>
+      <ion-select-option value="geo">Geography</ion-select-option>
+      <ion-select-option value="geol">Geology</ion-select-option>
+      <ion-select-option value="german">German</ion-select-option>
+      <ion-select-option value="hist">History</ion-select-option>
+      <ion-select-option value="international studies">International Studies</ion-select-option>
+      <ion-select-option value="japanese">Japanese</ion-select-option>
+      <ion-select-option value="latin america studies">Latin American Studies</ion-select-option>
+      <ion-select-option value="linguistics">Linguistics</ion-select-option>
+      <ion-select-option value="math">Mathematics</ion-select-option>
+      <ion-select-option value="media studies">Media and Cultural Studies</ion-select-option>
+      <ion-select-option value="music">Music</ion-select-option>
+      <ion-select-option value="neuro">Neuroscience</ion-select-option>
+      <ion-select-option value="philosophy">Philosophy</ion-select-option>
+      <ion-select-option value="physics">Physics</ion-select-option>
+      <ion-select-option value="poli sci">Political Science</ion-select-option>
+      <ion-select-option value="psych">Psychology</ion-select-option>
+      <ion-select-option value="religious studies">Religious Studies</ion-select-option>
+      <ion-select-option value="russian">Russian</ion-select-option>
+      <ion-select-option value="sociology">Sociology</ion-select-option>
+      <ion-select-option value="spanish">Spanish</ion-select-option>
+      <ion-select-option value="theatre and dance">Theatre and Dance</ion-select-option>
+      <ion-select-option value="wgss">Women's, Gender and Sexuality Studies</ion-select-option> -->
+      <!-- <ion-option *ngIf="majors.id==0" value="0" [selected]="true">Select Major</ion-option> -->
+      <!-- <ion-option *ngFor="let id of majorsList" [value]="id.major_id">
+          {{id.major_name}}</ion-option> -->
+    </ion-select>
+<!-- 
+    <p>Selected Major: {{majors.id}}</p> -->
+  </ion-item>
+  <!-- <script>
+    var multi = document.getElementById('multiValue');
+    multi.value = [ , "american studies", "anthro", "art history", "art", "asian studies",
+                  "bio", "chem", "chinese", "classics", "comp sci", "econ", "education studies",
+                  "english", "enviro studies", "french", "geo", "geol", "german", "hist",
+                  "international studies", "japanese", "latin america studies", "linguistics",
+                  "math", "media studies", "music", "neuro", "philosophy", "physucs", "poli sci",
+                  "psych", "religious studies", "russian", "sociology", "spanish", "theatre and dance",
+                  "wgss"]
+  </script> -->
+
+  <ion-list>
+  <ion-list-header style = "font-family:Bebas Neue; font-size:20px">Please select your preffered language(s) of instruction:</ion-list-header>
+  }
