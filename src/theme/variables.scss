@@ -103,22 +103,17 @@
 
   $tabs-tab-color-active: color(dark);
 
-  // $colors: (
-  //   bgContent: #4da9ff,
-  //   primary: #4da9ff,
-  //   secondary: #ffffff
-  // );
-  @font-face {
+@font-face {
+  font-family: 'Bebas Neue';
+  src: ("../assets/fonts/BebasNeue-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+  }
+  * {
     font-family: 'Bebas Neue';
-    src: ("/assets/fonts/BebasNeue-Regular.ttf");
-    font-weight: normal;
-    font-style: normal;
-    }
-    * {
-      font-family: 'Bebas Neue' !important;
-    }
-    $font-family-base: 'Bebas Neue';
-    $font-family-ios-base: 'Bebas Neue';
-    $font-family-md-base:'Bebas Neue';
-    $font-family-wp-base:'Bebas Neue';
+  }
+    // $font-family-base: 'Bebas Neue';
+    // $font-family-ios-base: 'Bebas Neue';
+    // $font-family-md-base:'Bebas Neue';
+    // $font-family-wp-base:'Bebas Neue';
 }

@@ -1,11 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { IonicModule, NavController } from '@ionic/angular';
 import { DataService } from '../services/data.service';
+import * as myJSON from "../tab2/myJSON.json";
+import * as products from "./products.json";
+import { Observable } from 'rxjs';
 
-
-var stringifiedData = JSON.stringify(this.myJSON);
-var parsedData = JSON.parse(stringifiedData);
-this.displayData = parsedData;
+// console.log(myJSON.default);
+// var stringifiedData = JSON.stringify(this.myJSON);
+// var parsedData = JSON.parse(stringifiedData);
+// this.displayData = parsedData;
 
 @Component({
   selector: 'app-tab2',
