@@ -35,10 +35,10 @@
     "cordova": "^9.0.0",
     "cordova-android": "^8.1.0",
     "cordova-ios": "^5.0.1",
+    "cordova-plugin-calendar": "^5.1.5",
     "cordova-plugin-firebase": "^2.0.5",
     "cordova-plugin-nativestorage": "^2.3.2",
     "cordova-plugin-telerik-imagepicker": "^2.3.3",
-    "cordova-plugin-calendar": "^5.1.5",
     "core-js": "^2.5.4",
     "firebase": "^7.2.3",
     "global": "^4.4.0",
@@ -98,7 +98,7 @@
       "cordova-plugin-ionic-keyboard": {},
       "cordova-plugin-telerik-imagepicker": {
         "PHOTO_LIBRARY_USAGE_DESCRIPTION": "your usage message"
-      }
+      },
       "cordova-plugin-calendar": {}
     },
     "platforms": [
