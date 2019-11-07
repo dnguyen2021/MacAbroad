@@ -38,6 +38,12 @@ export class UserInputPageModule {
   constructor(public navCtrl: NavController){
     
   }
+  goToResults() {
+    const animationOptions = {
+      animation: 'ios-transition',
+      duration: 1000
+    }
+  }
     
   }
 

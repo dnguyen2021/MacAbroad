@@ -1,10 +1,13 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 import { Platform, Config } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { NgModule } from '@angular/core'; 
 import { RecommenderService } from './recommender.service';
+
+import { AuthService } from './authservice.service';
 
 @Component({
   selector: 'app-root',
@@ -17,7 +20,9 @@ export class AppComponent {
     private platform: Platform,
     private splashScreen: SplashScreen,
     private statusBar: StatusBar, 
-    public recommender: RecommenderService
+    public recommender: RecommenderService,
+    private authenticationService: AuthService,
+    private router: Router
   ) {
     this.initializeApp();
   
@@ -27,27 +32,11 @@ export class AppComponent {
     this.platform.ready().then(() => {
       this.statusBar.styleDefault();
       this.splashScreen.hide();
+
+      
+ 
     });
   }
-
-  config;   
-  JSONFILE;  
-  displayProgramInfo(){ 
-    this.recommender.readJSON()
-    .subscribe((data: Config) => this.config = { 
-      housing: data['housing'],
-      programName: data['programName'],
-      GPA: data['GPA'],
-      language: data['language'],
-      areaName: data['areaName'],
-      academicFeatures: data['academicFeatures']
-  })
-}
-
-testerFunction(){
-  this.JSONFILE = this.recommender.readJSON(); 
-    
-}
   
 }
 

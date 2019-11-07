@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>recommendation</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let item of items">
+      {{ item.program.programName}} <br>
+      {{ item.program.language }} <br>
+      {{ item.program.areaName}} <br>
+      {{ item.program.locationName}} <br>
+      {{ item.program.housing}} <br>
+      {{ item.program.GPA}} <br>
+      {{ item.program.academicFeatures}}
+
+    </ion-item>
+  </ion-list>
+
+</ion-content>
