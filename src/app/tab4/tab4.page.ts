@@ -10,14 +10,12 @@ import { Subject } from 'rxjs/Subject';
 
 
 
-
 @Component({
   selector: 'app-tab4',
   templateUrl: './tab4.page.html',
   styleUrls: ['./tab4.page.scss'],
-  
-}
-)
+
+}) 
 
 export class Tab4Page implements OnInit{
   event = {
@@ -127,4 +125,5 @@ onTimeSelected(ev) {
   selected.setHours(selected.getHours() + 1);
   this.event.endTime = (selected.toISOString());
 }
+
 }

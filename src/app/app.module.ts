@@ -10,17 +10,43 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { RecommenderService } from './recommender.service';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireAuthModule } from 'angularfire2/auth'; 
+import { AngularFireDatabase} from 'angularfire2/database';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+
+
+import { IonicStorageModule } from '@ionic/storage';
+
+import { environment } from '../environments/environment'; 
+import { FirebaseService } from './database.service';
+import { AngularFirestore } from 'angularfire2/firestore';
+import { AngularFirestoreModule } from 'angularfire2/firestore';
+
+import * as firebase from 'firebase';
+
+firebase.initializeApp(environment.config); 
 
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [
   ],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, HttpClientModule],
+  imports: [BrowserModule, AngularFirestoreModule, IonicModule.forRoot(), AppRoutingModule, HttpClientModule, 
+  FormsModule, ReactiveFormsModule, AngularFireAuthModule, AngularFireModule.initializeApp(environment.config) 
+    
+  , IonicStorageModule.forRoot(), AngularFireDatabaseModule, AngularFireDatabaseModule],
   providers: [
     StatusBar,
     SplashScreen,
-    { provide: RecommenderService, useClass: IonicRouteStrategy}
+    FirebaseService, 
+    AngularFirestore, 
+    { provide: [RouteReuseStrategy, RecommenderService] , useClass: IonicRouteStrategy}, 
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent], 
+  
+  exports: [ReactiveFormsModule] 
+
 })
 export class AppModule {}
