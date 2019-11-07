@@ -5,17 +5,12 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { IonicModule } from '@ionic/angular';
 
-import { Tab4Page } from './tab4.page';
-
-=======
-import { Calendar } from '@ionic-native/calendar/ngx';
-import { NgCalendarModule  } from 'ionic2-calendar';
-
+import { RecommendationPage } from './recommendation.page';
 
 const routes: Routes = [
   {
     path: '',
-    component: Tab4Page
+    component: RecommendationPage
   }
 ];
 
@@ -26,19 +21,6 @@ const routes: Routes = [
     IonicModule,
     RouterModule.forChild(routes)
   ],
-  declarations: [Tab4Page]
+  declarations: [RecommendationPage]
 })
-export class Tab4PageModule {}
-
-    RouterModule.forChild(routes),
-    NgCalendarModule,
-  ],
-  declarations: [Tab4Page]
-  
-}
-)
-
-export class Tab4PageModule {
-
-}
-
+export class RecommendationPageModule {}

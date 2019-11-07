@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicModule, NavController } from '@ionic/angular';
-import { Tab2Page } from '../tab2/tab2.page';
+//import { Tab2Page } from '../tab2/tab2.page';
 
 
 @Component({
@@ -13,7 +13,7 @@ export class Tab1Page {
   constructor(public navCtrl: NavController) {
 
   }
-  
+
   goToUserInput(){
     this.navCtrl.navigateForward('/tabs/user-input');
   }
