@@ -9,10 +9,6 @@ import { Tab4Page } from './tab4.page';
 import { Calendar } from '@ionic-native/calendar/ngx';
 import { NgCalendarModule  } from 'ionic2-calendar';
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 9966aa33aab5391778301583f8540cde5782372b
 const routes: Routes = [
   {
     path: '',
@@ -26,13 +22,7 @@ const routes: Routes = [
     FormsModule,
     IonicModule,
     RouterModule.forChild(routes),
-<<<<<<< HEAD
-
     NgCalendarModule,
-
-=======
-    NgCalendarModule,
->>>>>>> 9966aa33aab5391778301583f8540cde5782372b
   ],
   declarations: [Tab4Page]
 
