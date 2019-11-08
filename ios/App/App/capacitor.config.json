@@ -1,0 +1,10 @@
+{
+  "appId": "io.ionic.macstudyaway",
+  "appName": "myApp",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "www",
+  "server": {
+    "url": "http://141.140.34.223:8100"
+  }
+}
