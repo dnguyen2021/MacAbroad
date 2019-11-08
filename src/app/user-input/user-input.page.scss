@@ -10,14 +10,20 @@ img{
   from {
     opacity: 0;
   }
-  
+
   to {
     opacity: 1;
   }
 }
-  
+
 .fadeIn {
   animation-name: fadeIn;
   animation-duration: 4s;
 }
 
+table{
+  table-layout: fixed;
+  width: auto;
+  border-width: medium;
+  border-color: black;
+}

@@ -1,14 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { IonicModule, NavController } from '@ionic/angular';
 import { DataService } from '../services/data.service';
-import * as myJSON from "../tab2/myJSON.json";
-import * as products from "./products.json";
-import { Observable } from 'rxjs';
-
-// console.log(myJSON.default);
-// var stringifiedData = JSON.stringify(this.myJSON);
-// var parsedData = JSON.parse(stringifiedData);
-// this.displayData = parsedData;
 
 @Component({
   selector: 'app-tab2',
@@ -17,8 +9,23 @@ import { Observable } from 'rxjs';
 
 })
 
+export class Tab2Page implements OnInit{
+  public searchTerm4: string = "";
+  public items2: any;
 
-export class Tab2Page{
+  constructor(private dataService: DataService) {}
+
+  ngOnInit() {
+    this.setSearchedItems();
+  }
+
+  setSearchedItems() {
+    this.items2 = this.dataService.searchItems(this.searchTerm4);
+  }
+
+  setSortSearch(){
+    this.items2 = this.dataService.sortSearch();
+  }
 
   // constructor(private dataService: DataService) {}
   //
