@@ -5,15 +5,18 @@ import { Injectable } from '@angular/core';
 })
 export class DataService {
   public items: any = [];
+  public items2: any = [];
   // public stars: any = [];
 
   constructor() {
     // this.stars = [1, 2, 3]
+    // this.items2 = [...this.items]
     this.items = [
       {"program": {
           "locationName": "Ghana",
           "housing": "Residence Hall, Residence Hall- Local Roommate",
-          "programName": "Group A - Exchange: Ashesi University College",
+          "programGroup": "Group A - Exchange:",
+          "programName": "Ashesi University College",
           "GPA": "3",
           "language": "English",
           "areaName": "African Studies, Computer Science, Economics",
@@ -24,7 +27,8 @@ export class DataService {
         "program":{
           "locationName":"Various",
           "housing":"No Housing Provided",
-          "programName":"Group A - Exchange: ISEP- International Student Exchange Programs",
+          "programGroup": "Group A - Exchange:",
+          "programName":"ISEP- International Student Exchange Programs",
           "GPA":"No GPA Requirement",
           "language":"Arabic, English, French, German, Other, Spanish, Portuguese, Japanese, Italian, Hebrew, Chinese",
           "areaName":"No recommendations by faculties",
@@ -34,7 +38,8 @@ export class DataService {
         "program":{
           "locationName":"Singapore",
           "housing":"Marcus Carrigan",
-          "programName":"Group A - Exchange: NTU- Nanyang Technological University",
+          "programGroup": "Group A - Exchange:",
+          "programName":"NTU- Nanyang Technological University",
           "GPA":"Apartment, Residence Hall, Residence Hall- Local Roommate",
           "language":"English",
           "areaName":"Arabic, Art (Studio), Art History, Asian Languages and Cultures, Astronomy, Biology, Chemistry, Chinese, Community and Global Health, Computer Science, Creative Writing, Economics, English, Environmental Studies, French and Francophone Studies, German Studies, History, International Development, International Studies, Japanese, Linguistics, Mathematics, Media and Cultural Studies, Neuroscience Studies, Philosophy, Physics, Political Science, Psychology, Sociology, Spanish, Statistics, Urban Studies, Women's, Gender, and Sexuality Studies",
@@ -45,7 +50,8 @@ export class DataService {
         "program":{
           "locationName":"France\nFrance\nFrance\nFrance\nFrance\nFrance\nFrance",
           "housing":"Marcus Carrigan",
-          "programName":"Group A - Exchange: Sciences Po",
+          "programGroup": "Group A - Exchange:",
+          "programName":"Sciences Po",
           "GPA":"Other",
           "language":"English, French",
           "areaName":"African Studies, Anthropology, Arabic, Asian Languages and Cultures, Chinese, Creative Writing, Critical Theory, Economics, Environmental Studies, French and Francophone Studies, Geography, German Studies, Hebrew, History, Human Rights and Humanitarianism, International Development, International Studies, Japanese, Latin American Studies, Legal Studies Program, Media and Cultural Studies, Middle Eastern Studies and Islamic Civilization, Philosophy, Political Science, Portuguese, Pre-Law, Religious Studies, Russian Studies, Sociology, Spanish, Urban Studies, Women's, Gender, and Sexuality Studies",
@@ -56,7 +62,8 @@ export class DataService {
         "program":{
           "locationName":"Germany\nAustria",
           "housing":"Shanti Freitas",
-          "programName":"Group A - Macalester: German Studies Program",
+          "programGroup": "Group A - Macalester:",
+          "programName":"German Studies Program",
           "GPA":"Apartment, Residence Hall",
           "language":"German",
           "areaName":"American Studies, Anthropology, Art History, Astronomy, Biology, Chemistry, Computer Science, Critical Theory, Economics, Geography, German Studies, History, International Studies, Mathematics, Media and Cultural Studies, Music, Philosophy, Physics, Political Science, Psychology, Religious Studies, Sociology, Statistics, Theater",
@@ -67,7 +74,8 @@ export class DataService {
         "program":{
           "locationName":"South Africa",
           "housing":"Apartment",
-          "programName":"Group A - Macalester: Globalization, the Environment, and Society in Cape Town",
+          "programGroup": "Group A - Macalester:",
+          "programName":"Globalization, the Environment, and Society in Cape Town",
           "GPA":"3",
           "language":"English",
           "areaName":"African Studies, Anthropology, Biology, Economics, Environmental Studies, Food, Agriculture, and Society, Geography, Geology, Urban Studies",
@@ -78,7 +86,8 @@ export class DataService {
         "program":{
           "locationName":"Netherlands",
           "housing":"Residence Hall",
-          "programName":"Group A - Macalester: Perspectives on Globalization",
+          "programGroup": "Group A - Macalester:",
+          "programName":"Perspectives on Globalization",
           "GPA":"3.2",
           "language":"English",
           "areaName":"Community and Global Health, Economics, Human Rights and Humanitarianism, Political Science",
@@ -89,7 +98,8 @@ export class DataService {
         "program":{
           "locationName":"United States",
           "housing":"Barbara Stinson",
-          "programName":"Group B - ACM: Newberry Seminar: Research in the Humanities",
+          "programGroup": "Group B - ",
+          "programName":"ACM: Newberry Seminar: Research in the Humanities",
           "GPA":"Apartment",
           "language":"English",
           "areaName":"No recommendations by faculties",
@@ -100,7 +110,8 @@ export class DataService {
         "program":{
           "locationName":"Hungary",
           "housing":"Apartment",
-          "programName":"Group B - AIT: Aquincum Institute of Technology",
+          "programGroup": "Group B - ",
+          "programName":"AIT: Aquincum Institute of Technology",
           "GPA":"3",
           "language":"English",
           "areaName":"Computer Science",
@@ -111,7 +122,8 @@ export class DataService {
         "program":{
           "locationName":"Kazakhstan\nRussia\nRussia\nRussia",
           "housing":"Home Stay, Residence Hall",
-          "programName":"Group B - American Councils: Russian Language & Area Studies Program",
+          "programGroup": "Group B - ",
+          "programName":"American Councils: Russian Language & Area Studies Program",
           "GPA":"2.7",
           "language":"Russian",
           "areaName":"Russian Studies",
@@ -122,7 +134,8 @@ export class DataService {
         "program":{
           "locationName":"Morocco",
           "housing":"Home Stay",
-          "programName":"Group B - AMIDEAST: Area & Language Studies in Morocco",
+          "programGroup": "Group B - ",
+          "programName":"AMIDEAST: Area & Language Studies in Morocco",
           "GPA":"3",
           "language":"Arabic, English, French",
           "areaName":"African Studies, Economics, French and Francophone Studies, Middle Eastern Studies and Islamic Civilization",
@@ -133,7 +146,8 @@ export class DataService {
         "program":{
           "locationName":"Hungary",
           "housing":"Barbara Stinson",
-          "programName":"Group B - Budapest Semesters in Mathematics",
+          "programGroup": "Group B - ",
+          "programName":"Budapest Semesters in Mathematics",
           "GPA":"Apartment, Home Stay",
           "language":"English",
           "areaName":"Educational Studies, Mathematics",
@@ -144,7 +158,8 @@ export class DataService {
         "program":{
           "locationName":"Brazil",
           "housing":"Apartment - Local Roommate",
-          "programName":"Group B - CET: Brazil",
+          "programGroup": "Group B - ",
+          "programName":"CET: Brazil",
           "GPA":"3",
           "language":"English, Portuguese",
           "areaName":"Latin American Studies, Spanish and Portuguese",
@@ -155,7 +170,8 @@ export class DataService {
         "program":{
           "locationName":"Japan",
           "housing":"Apartment - Local Roommate",
-          "programName":"Group B - CET: Japan",
+          "programGroup": "Group B - ",
+          "programName":"CET: Japan",
           "GPA":"3",
           "language":"English, Japanese",
           "areaName":"Art and Art History, Asian Languages and Cultures, Economics",
@@ -166,7 +182,8 @@ export class DataService {
         "program":{
           "locationName":"Czech Republic",
           "housing":"Apartment - Local Roommate",
-          "programName":"Group B - CET: Prague",
+          "programGroup": "Group B - ",
+          "programName":"CET: Prague",
           "GPA":"3",
           "language":"English",
           "areaName":"Art and Art History, Religious Studies",
@@ -177,7 +194,8 @@ export class DataService {
         "program":{
           "locationName":"China",
           "housing":"Apartment, Home Stay, Residence Hall",
-          "programName":"Group B - China Studies Institute: Peking University",
+          "programGroup": "Group B - ",
+          "programName":"China Studies Institute: Peking University",
           "GPA":"3.2",
           "language":"Chinese, English",
           "areaName":"Art and Art History, Asian Languages and Cultures, Economics, Political Science",
@@ -188,7 +206,8 @@ export class DataService {
         "program":{
           "locationName":"Japan",
           "housing":"Home Stay, Residence Hall",
-          "programName":"Group B - CIEE: Arts and Sciences in Tokyo",
+          "programGroup": "Group B - ",
+          "programName":"CIEE: Arts and Sciences in Tokyo",
           "GPA":"2.75",
           "language":"English, Japanese",
           "areaName":"Art and Art History, Asian Languages and Cultures, Economics, Linguistics",
@@ -199,7 +218,8 @@ export class DataService {
         "program":{
           "locationName":"China",
           "housing":"Home Stay, Residence Hall- Local Roommate",
-          "programName":"Group B - CIEE: Intensive Chinese Language and Culture in Nanjing",
+          "programGroup": "Group B - ",
+          "programName":"CIEE: Intensive Chinese Language and Culture in Nanjing",
           "GPA":"2.75",
           "language":"Chinese, English",
           "areaName":"Asian Languages and Cultures",
@@ -210,7 +230,8 @@ export class DataService {
         "program":{
           "locationName":"Portugal",
           "housing":"Home Stay, Residence Hall",
-          "programName":"Group B - CIEE: Language and Culture in Lisbon",
+          "programGroup": "Group B - ",
+          "programName":"CIEE: Language and Culture in Lisbon",
           "GPA":"2.5",
           "language":"English, Portuguese",
           "areaName":"Spanish and Portuguese",
@@ -221,7 +242,8 @@ export class DataService {
         "program":{
           "locationName":"Brazil",
           "housing":"Apartment, Home Stay",
-          "programName":"Group B - CIEE: Liberal Arts in Rio de Janeiro",
+          "programGroup": "Group B - ",
+          "programName":"CIEE: Liberal Arts in Rio de Janeiro",
           "GPA":"2.5",
           "language":"English, Portuguese",
           "areaName":"American Studies, Economics, Latin American Studies, Spanish and Portuguese",
@@ -232,7 +254,8 @@ export class DataService {
         "program":{
           "locationName":"Dominican Republic",
           "housing":"Home Stay",
-          "programName":"Group B - CIEE: Liberal Arts in Santiago, Dominican Republic",
+          "programGroup": "Group B - ",
+          "programName":"CIEE: Liberal Arts in Santiago, Dominican Republic",
           "GPA":"2.5",
           "language":"Spanish",
           "areaName":"Spanish and Portuguese, Theater and Dance",
@@ -243,7 +266,8 @@ export class DataService {
         "program":{
           "locationName":"Jordan",
           "housing":"Apartment, Home Stay",
-          "programName":"Group B - CIEE: Middle East Studies",
+          "programGroup": "Group B - ",
+          "programName":"CIEE: Middle East Studies",
           "GPA":"2.5",
           "language":"Arabic, English",
           "areaName":"Classics, Economics, Middle Eastern Studies and Islamic Civilization, Political Science, Religious Studies",
@@ -254,7 +278,8 @@ export class DataService {
         "program":{
           "locationName":"Botswana",
           "housing":"Home Stay, Residence Hall- Local Roommate",
-          "programName":"Group B - CIEE: Study Abroad in Gaborone",
+          "programGroup": "Group B - ",
+          "programName":"CIEE: Study Abroad in Gaborone",
           "GPA":"2.75",
           "language":"English",
           "areaName":"African Studies, Political Science",
@@ -265,7 +290,8 @@ export class DataService {
         "program":{
           "locationName":"Thailand",
           "housing":"Apartment - Local Roommate, Home Stay",
-          "programName":"Group B - CIEE: Study Abroad in Khon Kaen",
+          "programGroup": "Group B - ",
+          "programName":"CIEE: Study Abroad in Khon Kaen",
           "GPA":"2.5",
           "language":"English",
           "areaName":"Community and Global Health, Economics, Educational Studies, Urban Studies",
@@ -276,7 +302,8 @@ export class DataService {
         "program":{
           "locationName":"Costa Rica",
           "housing":"Home Stay, Other",
-          "programName":"Group B - CIEE: Study Abroad in Monteverde",
+          "programGroup": "Group B - ",
+          "programName":"CIEE: Study Abroad in Monteverde",
           "GPA":"2.5",
           "language":"English",
           "areaName":"Economics, Environmental Studies",
@@ -287,7 +314,8 @@ export class DataService {
         "program":{
           "locationName":"Spain",
           "housing": "Home Stay, Residence Hall",
-          "programName": "Group B - CIEE: Study Abroad in Seville",
+          "programGroup": "Group B - ",
+          "programName": "CIEE: Study Abroad in Seville",
           "GPA": "2.5, 2.9",
           "language": "English, Spanish",
           "areaName": "Art and Art History, Economics, Educational Studies, Linguistics, Neuroscience, Spanish and Portuguese, Theater and Dance",
@@ -299,7 +327,8 @@ export class DataService {
           "program": {
             "locationName": "Greece",
           "housing":"Barbara Stinson",
-          "programName":"Group B - College Year in Athens: International Center for Hellenic and Mediterranean Studies",
+          "programGroup": "Group B - ",
+          "programName":"College Year in Athens: International Center for Hellenic and Mediterranean Studies",
           "GPA":"Apartment, Home Stay",
           "language":"English",
           "areaName":"Anthropology, Economics, Greek, History, Latin, Philosophy, Psychology, Neuroscience Studies",
@@ -310,7 +339,8 @@ export class DataService {
         "program":{
           "locationName":"United States",
           "housing":"Apartment",
-          "programName":"Group B - CUNY: New York Union Semester",
+          "programGroup": "Group B - ",
+          "programName":"CUNY: New York Union Semester",
           "GPA":"2.5",
           "language":"English",
           "areaName":"American Studies, Political Science, Sociology, Urban Studies, Legal Studies Program",
@@ -321,7 +351,8 @@ export class DataService {
         "program":{
           "locationName":"Egypt",
           "housing":"Residence Hall",
-          "programName":"Group B - Direct Enroll: American University in Cairo",
+          "programGroup": "Group B - Direct Enroll:",
+          "programName":"American University in Cairo",
           "GPA":"2.0",
           "language":"Arabic, English",
           "areaName":"Middle Eastern Studies and Islamic Civilization, Classical Mediterranean and Middle East",
@@ -332,7 +363,8 @@ export class DataService {
         "program":{
           "locationName":"Israel",
           "housing":"Residence Hall",
-          "programName":"Group B - Direct Enroll: Hebrew University of Jerusalem",
+          "programGroup": "Group B - Direct Enroll:",
+          "programName":"Hebrew University of Jerusalem",
           "GPA":"3",
           "language":"Arabic, English, Hebrew",
           "areaName":"Biology, Classics, Middle Eastern Studies and Islamic Civilization, Music",
@@ -343,7 +375,8 @@ export class DataService {
         "program":{
           "locationName":"Australia\nAustralia",
           "housing":"Apartment, Home Stay, Residence Hall",
-          "programName":"Group B - Direct Enroll: James Cook University",
+          "programGroup": "Group B - Direct Enroll:",
+          "programName":"James Cook University",
           "GPA":"2.8",
           "language":"English",
           "areaName":"Art and Art History, Biology, Chemistry, Economics, Environmental Studies, Geography, Geology",
@@ -354,7 +387,8 @@ export class DataService {
         "program":{
           "locationName":"Japan",
           "housing":"Home Stay, Residence Hall",
-          "programName":"Group B - Direct Enroll: Kansai Gaidai University",
+          "programGroup": "Group B - Direct Enroll:",
+          "programName":"Kansai Gaidai University",
           "GPA":"3",
           "language":"English, Japanese",
           "areaName":"Asian Languages and Cultures",
@@ -365,7 +399,8 @@ export class DataService {
         "program":{
           "locationName":"England (United Kingdom)",
           "housing":"Residence Hall",
-          "programName":"Group B - Direct Enroll: King's College London",
+          "programGroup": "Group B - Direct Enroll:",
+          "programName":"King's College London",
           "GPA":"3.3",
           "language":"English",
           "areaName":"Chemistry, Computer Science, Economics, English, Geography, Philosophy, Political Science",
@@ -376,7 +411,8 @@ export class DataService {
         "program":{
           "locationName":"Ireland",
           "housing":"Apartment, Residence Hall",
-          "programName":"Group B - Direct Enroll: University College Cork",
+          "programGroup": "Group B - Direct Enroll:",
+          "programName":"University College Cork",
           "GPA":"3",
           "language":"English",
           "areaName":"Art and Art History, Economics, English, Geology, Music",
@@ -387,7 +423,8 @@ export class DataService {
         "program":{
           "locationName":"Scotland (United Kingdom)",
           "housing":"Residence Hall",
-          "programName":"Group B - Direct Enroll: University of Edinburgh",
+          "programGroup": "Group B - Direct Enroll:",
+          "programName":"University of Edinburgh",
           "GPA":"3",
           "language":"English",
           "areaName":"Art and Art History, Biology, Chemistry, Classics, Computer Science, Economics, Educational Studies, English, Geology, Linguistics, Mathematics, Music, Neuroscience, Philosophy, Physics, Political Science, Psychology, Religious Studies, Women's, Gender, and Sexuality Studies",
@@ -398,7 +435,8 @@ export class DataService {
         "program":{
           "locationName":"Scotland (United Kingdom)",
           "housing":"Apartment, Residence Hall",
-          "programName":"Group B - Direct Enroll: University of Glasgow",
+          "programGroup": "Group B - Direct Enroll:",
+          "programName":"University of Glasgow",
           "GPA":"3",
           "language":"English",
           "areaName":"Art and Art History, Biology, Computer Science, Economics, English, Mathematics, Neuroscience",
@@ -409,7 +447,8 @@ export class DataService {
         "program":{
           "locationName":"Israel",
           "housing":"Residence Hall",
-          "programName":"Group B - Direct Enroll: University of Haifa",
+          "programGroup": "Group B - Direct Enroll:",
+          "programName":"University of Haifa",
           "GPA":"3",
           "language":"Arabic, English, Hebrew",
           "areaName":"Classics, Middle Eastern Studies and Islamic Civilization",
@@ -420,7 +459,8 @@ export class DataService {
         "program":{
           "locationName":"New Zealand",
           "housing":"Apartment, Residence Hall",
-          "programName":"Group B - Direct Enroll: University of Otago Dunedin",
+          "programGroup": "Group B - Direct Enroll:",
+          "programName":"University of Otago Dunedin",
           "GPA":"3",
           "language":"English",
           "areaName":"Art and Art History, Chemistry, Cognitive Science, Economics, Educational Studies, Geography, Geology, Linguistics, Mathematics, Neuroscience, Physics, Psychology, Theater and Dance",
@@ -431,7 +471,8 @@ export class DataService {
         "program":{
           "locationName":"Scotland (United Kingdom)",
           "housing":"Residence Hall",
-          "programName":"Group B - Direct Enroll: University of St. Andrews",
+          "programGroup": "Group B - Direct Enroll:",
+          "programName":"University of St. Andrews",
           "GPA":"3.2",
           "language":"English",
           "areaName":"Art and Art History, Chemistry, Computer Science, English, Geography, Geology, Mathematics, Neuroscience, Philosophy, Physics, Political Science, Psychology",
@@ -442,7 +483,8 @@ export class DataService {
         "program":{
           "locationName":"Northern Ireland (United Kingdom)",
           "housing":"Residence Hall",
-          "programName":"Group B - HECUA: Democracy and Social Change in Northern Ireland",
+          "programGroup": "Group B - ",
+          "programName":"HECUA: Democracy and Social Change in Northern Ireland",
           "GPA":"2",
           "language":"English",
           "areaName":"American Studies, Educational Studies, Geography, Human Rights and Humanitarianism, Political Science, Urban Studies",
@@ -453,7 +495,8 @@ export class DataService {
         "program":{
           "locationName":"Norway",
           "housing":"Other",
-          "programName":"Group B - HECUA: The New Norway: Globalization, National Identity, and the Politics of Belonging",
+          "programGroup": "Group B - ",
+          "programName":"HECUA: The New Norway: Globalization, National Identity, and the Politics of Belonging",
           "GPA":"2",
           "language":"English",
           "areaName":"Educational Studies, Geography, Human Rights and Humanitarianism, Urban Studies",
@@ -464,7 +507,8 @@ export class DataService {
         "program":{
           "locationName":"France",
           "housing":"Home Stay",
-          "programName":"Group B - IAU: Marchutz School of Fine Arts - Arts Core Program",
+          "programGroup": "Group B - ",
+          "programName":"IAU: Marchutz School of Fine Arts - Arts Core Program",
           "GPA":"2.5",
           "language":"English",
           "areaName":"Art and Art History",
@@ -475,7 +519,8 @@ export class DataService {
         "program":{
           "locationName":"Germany",
           "housing":"Apartment - Local Roommate, Home Stay",
-          "programName":"Group B - IES Abroad: Berlin Metropolitan Studies",
+          "programGroup": "Group B - ",
+          "programName":"IES Abroad: Berlin Metropolitan Studies",
           "GPA":"2.75",
           "language":"English, German",
           "areaName":"Economics",
@@ -486,7 +531,8 @@ export class DataService {
         "program":{
           "locationName":"Ireland",
           "housing":"Apartment",
-          "programName":"Group B - IES Abroad: Dublin Direct Enroll- National Theatre School of Ireland- Gaiety School of Acting",
+          "programGroup": "Group B - ",
+          "programName":"IES Abroad: Dublin Direct Enroll- National Theatre School of Ireland- Gaiety School of Acting",
           "GPA":"3",
           "language":"English",
           "areaName":"Theater and Dance",
@@ -497,7 +543,8 @@ export class DataService {
         "program":{
           "locationName":"France",
           "housing":"Home Stay",
-          "programName":"Group B - IES Abroad: French Language Immersion & Area Studies in Nantes",
+          "programGroup": "Group B - ",
+          "programName":"IES Abroad: French Language Immersion & Area Studies in Nantes",
           "GPA":"2.75",
           "language":"French",
           "areaName":"Art and Art History, Economics, Educational Studies, French and Francophone Studies, Linguistics, Theater and Dance",
@@ -508,7 +555,8 @@ export class DataService {
         "program":{
           "locationName":"Spain",
           "housing":"Home Stay, Residence Hall",
-          "programName":"Group B - IES Abroad: Granada Program",
+          "programGroup": "Group B - ",
+          "programName":"IES Abroad: Granada Program",
           "GPA":"2.75",
           "language":"English, Spanish",
           "areaName":"Art and Art History, Economics, Middle Eastern Studies and Islamic Civilization, Religious Studies, Spanish and Portuguese",
@@ -519,7 +567,8 @@ export class DataService {
         "program":{
           "locationName":"Spain",
           "housing":"Apartment, Home Stay, Residence Hall",
-          "programName":"Group B - IES Abroad: Madrid Program",
+          "programGroup": "Group B - ",
+          "programName":"IES Abroad: Madrid Program",
           "GPA":"2.75, 3.0","language":"English, Spanish",
           "areaName":"Art and Art History, Economics, Spanish and Portuguese, Theater and Dance",
           "academicFeatures":"Courses at local university, Creative Work, Facilitated Excursion(s), Internship"
@@ -529,7 +578,8 @@ export class DataService {
         "program":{
           "locationName":"Italy",
           "housing":"Apartment, Home Stay",
-          "programName":"Group B - IES Abroad: Milan Program",
+          "programGroup": "Group B - ",
+          "programName":"IES Abroad: Milan Program",
           "GPA":"2.75",
           "language":"English, Italian",
           "areaName":"Economics, Music",
@@ -540,7 +590,8 @@ export class DataService {
         "program":{
           "locationName":"Japan",
           "housing":"Home Stay, Residence Hall",
-          "programName":"Group B - IES Abroad: Nagoya Direct Enrollment - Nanzan University",
+          "programGroup": "Group B - ",
+          "programName":"IES Abroad: Nagoya Direct Enrollment - Nanzan University",
           "GPA":"3",
           "language":"English, Japanese",
           "areaName":"Art and Art History, Asian Languages and Cultures, Linguistics",
@@ -551,7 +602,8 @@ export class DataService {
         "program":{
           "locationName":"Netherlands",
           "housing":"Apartment",
-          "programName":"Group B - IES Abroad: Study Amsterdam",
+          "programGroup": "Group B - ",
+          "programName":"IES Abroad: Study Amsterdam",
           "GPA":"3",
           "language":"English",
           "areaName":"Art and Art History, Cognitive Science, Economics, Media and Cultural Studies, Neuroscience, Philosophy, Women's, Gender, and Sexuality Studies",
@@ -562,7 +614,8 @@ export class DataService {
         "program":{
           "locationName":"South Africa",
           "housing":"Apartment, Residence Hall",
-          "programName":"Group B - IES Abroad: University of Cape Town",
+          "programGroup": "Group B - ",
+          "programName":"IES Abroad: University of Cape Town",
           "GPA":"3",
           "language":"English",
           "areaName":"African Studies, American Studies, Art and Art History, Economics, English, Human Rights and Humanitarianism, Linguistics, Political Science, Theater and Dance",
@@ -573,7 +626,8 @@ export class DataService {
         "program":{
           "locationName":"Belgium\nFrance\nFrance",
           "housing":"Home Stay, Other",
-          "programName":"Group B - IFE: Institute for Field Education Program",
+          "programGroup": "Group B - ",
+          "programName":"IFE: Institute for Field Education Program",
           "GPA":"3",
           "language":"French",
           "areaName":"Computer Science, Economics, French and Francophone Studies, Media and Cultural Studies, Neuroscience, Physics, Political Science, Women's, Gender, and Sexuality Studies",
@@ -584,7 +638,8 @@ export class DataService {
         "program":{
           "locationName":"Argentina",
           "housing":"Home Stay",
-          "programName":"Group B - IFSA: Argentine Universities Program",
+          "programGroup": "Group B - ",
+          "programName":"IFSA: Argentine Universities Program",
           "GPA":"2.5",
           "language":"Spanish",
           "areaName":"Art and Art History, Economics, English, Geography, Latin American Studies, Linguistics, Media and Cultural Studies, Political Science, Psychology, Spanish and Portuguese, Theater and Dance, Urban Studies",
@@ -595,7 +650,8 @@ export class DataService {
         "program":{
           "locationName":"Chile",
           "housing":"Home Stay",
-          "programName":"Group B - IFSA: Chilean Universities Program in Santiago",
+          "programGroup": "Group B - ",
+          "programName":"IFSA: Chilean Universities Program in Santiago",
           "GPA":"2.75",
           "language":"Spanish",
           "areaName":"Art and Art History, Economics, Geology, Latin American Studies, Political Science, Spanish and Portuguese, Theater and Dance",
@@ -606,7 +662,8 @@ export class DataService {
         "program":{
           "locationName":"India",
           "housing":"Home Stay",
-          "programName":"Group B - IFSA: Contemporary India",
+          "programGroup": "Group B - ",
+          "programName":"IFSA: Contemporary India",
           "GPA":"2.5",
           "language":"English",
           "areaName":"Educational Studies, Geography, Human Rights and Humanitarianism",
@@ -617,7 +674,8 @@ export class DataService {
         "program":{
           "locationName":"India",
           "housing":"Community and Global Health",
-          "programName":"Group B - IFSA: India: Global and Public Health",
+          "programGroup": "Group B - ",
+          "programName":"IFSA: India: Global and Public Health",
           "GPA":"Marcus Carrigan",
           "language":"English",
           "areaName":"No recommendations by faculties",
@@ -628,7 +686,8 @@ export class DataService {
         "program":{
           "locationName":"Mexico",
           "housing":"Home Stay",
-          "programName":"Group B - IFSA: Mérida Universities Program",
+          "programGroup": "Group B - ",
+          "programName":"IFSA: Mérida Universities Program",
           "GPA":"2.5",
           "language":"Spanish",
           "areaName":"Latin American Studies, Spanish and Portuguese",
@@ -639,7 +698,8 @@ export class DataService {
         "program":{
           "locationName":"Peru",
           "housing":"Home Stay",
-          "programName":"Group B - IFSA: Pontificia Universidad Católica del Perú",
+          "programGroup": "Group B - ",
+          "programName":"IFSA: Pontificia Universidad Católica del Perú",
           "GPA":"2.5",
           "language":"Spanish",
           "areaName":"Latin American Studies, Spanish and Portuguese, Theater and Dance",
@@ -650,7 +710,8 @@ export class DataService {
         "program":{
           "locationName":"China",
           "housing":"Apartment - Local Roommate, Home Stay",
-          "programName":"Group B - IFSA: Shanghai",
+          "programGroup": "Group B - ",
+          "programName":"IFSA: Shanghai",
           "GPA":"3",
           "language":"Chinese, English",
           "areaName":"Economics, Urban Studies",
@@ -661,7 +722,8 @@ export class DataService {
         "program":{
           "locationName":"Cuba",
           "housing":"Home Stay",
-          "programName":"Group B - IFSA: Universidad de La Habana",
+          "programGroup": "Group B - ",
+          "programName":"IFSA: Universidad de La Habana",
           "GPA":"3.0",
           "language":"Spanish",
           "areaName":"Spanish and Portuguese",
@@ -672,7 +734,8 @@ export class DataService {
         "program":{
           "locationName":"Costa Rica",
           "housing":"Home Stay",
-          "programName":"Group B - IFSA: Universidad Nacional",
+          "programGroup": "Group B - ",
+          "programName":"IFSA: Universidad Nacional",
           "GPA":"2.75",
           "language":"Spanish",
           "areaName":"Political Science, Theater and Dance",
@@ -683,7 +746,8 @@ export class DataService {
         "program":{
           "locationName":"Russia\nRussia\nRussia",
           "housing":"Home Stay",
-          "programName":"Group B - Middlebury College: Study Abroad in Russia",
+          "programGroup": "Group B - ",
+          "programName":"Middlebury College: Study Abroad in Russia",
           "GPA":"2.67",
           "language":"Russian",
           "areaName":"Russian Studies",
@@ -694,7 +758,8 @@ export class DataService {
         "program":{
           "locationName":"Italy",
           "housing":"Apartment",
-          "programName":"Group B - SACI: Studio Art College International Florence",
+          "programGroup": "Group B - ",
+          "programName":"SACI: Studio Art College International Florence",
           "GPA":"2.75",
           "language":"English",
           "areaName":"Art and Art History, Classics, Economics",
@@ -705,7 +770,8 @@ export class DataService {
         "program":{
           "locationName":"Bolivia",
           "housing":"Home Stay",
-          "programName":"Group B - SIT Study Abroad: Bolivia: Multiculturalism, Globalization, and Social Change",
+          "programGroup": "Group B - ",
+          "programName":"SIT Study Abroad: Bolivia: Multiculturalism, Globalization, and Social Change",
           "GPA":"2.5",
           "language":"Spanish",
           "areaName":"Anthropology, Educational Studies, Latin American Studies, Political Science, Spanish and Portuguese",
@@ -716,7 +782,8 @@ export class DataService {
         "program":{
           "locationName":"Cameroon",
           "housing":"Home Stay",
-          "programName":"Group B - SIT Study Abroad: Cameroon: Development and Social Change",
+          "programGroup": "Group B - ",
+          "programName":"SIT Study Abroad: Cameroon: Development and Social Change",
           "GPA":"2.5",
           "language":"English, French",
           "areaName":"African Studies, Economics",
@@ -727,7 +794,8 @@ export class DataService {
         "program": {
           "locationName":"Chile",
           "housing":"Home Stay",
-          "programName":"Group B - SIT Study Abroad: Chile: Public Health, Traditional Medicine, and Community Empowerment",
+          "programGroup": "Group B - ",
+          "programName":"SIT Study Abroad: Chile: Public Health, Traditional Medicine, and Community Empowerment",
           "GPA":"2.5",
           "language":"Spanish",
           "areaName":"Community and Global Health, Economics",
@@ -738,7 +806,8 @@ export class DataService {
         "program":{
           "locationName":"China",
           "housing":"Home Stay",
-          "programName":"Group B - SIT Study Abroad: China: Health, Environment, and Traditional Chinese Medicine",
+          "programGroup": "Group B - ",
+          "programName":"SIT Study Abroad: China: Health, Environment, and Traditional Chinese Medicine",
           "GPA":"2.5",
           "language":"Chinese, English",
           "areaName":"American Studies, Anthropology, Asian Languages and Cultures, Educational Studies, Geography",
@@ -749,7 +818,8 @@ export class DataService {
         "program":{
           "locationName":"Ecuador\nEcuador",
           "housing":"Home Stay",
-          "programName":"Group B - SIT Study Abroad: Ecuador: Comparative Ecology and Conservation",
+          "programGroup": "Group B - ",
+          "programName":"SIT Study Abroad: Ecuador: Comparative Ecology and Conservation",
           "GPA":"2.5",
           "language":"Spanish",
           "areaName":"Biology, Economics, Environmental Studies",
@@ -760,7 +830,8 @@ export class DataService {
         "program":{
           "locationName":"Ghana",
           "housing":"Home Stay",
-          "programName":"Group B - SIT Study Abroad: Ghana: Africa in the 21st Century",
+          "programGroup": "Group B - ",
+          "programName":"SIT Study Abroad: Ghana: Africa in the 21st Century",
           "GPA":"2.5",
           "language":"English",
           "areaName":"African Studies",
@@ -771,7 +842,8 @@ export class DataService {
         "program":{
           "locationName":"Jordan",
           "housing":"Home Stay",
-          "programName":"Group B - SIT Study Abroad: Jordan: Geopolitics, International Relations, and the Future of the Middle East",
+          "programGroup": "Group B - ",
+          "programName":"SIT Study Abroad: Jordan: Geopolitics, International Relations, and the Future of the Middle East",
           "GPA":"2.5",
           "language":"Arabic, English",
           "areaName":"Classics, Economics, Environmental Studies, Middle Eastern Studies and Islamic Civilization",
@@ -782,7 +854,8 @@ export class DataService {
         "program":{
           "locationName":"Madagascar\nMadagascar",
           "housing":"Home Stay",
-          "programName":"Group B - SIT Study Abroad: Madagascar: Biodiversity and Natural Resource Management",
+          "programGroup": "Group B - ",
+          "programName":"SIT Study Abroad: Madagascar: Biodiversity and Natural Resource Management",
           "GPA":"2.5",
           "language":"English, French",
           "areaName":"African Studies, Biology, Environmental Studies",
@@ -793,7 +866,8 @@ export class DataService {
         "program":{
           "locationName":"Mongolia",
           "housing":"Home Stay",
-          "programName":"Group B - SIT Study Abroad: Mongolia and Siberia: Nomadism, Geopolitics, and the Environment",
+          "programGroup": "Group B - ",
+          "programName":"SIT Study Abroad: Mongolia and Siberia: Nomadism, Geopolitics, and the Environment",
           "GPA":"2.5",
           "language":"English",
           "areaName":"Anthropology, Environmental Studies, Geography",
@@ -804,7 +878,8 @@ export class DataService {
         "program":{
           "locationName":"Nepal",
           "housing":"Home Stay",
-          "programName":"Group B - SIT Study Abroad: Nepal: Tibetan and Himalayan Peoples",
+          "programGroup": "Group B - ",
+          "programName":"SIT Study Abroad: Nepal: Tibetan and Himalayan Peoples",
           "GPA":"2.5",
           "language":"English",
           "areaName":"Educational Studies, Religious Studies",
@@ -815,7 +890,8 @@ export class DataService {
         "program":{
           "locationName":"Peru",
           "housing":"Home Stay",
-          "programName":"GroupB - SIT Study Abroad: Peru: Indigenous Peoples and Globalization",
+          "programGroup": "Group B - ",
+          "programName":"SIT Study Abroad: Peru: Indigenous Peoples and Globalization",
           "GPA":"2.5",
           "language":"Spanish",
           "areaName":"Anthropology, Economics, Human Rights and Humanitarianism, Latin American Studies, Political Science, Spanish and Portuguese",
@@ -826,7 +902,8 @@ export class DataService {
         "program":{
           "locationName":"Serbia",
           "housing":"Kevin Morrison",
-          "programName":"Group B - SIT Study Abroad: Serbia, Bosnia, and Kosovo: Peace and Conflict Studies in the Balkans",
+          "programGroup": "Group B - ",
+          "programName":"SIT Study Abroad: Serbia, Bosnia, and Kosovo: Peace and Conflict Studies in the Balkans",
           "GPA":"Home Stay, Other",
           "language":"English",
           "areaName":"Anthropology, Geography, History, Human Rights and Humanitarianism, International Studies, Political Science, Russian Studies, Sociology",
@@ -837,7 +914,8 @@ export class DataService {
         "program":{
           "locationName":"Ecuador",
           "housing":"Home Stay",
-          "programName":"Group B - University of Minnesota: MSID: International Development in Ecuador",
+          "programGroup": "Group B - ",
+          "programName":"University of Minnesota: MSID: International Development in Ecuador",
           "GPA":"2.5",
           "language":"Spanish",
           "areaName":"Community and Global Health, Economics, Latin American Studies",
@@ -848,7 +926,8 @@ export class DataService {
         "program":{
           "locationName":"Kenya",
           "housing":"Home Stay",
-          "programName":"Group B - University of Minnesota: MSID: International Development in Kenya",
+          "programGroup": "Group B - ",
+          "programName":"University of Minnesota: MSID: International Development in Kenya",
           "GPA":"2.5",
           "language":"English",
           "areaName":"Environmental Studies, African Studies",
@@ -859,7 +938,8 @@ export class DataService {
         "program":{
           "locationName":"Senegal",
           "housing":"Home Stay",
-          "programName":"Group B - University of Minnesota: MSID: International Development in Senegal",
+          "programGroup": "Group B - ",
+          "programName":"University of Minnesota: MSID: International Development in Senegal",
           "GPA":"2.5",
           "language":"French",
           "areaName":"African Studies, Anthropology, Art and Art History, Community and Global Health, Economics, Educational Studies, French and Francophone Studies, Human Rights and Humanitarianism",
@@ -870,7 +950,8 @@ export class DataService {
         "program":{
           "locationName":"England (United Kingdom)",
           "housing":"Kevin Morrison",
-          "programName":"Group C - BADA: London Theatre Program",
+          "programGroup": "Group C - ",
+          "programName":"BADA: London Theatre Program",
           "GPA":"Apartment",
           "language":"English",
           "areaName":"Theater",
@@ -881,7 +962,8 @@ export class DataService {
         "program":{
           "locationName":"Russia",
           "housing":"Home Stay, Other",
-          "programName":"Group C - Bard College: Bard-Smolny Program in Russia",
+          "programGroup": "Group C - ",
+          "programName":"Bard College: Bard-Smolny Program in Russia",
           "GPA":"3",
           "language":"English, Russian",
           "areaName":"Cognitive Science, Linguistics, Russian Studies, Theater and Dance",
@@ -892,7 +974,8 @@ export class DataService {
         "program":{
           "locationName":"France",
           "housing":"Home Stay, Other",
-          "programName":"Group C - CUPA: Center for University Programs Abroad",
+          "programGroup": "Group C - ",
+          "programName":"CUPA: Center for University Programs Abroad",
           "GPA":"3",
           "language":"French",
           "areaName":"Art and Art History, Critical Theory, Economics, English, French and Francophone Studies, Media and Cultural Studies, Music, Philosophy, Political Science, Psychology, Theater and Dance, Women's, Gender, and Sexuality Studies",
@@ -924,11 +1007,27 @@ export class DataService {
   filterItems() {
     return this.items.filter(item => {
       return item.program.value == 3 || item.program.value == 2 || item.program.value == 1;
-      // return item.program.areaName.toLowerCase().indexOf(searchTerm.toLowerCase()) > -1 &&
-      // item.program.language.toLowerCase().indexOf(searchTerm2.toLowerCase()) > -1 &&
-      // item.program.locationName.toLowerCase().indexOf(searchTerm3.toLowerCase()) > -1;
+
     });
   }
+
+  searchItems(searchTerm4){
+    return this.items.filter(item => {
+      return item.program.programName.toLowerCase().indexOf(searchTerm4.toLowerCase()) > -1;
+    })
+  }
+
+  sortSearch(){
+    return this.items.sort((a,b) => {
+      if (a.program.programName.toLowerCase() > b.program.programName.toLowerCase()){
+        return -1;
+      }
+      if (a.program.programName.toLowerCase() < b.program.programName.toLowerCase()){
+        return 1;
+      }
+      return 0;
+  });
+ }
 
   createStars(searchTerm, searchTerm2, searchTerm3){
     for(let item of this.items) {
@@ -975,33 +1074,5 @@ export class DataService {
       // }
     }
   }
-
-  // createStars(searchTerm, searchTerm2, searchTerm3){d
-  //   if (item.program.areaName.toLowerCase().indexOf(searchTerm.toLowerCase()) > -1 &&
-  //   item.program.language.toLowerCase().indexOf(searchTerm2.toLowerCase()) > -1 &&
-  //   item.program.locationName.toLowerCase().indexOf(searchTerm3.toLowerCase()) > -1){
-  //     program.stars = "3";
-  //     return program.stars;
-  //   }
-  //   if (item.program.areaName.toLowerCase().indexOf(searchTerm.toLowerCase()) > -1 &&
-  //   item.program.language.toLowerCase().indexOf(searchTerm2.toLowerCase()) > -1){
-  //     return this.stars[2];
-  //   }
-  //   if(item.program.areaName.toLowerCase().indexOf(searchTerm.toLowerCase()) > -1 &&
-  //   item.program.locationName.toLowerCase().indexOf(searchTerm3.toLowerCase()) > -1){
-  //     return this.stars[2];
-  //   }
-  //   if(item.program.language.toLowerCase().indexOf(searchTerm2.toLowerCase()) > -1 &&
-  //    item.program.locationName.toLowerCase().indexOf(searchTerm3.toLowerCase()) > -1){
-  //      return this.stars[2];
-  //   }
-  //   if(item.program.areaName.toLowerCase().indexOf(searchTerm.toLowerCase()) > -1 ||
-  //   item.program.language.toLowerCase().indexOf(searchTerm2.toLowerCase()) > -1 ||
-  //   item.program.locationName.toLowerCase().indexOf(searchTerm3.toLowerCase()) > -1){
-  //     return this.stars[1];
-  //   }
-  // }
-
-
 
 }

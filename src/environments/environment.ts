@@ -7,6 +7,7 @@ import * as firebase from 'firebase';
 export const environment = {
   production: false,
   config: {
+
     apiKey: "API_Key",
     authDomain: "macabroad-d7ddd.firebaseapp.com",
     databaseURL: "https://macabroad-d7ddd.firebaseio.com",

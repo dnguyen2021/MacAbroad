@@ -157,25 +157,29 @@
   <ion-list>
     <div *ngIf="boolean == true">
     <h1> Recommendations </h1>
-    <table>
-      <col width="700">
-      <tr>
+    <ion-col>
     <ion-item *ngFor="let item of items">
-      <td>
-      {{ item.program.programName}} <br>
-      {{ item.program.language }} <br>
-      {{ item.program.areaName}} <br>
-      {{ item.program.locationName}} <br>
-      {{ item.program.housing}} <br>
-      {{ item.program.GPA}} <br>
-      {{ item.program.academicFeatures}} <br>
-      </td>
-      <td>
+      <ion-row>
+      <b>Program:</b> {{item.program.programGroup}} {{ item.program.programName}} <br>
+      <b>Language:</b> {{ item.program.language }} <br>
+      <b>Recommended By:</b> {{ item.program.areaName}} <br>
+      <b>Location:</b> {{ item.program.locationName}} <br>
+      <b>Housing:</b> {{ item.program.housing}} <br>
+      <b>Minimum GPA Requirement:</b> {{ item.program.GPA}} <br>
+      <b>Academic Features:</b> {{ item.program.academicFeatures}} <br>
+      </ion-row>
+      <ion-col>
       {{ item.program.value}}/ 3 match
-      </td>
+      </ion-col>
+      <ion-col>
+        <ion-button>
+          <ion-icon ="star"></ion-icon>
+        </ion-button>
+      </ion-col>
     </ion-item>
-    </tr>
-    </table>
+    </ion-col>
+
+
     <!-- <ion-item *ngFor="let star of stars">
       {{ stars }}
     </ion-item> -->

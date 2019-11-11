@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Validators, FormBuilder, FormGroup, FormControl } from '@angular/forms';
 import { AuthService } from '../authservice.service';
 import { Router } from '@angular/router';
+import { IonicModule, NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-tab5',
@@ -27,7 +28,8 @@ export class Tab5Page implements OnInit {
   constructor(
     private authService: AuthService,
     private formBuilder: FormBuilder,
-    private router: Router
+    private router: Router,
+    public navCtrl: NavController
   ) { }
 
   ngOnInit() {
@@ -55,5 +57,9 @@ export class Tab5Page implements OnInit {
 
   goRegisterPage(){
     this.router.navigate(["/tab6"]);
+  }
+
+  goToUserInput(){
+    this.navCtrl.navigateForward("/tabs/user-input")
   }
 }
