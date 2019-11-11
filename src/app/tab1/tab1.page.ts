@@ -18,4 +18,8 @@ export class Tab1Page {
     this.navCtrl.navigateForward('/tabs/user-input');
   }
 
+  goToLogin(){
+    this.navCtrl.navigateForward('/tabs/tab5')
+  }
+
 }

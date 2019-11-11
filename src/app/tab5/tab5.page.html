@@ -3,7 +3,7 @@
 	  <ion-title>Log In</ion-title>
 	</ion-toolbar>
   </ion-header>
-  
+
   <ion-content padding class="form-content">
 	<form class="form" [formGroup]="validations_form" (ngSubmit)="tryLogin(validations_form.value)">
 	  <ion-item>
@@ -28,10 +28,10 @@
 		  </div>
 		</ng-container>
 	  </div>
-	  <ion-button class="submit-btn" expand="block" type="submit" [disabled]="!validations_form.valid">Log In</ion-button>
+	  <ion-button class="submit-btn" expand="block" type="submit" [disabled]="!validations_form.valid" (click)="goToUserInput()">Log In</ion-button>
 	  <label class="error-message">{{errorMessage}}</label>
 	</form>
-	
+
 	<p class="go-to-register">
 	  No account yet? <a (click)="goRegisterPage()">Create an account.</a>
 	</p>

@@ -26,4 +26,11 @@ export class Tab1PageModule {
     }
   }
 
+  goToLogin(){
+    const animationOptions = {
+      animation: 'ios-transition',
+      duration: 1000
+    }
+  }
+
 }
