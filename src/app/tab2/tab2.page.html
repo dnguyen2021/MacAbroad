@@ -1,17 +1,17 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>
+  <ion-toolbar color="primary">
+    <ion-title style = "font-size:25px; text-align: center">
       Program Search
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content padding>
-  <ion-searchbar [(ngModel)]="searchTerm4" (ionChange)="setSearchedItems()"></ion-searchbar>
-
+  <ion-searchbar color="primary" [(ngModel)]="searchTerm4" (ionChange)="setSearchedItems()"></ion-searchbar>
   <ion-list>
-    <ion-item *ngFor="let item of items2">
-      {{ item.program.programName }}
-    </ion-item>
-  </ion-list>
+      <!-- <ion-item *ngFor="let item of items2"> -->
+        <ion-select *ngFor="let item of items2">
+          {{item.program.programName}}
+        </ion-select>
+  </ion-list> 
 </ion-content>
