@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { IonicModule, NavController } from '@ionic/angular';
 import { DataService } from '../services/data.service';
+import { MbscFormOptions } from '@mobiscroll/angular-lite'
 
 @Component({
   selector: 'app-tab2',
@@ -14,6 +15,7 @@ export class Tab2Page implements OnInit{
   public items2: any;
 
   constructor(private dataService: DataService) {}
+
 
   ngOnInit() {
     this.setSearchedItems();

@@ -10,8 +10,25 @@
   <ion-searchbar color="primary" [(ngModel)]="searchTerm4" (ionChange)="setSearchedItems()"></ion-searchbar>
   <ion-list>
       <!-- <ion-item *ngFor="let item of items2"> -->
-        <ion-select *ngFor="let item of items2">
-          {{item.program.programName}}
-        </ion-select>
+        <!-- <ion-select *ngFor="let item of items2"> -->
+                <!-- <ion-title style="text-align: center;">{{item.program.programName}}</ion-title> -->
+        <ion-card style="background-color: #4178ee;" *ngFor="let item of items2">
+          <ion-card-header tappable (click)="collapseCard = !collapseCard">
+            <ion-card-title style="text-align: center;color: white;">{{item.program.programName}}</ion-card-title>
+          </ion-card-header>
+          <ion-card-content *ngIf="!collapseCard">
+              <ion-row>
+                  <b>Program:</b> {{item.program.programGroup}} {{ item.program.programName}} <br>
+                  <b>Language:</b> {{ item.program.language }} <br>
+                  <b>Recommended By:</b> {{ item.program.areaName}} <br>
+                  <b>Location:</b> {{ item.program.locationName}} <br>
+                  <b>Housing:</b> {{ item.program.housing}} <br>
+                  <b>Minimum GPA Requirement:</b> {{ item.program.GPA}} <br>
+                  <b>Academic Features:</b> {{ item.program.academicFeatures}} <br>
+                  </ion-row>
+          </ion-card-content>
+        </ion-card>
+      <!-- </ion-item> -->
   </ion-list> 
 </ion-content>
+
