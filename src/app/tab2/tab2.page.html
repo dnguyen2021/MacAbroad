@@ -1,23 +1,27 @@
 <ion-header>
   <ion-toolbar color="primary">
-    <ion-title style = "font-size:25px; text-align: center">
-      Program Search
+    <img src="/assets/icon/mockupMacAbroad3.png" width="65px" style="display:inline-block" height="65px">
+    <ion-title class="titleicon" style = "font-size:25px; text-align: center; display:inline-block">
+      <div class="fadeIn">
+        Program Search
+      </div>
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
+<!-- <ion-navbar *navbar secondary>
+  <img src="/assets/icon/mockupMacAbroad3.png" width="40px" style="display:inline-block" height="40px">
+  <ion-title class="titleicon" style="display:inline-block" >Home</ion-title>
+</ion-navbar> -->
+
 <ion-content padding>
-  <ion-searchbar color="primary" [(ngModel)]="searchTerm4" (ionChange)="setSearchedItems()"></ion-searchbar>
+  <div class="fadeIn"><ion-searchbar color="primary" [(ngModel)]="searchTerm4" (ionChange)="setSearchedItems()"></ion-searchbar></div>
   <ion-list>
-      <!-- <ion-item *ngFor="let item of items2"> -->
-        <!-- <ion-select *ngFor="let item of items2"> -->
-                <!-- <ion-title style="text-align: center;">{{item.program.programName}}</ion-title> -->
         <ion-card style="background-color: #4178ee;" *ngFor="let item of items2">
           <ion-card-header tappable (click)="collapseCard = !collapseCard">
-            <ion-card-title style="text-align: center;color: white;">{{item.program.programName}}</ion-card-title>
+            <div class="fadeIn"><ion-card-title style="text-align: center;color: white;">{{item.program.programName}}</ion-card-title></div>
           </ion-card-header>
-          <ion-card-content *ngIf="!collapseCard">
-              <ion-row>
+          <div class="fadeIn"><ion-card-content *ngIf="!collapseCard">
                   <b>Program:</b> {{item.program.programGroup}} {{ item.program.programName}} <br>
                   <b>Language:</b> {{ item.program.language }} <br>
                   <b>Recommended By:</b> {{ item.program.areaName}} <br>
@@ -25,10 +29,22 @@
                   <b>Housing:</b> {{ item.program.housing}} <br>
                   <b>Minimum GPA Requirement:</b> {{ item.program.GPA}} <br>
                   <b>Academic Features:</b> {{ item.program.academicFeatures}} <br>
-                  </ion-row>
           </ion-card-content>
+          </div>
         </ion-card>
-      <!-- </ion-item> -->
+        <!-- <div ng-repeat="item in items2">
+          <ion-item class="item-stable"
+          ng-click="toggleItem(item)"
+          ng-class="{active: isItemShown(item)}">
+        <i class="icon" ng-class="isItemShown(item) ?
+        'ion-minus' : 'ion-plus'"></i>
+        &nbsp;
+        {{item.program.programName}}
+        </ion-item>
+        <ion-item class="item-accordion"
+        ng-repeat=""
+
+        </div> -->
   </ion-list> 
 </ion-content>
 

@@ -29,6 +29,8 @@ export class Tab2Page implements OnInit{
     this.items2 = this.dataService.sortSearch();
   }
 
+  
+
   // constructor(private dataService: DataService) {}
   //
   // ngOnInit(){
