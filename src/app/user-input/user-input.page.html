@@ -1,6 +1,52 @@
 <ion-content padding>
+<!--
+  <ion-header>
+    <ion-toolbar>
+      <ion-row>
+      <ion-col size="0.1">
+      <ion-button (click)="show()">
+        <ion-icon name="menu"></ion-icon>
+      </ion-button>
+      </ion-col>
+      <ion-col>
+      <ion-title style = "font-family:Bebas Neue; font-size:25px; text-align: center">
+          <div class="fadeIn">Programs</div>
+      </ion-title>
+      </ion-col>
+      </ion-row>
+  </ion-toolbar>
+  </ion-header> -->
+  <!-- <div *ngIf="boolean == true">
+    <ion-menu side="start" menuId="custom" class="my-custom-menu">
+      <ion-header>
+        <ion-toolbar color="tertiary">
+          <ion-title>Custom Menu</ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content>
+        <ion-list>
+          <ion-item>Menu Item</ion-item>
+          <ion-item>Menu Item</ion-item>
+          <ion-item>Menu Item</ion-item>
+          <ion-item>Menu Item</ion-item>
+          <ion-item>Menu Item</ion-item>
+        </ion-list>
+      </ion-content>
+    </ion-menu>
+
+
+    <ion-router-outlet main></ion-router-outlet>
+  </div> -->
 
   <ion-header>
+<<<<<<< HEAD
+    <ion-toolbar>
+      <ion-title style = "font-family:Bebas Neue; font-size:25px; text-align: center">
+          <div class="fadeIn">Programs</div>
+      </ion-title>
+      <ion-button (click)="goToFavourites()"> My Saved Programs
+      </ion-button>
+=======
     <ion-toolbar color="primary">
         <img src="/assets/icon/mockupMacAbroad3.png" width="65px" style="display:inline-block" height="65px">
         <ion-title class="titleicon" style = "font-size:25px; text-align: center; display:inline-block">
@@ -8,6 +54,7 @@
             Programs
           </div>
         </ion-title>
+>>>>>>> 972d06607ff7774d587b2d6077e6745900b91e6b
     </ion-toolbar>
 
 
@@ -91,6 +138,7 @@
     <ion-item color="primary">
       <ion-label style="font-family:Bebas Neue;"><div class="fadeIn">Country</div></ion-label>
       <ion-select [(ngModel)] = "searchTerm3" (ionChange)="setStars(); setFilteredItems(); createSort()">
+        <ion-select-option value="Any">Any</ion-select-option>
         <ion-select-option value="Argentina">Argentina</ion-select-option>
         <ion-select-option value="Australia">Australia</ion-select-option>
         <ion-select-option value="Austria">Austria</ion-select-option>
@@ -143,22 +191,98 @@
         <ion-select-option value="Sweden">Sweden</ion-select-option>
         <ion-select-option value="Thailand">Thailand</ion-select-option>
         <ion-select-option value="United States">United States</ion-select-option>
-        <ion-select-option value="Other">Other</ion-select-option>
       </ion-select>
   </ion-item>
   </ion-list>
 
 
   <div class="center">
+<<<<<<< HEAD
+    <ion-button (click)="show()">
+=======
     <button ion-button style="color: white;background-color: #3c85f1;outline-color: white; font-size:24px;" (click)="show()">
+>>>>>>> 972d06607ff7774d587b2d6077e6745900b91e6b
         <div class="fadeIn">
           Search <ion-icon name = "search"></ion-icon>
         </div>
-    </button>
+    </ion-button>
   </div>
 
   <ion-list>
     <div *ngIf="boolean == true">
+<<<<<<< HEAD
+      <h1> Recommendations </h1>
+      <ion-item *ngFor="let item of items">
+        <ion-col size="9">
+        <ion-row>
+          <ion-col size="8">
+            <b>Program: </b>
+          </ion-col>
+          <ion-col size="9">
+            {{item.program.programGroup}} {{ item.program.programName}}
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="8">
+            <b>Language: </b>
+          </ion-col>
+          <ion-col size="9">
+            {{ item.program.language }}
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="8">
+            <b>Recommended By: </b>
+          </ion-col>
+          <ion-col size="9">
+            {{ item.program.areaName}}
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="8">
+            <b>Location: </b>
+          </ion-col>
+          <ion-col size="9">
+            {{ item.program.locationName}}
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="8">
+            <b>Housing: </b>
+          </ion-col>
+          <ion-col size="9">
+            {{ item.program.housing}}
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="8">
+            <b>Minimum GPA: </b>
+          </ion-col>
+          <ion-col size="9">
+            {{ item.program.GPA}}
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="8">
+            <b>Academic Features: </b>
+          </ion-col>
+          <ion-col size="9">
+            {{ item.program.academicFeatures}}
+          </ion-col>
+        </ion-row>
+        </ion-col>
+        <ion-col>
+          <ion-row>
+        {{ item.program.value}}/ 3 match
+          </ion-row>
+          <ion-row>
+            <ion-button (click)="saveData(item)">
+              <ion-icon slot="icon-only" name="star" fill="clear"></ion-icon>
+            </ion-button>
+          </ion-row>
+        </ion-col>
+      </ion-item>
+=======
     <h1> Recommendations </h1>
     <ion-col>
     <ion-item *ngFor="let item of items">
@@ -186,8 +310,10 @@
     <!-- <ion-item *ngFor="let star of stars">
       {{ stars }}
     </ion-item> -->
+>>>>>>> 972d06607ff7774d587b2d6077e6745900b91e6b
     </div>
   </ion-list>
+
 </ion-content>
 
 </ion-content>

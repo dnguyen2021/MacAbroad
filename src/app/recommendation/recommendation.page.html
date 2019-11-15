@@ -1,21 +1,49 @@
-<ion-header>
+<!-- <ion-header>
   <ion-toolbar>
-    <ion-title>recommendation</ion-title>
+    <ion-title>Recommendations</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
   <ion-list>
-    <ion-item *ngFor="let item of items">
-      {{ item.program.programName}} <br>
-      {{ item.program.language }} <br>
-      {{ item.program.areaName}} <br>
-      {{ item.program.locationName}} <br>
-      {{ item.program.housing}} <br>
-      {{ item.program.GPA}} <br>
-      {{ item.program.academicFeatures}}
-
-    </ion-item>
+    <div *ngIf="boolean == true">
+      <h1> Recommendations </h1>
+      <ion-item *ngFor="let item of faveItems">
+        <ion-col size="10">
+        <ion-row>
+        <b>Program:</b> {{item.program.programGroup}} {{ item.program.programName}}
+        </ion-row>
+        <ion-row>
+        <b>Language:</b> {{ item.program.language }}
+        </ion-row>
+        <ion-row>
+        <b>Recommended By:</b> {{ item.program.areaName}}
+        </ion-row>
+        <ion-row>
+        <b>Location:</b> {{ item.program.locationName}}
+        </ion-row>
+        <ion-row>
+        <b>Housing:</b> {{ item.program.housing}}
+        </ion-row>
+        <ion-row>
+        <b>Minimum GPA Requirement:</b> {{ item.program.GPA}}
+        </ion-row>
+        <ion-row>
+        <b>Academic Features:</b> {{ item.program.academicFeatures}}
+        </ion-row>
+        </ion-col>
+        <ion-col>
+          <ion-row>
+        {{ item.program.value}}/ 3 match
+          </ion-row>
+          <ion-row>
+            <ion-button (click)="saveData(item)">
+              <ion-icon slot="icon-only" name="star" fill="clear"></ion-icon>
+            </ion-button>
+          </ion-row>
+        </ion-col>
+      </ion-item>
+    </div>
   </ion-list>
 
-</ion-content>
+</ion-content> -->
