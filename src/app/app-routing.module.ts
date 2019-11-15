@@ -11,7 +11,8 @@ const routes: Routes = [
   { path: 'user-input', loadChildren: './user-input/user-input.module#UserInputPageModule' },
   { path: 'tab6', loadChildren: './tab6/tab6.module#Tab6PageModule' },
   { path: 'recommendation', loadChildren: './recommendation/recommendation.module#RecommendationPageModule' },
-  { path: 'tab4', loadChildren: './tab4/tab4.module#Tab4PageModule' }
+  { path: 'tab4', loadChildren: './tab4/tab4.module#Tab4PageModule' },
+  { path: 'saved-programs', loadChildren: './saved-programs/saved-programs.module#SavedProgramsPageModule' }
 
 ];
 @NgModule({

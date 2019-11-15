@@ -28,6 +28,26 @@ const routes: Routes = [
         ]
       },
       {
+        path: 'saved-programs',
+        children: [
+          {
+            path: '',
+            loadChildren: () =>
+              import('../saved-programs/saved-programs.module').then(m => m.SavedProgramsPageModule)
+          }
+        ]
+      },
+      {
+        path: 'recommendation',
+        children: [
+          {
+            path: '',
+            loadChildren: () =>
+              import('../recommendation/recommendation.module').then(m => m.RecommendationPageModule)
+          }
+        ]
+      },
+      {
         path: 'tab2',
         children: [
           {
