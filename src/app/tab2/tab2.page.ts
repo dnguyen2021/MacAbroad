@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { IonicModule, NavController } from '@ionic/angular';
 import { DataService } from '../services/data.service';
+import { MbscFormOptions } from '@mobiscroll/angular-lite'
 
 @Component({
   selector: 'app-tab2',
@@ -15,6 +16,7 @@ export class Tab2Page implements OnInit{
 
   constructor(private dataService: DataService) {}
 
+
   ngOnInit() {
     this.setSearchedItems();
   }
@@ -26,6 +28,8 @@ export class Tab2Page implements OnInit{
   setSortSearch(){
     this.items2 = this.dataService.sortSearch();
   }
+
+  
 
   // constructor(private dataService: DataService) {}
   //

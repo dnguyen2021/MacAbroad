@@ -2,9 +2,8 @@ import { IonicModule, NavController } from '@ionic/angular';
 import { RouterModule } from '@angular/router';
 import { NgModule, Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
 import { Tab2Page } from './tab2.page';
-// import { Component } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {SubmitComponent} from '../submit/submit.component'
 
 

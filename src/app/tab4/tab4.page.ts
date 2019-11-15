@@ -37,7 +37,7 @@ export class Tab4Page implements OnInit{
   };
  
   // @ViewChild(CalendarComponent) myCal: CalendarComponent;
-  // @ViewChild(CalendarComponent) myCal: CalendarComponent;
+  @ViewChild(CalendarComponent, { read: true, static: false}) myCal: CalendarComponent;
  
   constructor(private alertCtrl: AlertController, @Inject(LOCALE_ID) private locale: string) { }
  
