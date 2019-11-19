@@ -35,7 +35,7 @@ export class Tab4Page implements OnInit{
     mode: 'month',
     currentDate: new Date(),
   };
- 
+  
   // @ViewChild(CalendarComponent) myCal: CalendarComponent;
   @ViewChild(CalendarComponent, { read: true, static: false}) myCal: CalendarComponent;
  
