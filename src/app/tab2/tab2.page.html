@@ -9,18 +9,15 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-navbar *navbar secondary>
-  <img src="/assets/icon/mockupMacAbroad3.png" width="40px" style="display:inline-block" height="40px">
-  <ion-title class="titleicon" style="display:inline-block" >Home</ion-title>
-</ion-navbar>
+
 
 
 <ion-content padding>
-  <div class="center">
+  <!-- <div class="center">
     <ion-button ion-button shape="round" fill="clear" shape="round" (click)="goToProfile()">
         Profile Page 
     </ion-button>
-  </div>
+  </div> -->
   <div class="fadeIn"><ion-searchbar color="primary" [(ngModel)]="searchTerm4" (ionChange)="setSearchedItems()"></ion-searchbar></div>
   <ion-list>
         <ion-card style="background-color: #4178ee;" *ngFor="let item of items2">
@@ -45,13 +42,6 @@
         <i class="icon" ng-class="isItemShown(item) ?
         'ion-minus' : 'ion-plus'"></i>
         {{item.program.programName}}
-<<<<<<< HEAD
-        </ion-item> -->
-        <!-- <ion-item class="item-accordion"
-        ng-repeat="" -->
-        <!-- </div> -->
-  </ion-list>
-=======
         </ion-item>
         <ion-item class="item-accordion"
             ng-repeat="name in item.programName"
@@ -61,5 +51,4 @@
         </div> -->
   </ion-list> 
 
->>>>>>> 940a0c24a0579e40b0672a2657c8aff430b63e10
 </ion-content>
