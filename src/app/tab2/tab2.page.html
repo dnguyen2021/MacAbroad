@@ -9,10 +9,10 @@
   </ion-toolbar>
 </ion-header>
 
-<!-- <ion-navbar *navbar secondary>
+<ion-navbar *navbar secondary>
   <img src="/assets/icon/mockupMacAbroad3.png" width="40px" style="display:inline-block" height="40px">
   <ion-title class="titleicon" style="display:inline-block" >Home</ion-title>
-</ion-navbar> -->
+</ion-navbar>
 
 
 <ion-content padding>
@@ -44,8 +44,14 @@
           ng-class="{active: isItemShown(item)}">
         <i class="icon" ng-class="isItemShown(item) ?
         'ion-minus' : 'ion-plus'"></i>
-        &nbsp;
         {{item.program.programName}}
+<<<<<<< HEAD
+        </ion-item> -->
+        <!-- <ion-item class="item-accordion"
+        ng-repeat="" -->
+        <!-- </div> -->
+  </ion-list>
+=======
         </ion-item>
         <ion-item class="item-accordion"
             ng-repeat="name in item.programName"
@@ -55,5 +61,5 @@
         </div> -->
   </ion-list> 
 
+>>>>>>> 940a0c24a0579e40b0672a2657c8aff430b63e10
 </ion-content>
-

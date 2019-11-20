@@ -15,18 +15,18 @@ div{
 }
 
 ion-toolbar{
-  top:80px;
+  top:95px;
 }
 @keyframes fadeIn {
   from {
     opacity: 0;
   }
-  
+
   to {
     opacity: 1;
   }
 }
-  
+
 .fadeIn {
   animation-name: fadeIn;
   animation-duration: 4s;
@@ -35,7 +35,3 @@ ion-toolbar{
   background: url(/assets/icon/mockupMacAbroad3.png) no-repeat center center fixed;
   background-size: cover;
 }
-
-
-
-
