@@ -25,6 +25,7 @@ export class DataService {
           "areaName": "African Studies, Computer Science, Economics",
           "academicFeatures": "Civic Engagement, Courses at local university, Creative Work, Independent Study Project (ISP)"
           ,"value": 0
+          ,"img": "ashesi.jpg"
         }
       }, {
         "program":{
@@ -37,6 +38,7 @@ export class DataService {
           "areaName":"No recommendations by faculties",
           "academicFeatures":"Civic Engagement, Courses at local university, Facilitated Excursion(s), Internship"}
           ,"value": 0
+          ,"img": "isep.jpg"
       },{
         "program":{
           "locationName":"Singapore",
@@ -48,6 +50,7 @@ export class DataService {
           "areaName":"Arabic, Art (Studio), Art History, Asian Languages and Cultures, Astronomy, Biology, Chemistry, Chinese, Community and Global Health, Computer Science, Creative Writing, Economics, English, Environmental Studies, French and Francophone Studies, German Studies, History, International Development, International Studies, Japanese, Linguistics, Mathematics, Media and Cultural Studies, Neuroscience Studies, Philosophy, Physics, Political Science, Psychology, Sociology, Spanish, Statistics, Urban Studies, Women's, Gender, and Sexuality Studies",
           "academicFeatures":"Civic Engagement, Courses at local university, Creative Work"
           ,"value": 0
+          ,"img": "ntu.jpg"
         }
       },{
         "program":{
@@ -60,6 +63,7 @@ export class DataService {
           "areaName":"African Studies, Anthropology, Arabic, Asian Languages and Cultures, Chinese, Creative Writing, Critical Theory, Economics, Environmental Studies, French and Francophone Studies, Geography, German Studies, Hebrew, History, Human Rights and Humanitarianism, International Development, International Studies, Japanese, Latin American Studies, Legal Studies Program, Media and Cultural Studies, Middle Eastern Studies and Islamic Civilization, Philosophy, Political Science, Portuguese, Pre-Law, Religious Studies, Russian Studies, Sociology, Spanish, Urban Studies, Women's, Gender, and Sexuality Studies",
           "academicFeatures":"Courses at local university"
           ,"value": 0
+          ,"img": "sciences.jpg"
         }
       },{
         "program":{
@@ -72,6 +76,7 @@ export class DataService {
           "areaName":"American Studies, Anthropology, Art History, Astronomy, Biology, Chemistry, Computer Science, Critical Theory, Economics, Geography, German Studies, History, International Studies, Mathematics, Media and Cultural Studies, Music, Philosophy, Physics, Political Science, Psychology, Religious Studies, Sociology, Statistics, Theater",
           "academicFeatures":"Civic Engagement, Courses at local university, Facilitated Excursion(s)"
           ,"value":0
+          ,"img": "german.jpg"
         }
       },{
         "program":{
@@ -84,6 +89,7 @@ export class DataService {
           "areaName":"African Studies, Anthropology, Biology, Economics, Environmental Studies, Food, Agriculture, and Society, Geography, Geology, Urban Studies",
           "academicFeatures":"Civic Engagement, Courses at local university, Facilitated Excursion(s), Independent Study Project (ISP)"
           ,"value":0
+          ,"img": "globalization.jpg"
         }
       },{
         "program":{
@@ -96,6 +102,7 @@ export class DataService {
           "areaName":"Community and Global Health, Economics, Human Rights and Humanitarianism, Political Science",
           "academicFeatures":"Civic Engagement, Courses at local university, Facilitated Excursion(s), Independent Study Project (ISP)"
           ,"value":0
+          ,"img": "perspectives.jpg"
         }
       },{
         "program":{
@@ -108,6 +115,7 @@ export class DataService {
           "areaName":"No recommendations by faculties",
           "academicFeatures":"Independent Study Project (ISP)"
           ,"value":0
+          ,"img": "acm.jpg"
         }
       },{
         "program":{
@@ -120,6 +128,7 @@ export class DataService {
           "areaName":"Computer Science",
           "academicFeatures":"Creative Work"
           ,"value":0
+          ,"img": "ait.jpg"
         }
       },{
         "program":{
@@ -132,6 +141,7 @@ export class DataService {
           "areaName":"Russian Studies",
           "academicFeatures":"Civic Engagement, Facilitated Excursion(s), Independent Study Project (ISP), Internship"
           ,"value":0
+          ,"img": "acouncils.jpg"
         }
       },{
         "program":{
@@ -144,6 +154,7 @@ export class DataService {
           "areaName":"African Studies, Economics, French and Francophone Studies, Middle Eastern Studies and Islamic Civilization",
           "academicFeatures":"Civic Engagement, Facilitated Excursion(s)"
           ,"value":0
+          ,"img": "amideast.jpg"
         }
       },{
         "program":{
@@ -156,6 +167,7 @@ export class DataService {
           "areaName":"Educational Studies, Mathematics",
           "academicFeatures":"Independent Study Project (ISP), Internship"
           ,"value":0
+          ,"img": "budapest.jpg"
         }
       },{
         "program":{
@@ -168,6 +180,7 @@ export class DataService {
           "areaName":"Latin American Studies, Spanish and Portuguese",
           "academicFeatures":"Civic Engagement, Courses at local university, Creative Work, Facilitated Excursion(s), Independent Study Project (ISP)"
           ,"value":0
+          ,"img": "cetb.jpg"
         }
       },{
         "program":{
@@ -180,6 +193,7 @@ export class DataService {
           "areaName":"Art and Art History, Asian Languages and Cultures, Economics",
           "academicFeatures":"Facilitated Excursion(s)"
           ,"value":0
+          ,"img": "cetj.jpg"
         }
       },{
         "program":{
@@ -192,6 +206,7 @@ export class DataService {
           "areaName":"Art and Art History, Religious Studies",
           "academicFeatures":"Creative Work, Facilitated Excursion(s), Internship, Civic Engagement"
           ,"value":0
+          ,"img": "cetp.jpg"
         }
       },{
         "program":{
@@ -204,6 +219,7 @@ export class DataService {
           "areaName":"Art and Art History, Asian Languages and Cultures, Economics, Political Science",
           "academicFeatures":"Creative Work, Facilitated Excursion(s), Internship"
           ,"value":0
+          ,"img": "china.jpg"
         }
       },{
         "program":{
@@ -216,6 +232,7 @@ export class DataService {
           "areaName":"Art and Art History, Asian Languages and Cultures, Economics, Linguistics",
           "academicFeatures":"Courses at local university, Creative Work, Facilitated Excursion(s)"
           ,"value":0
+          ,"img": "cieea.jpg"
         }
       },{
         "program":{
@@ -228,6 +245,7 @@ export class DataService {
           "areaName":"Asian Languages and Cultures",
           "academicFeatures":"Facilitated Excursion(s)"
           ,"value":0
+          ,"img": "cieei.jpg"
         }
       },{
         "program":{
@@ -240,6 +258,7 @@ export class DataService {
           "areaName":"Spanish and Portuguese",
           "academicFeatures":"Civic Engagement, Courses at local university, Facilitated Excursion(s)"
           ,"value":0
+          ,"img": "cieelc.jpg"
         }
       },{
         "program":{
@@ -252,6 +271,7 @@ export class DataService {
           "areaName":"American Studies, Economics, Latin American Studies, Spanish and Portuguese",
           "academicFeatures":"Civic Engagement, Courses at local university, Creative Work, Facilitated Excursion(s)"
           ,"value":0
+          ,"img": "cieelar.jpg"
         }
       },{
         "program":{
@@ -264,6 +284,7 @@ export class DataService {
           "areaName":"Spanish and Portuguese, Theater and Dance",
           "academicFeatures":"Civic Engagement, Courses at local university, Creative Work, Facilitated Excursion(s), Independent Study Project (ISP)"
           ,"value":0
+          ,"img": "cieelas.jpg"
         }
       },{
         "program":{
@@ -276,6 +297,7 @@ export class DataService {
           "areaName":"Classics, Economics, Middle Eastern Studies and Islamic Civilization, Political Science, Religious Studies",
           "academicFeatures":"Civic Engagement, Courses at local university, Facilitated Excursion(s), Independent Study Project (ISP), Internship"
           ,"value":0
+          ,"img": "cieeme.jpg"
         }
       },{
         "program":{
@@ -288,6 +310,7 @@ export class DataService {
           "areaName":"African Studies, Political Science",
           "academicFeatures":"Civic Engagement, Courses at local university, Facilitated Excursion(s), Independent Study Project (ISP), Internship"
           ,"value":0
+          ,"img": "cieeg.jpg"
         }
       },{
         "program":{
@@ -300,6 +323,7 @@ export class DataService {
           "areaName":"Community and Global Health, Economics, Educational Studies, Urban Studies",
           "academicFeatures":"Civic Engagement, Creative Work, Facilitated Excursion(s), Independent Study Project (ISP)"
           ,"value":0
+          ,"img": "cieek.jpg"
         }
       },{
         "program":{
@@ -312,6 +336,7 @@ export class DataService {
           "areaName":"Economics, Environmental Studies",
           "academicFeatures":"Civic Engagement, Facilitated Excursion(s), Independent Study Project (ISP), Internship"
           ,"value":0
+          ,"img": "cieem.jpg"
         }
       },{
         "program":{
@@ -324,6 +349,7 @@ export class DataService {
           "areaName": "Art and Art History, Economics, Educational Studies, Linguistics, Neuroscience, Spanish and Portuguese, Theater and Dance",
           "academicFeatures": "Civic Engagement, Courses at local university, Creative Work, Facilitated Excursion(s), Internship"
           ,"value":0
+          ,"img": "ciees.jpg"
         }
       },
         {
@@ -337,6 +363,7 @@ export class DataService {
           "areaName":"Anthropology, Economics, Greek, History, Latin, Philosophy, Psychology, Neuroscience Studies",
           "academicFeatures":"Civic Engagement, Facilitated Excursion(s)"
           ,"value":0
+          ,"img": "college.jpg"
         }
       },{
         "program":{
@@ -349,6 +376,7 @@ export class DataService {
           "areaName":"American Studies, Political Science, Sociology, Urban Studies, Legal Studies Program",
           "academicFeatures":"Civic Engagement, Internship"
           ,"value":0
+          ,"img": "cuny.jpg"
         }
       },{
         "program":{
@@ -361,6 +389,7 @@ export class DataService {
           "areaName":"Middle Eastern Studies and Islamic Civilization, Classical Mediterranean and Middle East",
           "academicFeatures":"Civic Engagement, Courses at local university, Internship, Facilitated Excursion(s)"
           ,"value":0
+          ,"img": "auni.jpg"
         }
       },{
         "program":{
@@ -373,6 +402,7 @@ export class DataService {
           "areaName":"Biology, Classics, Middle Eastern Studies and Islamic Civilization, Music",
           "academicFeatures":"Courses at local university, Creative Work, Independent Study Project (ISP), Internship"
           ,"value":0
+          ,"img": "hebrew.jpg"
         }
       },{
         "program":{
@@ -385,6 +415,7 @@ export class DataService {
           "areaName":"Art and Art History, Biology, Chemistry, Economics, Environmental Studies, Geography, Geology",
           "academicFeatures":"Courses at local university, Creative Work, Facilitated Excursion(s)"
           ,"value":0
+          ,"img": "james.jpg"
         }
       },{
         "program":{
@@ -397,6 +428,7 @@ export class DataService {
           "areaName":"Asian Languages and Cultures",
           "academicFeatures":"Courses at local university, Creative Work, Facilitated Excursion(s)"
           ,"value":0
+          ,"img": "kansai.jpg"
         }
       },{
         "program":{
@@ -409,6 +441,7 @@ export class DataService {
           "areaName":"Chemistry, Computer Science, Economics, English, Geography, Philosophy, Political Science",
           "academicFeatures":"Courses at local university, Internship"
           ,"value":0
+          ,"img": "kings.jpg"
         }
       },{
         "program":{
@@ -421,6 +454,7 @@ export class DataService {
           "areaName":"Art and Art History, Economics, English, Geology, Music",
           "academicFeatures":"Courses at local university, Internship"
           ,"value":0
+          ,"img": "ucollege.jpg"
         }
       },{
         "program":{
@@ -433,6 +467,7 @@ export class DataService {
           "areaName":"Art and Art History, Biology, Chemistry, Classics, Computer Science, Economics, Educational Studies, English, Geology, Linguistics, Mathematics, Music, Neuroscience, Philosophy, Physics, Political Science, Psychology, Religious Studies, Women's, Gender, and Sexuality Studies",
           "academicFeatures":"Courses at local university, Internship"
           ,"value":0
+          ,"img": "uedin.jpg"
         }
       },{
         "program":{
@@ -445,6 +480,7 @@ export class DataService {
           "areaName":"Art and Art History, Biology, Computer Science, Economics, English, Mathematics, Neuroscience",
           "academicFeatures":"Civic Engagement, Courses at local university, Creative Work"
           ,"value":0
+          ,"img": "uglas.jpg"
         }
       },{
         "program":{
@@ -457,6 +493,7 @@ export class DataService {
           "areaName":"Classics, Middle Eastern Studies and Islamic Civilization",
           "academicFeatures":"Civic Engagement, Courses at local university, Creative Work, Facilitated Excursion(s), Independent Study Project (ISP), Internship"
           ,"value":0
+          ,"img": "uhaif.jpg"
         }
       },{
         "program":{
@@ -469,6 +506,7 @@ export class DataService {
           "areaName":"Art and Art History, Chemistry, Cognitive Science, Economics, Educational Studies, Geography, Geology, Linguistics, Mathematics, Neuroscience, Physics, Psychology, Theater and Dance",
           "academicFeatures":"Courses at local university, Creative Work"
           ,"value":0
+          ,"img": "uotago.jpg"
         }
       },{
         "program":{
@@ -481,6 +519,7 @@ export class DataService {
           "areaName":"Art and Art History, Chemistry, Computer Science, English, Geography, Geology, Mathematics, Neuroscience, Philosophy, Physics, Political Science, Psychology",
           "academicFeatures":"Courses at local university"
           ,"value":0
+          ,"img": "ustandrews.jpg"
         }
       },{
         "program":{
@@ -493,6 +532,7 @@ export class DataService {
           "areaName":"American Studies, Educational Studies, Geography, Human Rights and Humanitarianism, Political Science, Urban Studies",
           "academicFeatures":"Civic Engagement, Facilitated Excursion(s), Independent Study Project (ISP), Internship"
           ,"value":0
+          ,"img": "hecuaireland.jpg"
         }
       },{
         "program":{
@@ -505,6 +545,7 @@ export class DataService {
           "areaName":"Educational Studies, Geography, Human Rights and Humanitarianism, Urban Studies",
           "academicFeatures":"Civic Engagement, Facilitated Excursion(s), Independent Study Project (ISP), Internship"
           ,"value":0
+          ,"img": "hecuanorway.jpg"
         }
       },{
         "program":{
@@ -517,6 +558,7 @@ export class DataService {
           "areaName":"Art and Art History",
           "academicFeatures":"Creative Work, Facilitated Excursion(s)"
           ,"value":0
+          ,"img": "iau.jpg"
         }
       },{
         "program":{
@@ -529,6 +571,7 @@ export class DataService {
           "areaName":"Economics",
           "academicFeatures":"Courses at local university, Facilitated Excursion(s)"
           ,"value":0
+          ,"img": "iesberlin.jpg"
         }
       },{
         "program":{
@@ -541,6 +584,7 @@ export class DataService {
           "areaName":"Theater and Dance",
           "academicFeatures":"Courses at local university, Creative Work, Facilitated Excursion(s)"
           ,"value":0
+          ,"img": "iesdublin.jpg"
         }
       },{
         "program":{
@@ -553,6 +597,7 @@ export class DataService {
           "areaName":"Art and Art History, Economics, Educational Studies, French and Francophone Studies, Linguistics, Theater and Dance",
           "academicFeatures":"Civic Engagement, Courses at local university, Creative Work, Facilitated Excursion(s), Internship"
           ,"value":0
+          ,"img": "iesfrench.jpg"
         }
       },{
         "program":{
@@ -565,6 +610,7 @@ export class DataService {
           "areaName":"Art and Art History, Economics, Middle Eastern Studies and Islamic Civilization, Religious Studies, Spanish and Portuguese",
           "academicFeatures":"Civic Engagement, Courses at local university, Creative Work, Facilitated Excursion(s), Internship"
           ,"value":0
+          ,"img": "iesgranada.jpg"
         }
       },{
         "program":{
@@ -576,6 +622,7 @@ export class DataService {
           "areaName":"Art and Art History, Economics, Spanish and Portuguese, Theater and Dance",
           "academicFeatures":"Courses at local university, Creative Work, Facilitated Excursion(s), Internship"
           ,"value":0
+          ,"img": "iesmadrid.jpg"
         }
       },{
         "program":{
@@ -588,6 +635,7 @@ export class DataService {
           "areaName":"Economics, Music",
           "academicFeatures":"Courses at local university, Creative Work, Facilitated Excursion(s), Internship"
           ,"value":0
+          ,"img": "iesmilan.jpg"
         }
       },{
         "program":{
@@ -600,6 +648,7 @@ export class DataService {
           "areaName":"Art and Art History, Asian Languages and Cultures, Linguistics",
           "academicFeatures":"Civic Engagement, Courses at local university, Creative Work, Facilitated Excursion(s)"
           ,"value":0
+          ,"img": "iesnagoya.jpg"
         }
       },{
         "program":{
@@ -612,6 +661,7 @@ export class DataService {
           "areaName":"Art and Art History, Cognitive Science, Economics, Media and Cultural Studies, Neuroscience, Philosophy, Women's, Gender, and Sexuality Studies",
           "academicFeatures":"Courses at local university, Facilitated Excursion(s), Independent Study Project (ISP)"
           ,"value":0
+          ,"img": "iesamsterdam.jpg"
         }
       },{
         "program":{
@@ -624,6 +674,7 @@ export class DataService {
           "areaName":"African Studies, American Studies, Art and Art History, Economics, English, Human Rights and Humanitarianism, Linguistics, Political Science, Theater and Dance",
           "academicFeatures":"Civic Engagement, Courses at local university, Creative Work, Facilitated Excursion(s)"
           ,"value":0
+          ,"img": "iesctown.jpg"
         }
       },{
         "program":{
@@ -636,6 +687,7 @@ export class DataService {
           "areaName":"Computer Science, Economics, French and Francophone Studies, Media and Cultural Studies, Neuroscience, Physics, Political Science, Women's, Gender, and Sexuality Studies",
           "academicFeatures":"Independent Study Project (ISP), Internship"
           ,"value":0
+          ,"img": "ife.jpg"
         }
       },{
         "program":{
@@ -648,6 +700,7 @@ export class DataService {
           "areaName":"Art and Art History, Economics, English, Geography, Latin American Studies, Linguistics, Media and Cultural Studies, Political Science, Psychology, Spanish and Portuguese, Theater and Dance, Urban Studies",
           "academicFeatures":"Civic Engagement, Courses at local university, Creative Work, Facilitated Excursion(s), Independent Study Project (ISP)"
           ,"value":0
+          ,"img": "ifsaargentine.jpg"
         }
       },{
         "program":{
@@ -660,6 +713,7 @@ export class DataService {
           "areaName":"Art and Art History, Economics, Geology, Latin American Studies, Political Science, Spanish and Portuguese, Theater and Dance",
           "academicFeatures":"Civic Engagement, Courses at local university, Creative Work, Facilitated Excursion(s), Independent Study Project (ISP)"
           ,"value":0
+          ,"img": "ifsachile.jpg"
         }
       },{
         "program":{
@@ -672,6 +726,7 @@ export class DataService {
           "areaName":"Educational Studies, Geography, Human Rights and Humanitarianism",
           "academicFeatures":"Civic Engagement, Creative Work, Facilitated Excursion(s), Independent Study Project (ISP), Internship"
           ,"value":0
+          ,"img": "ifsaindiac.jpg"
         }
       },{
         "program":{
@@ -684,6 +739,7 @@ export class DataService {
           "areaName":"No recommendations by faculties",
           "academicFeatures":"Civic Engagement, Courses at local university, Facilitated Excursion(s), Independent Study Project (ISP)"
           ,"value":0
+          ,"img": "ifsaindiag.jpg"
         }
       },{
         "program":{
@@ -696,6 +752,7 @@ export class DataService {
           "areaName":"Latin American Studies, Spanish and Portuguese",
           "academicFeatures":"Civic Engagement, Courses at local university, Creative Work, Facilitated Excursion(s), Independent Study Project (ISP)"
           ,"value":0
+          ,"img": "ifsam.jpg"
         }
       },{
         "program":{
@@ -708,6 +765,7 @@ export class DataService {
           "areaName":"Latin American Studies, Spanish and Portuguese, Theater and Dance",
           "academicFeatures":"Civic Engagement, Courses at local university, Creative Work, Facilitated Excursion(s), Independent Study Project (ISP)"
           ,"value":0
+          ,"img": "ifsap.jpg"
         }
       },{
         "program":{
@@ -720,6 +778,7 @@ export class DataService {
           "areaName":"Economics, Urban Studies",
           "academicFeatures":"Civic Engagement, Facilitated Excursion(s), Independent Study Project (ISP), Internship"
           ,"value":0
+          ,"img": "ifsas.jpg"
         }
       },{
         "program":{
@@ -732,6 +791,7 @@ export class DataService {
           "areaName":"Spanish and Portuguese",
           "academicFeatures":"Courses at local university, Creative Work, Facilitated Excursion(s)"
           ,"value":0
+          ,"img": "ifsauh.jpg"
         }
       },{
         "program":{
@@ -744,6 +804,7 @@ export class DataService {
           "areaName":"Political Science, Theater and Dance",
           "academicFeatures":"Civic Engagement, Courses at local university, Creative Work, Facilitated Excursion(s), Independent Study Project (ISP)"
           ,"value":0
+          ,"img": "ifsaun.jpg"
         }
       },{
         "program":{
@@ -756,6 +817,7 @@ export class DataService {
           "areaName":"Russian Studies",
           "academicFeatures":"Courses at local university, Facilitated Excursion(s), Internship"
           ,"value":0
+          ,"img": "middlebury.jpg"
         }
       },{
         "program":{
@@ -768,6 +830,7 @@ export class DataService {
           "areaName":"Art and Art History, Classics, Economics",
           "academicFeatures":"Civic Engagement, Creative Work, Facilitated Excursion(s), Independent Study Project (ISP), Internship"
           ,"value":0
+          ,"img": "saci.jpg"
         }
       },{
         "program":{
@@ -780,6 +843,7 @@ export class DataService {
           "areaName":"Anthropology, Educational Studies, Latin American Studies, Political Science, Spanish and Portuguese",
           "academicFeatures":"Civic Engagement, Creative Work, Facilitated Excursion(s), Independent Study Project (ISP)"
           ,"value":0
+          ,"img": "sitbolivia.jpg"
         }
       },{
         "program":{
@@ -792,6 +856,7 @@ export class DataService {
           "areaName":"African Studies, Economics",
           "academicFeatures":"Civic Engagement, Creative Work, Facilitated Excursion(s), Homestay, Independent Study Project (ISP), Internship"
           ,"value":0
+          ,"img": "sitcameroon.jpg"
         }
       },{
         "program": {
@@ -804,6 +869,7 @@ export class DataService {
           "areaName":"Community and Global Health, Economics",
           "academicFeatures":"Civic Engagement, Facilitated Excursion(s), Independent Study Project (ISP), Internship"
           ,"value":0
+          ,"img": "sitchile.jpg"
         }
       },{
         "program":{
@@ -816,6 +882,7 @@ export class DataService {
           "areaName":"American Studies, Anthropology, Asian Languages and Cultures, Educational Studies, Geography",
           "academicFeatures":"Facilitated Excursion(s), Homestay, Independent Study Project (ISP), Internship"
           ,"value":0
+          ,"img": "sitchina.jpg"
         }
       },{
         "program":{
@@ -828,6 +895,7 @@ export class DataService {
           "areaName":"Biology, Economics, Environmental Studies",
           "academicFeatures":"Civic Engagement, Facilitated Excursion(s), Independent Study Project (ISP)"
           ,"value":0
+          ,"img": "sitecuador.jpg"
         }
       },{
         "program":{
@@ -840,6 +908,7 @@ export class DataService {
           "areaName":"African Studies",
           "academicFeatures":"Civic Engagement, Facilitated Excursion(s), Independent Study Project (ISP), Internship"
           ,"value":0
+          ,"img": "sitghana.jpg"
         }
       },{
         "program":{
@@ -852,6 +921,7 @@ export class DataService {
           "areaName":"Classics, Economics, Environmental Studies, Middle Eastern Studies and Islamic Civilization",
           "academicFeatures":"Civic Engagement, Facilitated Excursion(s), Independent Study Project (ISP), Internship"
           ,"value":0
+          ,"img": "sitjordan.jpg"
         }
       },{
         "program":{
@@ -864,6 +934,7 @@ export class DataService {
           "areaName":"African Studies, Biology, Environmental Studies",
           "academicFeatures":"Civic Engagement, Facilitated Excursion(s), Independent Study Project (ISP), Internship"
           ,"value":0
+          ,"img": "sitmadagascar.jpg"
         }
       },{
         "program":{
@@ -876,6 +947,7 @@ export class DataService {
           "areaName":"Anthropology, Environmental Studies, Geography",
           "academicFeatures":"Civic Engagement, Facilitated Excursion(s), Independent Study Project (ISP), Internship"
           ,"value":0
+          ,"img": "sitmongolia.jpg"
         }
       },{
         "program":{
@@ -888,6 +960,7 @@ export class DataService {
           "areaName":"Educational Studies, Religious Studies",
           "academicFeatures":"Civic Engagement, Facilitated Excursion(s), Independent Study Project (ISP), Internship"
           ,"value":0
+          ,"img": "sitnepal.jpg"
         }
       },{
         "program":{
@@ -900,6 +973,7 @@ export class DataService {
           "areaName":"Anthropology, Economics, Human Rights and Humanitarianism, Latin American Studies, Political Science, Spanish and Portuguese",
           "academicFeatures":"Civic Engagement, Creative Work, Facilitated Excursion(s), Independent Study Project (ISP)"
           ,"value":0
+          ,"img": "sitperu.jpg"
         }
       },{
         "program":{
@@ -912,6 +986,7 @@ export class DataService {
           "areaName":"Anthropology, Geography, History, Human Rights and Humanitarianism, International Studies, Political Science, Russian Studies, Sociology",
           "academicFeatures":"Civic Engagement, Creative Work, Facilitated Excursion(s), Independent Study Project (ISP), Internship"
           ,"value":0
+          ,"img": "sitserbia.jpg"
         }
       },{
         "program":{
@@ -924,6 +999,7 @@ export class DataService {
           "areaName":"Community and Global Health, Economics, Latin American Studies",
           "academicFeatures":"Civic Engagement, Creative Work, Facilitated Excursion(s), Independent Study Project (ISP), Internship"
           ,"value":0
+          ,"img": "uofmecuador.jpg"
         }
       },{
         "program":{
@@ -936,6 +1012,7 @@ export class DataService {
           "areaName":"Environmental Studies, African Studies",
           "academicFeatures":"Civic Engagement, Creative Work, Facilitated Excursion(s), Independent Study Project (ISP), Internship"
           ,"value":0
+          ,"img": "uofmkenya.jpg"
         }
       },{
         "program":{
@@ -948,6 +1025,7 @@ export class DataService {
           "areaName":"African Studies, Anthropology, Art and Art History, Community and Global Health, Economics, Educational Studies, French and Francophone Studies, Human Rights and Humanitarianism",
           "academicFeatures":"Civic Engagement, Creative Work, Facilitated Excursion(s), Independent Study Project (ISP), Internship"
           ,"value":0
+          ,"img": "uofmsenegal.jpg"
         }
       },{
         "program":{
@@ -960,6 +1038,7 @@ export class DataService {
           "areaName":"Theater",
           "academicFeatures":"Creative Work, Facilitated Excursion(s)"
           ,"value":0
+          ,"img": "bada.jpg"
         }
       },{
         "program":{
@@ -972,6 +1051,7 @@ export class DataService {
           "areaName":"Cognitive Science, Linguistics, Russian Studies, Theater and Dance",
           "academicFeatures":"Civic Engagement, Courses at local university, Creative Work, Facilitated Excursion(s), Internship"
           ,"value":0
+          ,"img": "bard.jpg"
         }
       },{
         "program":{
@@ -984,6 +1064,137 @@ export class DataService {
           "areaName":"Art and Art History, Critical Theory, Economics, English, French and Francophone Studies, Media and Cultural Studies, Music, Philosophy, Political Science, Psychology, Theater and Dance, Women's, Gender, and Sexuality Studies",
           "academicFeatures":"Civic Engagement, Courses at local university, Creative Work, Independent Study Project (ISP), Internship"
           ,"value":0
+          ,"img": "cupa.jpg"
+        }
+      },{
+        "program":{
+          "locationName":"England (United Kingdom)",
+          "housing":"Residence Hall",
+          "programGroup": "Group C - ",
+          "programName":"Direct Enroll: Oxford University St. Catherine's College",
+          "GPA":"3.7",
+          "language":"English",
+          "areaName":"Art and Art History, Computer Science, Economics, English, Geology, Linguistics, Mathematics, Middle Eastern Studies and Islamic Civilization, Philosophy, Physics, Political Science, Psychology, Religious Studies",
+          "academicFeatures":"Courses at local university"
+          ,"value":0
+          ,"img": "oxford.jpg"
+        }
+      },{
+        "program":{
+          "locationName":"Denmark, Sweden",
+          "housing":"Apartment, Apartment - Local Roommate, Home Stay, Other, Residence Hall, Residence Hall- Local Roommate",
+          "programGroup": "Group C - ",
+          "programName":"DIS: Study Abroad in Scandinavia",
+          "GPA":"3",
+          "language":"English",
+          "areaName":"American Studies, Art and Art History, Biology, Community and Global Health, Economics, Educational Studies, Environmental Studies, Human Rights and Humanitarianism, Media and Cultural Studies, Neuroscience, Philosophy, Political Science, Psychology, Urban Studies, Women's, Gender, and Sexuality Studies",
+          "academicFeatures":"Civic Engagement, Creative Work, Facilitated Excursion(s), Independent Study Project (ISP)"
+          ,"value":0
+          ,"img": "dis.jpg"
+        }
+      },{
+        "program":{
+          "locationName":"United States",
+          "housing":"Home Stay",
+          "programGroup": "Group C - ",
+          "programName":"Earlham College: Border Studies Program",
+          "GPA":"2",
+          "language":"English",
+          "areaName":"American Studies, Human Rights and Humanitarianism, Latin American Studies",
+          "academicFeatures":"Civic Engagement, Facilitated Excursion(s), Internship"
+          ,"value":0
+          ,"img": "earlham.jpg"
+        }
+      },{
+        "program":{
+          "locationName":"New Zealand",
+          "housing":"Home Stay",
+          "programGroup": "Group C - ",
+          "programName":"HECUA: New Zealand Culture & the Environment",
+          "GPA":"2",
+          "language":"English",
+          "areaName":"American Studies, Educational Studies, Environmental Studies, Geography, Urban Studies",
+          "academicFeatures":"Civic Engagement, Facilitated Excursion(s), Independent Study Project (ISP), Internship"
+          ,"value":0
+          ,"img": "hecuanz.jpg"
+        }
+      },{
+        "program":{
+          "locationName":"Netherlands",
+          "housing":"Apartment",
+          "programGroup": "Group C - ",
+          "programName":"IES Abroad: Amsterdam - Conservatorium van Amsterdam",
+          "GPA":"3",
+          "language":"English",
+          "areaName":"Music",
+          "academicFeatures":"Courses at local university, Creative Work, Facilitated Excursion(s)"
+          ,"value":0
+          ,"img": "iesamsterdamc.jpg"
+        }
+      },{
+        "program":{
+          "locationName":"Japan",
+          "housing":"Home Stay",
+          "programGroup": "Group C - ",
+          "programName":"Japan Study at Waseda University",
+          "GPA":"3",
+          "language":"English, Japanese",
+          "areaName":"Art and Art History, Asian Languages and Cultures, Economics",
+          "academicFeatures":"Courses at local university"
+          ,"value":0
+          ,"img": "waseda.jpg"
+        }
+      },{
+        "program":{
+          "locationName":"China",
+          "housing":"Residence Hall- Local Roommate",
+          "programGroup": "Group C - ",
+          "programName":"Middlebury College: China: Hangzhou",
+          "GPA":"2.75",
+          "language":"Chinese",
+          "areaName":"Asian Languages and Cultures, Economics",
+          "academicFeatures":"Facilitated Excursion(s), Independent Study Project (ISP)"
+          ,"value":0
+          ,"img": "middleburychina.jpg"
+        }
+      },{
+        "program":{
+          "locationName":"Nepal",
+          "housing":"Home Stay",
+          "programGroup": "Group C - ",
+          "programName":"Pitzer College: Nepal Program",
+          "GPA":"2",
+          "language":"English",
+          "areaName":"Anthropology, Asian Languages and Cultures, Food, Agriculture, and Society",
+          "academicFeatures":"Civic Engagement, Facilitated Excursion(s), Independent Study Project (ISP), Internship, Creative Work"
+          ,"value":0
+          ,"img": "pitzer.jpg"
+        }
+      },{
+        "program":{
+          "locationName":"United States",
+          "housing":"Other",
+          "programGroup": "Group C - ",
+          "programName":"SEA Semester",
+          "GPA":"No GPA Requirement",
+          "language":"English",
+          "areaName":"Biology, Environmental Studies",
+          "academicFeatures":"Facilitated Excursion(s), Independent Study Project (ISP)"
+          ,"value":0
+          ,"img": "sea.jpg"
+        }
+      },{
+        "program":{
+          "locationName":"Spain, Argentina, South Africa, United States, Brazil",
+          "housing":"Home Stay",
+          "programGroup": "Group C - ",
+          "programName":"SIT Study Abroad/IHP: Cities in the 21st Century",
+          "GPA":"2.5",
+          "language":"English",
+          "areaName":"Geography, Urban Studies, African Studies",
+          "academicFeatures":"Facilitated Excursion(s)"
+          ,"value":0
+          ,"img": "sitcities.jpg"
         }
       }
    ];

@@ -1,4 +1,4 @@
-<ion-content padding>
+
 <!--
   <ion-header>
     <ion-toolbar>
@@ -39,33 +39,39 @@
   </div> -->
 
   <ion-header>
-<<<<<<< HEAD
-    <ion-toolbar>
-      <ion-title style = "font-family:Bebas Neue; font-size:25px; text-align: center">
-          <div class="fadeIn">Programs</div>
-      </ion-title>
-      <ion-button (click)="goToFavourites()"> My Saved Programs
-      </ion-button>
-=======
+
     <ion-toolbar color="primary">
+      <ion-row>
+        <ion-col size="auto">
+          <ion-button (click)="goToFavourites()">
+            <ion-icon slot="icon-only" name="star" fill="clear"></ion-icon>
+          </ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-title style = "font-family:Bebas Neue; font-size:25px; text-align: center">
+              <div class="pad"><div class="fadeIn">Programs</div></div>
+          </ion-title>
+        </ion-col>
+      </ion-row>
+
+    <!-- <ion-toolbar color="primary">
         <img src="/assets/icon/mockupMacAbroad3.png" width="65px" style="display:inline-block" height="65px">
         <ion-title class="titleicon" style = "font-size:25px; text-align: center; display:inline-block">
           <div class="fadeIn">
             Programs
           </div>
         </ion-title>
->>>>>>> 972d06607ff7774d587b2d6077e6745900b91e6b
+    </ion-toolbar> -->
+
     </ion-toolbar>
-
-
   </ion-header>
 
   <ion-content>
     <ion-list>
     <ion-list-header style = "font-family:Bebas Neue; font-size:20px"><div class="fadeIn">Please select your major(s):</div></ion-list-header>
-    <ion-item color="primary">
+    <ion-item>
       <ion-label style="font-family:Bebas Neue"><div class="fadeIn">Major</div></ion-label>
-      <ion-select [(ngModel)] = "searchTerm" (ionChange)="setStars(); setFilteredItems(); createSort()">
+      <ion-select [(ngModel)] = "searchTerm" multiple="true" (ionChange)="setStars(); setFilteredItems(); createSort()">
         <ion-select-option value="any">Any</ion-select-option>
         <ion-select-option value="american studies">American Studies</ion-select-option>
         <ion-select-option value="anthro">Anthropology</ion-select-option>
@@ -109,10 +115,10 @@
     </ion-list>
 
     <ion-list>
-    <ion-list-header style = "font-family:Bebas Neue; font-size:20px"><div class="fadeIn">Please select your preffered language(s) of instruction:</div></ion-list-header>
-    <ion-item color="primary">
+    <ion-list-header style = "font-family:Bebas Neue; font-size:20px"><div class="fadeIn">Please select your preferred language(s) of instruction:</div></ion-list-header>
+    <ion-item>
       <ion-label style="font-family:Bebas Neue"><div class="fadeIn">Language</div></ion-label>
-      <ion-select [(ngModel)] ="searchTerm2" (ionChange)="setStars(); setFilteredItems(); createSort()">
+      <ion-select [(ngModel)] ="searchTerm2" multiple="true" (ionChange)="setStars(); setFilteredItems(); createSort()">
         <ion-select-option value="any">Any</ion-select-option>
         <ion-select-option value="arabic">Arabic</ion-select-option>
         <ion-select-option value="chinese">Chinese</ion-select-option>
@@ -134,10 +140,10 @@
 
 
     <ion-list>
-    <ion-list-header style = "font-family:Bebas Neue; font-size:20px"><div class="fadeIn">Please select your preffered country(s) to visit:</div></ion-list-header>
-    <ion-item color="primary">
+    <ion-list-header style = "font-family:Bebas Neue; font-size:20px"><div class="fadeIn">Please select your preferred country(s) to visit:</div></ion-list-header>
+    <ion-item>
       <ion-label style="font-family:Bebas Neue;"><div class="fadeIn">Country</div></ion-label>
-      <ion-select [(ngModel)] = "searchTerm3" (ionChange)="setStars(); setFilteredItems(); createSort()">
+      <ion-select [(ngModel)] = "searchTerm3" multiple="true" (ionChange)="setStars(); setFilteredItems(); createSort()">
         <ion-select-option value="Any">Any</ion-select-option>
         <ion-select-option value="Argentina">Argentina</ion-select-option>
         <ion-select-option value="Australia">Australia</ion-select-option>
@@ -197,11 +203,11 @@
 
 
   <div class="center">
-<<<<<<< HEAD
+
     <ion-button (click)="show()">
-=======
-    <button ion-button style="color: white;background-color: #3c85f1;outline-color: white; font-size:24px;" (click)="show()">
->>>>>>> 972d06607ff7774d587b2d6077e6745900b91e6b
+
+    <!-- <ion-button style="color: white;background-color: #3c85f1;outline-color: white; font-size:24px;" (click)="show()"> -->
+
         <div class="fadeIn">
           Search <ion-icon name = "search"></ion-icon>
         </div>
@@ -210,110 +216,87 @@
 
   <ion-list>
     <div *ngIf="boolean == true">
-<<<<<<< HEAD
+      <div class="center">
       <h1> Recommendations </h1>
-      <ion-item *ngFor="let item of items">
-        <ion-col size="9">
-        <ion-row>
-          <ion-col size="8">
-            <b>Program: </b>
-          </ion-col>
-          <ion-col size="9">
-            {{item.program.programGroup}} {{ item.program.programName}}
-          </ion-col>
-        </ion-row>
-        <ion-row>
-          <ion-col size="8">
-            <b>Language: </b>
-          </ion-col>
-          <ion-col size="9">
-            {{ item.program.language }}
-          </ion-col>
-        </ion-row>
-        <ion-row>
-          <ion-col size="8">
-            <b>Recommended By: </b>
-          </ion-col>
-          <ion-col size="9">
-            {{ item.program.areaName}}
-          </ion-col>
-        </ion-row>
-        <ion-row>
-          <ion-col size="8">
-            <b>Location: </b>
-          </ion-col>
-          <ion-col size="9">
-            {{ item.program.locationName}}
-          </ion-col>
-        </ion-row>
-        <ion-row>
-          <ion-col size="8">
-            <b>Housing: </b>
-          </ion-col>
-          <ion-col size="9">
-            {{ item.program.housing}}
-          </ion-col>
-        </ion-row>
-        <ion-row>
-          <ion-col size="8">
-            <b>Minimum GPA: </b>
-          </ion-col>
-          <ion-col size="9">
-            {{ item.program.GPA}}
-          </ion-col>
-        </ion-row>
-        <ion-row>
-          <ion-col size="8">
-            <b>Academic Features: </b>
-          </ion-col>
-          <ion-col size="9">
-            {{ item.program.academicFeatures}}
-          </ion-col>
-        </ion-row>
-        </ion-col>
-        <ion-col>
+      </div>
+      <ion-card *ngFor="let item of items">
+        <ion-card-header>
+          <ion-card-subtitle style="font-size:15px">PROGRAM</ion-card-subtitle>
           <ion-row>
-        {{ item.program.value}}/ 3 match
+            <ion-col size="10">
+              <ion-card-title style="font-size:25px">{{item.program.programGroup}}{{item.program.programName}}</ion-card-title>
+            </ion-col>
           </ion-row>
           <ion-row>
-            <ion-button (click)="saveData(item)">
-              <ion-icon slot="icon-only" name="star" fill="clear"></ion-icon>
-            </ion-button>
+            <ion-col>
+              <ion-card-title><div style="font-size:20px">{{ item.program.value}} / 3</div> <div style="font-size:16px">match</div></ion-card-title>
+            </ion-col>
+            <ion-col>
+              <ion-button (click)="saveData(item)">
+                <ion-icon slot="icon-only" name="star" fill="clear"></ion-icon>
+              </ion-button>
+            </ion-col>
           </ion-row>
-        </ion-col>
-      </ion-item>
-=======
-    <h1> Recommendations </h1>
-    <ion-col>
-    <ion-item *ngFor="let item of items">
-      <ion-row>
-      <b>Program:</b> {{item.program.programGroup}} {{ item.program.programName}} <br>
-      <b>Language:</b> {{ item.program.language }} <br>
-      <b>Recommended By:</b> {{ item.program.areaName}} <br>
-      <b>Location:</b> {{ item.program.locationName}} <br>
-      <b>Housing:</b> {{ item.program.housing}} <br>
-      <b>Minimum GPA Requirement:</b> {{ item.program.GPA}} <br>
-      <b>Academic Features:</b> {{ item.program.academicFeatures}} <br>
-      </ion-row>
-      <ion-col>
-      {{ item.program.value}}/ 3 match
-      </ion-col>
-      <ion-col>
-        <ion-button>
-          <!-- <ion-icon ="star"></ion-icon> -->
-        </ion-button>
-      </ion-col>
-    </ion-item>
-    </ion-col>
+        </ion-card-header>
+        <!-- <ion-item href="{{item.program.img}}" class="activated">
+        </ion-item> -->
+        <img src="/assets/icon/{{item.program.img}}" alt="img" width="100" height="200">
 
+        <ion-card-content>
+          <!-- <ion-col size="9"> -->
+          <ion-row>
+            <ion-col size="8">
+              <b>Language: </b>
+            </ion-col>
+            <ion-col size="9">
+              {{ item.program.language }}
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col size="8">
+              <b>Recommended By: </b>
+            </ion-col>
+            <ion-col size="9">
+              {{ item.program.areaName}}
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col size="8">
+              <b>Location: </b>
+            </ion-col>
+            <ion-col size="9">
+              {{ item.program.locationName}}
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col size="8">
+              <b>Housing: </b>
+            </ion-col>
+            <ion-col size="9">
+              {{ item.program.housing}}
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col size="8">
+              <b>Minimum GPA: </b>
+            </ion-col>
+            <ion-col size="9">
+              {{ item.program.GPA}}
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col size="8">
+              <b>Academic Features: </b>
+            </ion-col>
+            <ion-col size="9">
+              {{ item.program.academicFeatures}}
+            </ion-col>
+          </ion-row>
 
-    <!-- <ion-item *ngFor="let star of stars">
-      {{ stars }}
-    </ion-item> -->
->>>>>>> 972d06607ff7774d587b2d6077e6745900b91e6b
+        </ion-card-content>
+      </ion-card>
+
     </div>
   </ion-list>
-
-</ion-content>
 
 </ion-content>

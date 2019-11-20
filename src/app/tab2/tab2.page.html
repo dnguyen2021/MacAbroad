@@ -9,10 +9,10 @@
   </ion-toolbar>
 </ion-header>
 
-<!-- <ion-navbar *navbar secondary>
+<ion-navbar *navbar secondary>
   <img src="/assets/icon/mockupMacAbroad3.png" width="40px" style="display:inline-block" height="40px">
   <ion-title class="titleicon" style="display:inline-block" >Home</ion-title>
-</ion-navbar> -->
+</ion-navbar>
 
 <ion-content padding>
   <div class="fadeIn"><ion-searchbar color="primary" [(ngModel)]="searchTerm4" (ionChange)="setSearchedItems()"></ion-searchbar></div>
@@ -38,13 +38,10 @@
           ng-class="{active: isItemShown(item)}">
         <i class="icon" ng-class="isItemShown(item) ?
         'ion-minus' : 'ion-plus'"></i>
-        &nbsp;
         {{item.program.programName}}
-        </ion-item>
-        <ion-item class="item-accordion"
-        ng-repeat=""
-
-        </div> -->
-  </ion-list> 
+        </ion-item> -->
+        <!-- <ion-item class="item-accordion"
+        ng-repeat="" -->
+        <!-- </div> -->
+  </ion-list>
 </ion-content>
-

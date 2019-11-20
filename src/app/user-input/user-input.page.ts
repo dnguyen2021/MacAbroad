@@ -18,7 +18,7 @@ export class UserInputPage implements OnInit {
   // public savedItems: any = [];
   public boolean;
 
-  constructor(public navCtrl: NavController, private dataService: DataService, private menu: MenuController) {
+  constructor(public navCtrl: NavController, private dataService: DataService) {
   }
 
   ngOnInit(){
