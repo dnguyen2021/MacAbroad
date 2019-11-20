@@ -38,7 +38,7 @@
           </ion-card-content>
           </div>
         </ion-card>
-        <!-- <div ng-repeat="item in items2">
+        <div ng-repeat="item in items2">
           <ion-item class="item-stable"
           ng-click="toggleItem(item)"
           ng-class="{active: isItemShown(item)}">
@@ -48,9 +48,11 @@
         {{item.program.programName}}
         </ion-item>
         <ion-item class="item-accordion"
-        ng-repeat=""
-
-        </div> -->
+            ng-repeat="name in item.programName"
+            ng-show="isItemShown(item)">
+          {{name}}
+          </ion-item>
+        </div>
   </ion-list> 
 
 </ion-content>
