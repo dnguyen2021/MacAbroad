@@ -5,7 +5,10 @@ import { Injectable } from '@angular/core';
 })
 export class DataService {
   public items: any = [];
-  public items2: any = [];
+  public savedItems: any = [];
+  public boolean;
+  // public items2: any = [];
+  // public savedItems: any = [];
   // public stars: any = [];
 
   constructor() {
@@ -1029,8 +1032,35 @@ export class DataService {
   });
  }
 
+ // getItems(){
+ //   return this.items;
+ // }
+
+ save(item){
+   this.savedItems.push(item);
+ }
+
+// setShow(){
+//   this.boolean = true;
+// }
+
+
+ getSaved(){
+   return this.savedItems;
+ }
+
+ getItems(){
+   return this.items; 
+ }
+
   createStars(searchTerm, searchTerm2, searchTerm3){
     for(let item of this.items) {
+      if (item.program.areaName.toLowerCase().includes("Any") ||
+      item.program.language.toLowerCase().includes("Any") ||
+      item.program.locationName.toLowerCase().includes("Any")){
+        return;
+      }
+
       if (item.program.areaName.toLowerCase().indexOf(searchTerm.toLowerCase()) > -1 &&
       item.program.language.toLowerCase().indexOf(searchTerm2.toLowerCase()) > -1 &&
       item.program.locationName.toLowerCase().indexOf(searchTerm3.toLowerCase()) > -1){
@@ -1074,5 +1104,9 @@ export class DataService {
       // }
     }
   }
+
+  // createSavedItems(item){
+  //   return item;
+  // }
 
 }

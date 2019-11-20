@@ -1,49 +1,3 @@
-// import { Platform } from '@ionic/angular';
-// import { Injectable } from '@angular/core';
-// import { Storage } from '@ionic/storage';
-// import { BehaviorSubject } from 'rxjs';
- 
-// const TOKEN_KEY = 'auth-token';
- 
-// @Injectable({
-//   providedIn: 'root'
-// })
-// export class AuthenticationService {
- 
-//   authenticationState = new BehaviorSubject(false);
- 
-//   constructor(private storage: Storage, private plt: Platform) { 
-//     this.plt.ready().then(() => {
-//       this.checkToken();
-//     });
-//   }
- 
-//   checkToken() {
-//     this.storage.get(TOKEN_KEY).then(res => {
-//       if (res) {
-//         this.authenticationState.next(true);
-//       }
-//     })
-//   }
- 
-//   login() {
-//     return this.storage.set(TOKEN_KEY, 'Bearer 1234567').then(() => {
-//       this.authenticationState.next(true);
-//     });
-//   }
- 
-//   logout() {
-//     return this.storage.remove(TOKEN_KEY).then(() => {
-//       this.authenticationState.next(false);
-//     });
-//   }
- 
-//   isAuthenticated() {
-//     return this.authenticationState.value;
-//   }
- 
-// }
-
 import { Injectable } from "@angular/core";
 import * as firebase from 'firebase/app';
 import { FirebaseService } from './database.service';
@@ -54,12 +8,21 @@ import { AngularFireAuth } from '@angular/fire/auth';
 })
 export class AuthService {
 
+  private authState: any; 
+
   constructor(
 		private firebaseService: FirebaseService,
 		public afAuth: AngularFireAuth
-	){}
+	){
+
+    this.afAuth.authState.subscribe((auth) => {
+      this.authState = auth
+    });
+
+  }
 
   doRegister(value){
+
    return new Promise<any>((resolve, reject) => {
      firebase.auth().createUserWithEmailAndPassword(value.email, value.password)
      .then(
@@ -88,4 +51,32 @@ export class AuthService {
       });
     })
   }
+
+  get authenticated(): boolean {
+    return this.authState !== null;
+}
+
+get user(): any {
+    return this.authenticated ? this.authState : null;
+}
+
+get id(): string {
+    return this.authenticated ? this.authState.uid : '';
+}
+
+get currentUserAnonymous(): boolean {
+    return this.authenticated ? this.authState.isAnonymous : false
+}
+
+get currentUserDisplayName(): string {
+    if (!this.authState)
+        return 'Guest';
+    
+    if (this.currentUserAnonymous)
+        return 'Anonymous';
+    
+    return (this.authState['displayName'] || 'User without a Name');
+}
+
+
 }

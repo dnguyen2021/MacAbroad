@@ -1,11 +1,58 @@
 <ion-content padding>
+<!--
+  <ion-header>
+    <ion-toolbar>
+      <ion-row>
+      <ion-col size="0.1">
+      <ion-button (click)="show()">
+        <ion-icon name="menu"></ion-icon>
+      </ion-button>
+      </ion-col>
+      <ion-col>
+      <ion-title style = "font-family:Bebas Neue; font-size:25px; text-align: center">
+          <div class="fadeIn">Programs</div>
+      </ion-title>
+      </ion-col>
+      </ion-row>
+  </ion-toolbar>
+  </ion-header> -->
+  <!-- <div *ngIf="boolean == true">
+    <ion-menu side="start" menuId="custom" class="my-custom-menu">
+      <ion-header>
+        <ion-toolbar color="tertiary">
+          <ion-title>Custom Menu</ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content>
+        <ion-list>
+          <ion-item>Menu Item</ion-item>
+          <ion-item>Menu Item</ion-item>
+          <ion-item>Menu Item</ion-item>
+          <ion-item>Menu Item</ion-item>
+          <ion-item>Menu Item</ion-item>
+        </ion-list>
+      </ion-content>
+    </ion-menu>
+
+
+    <ion-router-outlet main></ion-router-outlet>
+  </div> -->
 
   <ion-header>
     <ion-toolbar color="primary">
-      <ion-title style = "font-size:25px; text-align: center">
-          <div class="fadeIn">Programs</div>
-      </ion-title>
+        <img src="/assets/icon/mockupMacAbroad3.png" width="65px" style="display:inline-block" height="65px">
+        <ion-title class="titleicon" style = "font-size:25px; text-align: center; display:inline-block">
+          <div class="fadeIn">
+            Programs
+          </div>
+        </ion-title>
     </ion-toolbar>
+
+    <div>
+        <ion-button ion-button shape="round" fill="clear" shape="round" (click)="goToProfile()">
+            Profile Page 
+        </ion-button>
+      </div>
 
 
   </ion-header>
@@ -88,6 +135,7 @@
     <ion-item color="primary">
       <ion-label style="font-family:Bebas Neue;"><div class="fadeIn">Country</div></ion-label>
       <ion-select [(ngModel)] = "searchTerm3" (ionChange)="setStars(); setFilteredItems(); createSort()">
+        <ion-select-option value="Any">Any</ion-select-option>
         <ion-select-option value="Argentina">Argentina</ion-select-option>
         <ion-select-option value="Australia">Australia</ion-select-option>
         <ion-select-option value="Austria">Austria</ion-select-option>
@@ -140,7 +188,6 @@
         <ion-select-option value="Sweden">Sweden</ion-select-option>
         <ion-select-option value="Thailand">Thailand</ion-select-option>
         <ion-select-option value="United States">United States</ion-select-option>
-        <ion-select-option value="Other">Other</ion-select-option>
       </ion-select>
   </ion-item>
   </ion-list>
@@ -151,8 +198,7 @@
         <div class="fadeIn">
           Search <ion-icon name = "search"></ion-icon>
         </div>
-    </button>
-  </div>
+
 
   <ion-list>
     <div *ngIf="boolean == true">
@@ -172,9 +218,6 @@
       {{ item.program.value}}/ 3 match
       </ion-col>
       <ion-col>
-        <ion-button>
-          <!-- <ion-icon ="star"></ion-icon> -->
-        </ion-button>
       </ion-col>
     </ion-item>
     </ion-col>
@@ -185,6 +228,4 @@
     </ion-item> -->
     </div>
   </ion-list>
-</ion-content>
 
-</ion-content>

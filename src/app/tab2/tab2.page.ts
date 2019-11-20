@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { IonicModule, NavController } from '@ionic/angular';
 import { DataService } from '../services/data.service';
 
@@ -13,7 +13,8 @@ export class Tab2Page implements OnInit{
   public searchTerm4: string = "";
   public items2: any;
 
-  constructor(private dataService: DataService) {}
+  constructor(private dataService: DataService, private navCtrl: NavController) {}
+
 
   ngOnInit() {
     this.setSearchedItems();
@@ -25,6 +26,10 @@ export class Tab2Page implements OnInit{
 
   setSortSearch(){
     this.items2 = this.dataService.sortSearch();
+  }
+
+  goToProfile(){
+    this.navCtrl.navigateForward('/profile')
   }
 
   // constructor(private dataService: DataService) {}

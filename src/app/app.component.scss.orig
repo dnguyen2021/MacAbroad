@@ -9,11 +9,6 @@
     $font-family-ios-base: “Bebas Neue”;
     $font-family-md-base:“Bebas Neue”;
     $font-family-wp-base:“Bebas Neue”;
-
-.titleicon div{
-    display:inline-block;
-    margin-bottom:10px;
-    }    
 // .tabbar {
 //     a.tab-button[aria-selected=true]:nth-of-type(1){
 //         color: white;

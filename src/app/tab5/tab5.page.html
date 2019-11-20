@@ -1,13 +1,18 @@
 <ion-header>
 	<ion-toolbar color="primary">
-	  <ion-title style = "text-align: center">Log In</ion-title>
+		<img src="/assets/icon/mockupMacAbroad3.png" width="65px" style="display:inline-block" height="65px">
+    		<ion-title class="titleicon" style = "font-size:25px; text-align: center; display:inline-block">
+				<div class="fadeIn">
+					Log In
+				</div>
+			</ion-title>
 	</ion-toolbar>
   </ion-header>
 
   <ion-content padding class="form-content">
 	<form class="form" [formGroup]="validations_form" (ngSubmit)="tryLogin(validations_form.value)">
 	  <ion-item>
-		<ion-label position="floating" color="primary">Email</ion-label>
+		<ion-label position="floating" color="primary"><div class="fadeIn">Email</div></ion-label>
 		<ion-input type="text" formControlName="email"></ion-input>
 	  </ion-item>
 	  <div class="validation-errors">
@@ -18,7 +23,7 @@
 		</ng-container>
 	  </div>
 	  <ion-item>
-		<ion-label position="floating" color="primary">Password</ion-label>
+		<ion-label position="floating" color="primary"><div class="fadeIn">Password</div></ion-label>
 		<ion-input type="password" formControlName="password"></ion-input>
 	  </ion-item>
 	  <div class="validation-errors">
@@ -33,6 +38,6 @@
 	</form>
 
 	<p class="go-to-register">
-	  No account yet? <a (click)="goRegisterPage()">Create an account.</a>
+		No account yet?<a (click)="goRegisterPage()"> Create an account.</a>
 	</p>
   </ion-content>
