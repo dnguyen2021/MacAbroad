@@ -14,11 +14,11 @@ export class FirebaseService {
     public afAuth: AuthService
   ){ }
 
-
+    
   createTask(value){
     return new Promise<any>((resolve, reject) => {
       let currentUser = firebase.auth().currentUser;
-      this.afs.collection('users').doc(currentUser.uid).collection('User Data').add({
+      this.afs.collection('users').doc(currentUser.email).collection('User Data').add({
         Name: value.Name,
         email: value.email,
         Program: value.Program

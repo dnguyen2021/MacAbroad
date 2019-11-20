@@ -73,7 +73,7 @@ export class UserInputPage implements OnInit {
   // }
 
   goToProfile(){
-    this.navCtrl.navigateForward('tabs/profile')
+    this.navCtrl.navigateForward('/profile')
     }
 
 }
