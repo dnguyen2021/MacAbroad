@@ -27,7 +27,7 @@
           <ion-card-header tappable (click)="collapseCard = !collapseCard">
             <div class="fadeIn"><ion-card-title style="text-align: center;color: white;">{{item.program.programName}}</ion-card-title></div>
           </ion-card-header>
-          <div class="fadeIn"><ion-card-content *ngIf="!collapseCard">
+          <div class="fadeIn"><ion-card-content style="background-color: rgb(59, 61, 129);" *ngIf="!collapseCard">
                   <b>Program:</b> {{item.program.programGroup}} {{ item.program.programName}} <br>
                   <b>Language:</b> {{ item.program.language }} <br>
                   <b>Recommended By:</b> {{ item.program.areaName}} <br>
@@ -38,7 +38,7 @@
           </ion-card-content>
           </div>
         </ion-card>
-        <div ng-repeat="item in items2">
+        <!-- <div ng-repeat="item in items2">
           <ion-item class="item-stable"
           ng-click="toggleItem(item)"
           ng-class="{active: isItemShown(item)}">
@@ -52,7 +52,7 @@
             ng-show="isItemShown(item)">
           {{name}}
           </ion-item>
-        </div>
+        </div> -->
   </ion-list> 
 
 </ion-content>

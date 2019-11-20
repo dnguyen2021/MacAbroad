@@ -9,31 +9,31 @@ import { DataService } from '../services/data.service';
 
 })
 
-.controller('MyCtrl', function($scope) {
-  $scope.items2 = [];
-  for (var i=0; i<10; i++) {
-    $scope.items2[i] = {
-      name: i,
-      items: [],
-      show: false
-    };
-    for (var j=0; j<3; j++) {
-      $scope.items2[i].items.push(i + '-' + j);
-    }
-  }
+// .controller('MyCtrl', function($scope) {
+//   $scope.items2 = [];
+//   for (var i=0; i<10; i++) {
+//     $scope.items2[i] = {
+//       name: i,
+//       items: [],
+//       show: false
+//     };
+//     for (var j=0; j<3; j++) {
+//       $scope.items2[i].items.push(i + '-' + j);
+//     }
+//   }
   
-  /*
-   * if given group is the selected group, deselect it
-   * else, select the given group
-   */
-  $scope.toggleItem = function(item) {
-    item.show = !item.show;
-  };
-  $scope.isItemShown = function(item) {
-    return item.show;
-  };
+//   /*
+//    * if given group is the selected group, deselect it
+//    * else, select the given group
+//    */
+//   $scope.toggleItem = function(item) {
+//     item.show = !item.show;
+//   };
+//   $scope.isItemShown = function(item) {
+//     return item.show;
+//   };
   
-});
+// });
 
 export class Tab2Page implements OnInit{
   
