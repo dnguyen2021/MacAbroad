@@ -48,6 +48,12 @@
         </ion-title>
     </ion-toolbar>
 
+    <div>
+        <ion-button ion-button shape="round" fill="clear" shape="round" (click)="goToProfile()">
+            Profile Page
+        </ion-button>
+      </div>
+
 
   </ion-header>
 
@@ -192,8 +198,7 @@
         <div class="fadeIn">
           Search <ion-icon name = "search"></ion-icon>
         </div>
-    </ion-button>
-  </div>
+
 
   <ion-list>
     <div *ngIf="boolean == true">
@@ -213,9 +218,6 @@
       {{ item.program.value}}/ 3 match
       </ion-col>
       <ion-col>
-        <ion-button>
-          <!-- <ion-icon ="star"></ion-icon> -->
-        </ion-button>
       </ion-col>
     </ion-item>
     </ion-col>

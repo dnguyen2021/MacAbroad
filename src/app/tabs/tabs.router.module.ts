@@ -122,6 +122,17 @@ const routes: Routes = [
     redirectTo: '/tabs/tab1',
     pathMatch: 'full'
   },
+
+  {
+    path: 'profile',
+    children: [
+      {
+        path: '',
+        loadChildren: () =>
+          import('../profile/profile.module').then(m => m.ProfilePageModule)
+      }
+    ]
+  },
 ];
 
 @NgModule({
