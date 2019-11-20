@@ -1049,6 +1049,10 @@ export class DataService {
    return this.savedItems;
  }
 
+ getItems(){
+   return this.items; 
+ }
+
   createStars(searchTerm, searchTerm2, searchTerm3){
     for(let item of this.items) {
       if (item.program.areaName.toLowerCase().includes("Any") ||

@@ -14,7 +14,13 @@
   <ion-title class="titleicon" style="display:inline-block" >Home</ion-title>
 </ion-navbar> -->
 
+
 <ion-content padding>
+  <div class="center">
+    <ion-button ion-button shape="round" fill="clear" shape="round" (click)="goToProfile()">
+        Profile Page 
+    </ion-button>
+  </div>
   <div class="fadeIn"><ion-searchbar color="primary" [(ngModel)]="searchTerm4" (ionChange)="setSearchedItems()"></ion-searchbar></div>
   <ion-list>
         <ion-card style="background-color: #4178ee;" *ngFor="let item of items2">
@@ -46,5 +52,6 @@
 
         </div> -->
   </ion-list> 
+
 </ion-content>
 

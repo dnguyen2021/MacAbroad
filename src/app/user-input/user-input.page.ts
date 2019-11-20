@@ -72,4 +72,10 @@ export class UserInputPage implements OnInit {
   //   this.menu.open('custom');
   // }
 
+  goToProfile(){
+    this.navCtrl.navigateForward('tabs/profile')
+    }
+
 }
+
+
