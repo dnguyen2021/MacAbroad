@@ -6,7 +6,11 @@
   </ion-toolbar>
 </ion-header>
 <ion-content>
-    <ion-label position="floating" color="primary">Enter a Question</ion-label>
-  <ion-textarea></ion-textarea>
-  <ion-button size=small>Post</ion-button>
+    <div class="fadeIn"><ion-searchbar color="primary" [(ngModel)]="searchTerm4" (ionChange)="setSearchedItems()"></ion-searchbar></div>
+  <ion-list>
+    <ion-card style="background-color: #4178ee;" *ngFor="let item of items2">
+      <ion-card-header tappable (click)="collapseCard = !collapseCard">
+        <div class="fadeIn"><ion-card-title style="text-align: center;color: white;">{{item.program.programName}}</ion-card-title></div>
+
+  <ion-list>
 </ion-content>
