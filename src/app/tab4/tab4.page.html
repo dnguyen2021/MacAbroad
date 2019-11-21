@@ -24,7 +24,7 @@
  
   <!-- Card for adding a new event -->
   <ion-card>
-    <ion-card-header tappable (click)="collapseCard = !collapseCard">
+    <ion-card-header color="primary" (click)="collapseCard = !collapseCard">
       <ion-card-title>New Event</ion-card-title>
     </ion-card-header>
     <ion-card-content *ngIf="!collapseCard">
@@ -64,7 +64,7 @@
       <ion-button expand="block" [color]="calendar.mode == 'day' ? 'primary' : 'secondary'" (click)="changeMode('day')">Day</ion-button>
     </ion-col>
  
-    <!-- Move back one screen of the slides -->
+    Move back one screen of the slides
     <ion-col size="6" text-left>
       <ion-button fill="clear" (click)="back()">
         <ion-icon name="arrow-back" slot="icon-only"></ion-icon>
@@ -93,3 +93,28 @@
   </calendar>
  
 </ion-content>
+
+<!-- <ion-header>
+  <ion-navbar>
+    <ion-title>
+      Timeline 
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <app-timeline endIcon="call">
+    <app-timeline-item *ngFor="let item of items2">
+    <app-timeline-item [time]="item.time"></app-timeline-item>
+    <ion-icon [name]="item.icon"></ion-icon>
+    <ion-card>
+      <ion-card-header>
+
+      </ion-card-header>
+      <ion-card-content>
+
+      </ion-card-content>
+    </ion-card>
+    </app-timeline-item>
+  </app-timeline>
+</ion-content> -->

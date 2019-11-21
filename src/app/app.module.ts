@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { ErrorHandler, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouteReuseStrategy } from '@angular/router';
 
@@ -25,12 +25,19 @@ import { FirebaseService } from './database.service';
 import { AngularFirestore } from 'angularfire2/firestore';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
 
+import { TimelineComponent } from '../app/timeline/timeline.component';
+import { TimelineTimeComponent } from '../app/timeline/timeline.component';
+import { TimelineItemComponent } from '../app/timeline/timeline.component'; 
+
 import * as firebase from 'firebase';
 
 firebase.initializeApp(environment.config); 
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, 
+  TimelineComponent,
+  TimelineItemComponent,
+  TimelineTimeComponent],
   entryComponents: [
   ],
   imports: [BrowserModule, AngularFirestoreModule, IonicModule.forRoot(), AppRoutingModule, HttpClientModule, 
@@ -42,7 +49,8 @@ firebase.initializeApp(environment.config);
     SplashScreen,
     FirebaseService, 
     AngularFirestore, 
-    { provide: [RouteReuseStrategy, RecommenderService] , useClass: IonicRouteStrategy}, 
+    { provide:
+       [RouteReuseStrategy, RecommenderService, ErrorHandler] , useClass: IonicRouteStrategy}, 
   ],
   bootstrap: [AppComponent], 
   
