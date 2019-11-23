@@ -1,4 +1,4 @@
-<ion-header>
+<!-- <ion-header>
   <ion-toolbar>
     <img src="/assets/icon/mockupMacAbroad3.png" width="65px" style="display:inline-block" height="65px">
     <ion-title class="titleicon" style = "font-size:25px; text-align: center; display:inline-block">
@@ -22,7 +22,7 @@
  
 <ion-content>
  
-  <!-- Card for adding a new event -->
+  Card for adding a new event
   <ion-card>
     <ion-card-header color="primary" (click)="collapseCard = !collapseCard">
       <ion-card-title>New Event</ion-card-title>
@@ -53,7 +53,7 @@
   </ion-card>
  
   <ion-row>
-    <!-- Change the displayed calendar mode -->
+    Change the displayed calendar mode
     <ion-col size="4">
       <ion-button expand="block" [color]="calendar.mode == 'month' ? 'primary' : 'secondary'" (click)="changeMode('month')">Month</ion-button>
     </ion-col>
@@ -71,7 +71,7 @@
       </ion-button>
     </ion-col>
  
-    <!-- Move forward one screen of the slides -->
+    Move forward one screen of the slides
     <ion-col size="6" text-right>
       <ion-button fill="clear" (click)="next()">
         <ion-icon name="arrow-forward" slot="icon-only"></ion-icon>
@@ -92,29 +92,29 @@
   startingDayWeek="1">
   </calendar>
  
-</ion-content>
+</ion-content> -->
 
-<!-- <ion-header>
-  <ion-navbar>
+<ion-header>
+  <!-- <ion-navbar> -->
     <ion-title>
       Timeline 
     </ion-title>
-  </ion-navbar>
+  <!-- </ion-navbar> -->
 </ion-header>
 
 <ion-content padding>
   <app-timeline endIcon="call">
-    <app-timeline-item *ngFor="let item of items2">
-    <app-timeline-item [time]="item.time"></app-timeline-item>
+    <app-timeline-item *ngFor="let item of items">
+    <app-timeline-item [time]="item.date"></app-timeline-item>
     <ion-icon [name]="item.icon"></ion-icon>
     <ion-card>
       <ion-card-header>
-
+        {{item.title}}
       </ion-card-header>
       <ion-card-content>
-
+        {{item.description}}
       </ion-card-content>
     </ion-card>
     </app-timeline-item>
   </app-timeline>
-</ion-content> -->
+</ion-content>

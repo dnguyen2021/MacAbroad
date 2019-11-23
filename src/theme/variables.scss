@@ -75,7 +75,7 @@
   --ion-color-light-shade: #d7d8da;
   --ion-color-light-tint: #f5f6f9;*/
 
-  --ion-background-color: #045eb3;
+  --ion-background-color: #1c357a;
   --ion-background-color-rgb: 29,28,179;
 
   --ion-text-color: #ffffff;
@@ -117,3 +117,16 @@
     // $font-family-md-base:'Bebas Neue';
     // $font-family-wp-base:'Bebas Neue';
 }
+
+// @import '~bootstrap/scss/_functions.scss';
+// @import '~bootstrap/scss/_variables.scss';
+// @import '~bootstrap/scss/mixins/_breakpoints';
+// @import "~bootstrap/scss/bootstrap";
+
+
+// $grid-breakpoints: (
+//  xs: 0, // Phone (0px - 575px)
+//  sm: 576px, // Phablet (576px - 767px)
+//  md: 768px, // Tablet vertical (768px - 991px)
+//  lg: 992px // Tablet horizontal, Desktop (992px and above)
+// );
