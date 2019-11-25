@@ -9,25 +9,22 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-navbar *navbar secondary>
-  <img src="/assets/icon/mockupMacAbroad3.png" width="40px" style="display:inline-block" height="40px">
-  <ion-title class="titleicon" style="display:inline-block" >Home</ion-title>
-</ion-navbar>
+
 
 
 <ion-content padding>
-  <div class="center">
+  <!-- <div class="center">
     <ion-button ion-button shape="round" fill="clear" shape="round" (click)="goToProfile()">
         Profile Page 
     </ion-button>
-  </div>
+  </div> -->
   <div class="fadeIn"><ion-searchbar color="primary" [(ngModel)]="searchTerm4" (ionChange)="setSearchedItems()"></ion-searchbar></div>
   <ion-list>
         <ion-card style="background-color: #4178ee;" *ngFor="let item of items2">
           <ion-card-header tappable (click)="collapseCard = !collapseCard">
             <div class="fadeIn"><ion-card-title style="text-align: center;color: white;">{{item.program.programName}}</ion-card-title></div>
           </ion-card-header>
-          <div class="fadeIn"><ion-card-content *ngIf="!collapseCard">
+          <div class="fadeIn"><ion-card-content style="background-color: rgb(59, 61, 129);" *ngIf="!collapseCard">
                   <b>Program:</b> {{item.program.programGroup}} {{ item.program.programName}} <br>
                   <b>Language:</b> {{ item.program.language }} <br>
                   <b>Recommended By:</b> {{ item.program.areaName}} <br>
@@ -45,9 +42,13 @@
         <i class="icon" ng-class="isItemShown(item) ?
         'ion-minus' : 'ion-plus'"></i>
         {{item.program.programName}}
-        </ion-item> -->
-        <!-- <ion-item class="item-accordion"
-        ng-repeat="" -->
-        <!-- </div> -->
-  </ion-list>
+        </ion-item>
+        <ion-item class="item-accordion"
+            ng-repeat="name in item.programName"
+            ng-show="isItemShown(item)">
+          {{name}}
+          </ion-item>
+        </div> -->
+  </ion-list> 
+
 </ion-content>
