@@ -11,6 +11,16 @@
     <ion-card style="background-color: #4178ee;" *ngFor="let item of items2">
       <ion-card-header tappable (click)="collapseCard = !collapseCard">
         <div class="fadeIn"><ion-card-title style="text-align: center;color: white;">{{item.program.programName}}</ion-card-title></div>
+        <div class="fadeIn"><ion-card-content *ngIf="!collapseCard">
+            <b>Program:</b> {{item.program.programGroup}} {{ item.program.programName}} <br>
+            <b>Major:</b> {{ item.program.language }} <br>
+            <b>:</b> {{ item.program.areaName}} <br>
+            <b>Location:</b> {{ item.program.locationName}} <br>
+            <b>Housing:</b> {{ item.program.housing}} <br>
+            <b>Minimum GPA Requirement:</b> {{ item.program.GPA}} <br>
+            <b>Academic Features:</b> {{ item.program.academicFeatures}} <br>
+          </ion-card-content>
+        </div>
       </ion-card-header>
   <ion-list>
 </ion-content>
