@@ -3,6 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { RouteReuseStrategy } from '@angular/router';
 
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
+import {IonicApp, IonicErrorHandler } from 'ionic-angular';
+
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 
@@ -50,7 +52,11 @@ firebase.initializeApp(environment.config);
     FirebaseService, 
     AngularFirestore, 
     { provide:
-       [RouteReuseStrategy, RecommenderService, ErrorHandler] , useClass: IonicRouteStrategy}, 
+       [RouteReuseStrategy, RecommenderService] , useClass: IonicRouteStrategy
+      }, 
+    {provide: 
+      ErrorHandler, useClass: IonicErrorHandler
+    }
   ],
   bootstrap: [AppComponent], 
   
