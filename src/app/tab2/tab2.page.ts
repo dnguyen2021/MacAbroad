@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { IonicModule, NavController } from '@ionic/angular';
 import { DataService } from '../services/data.service';
+import { InAppBrowser } from '@ionic-native/in-app-browser/ngx'
 // import { MbscFormOptions } from '@mobiscroll/angular-lite'
 
 
@@ -42,7 +43,11 @@ export class Tab2Page implements OnInit{
   public searchTerm4: string = "";
   public items2: any;
 
-  constructor(private dataService: DataService, private navCtrl: NavController) {}
+  constructor(private dataService: DataService, private navCtrl: NavController, 
+    ) {
+
+    }
+    
 
 
   ngOnInit() {
@@ -60,6 +65,10 @@ export class Tab2Page implements OnInit{
   goToProfile(){
     this.navCtrl.navigateForward('/profile')
   }
+
+  // goToProgramWebsite(){
+  //   this.navCtrl.navigateForward()
+  // }
 
   // constructor(private dataService: DataService) {}
   //

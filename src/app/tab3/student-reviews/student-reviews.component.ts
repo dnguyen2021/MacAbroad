@@ -1,5 +1,5 @@
 import {Injectable} from '@angular/core';
-import {Http} from '@angular/http';
+import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
 
 @Injectable()
@@ -26,8 +26,8 @@ export class GoogleDriveProvider {
             this.data.forEach( ( entry, index ) => {
               var obj = {};
               for( let x in entry ) {
-                if( x.includes() && entry[x].$t ){
-                  obj[x.split()[1]] = entry[x][];
+                if( x.includes(x) && entry[x].$t ){
+                  // obj[x.split()[1]] = entry[x][];
                 }
               }
               returnArray.push( obj );
