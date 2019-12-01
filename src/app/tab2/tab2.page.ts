@@ -1,6 +1,8 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { IonicModule, NavController } from '@ionic/angular';
 import { DataService } from '../services/data.service';
+// import { MbscFormOptions } from '@mobiscroll/angular-lite'
+
 
 @Component({
   selector: 'app-tab2',
