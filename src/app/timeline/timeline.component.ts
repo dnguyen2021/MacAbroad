@@ -6,7 +6,7 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./timeline.component.scss'],
 })
 export class TimelineComponent {
-  @Input('endIcon') endIcon ="ionic";
+  @Input('endIcon') endIcon = "ionic";
   constructor() {
     
    }
@@ -23,11 +23,11 @@ export class TimelineItemComponent{
 }
 
 @Component({
-  selector:'app-timeline-time',
-  template: '<span>{{time.subtitle}}</span> <span>{{time.title}}</span>'
+  selector:'app-timeline-date',
+  template: '<span>{{date.subtitle}}</span> <span>{{date.title}}</span>'
 })
-export class TimelineTimeComponent{
-  @Input('time') time ={};
+export class TimelineDateComponent{
+  @Input('date') date ={};
   constructor(){
 
   }

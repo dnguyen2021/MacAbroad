@@ -30,7 +30,7 @@ $grid-breakpoints: (
       position: relative;
       display: inline-block;
 
-      app-timeline-time {
+      app-timeline-date {
         display: block;
         width: 20%;
         padding-right: 50px;
@@ -89,7 +89,7 @@ $grid-breakpoints: (
     }
     @media screen and (max-width: map-get($grid-breakpoints,'lg')){
       app-timeline-item{
-        app-timeline-time{
+        app-timeline-date{
           font-size: 0.7em;
         }
       }
@@ -105,7 +105,7 @@ $grid-breakpoints: (
         ion-icon{
           left: 30px;
         }
-        app-timeline-time{
+        app-timeline-date{
           font-size: 0.8em;
           width: 100%;
           left: 80px;
@@ -137,7 +137,7 @@ $grid-breakpoints: (
             left: 10px;
           }
         }
-        app-timeline-time{
+        app-timeline-date{
           width: 100%;
           position: relative;
           padding: 0 0 20px 0;

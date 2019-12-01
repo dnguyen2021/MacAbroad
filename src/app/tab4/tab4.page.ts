@@ -7,7 +7,9 @@ import { formatDate } from '@angular/common';
 import { ModalController } from '@ionic/angular';
 import { Observable } from 'rxjs/Observable';
 import { Subject } from 'rxjs/Subject';
-import { IonicModule, NavController } from '@ionic/angular';
+import { IonicModule } from '@ionic/angular';
+import { NavController } from 'ionic-angular';
+import { DataService } from '../services/data.service';
 
 
 
@@ -36,6 +38,7 @@ export class Tab4Page {
   constructor(public navCtrl: NavController){
 
   }
+  
 }
 
 // export class Tab4Page implements OnInit{

@@ -27,8 +27,9 @@ import { FirebaseService } from './database.service';
 import { AngularFirestore } from 'angularfire2/firestore';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
 
+import { Tab4Page } from '../app/tab4/tab4.page';
 import { TimelineComponent } from '../app/timeline/timeline.component';
-import { TimelineTimeComponent } from '../app/timeline/timeline.component';
+import { TimelineDateComponent } from '../app/timeline/timeline.component';
 import { TimelineItemComponent } from '../app/timeline/timeline.component'; 
 
 import * as firebase from 'firebase';
@@ -39,19 +40,18 @@ firebase.initializeApp(environment.config);
   declarations: [AppComponent, 
   TimelineComponent,
   TimelineItemComponent,
-  TimelineTimeComponent],
+  TimelineDateComponent],
   entryComponents: [
   ],
   imports: [BrowserModule, AngularFirestoreModule, IonicModule.forRoot(), AppRoutingModule, HttpClientModule, 
   FormsModule, ReactiveFormsModule, AngularFireAuthModule, AngularFireModule.initializeApp(environment.config) 
-    
   , IonicStorageModule.forRoot(), AngularFireDatabaseModule, AngularFireDatabaseModule],
   providers: [
     StatusBar,
     SplashScreen,
     FirebaseService, 
     AngularFirestore, 
-    { provide:
+    {provide:
        [RouteReuseStrategy, RecommenderService] , useClass: IonicRouteStrategy
       }, 
     {provide: 
