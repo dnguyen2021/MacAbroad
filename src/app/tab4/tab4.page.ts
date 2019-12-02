@@ -24,14 +24,14 @@ export class Tab4Page {
     {
       title: 'Application Deadline',
       description: 'Online Application for Mac Study Abroad applications Deadline',
+      icon: 'calendar',
       date:  {subtitle: 'December', title: '5th'},
-      icon: 'calendar'
     },
     {
       title: 'Pre-Departure Meeting',
       description: 'Required pre-departure meeting to discuss logistics and housing accommadations',
+      icon: 'calendar',
       date:  {subtitle: 'February', title: '26th'},
-      icon: 'calendar'
     }
   ]
   constructor(public navCtrl: NavController){

@@ -22,7 +22,7 @@ const routes: Routes = [
     FormsModule,
     IonicModule,
     RouterModule.forChild(routes),
-    NgCalendarModule,
+    // NgCalendarModule,
   ],
   declarations: [Tab4Page]
 

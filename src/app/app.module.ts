@@ -37,15 +37,22 @@ import * as firebase from 'firebase';
 firebase.initializeApp(environment.config); 
 
 @NgModule({
-  declarations: [AppComponent, 
+  declarations: [
+  AppComponent,
+  // Tab4Page,   
   TimelineComponent,
   TimelineItemComponent,
-  TimelineDateComponent],
+  TimelineDateComponent
+],
   entryComponents: [
+    // AppComponent,
+    // Tab4Page
   ],
-  imports: [BrowserModule, AngularFirestoreModule, IonicModule.forRoot(), AppRoutingModule, HttpClientModule, 
+  imports: [
+    BrowserModule, AngularFirestoreModule, IonicModule.forRoot(), AppRoutingModule, HttpClientModule, 
   FormsModule, ReactiveFormsModule, AngularFireAuthModule, AngularFireModule.initializeApp(environment.config) 
-  , IonicStorageModule.forRoot(), AngularFireDatabaseModule, AngularFireDatabaseModule],
+  ,IonicStorageModule.forRoot(), AngularFireDatabaseModule, AngularFireDatabaseModule
+],
   providers: [
     StatusBar,
     SplashScreen,
@@ -59,7 +66,7 @@ firebase.initializeApp(environment.config);
     }
   ],
   bootstrap: [AppComponent], 
-  
+
   exports: [ReactiveFormsModule] 
 
 })

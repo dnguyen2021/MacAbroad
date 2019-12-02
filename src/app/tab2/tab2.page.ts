@@ -47,7 +47,7 @@ export class Tab2Page implements OnInit{
   constructor(private dataService: DataService, private navCtrl: NavController) {
 
     }
-  panelOpenState = false;
+  // panelOpenState = false;
 
     
 
