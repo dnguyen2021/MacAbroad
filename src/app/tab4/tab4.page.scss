@@ -3,6 +3,40 @@
 @import '~bootstrap/scss/mixins/_breakpoints';
 @import "~bootstrap/scss/bootstrap";
 
+img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+@keyframes fadeIn {
+from {
+  opacity: 0;
+}
+
+to {
+  opacity: 1;
+}
+}
+
+.fadeIn {
+animation-name: fadeIn;
+animation-duration: 4s;
+}
+
+.list .item.item-accordion {
+line-height: 38px;
+padding-top: 0;
+padding-bottom: 0;
+transition: 0.09s all linear;
+}
+.list .item.item-accordion.ng-hide {
+line-height: 0px;
+}
+.list .item.item-accordion.ng-hide-add,
+.list .item.item-accordion.ng-hide-remove {
+display: block !important;
+}
+
 
 $grid-breakpoints: (
  xs: 0, // Phone (0px - 575px)

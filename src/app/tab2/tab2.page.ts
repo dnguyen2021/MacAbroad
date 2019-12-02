@@ -2,6 +2,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { IonicModule, NavController } from '@ionic/angular';
 import { DataService } from '../services/data.service';
 import { InAppBrowser } from '@ionic-native/in-app-browser/ngx'
+// import {MatExpansionModule} from '@angular/material/expansion'
 // import { MbscFormOptions } from '@mobiscroll/angular-lite'
 
 
@@ -43,10 +44,11 @@ export class Tab2Page implements OnInit{
   public searchTerm4: string = "";
   public items2: any;
 
-  constructor(private dataService: DataService, private navCtrl: NavController, 
-    ) {
+  constructor(private dataService: DataService, private navCtrl: NavController) {
 
     }
+  panelOpenState = false;
+
     
 
 
