@@ -1,6 +1,6 @@
 <ion-header>
   <ion-toolbar color="primary">
-    <img src="/assets/icon/mockupMacAbroad3.png" width="65px" style="display:inline-block" height="65px">
+    <img src="/assets/icon/mockupMacAbroad3.png" width="65px" style="display:inline-block" height="65px" (click)="goToHome()">
     <ion-title class="titleicon" style = "font-size:25px; text-align: center; display:inline-block">
       <div class="fadeIn">
         Program Search
@@ -13,12 +13,12 @@
 <ion-content padding>
   <!-- <div class="center">
     <ion-button ion-button shape="round" fill="clear" shape="round" (click)="goToProfile()">
-        Profile Page 
+        Profile Page
     </ion-button>
   </div> -->
   <div class="fadeIn"><ion-searchbar color="primary" [(ngModel)]="searchTerm4" (ionChange)="setSearchedItems()"></ion-searchbar></div>
   <ion-list>
-    
+
         <ion-card style="background-color: #4178ee;" *ngFor="let item of items2">
             <!-- <mat-accordion>
                 <mat-expansion-panel>
@@ -40,19 +40,19 @@
               </mat-accordion> -->
 
           <div class="fadeIn">
-                <img src="/assets/icon/{{item.program.img}}" alt="img" width="100" height="200">
+              <img src="/assets/icon/{{item.program.img}}" alt="img" width="fill" height="fill" >
           </div>
 
           <ion-card-header tappable (click)="collapseCard = !collapseCard">
             <div class="fadeIn"><ion-card-title style="text-align: center;color: white;">{{item.program.programName}}</ion-card-title></div>
-          </ion-card-header> 
-          
+          </ion-card-header>
+
           <div class="fadeIn"><ion-card-content style="background-color: #292b44;" *ngIf="!collapseCard">
             <ion-card-title style="text-align: center; text-decoration: underline; font-weight: bold;">
               Summary
 
             </ion-card-title>
-            
+
               {{item.program.summary}}
 
             <ion-card-title style="text-align: center; text-decoration: underline; font-weight: bold;">
@@ -85,6 +85,6 @@
           </ion-item>
         </div> -->
 
-  </ion-list>  
+  </ion-list>
 
 </ion-content>
