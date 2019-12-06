@@ -25,20 +25,24 @@ export class Tab4Page {
       title: 'Application Deadline',
       description: 'Online Application for Mac Study Abroad applications Deadline',
       icon: 'calendar',
-      date:  {subtitle: 'December', title: '5th'},
+      date:  {subtitle: 'December', title: '5th, 2019'},
     },
     {
       title: 'Pre-Departure Meeting',
       description: 'Required pre-departure meeting to discuss logistics and housing accommadations',
       icon: 'calendar',
-      date:  {subtitle: 'February', title: '26th'},
+      date:  {subtitle: 'February', title: '26th, 2020'},
     }
   ]
   constructor(public navCtrl: NavController){
 
   }
+  goToHome(){
+    this.navCtrl.navigateForward('/tabs/tab1');
+  }
 
 }
+
 
 // export class Tab4Page implements OnInit{
 //   event = {
