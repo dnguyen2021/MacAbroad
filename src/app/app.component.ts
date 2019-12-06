@@ -6,6 +6,7 @@ import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { NgModule } from '@angular/core'; 
 import { RecommenderService } from './recommender.service';
+import { MbscFormOptions, MbscPageOptions } from '@mobiscroll/angular-lite'
 
 import { AuthService } from './authservice.service';
 
@@ -36,6 +37,13 @@ export class AppComponent {
       
  
     });
+  }
+
+  settings: MbscFormOptions = {
+    theme: 'ios',
+  };
+  pageSettings: MbscPageOptions = {
+    theme: 'ios',
   }
   
 }
