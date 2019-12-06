@@ -1340,8 +1340,8 @@ export class DataService {
           "areaName":"Asian Languages and Cultures, Economics",
           "academicFeatures":"Facilitated Excursion(s), Independent Study Project (ISP)"
           ,"value":0
-          ,"img": "middleburychina.jpg",
-          "website":"http://www.middlebury.edu/study-abroad/china/hangzhou"
+          ,"img": "middleburychina.jpg"
+          ,"website": "http://www.middlebury.edu/study-abroad/china/hangzhou",
         }
       },{
         "program":{
