@@ -20,6 +20,7 @@ import { DataService } from '../services/data.service';
 }) 
 
 export class Tab4Page {
+
   items = [ 
     {
       title: 'Application Deadline',
@@ -32,7 +33,43 @@ export class Tab4Page {
       description: 'Required pre-departure meeting to discuss logistics and housing accommadations',
       icon: 'calendar',
       date:  {subtitle: 'February', title: '26th, 2020'},
-    }
+    },
+    {
+      title:'Priority 1 - Fall 2019',
+      description:'Please complete the following steps in order of priority listed by the deadlines below. New material will be posted throughout the pre-departure process and you will be notified accordingly. Additional information will be posted in the attached documents section of your application or emailed to you. Please read these documents carefully. If you have general questions, contact us at 651.696.6300 or email . You may also contact your Study Away advisor if you have any specific questions.',
+      icon:'calendar',
+      date: {subtitle: 'January 17th to', title: 'March 1st'},
+    },
+    {
+      title:'Priority 2 - Fall 2019',
+      description:'Please complete the following steps in order of priority listed by the deadlines below. New material will be posted throughout the pre-departure process and you will be notified accordingly. Additional information will be posted in the attached documents section of your application or emailed to you. Please read these documents carefully. If you have general questions, contact us at 651.696.6300 or email . You may also contact your Study Away advisor if you have any specific questions.',
+      icon:'calendar',
+      date: {subtitle: 'February 25th to', title: 'March 27th'},
+    },
+    {
+      title:'Priority 3 - Fall 2019',
+      description:'Please complete the following steps in order of priority listed by the deadlines below. New material will be posted throughout the pre-departure process and you will be notified accordingly. Additional information will be posted in the attached documents section of your application or emailed to you. Please read these documents carefully. If you have general questions, contact us at 651.696.6300 or email . You may also contact your Study Away advisor if you have any specific questions.',
+      icon:'calendar',
+      date: {subtitle: 'February 25th to', title: 'April 29th'},
+    },
+    {
+      title:'Priority 1 - Spring 2020',
+      description:'Please complete the following steps in order of priority listed by the deadlines below. New material will be posted throughout the pre-departure process and you will be notified accordingly. Additional information will be posted in the attached documents section of your application or emailed to you. Please read these documents carefully. If you have general questions, contact us at 651.696.6300 or email . You may also contact your Study Away advisor if you have any specific questions.',
+      icon:'calendar',
+      date: {subtitle: 'January 17th to', title: 'March 1st'},
+    },
+    {
+      title:'Priority 2 - Spring 2020',
+      description:'Please complete the following steps in order of priority listed by the deadlines below. New material will be posted throughout the pre-departure process and you will be notified accordingly. Additional information will be posted in the attached documents section of your application or emailed to you. Please read these documents carefully. If you have general questions, contact us at 651.696.6300 or email . You may also contact your Study Away advisor if you have any specific questions.',
+      icon:'calendar',
+      date: {subtitle: 'September 4th to ', title: 'September 30th'},
+    },
+    {
+      title:'Priority 3 - Spring 2020',
+      description:'Please complete the following steps in order of priority listed by the deadlines below. New material will be posted throughout the pre-departure process and you will be notified accordingly. Additional information will be posted in the attached documents section of your application or emailed to you. Please read these documents carefully. If you have general questions, contact us at 651.696.6300 or email . You may also contact your Study Away advisor if you have any specific questions.',
+      icon:'calendar',
+      date: {subtitle: 'September 4th to', title: 'November 26th'},
+    },
   ]
   constructor(public navCtrl: NavController){
 

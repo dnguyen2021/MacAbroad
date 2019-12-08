@@ -77,14 +77,4 @@ export class Tab2Page implements OnInit{
   //   this.navCtrl.navigateForward()
   // }
 
-  // constructor(private dataService: DataService) {}
-  //
-  // ngOnInit(){
-  //   this.setFilteredItems();
-  // }
-  //
-  // setFilteredItems2() {
-  //   this.items = this.dataService.filterItems2(this.searchTerm);
-  // }
-
 }

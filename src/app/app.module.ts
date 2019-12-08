@@ -1,3 +1,4 @@
+import { MbscModule } from '@mobiscroll/angular';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouteReuseStrategy } from '@angular/router';
@@ -10,7 +11,7 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HttpClientJsonpModule } from '@angular/common/http';
 import { RecommenderService } from './recommender.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
@@ -21,7 +22,6 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
 
 
 import { IonicStorageModule } from '@ionic/storage';
-
 import { environment } from '../environments/environment'; 
 import { FirebaseService } from './database.service';
 import { AngularFirestore } from 'angularfire2/firestore';
@@ -39,18 +39,16 @@ firebase.initializeApp(environment.config);
 @NgModule({
   declarations: [
   AppComponent,
-  // Tab4Page,   
   TimelineComponent,
   TimelineItemComponent,
   TimelineDateComponent
 ],
   entryComponents: [
-    // AppComponent,
-    // Tab4Page
   ],
-  imports: [
-    BrowserModule, AngularFirestoreModule, IonicModule.forRoot(), AppRoutingModule, HttpClientModule, 
-  FormsModule, ReactiveFormsModule, AngularFireAuthModule, AngularFireModule.initializeApp(environment.config) 
+  imports: [ 
+    MbscModule,  
+    BrowserModule, AngularFirestoreModule, IonicModule.forRoot(), AppRoutingModule, HttpClientModule, HttpClientJsonpModule,
+     FormsModule, ReactiveFormsModule, AngularFireAuthModule, AngularFireModule.initializeApp(environment.config) 
   ,IonicStorageModule.forRoot(), AngularFireDatabaseModule, AngularFireDatabaseModule
 ],
   providers: [

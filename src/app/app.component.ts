@@ -6,9 +6,17 @@ import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { NgModule } from '@angular/core'; 
 import { RecommenderService } from './recommender.service';
-import { MbscFormOptions, MbscPageOptions } from '@mobiscroll/angular-lite'
+// import { MbscFormOptions, MbscPageOptions } from '@mobiscroll/angular-lite'
+
+import { mobiscroll, MbscScrollViewOptions, MbscNavOptions, MbscListviewOptions } from '@mobiscroll/angular';
+
 
 import { AuthService } from './authservice.service';
+
+mobiscroll.settings ={
+  theme: 'ios',
+  themeVariant: 'light'
+}
 
 @Component({
   selector: 'app-root',
@@ -39,12 +47,28 @@ export class AppComponent {
     });
   }
 
-  settings: MbscFormOptions = {
-    theme: 'ios',
-  };
-  pageSettings: MbscPageOptions = {
-    theme: 'ios',
-  }
+  // settings: MbscFormOptions = {
+  //   theme: 'ios',
+  // };
+  // pageSettings: MbscPageOptions = {
+  //   theme: 'ios',
+  // }
+  settings: MbscListviewOptions = {
+    actionable: false,
+    stages: [{
+        percent: -20,
+        action: (event, inst) => {
+            inst.remove(event.target);
+            return false;
+        }
+    }, {
+        percent: 20,
+        action: (event, inst) => {
+            inst.remove(event.target);
+            return false;
+        }
+    }]
+};
   
 }
 

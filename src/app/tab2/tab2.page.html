@@ -1,25 +1,63 @@
-<ion-header>
-  <ion-toolbar color="primary">
+<ion-header style="color: #1c357a">
+  <ion-toolbar class="bg-class">
     <img src="/assets/icon/mockupMacAbroad3.png" width="65px" style="display:inline-block" height="65px" (click)="goToHome()">
     <ion-title class="titleicon" style = "font-size:25px; text-align: center; display:inline-block">
       <div class="fadeIn">
-        Program Search
+          Program Search 
       </div>
     </ion-title>
+    <div class="fadeIn">
+        <ion-searchbar [(ngModel)]="searchTerm4" (ionChange)="setSearchedItems()"></ion-searchbar>
+    </div>
   </ion-toolbar>
 </ion-header>
 
+<!-- <mbsc-listview [options]="settings">
+  <mbsc-listview-item mbsc-card *ngFor="let item of items2">
+    <mbsc-card-content>
+      <mbsc-avatar src="/assets/icon/{{item.program.img}}" draggable="false"></mbsc-avatar>
+      <mbsc-card-title class="mbsc-bold">{{item.program.programName}}</mbsc-card-title>
+      <mbsc-card-subtitle>{{item.prorgram.summary}}</mbsc-card-subtitle>
+    </mbsc-card-content>
+  </mbsc-listview-item>
+</mbsc-listview> -->
 
-<ion-content padding>
-  <!-- <div class="center">
-    <ion-button ion-button shape="round" fill="clear" shape="round" (click)="goToProfile()">
-        Profile Page
-    </ion-button>
+
+<ion-content padding class="bg-class">
+  <!-- <div class="mbsc-padding">
+    <mbsc-scrollview [options]="settings">
+        <mbsc-scrollview-item class="bg-class2" *ngFor="let item of items2">
+          <img [src]="/assets/icon/{{item.program.img}}" draggabale ="false">
+          <mbsc-card-content>{{item.program.programName}}</mbsc-card-content>
+        </mbsc-scrollview-item>
+    </mbsc-scrollview>
   </div> -->
-  <div class="fadeIn"><ion-searchbar color="primary" [(ngModel)]="searchTerm4" (ionChange)="setSearchedItems()"></ion-searchbar></div>
-  <ion-list>
+<!-- 
+  <mbsc-card collapsible>
+      <mbsc-card-header class="mbsc-card-header">
+          <div>
+              <mbsc-card-subtitle class="mbsc-bold mbsc-txt-s">27/07/2018</mbsc-card-subtitle>
+              <div class="mbsc-bold">FRIDAY AFTERNOON RUN</div>
+              <div class="mbsc-grid mbsc-margin mbsc-txt-muted mbsc-bold mbsc-txt-s">
+                  <div class="mbsc-row mbsc-no-padding">
+                      <div class="mbsc-col">5.43km</div>
+                      <div class="mbsc-col">5'44"/km</div>
+                      <div class="mbsc-col">30:45</div>
+                  </div>
+              </div>
+          </div>
+      </mbsc-card-header>
+      <mbsc-card-content class="mbsc-no-padding">
+          <img src="/assets/icon/{{item.program.img}}" />
+          <div class="mbsc-btn-group-block">
+              <button class="mbsc-btn-primary">View details</button>
+              <button class="mbsc-btn-secondary">Share your run</button>
+          </div>
+      </mbsc-card-content>
+  </mbsc-card> -->
 
-        <ion-card style="background-color: #4178ee;" *ngFor="let item of items2">
+  <ion-list>
+        <ion-card class="bg-class2" *ngFor="let item of items2"> -->
             <!-- <mat-accordion>
                 <mat-expansion-panel>
                   <mat-expansion-panel-header>
@@ -41,13 +79,13 @@
 
           <div class="fadeIn">
               <img src="/assets/icon/{{item.program.img}}" alt="img" width="fill" height="fill" >
-          </div>
+          </div> 
 
           <ion-card-header tappable (click)="collapseCard = !collapseCard">
             <div class="fadeIn"><ion-card-title style="text-align: center;color: white;">{{item.program.programName}}</ion-card-title></div>
           </ion-card-header>
 
-          <div class="fadeIn"><ion-card-content style="background-color: #292b44;" *ngIf="!collapseCard">
+          <div class="fadeIn"><ion-card-content style="background-color: #ffffff;" *ngIf="!collapseCard">
             <ion-card-title style="text-align: center; text-decoration: underline; font-weight: bold;">
               Summary
 

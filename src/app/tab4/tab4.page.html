@@ -95,7 +95,7 @@
 </ion-content> -->
 
 <ion-header>
-    <ion-toolbar color="primary">
+    <ion-toolbar class="bg-class">
       <img src="/assets/icon/mockupMacAbroad3.png" width="65px" style="display:inline-block" height="65px" (click)="goToHome()">
       <ion-title class="titleicon" style = "font-size:25px; text-align: center; display:inline-block">
         <div class="fadeIn">
@@ -105,15 +105,15 @@
     </ion-toolbar>
   </ion-header>
 
-  <ion-content>
+  <ion-content padding class="bg-class">
     <ion-list *ngFor="let item of items">
-      <ion-card color= "primary">
-        <ion-card-header>
-          <ion-card-title style="text-align: center; text-decoration: underline; font-weight: bold;orientation: center;">
-              <div class="fadeIn">{{item.title}}</div>
+      <ion-card style="background-color: #e9f1f8;">
+        <ion-card-header class="bg-class2">
+          <ion-card-title style="text-align: center; font-weight: bold;orientation: center; color: white;">
+              <div class="fadeIn"><u>{{item.title}}</u> <ion-checkbox style="background-color: #1c357a;" ionChange="Completed">Completed</ion-checkbox></div>
           </ion-card-title>
         </ion-card-header>
-        <ion-card-content style="background-color: #292b44;">
+        <ion-card-content style="background-color: #e9f1f8;">
           <br>
           <div class="fadeIn">{{item.description}}<br>
           <b>Deadline: </b>{{item.date.subtitle}} {{item.date.title}}</div>
