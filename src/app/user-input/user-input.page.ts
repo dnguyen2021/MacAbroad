@@ -15,7 +15,6 @@ export class UserInputPage implements OnInit {
   public searchTerm3: string = "";
   public saveTerm: string = "";
   public items: any = [];
-  // public savedItems: any = [];
   public boolean;
 
   constructor(public navCtrl: NavController, private dataService: DataService) {
@@ -45,14 +44,14 @@ export class UserInputPage implements OnInit {
     // this.dataService.setShow();
   }
 
-  saveData(item){
-    // this.savedItems.push(item);
-    this.dataService.save(item);
-  }
+  // saveData(item){
+  //   // this.savedItems.push(item);
+  //   this.dataService.save(item);
+  // }
 
-  goToFavourites(){
-    this.navCtrl.navigateForward('/tabs/saved-programs')
-  }
+  // goToFavourites(){
+  //   this.navCtrl.navigateForward('/tabs/saved-programs')
+  // }
 
   goToRecommendation(){
     this.navCtrl.navigateForward('/tabs/recommendation')
@@ -77,5 +76,3 @@ export class UserInputPage implements OnInit {
     }
 
 }
-
-

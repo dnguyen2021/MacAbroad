@@ -1,6 +1,20 @@
-import { Component, OnInit } from '@angular/core';
-import { IonicModule, NavController } from '@ionic/angular';
+import { Component, OnInit, ViewChild, ViewChildren, QueryList } from '@angular/core';
+import { IonicModule, NavController} from '@ionic/angular'; //ItemSliding
 import { DataService } from "../services/data.service";
+// import { Http } from '@angular/http';
+import 'rxjs/Rx';
+
+import {
+  StackConfig,
+  Stack,
+  Card,
+  ThrowEvent,
+  DragEvent,
+  SwingStackComponent,
+  SwingCardComponent} from 'angular2-swing';
+
+  import { MenuController } from '@ionic/angular';
+
 
 @Component({
   selector: 'app-recommendation',
@@ -8,34 +22,117 @@ import { DataService } from "../services/data.service";
   styleUrls: ['./recommendation.page.scss'],
 })
 
-export class RecommendationPage implements OnInit {
-  public savedItems: any = [];
-  public boolean;
+export class RecommendationPage { //implements OnInit
+  @ViewChild('myswing1', {static:true}) swingStack: SwingStackComponent;
+  @ViewChildren('mycards1') swingCards: QueryList<SwingCardComponent>;
 
-  constructor(public navCtrl: NavController, private dataService: DataService) {}
+  // public items2: any = [];
+  // cards: Array<any>;
+  public items2: Array<any>;
+  stackConfig: StackConfig;
+  // recentCard: string= '';
 
-  ngOnInit() {
-    // this.createItems();
-    // // this.setStars();
-    // // this.setFilteredItems();
-    // // this.createSort();
-    // this.isShow();
+  constructor(public navCtrl: NavController, private dataService: DataService) { //private menu: MenuController, , private http:Http
+    this.stackConfig = {
+      throwOutConfidence: (offsetX, offsetY, element) => {
+        return Math.min(Math.abs(offsetX) / (element.offsetWidth/2), 1);
+      },
+      transform: (element, x, y, r) => {
+        this.onItemMove(element, x, y, r);
+      },
+      throwOutDistance: (d) => {
+        return 800;
+      }
+    };
+    this.createItems();
   }
 
-  // setFilteredItems() {
-  //   this.items = this.dataService.filterItems();
+  ngAfterViewInit() {
+    // Either subscribe in controller or set in HTML
+    this.swingStack.throwin.subscribe((event: DragEvent) => {
+      event.target.style.background = '#ffffff';
+    });
+
+    this.items2 = [{programName: ''}];
+    // this.addNewCards(1);
+
+  }
+
+  onItemMove(element, x, y, r) {
+  var color = '';
+  var abs = Math.abs(x);
+  let min = Math.trunc(Math.min(16*16 - abs, 16*16));
+  let hexCode = this.decimalToHex(min, 2);
+
+  if (x < 0) {
+    color = '#FF' + hexCode + hexCode;
+  } else {
+    color = '#' + hexCode + 'FF' + hexCode;
+  }
+
+  element.style.background = color;
+  element.style['transform'] = `translate3d(0, 0, 0) translate(${x}px, ${y}px) rotate(${r}deg)`;
+}
+
+// Connected through HTML
+// voteUp(like: boolean) {
+//   let removedCard = this.items2.pop();
+//   this.addNewCards(1);
+//   if (like) {
+//     this.recentCard = 'You liked: ' + removedCard.programName;
+//   } else {
+//     this.recentCard = 'You disliked: ' + removedCard.programName;
+//   }
+// }
+
+// Add new cards to our array
+// addNewCards(count: number) {
+//   this.items2 = this.dataService.getItems();
+// }
+
+// http://stackoverflow.com/questions/57803/how-to-convert-decimal-to-hex-in-javascript
+decimalToHex(d, padding) {
+  var hex = Number(d).toString(16);
+  padding = typeof (padding) === "undefined" || padding === null ? padding = 2 : padding;
+
+  while (hex.length < padding) {
+    hex = "0" + hex;
+  }
+
+  return hex;
+}
+
+  // ngOnInit() {
+  //   this.createItems();
   // }
-  //
-  // createSort(){
-  //   this.items = this.dataService.sort();
+
+  createItems(){
+    this.items2 = this.dataService.getItems();
+  }
+
+  goToFavourites(){
+    this.navCtrl.navigateForward('/tabs/saved-programs')
+  }
+
+  removeItem(i){
+    this.items2.splice(i, 1);
+  }
+
+  addItem(item, i){
+    this.dataService.save(item);
+    this.items2.splice(i, 1);
+  }
+
+  // share(slidingItem: ItemSliding) {
+  //   slidingItem.close();
   // }
-  //
-  // isShow(){
-  //   this.boolean = this.dataService.setShow();
+
+  // openFirst() {
+  //   this.menu.enable(true, 'first');
+  //   this.menu.open('first');
   // }
-  //
-  // createItems(){
-  //   this.savedItems = this.dataService.getSaved();
-  // }
+
+
+
 
 }
