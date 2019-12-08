@@ -1,0 +1,96 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-row>
+        <ion-button (click)="goBack()">
+            <ion-icon name="arrow-round-back"></ion-icon>
+          </ion-button>
+          <ion-title>Forum
+    </ion-title>
+    </ion-row>
+  </ion-toolbar>
+  
+</ion-header>
+
+
+<ion-content>
+
+<div>
+<form [formGroup]="validations_form" (ngSubmit)="onSubmit(validations_form.value)">
+
+<ion-input placeholder="Name" formControlName = Name ></ion-input>
+
+<ion-input placeholder="email" formControlName = email></ion-input>
+
+<ion-item>
+  <ion-label color="dark">Program</ion-label>
+  <ion-select [(ngModel)]="searchTerm4" (click)="setPrograms()" type = 'text' formControlName = Program>
+      <ion-select-option *ngFor="let item of items2">
+          {{ item.program.programName }}
+      </ion-select-option>
+  </ion-select>
+</ion-item>
+
+<!-- 
+<ion-toolbar>
+  <ion-searchbar  [(ngModel)]="searchTerm4" (click)="setPrograms()" (ionChange)="setSearchedItems()" showCancelButton="focus" placeholder="Enter search query" formControlName = Program></ion-searchbar>
+</ion-toolbar>
+
+<ion-list>
+  <ion-label style="background-color: #4178ee;" *ngFor="let item of items2">
+    {{ item.program.programName}}
+  </ion-label> -->
+  <!-- <div ng-repeat="item in items2">
+    <ion-item class="item-stable"
+    ng-click="toggleItem(item)"
+    ng-class="{active: isItemShown(item)}">
+  <i class="icon" ng-class="isItemShown(item) ?
+  'ion-minus' : 'ion-plus'"></i>
+  {{item.program.programName}}
+  </ion-item>
+  <ion-item class="item-accordion"
+      ng-repeat="name in item.programName"
+      ng-show="isItemShown(item)">
+    {{name}}
+    </ion-item>
+  </div> -->
+<!-- </ion-list>  -->
+
+<ion-input placeholder="Review" formControlName = Review></ion-input>
+
+<ion-datetime formControlName="Date" displayFormat="DD-MM-YYYY" pickerFormat="DD-MM-YYYY" placeholder="Please Select Today's Date" ></ion-datetime>
+
+
+<ion-button class="submit-btn" color="{{post.color}}" expand="block" type="submit" [disabled]="!validations_form.valid">{{post.message}}</ion-button> 
+
+  <ion-item-sliding *ngFor="let review of reviews">
+    <ion-item-options side="end">
+    </ion-item-options>
+    <ion-item>
+      Name: {{ review.Name }} <br>
+      email: {{ review.email }} <br>
+      Program: {{ review.Program }} <br>
+      Review: {{ review.Review }} <br>
+      Submitted at: {{ review.Date }}
+    </ion-item> 
+
+   </ion-item-sliding>
+
+</form>
+</div>
+</ion-content>
+  <!-- <ion-list>
+    <div *ngIf="boolean == true">
+      <div class="center">
+      <h1> Reviews </h1>
+      </div>
+      <ion-card *ngFor="let review of reviews">
+        <ion-card-header>
+          <ion-card-subtitle style="font-size:15px">REVIEW</ion-card-subtitle>
+          <ion-row>
+            <ion-col size="10">
+              <ion-card-title style="font-size:25px">{{review.Review}}{{item.Time}}</ion-card-title>
+            </ion-col>
+          </ion-row> -->
+
+
+ 

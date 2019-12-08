@@ -29,7 +29,9 @@ export class ProfilePage implements OnInit {
     this.validations_form = this.formBuilder.group({
       Name: new FormControl(''),
       email: new FormControl(''),
-      Program: new FormControl('')
+      Program: new FormControl(''),
+      GPA: new FormControl(''),
+      Major: new FormControl('')
     });
   }
 
@@ -61,6 +63,8 @@ export class ProfilePage implements OnInit {
   public Name: string; 
   public email: string; 
   public Programs: string; 
+  public GPA: string; 
+  public Major: string; 
 
 
   setPrograms(){
@@ -76,7 +80,9 @@ export class ProfilePage implements OnInit {
     let data = {
       Name: value.Name,
       email: value.email,
-      Program: value.Program
+      Program: value.Program, 
+      GPA: value.GPA, 
+      Major: value.Major
     }
     this.fireBaseService.createTask(data)
     .then(
