@@ -25,7 +25,7 @@ import { InAppBrowser } from '@ionic-native/in-app-browser/ngx'
 //       $scope.items2[i].items.push(i + '-' + j);
 //     }
 //   }
-  
+
 //   /*
 //    * if given group is the selected group, deselect it
 //    * else, select the given group
@@ -36,11 +36,11 @@ import { InAppBrowser } from '@ionic-native/in-app-browser/ngx'
 //   $scope.isItemShown = function(item) {
 //     return item.show;
 //   };
-  
+
 // });
 
 export class Tab2Page implements OnInit{
-  
+
   public searchTerm4: string = "";
   public items2: any;
 
@@ -49,7 +49,7 @@ export class Tab2Page implements OnInit{
     }
   // panelOpenState = false;
 
-    
+
 
 
   ngOnInit() {

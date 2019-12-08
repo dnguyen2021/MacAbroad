@@ -3,7 +3,7 @@
     <img src="/assets/icon/mockupMacAbroad3.png" width="65px" style="display:inline-block" height="65px" (click)="goToHome()">
     <ion-title class="titleicon" style = "font-size:25px; text-align: center; display:inline-block">
       <div class="fadeIn">
-          Program Search 
+          Program Search
       </div>
     </ion-title>
     <div class="fadeIn">
@@ -32,7 +32,7 @@
         </mbsc-scrollview-item>
     </mbsc-scrollview>
   </div> -->
-<!-- 
+<!--
   <mbsc-card collapsible>
       <mbsc-card-header class="mbsc-card-header">
           <div>
@@ -57,7 +57,7 @@
   </mbsc-card> -->
 
   <ion-list>
-        <ion-card class="bg-class2" *ngFor="let item of items2"> -->
+        <ion-card class="bg-class2" *ngFor="let item of items2">
             <!-- <mat-accordion>
                 <mat-expansion-panel>
                   <mat-expansion-panel-header>
@@ -79,7 +79,7 @@
 
           <div class="fadeIn">
               <img src="/assets/icon/{{item.program.img}}" alt="img" width="fill" height="fill" >
-          </div> 
+          </div>
 
           <ion-card-header tappable (click)="collapseCard = !collapseCard">
             <div class="fadeIn"><ion-card-title style="text-align: center;color: white;">{{item.program.programName}}</ion-card-title></div>
@@ -115,6 +115,11 @@
         <i class="icon" ng-class="isItemShown(item) ?
         'ion-minus' : 'ion-plus'"></i>
         {{item.program.programName}}
+        </ion-item> -->
+        <!-- <ion-item class="item-accordion"
+        ng-repeat="" -->
+        <!-- </div> -->
+  <!-- </ion-list>
         </ion-item>
         <ion-item class="item-accordion"
             ng-repeat="name in item.programName"
@@ -122,7 +127,5 @@
           {{name}}
           </ion-item>
         </div> -->
-
   </ion-list>
-
 </ion-content>

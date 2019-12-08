@@ -1454,7 +1454,7 @@ export class DataService {
  }
 
  getItems(){
-   return this.items; 
+   return this.items;
  }
 
   createStars(searchTerm, searchTerm2, searchTerm3){

@@ -24,10 +24,10 @@ export class SavedProgramsPage implements OnInit {
   }
 
   goBack(){
-    this.navCtrl.navigateForward('/tabs/user-input')
+    this.navCtrl.navigateForward('/tabs/recommendation')
   }
 
-  removeItem(i){
+  removeItem2(i){
     this.savedItems.splice(i, 1);
   }
 }
