@@ -2,6 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { IonicModule, NavController } from '@ionic/angular';
 import { DataService } from "../services/data.service";
 import { MenuController } from '@ionic/angular';
+import { FirebaseService } from '../database.service'
+import { Router } from '@angular/router';
+import { Validators, FormBuilder, FormGroup, FormControl } from '@angular/forms';
+import * as firebase from 'firebase/app';
+import 'firebase/storage'
 
 
 @Component({
@@ -17,10 +22,39 @@ export class UserInputPage implements OnInit {
   public items: any = [];
   public boolean;
 
-  constructor(public navCtrl: NavController, private dataService: DataService) {
+  constructor(public navCtrl: NavController, private dataService: DataService,
+    private fireBaseService: FirebaseService, private formBuilder: FormBuilder,) {
   }
 
-  ngOnInit(){
+  validations_form: FormGroup;
+
+  public Name: string;
+  public email: string;
+  public Program: string;
+  public Language: string;
+  public Recommended: string;
+  public Location: string;
+  public Housing: string;
+  public MinimumGPARequirement: string;
+  public AcademicFeatures: string;
+
+
+  ngOnInit(
+  ){
+
+    this.validations_form = this.formBuilder.group({
+      Name: new FormControl(''),
+      email: new FormControl(''),
+      Program: new FormControl(''),
+      Language: new FormControl(''),
+      Recommended : new FormControl(''),
+      Location: new FormControl(''),
+      Housing: new FormControl(''),
+      MinimumGPARequirement: new FormControl(''),
+      AcademicFeatures: new FormControl('')
+    });
+
+
     this.setStars();
     this.createSort();
     this.setFilteredItems();
@@ -44,10 +78,31 @@ export class UserInputPage implements OnInit {
     // this.dataService.setShow();
   }
 
-  // saveData(item){
-  //   // this.savedItems.push(item);
-  //   this.dataService.save(item);
-  // }
+
+  saveData(item){
+    // this.savedItems.push(item);
+    this.dataService.save(item);
+    let currentUser = firebase.auth().currentUser;
+    let data = {
+      Name: currentUser.email,
+      email: currentUser.email,
+      Program: item.program.programName,
+      Language: '',
+      Recommended : item.program.areaName,
+      Location: item.program.locationName,
+      Housing: item.program.housing,
+      MinimumGPARequirement: item.program.GPA,
+      AcademicFeatures: item.program.academicFeatures
+    }
+    this.fireBaseService.createTask(data)
+
+    .then(
+      // res => {
+      //   this.router.navigate(["/forum"]);
+      // }
+    )
+
+  }
 
   // goToFavourites(){
   //   this.navCtrl.navigateForward('/tabs/saved-programs')
@@ -71,8 +126,5 @@ export class UserInputPage implements OnInit {
   //   this.menu.open('custom');
   // }
 
-  goToProfile(){
-    this.navCtrl.navigateForward('/profile')
-    }
 
 }

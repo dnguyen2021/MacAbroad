@@ -38,6 +38,17 @@ const routes: Routes = [
         ]
       },
       {
+        path: 'forum',
+        children: [
+          {
+            path: '',
+            loadChildren: () =>
+              import('../forum/forum.module').then(m => m.ForumPageModule)
+          }
+        ]
+      },
+
+      {
         path: 'recommendation',
         children: [
           {

@@ -1,101 +1,35 @@
 <ion-header>
   <ion-toolbar color="primary">
     <ion-row>
-      <ion-button (click)="goBack()">
-          <ion-icon name="arrow-round-back"></ion-icon>
-      </ion-button>
+        <ion-button (click)="goBack()" >
+            <ion-icon name="arrow-round-back"></ion-icon>
+          </ion-button>
+
       <ion-title>My Saved Programs</ion-title>
     </ion-row>
   </ion-toolbar>
 </ion-header>
 
+<ion-button (click) = "goForum()"> <ion-icon name='ios-contacts'></ion-icon> <label>Go to Forums</label> </ion-button>
 <ion-content>
-  <ion-item-sliding *ngFor="let item of savedItems; let i = index">
-    <ion-item-options side="start">
-      <ion-item-option (click)="removeItem2(i)" color="danger" expandable >
-        <ion-icon ios="ios-trash" md="md-trash" size="large"></ion-icon>
+
+  <ion-item-sliding [(ngModel)] = "searchTerm4" *ngFor="let item of savedItems; let i = index">
+    <ion-item-options side="end">
+      <ion-item-option (click)="removeItem(i)" color="danger" expandable >
+        Delete
       </ion-item-option>
     </ion-item-options>
+
     <ion-item>
-
-      <!-- Program: {{item.program.programName}} <br>
-      Language: {{ item.program.language }} <br>
-      Recommended By: {{ item.program.areaName}} <br>
-      Location: {{ item.program.locationName}} <br>
-      Housing: {{ item.program.housing}} <br>
-      Minimum GPA Requirement: {{ item.program.GPA}} <br>
-      Academic Features: {{ item.program.academicFeatures}} <br> -->
-
-      <ion-card>
-        <ion-card-header>
-          <ion-card-subtitle style="font-size:15px">PROGRAM</ion-card-subtitle>
-          <ion-row>
-            <ion-col size="10">
-              <ion-card-title style="font-size:25px">{{item.program.programGroup}}{{item.program.programName}}</ion-card-title>
-            </ion-col>
-          </ion-row>
-          <ion-row>
-            <ion-col>
-              <ion-card-title><div style="font-size:20px">{{ item.program.value}} / 3</div> <div style="font-size:16px">match</div></ion-card-title>
-            </ion-col>
-          </ion-row>
-        </ion-card-header>
-
-        <img src="/assets/icon/{{item.program.img}}" alt="img" width="100" height="200">
-
-        <ion-card-content>
-
-          <ion-row>
-            <ion-col size="8">
-              <b>Language: </b>
-            </ion-col>
-            <ion-col size="9">
-              {{ item.program.language }}
-            </ion-col>
-          </ion-row>
-          <ion-row>
-            <ion-col size="8">
-              <b>Recommended By: </b>
-            </ion-col>
-            <ion-col size="9">
-              {{ item.program.areaName}}
-            </ion-col>
-          </ion-row>
-          <ion-row>
-            <ion-col size="8">
-              <b>Location: </b>
-            </ion-col>
-            <ion-col size="9">
-              {{ item.program.locationName}}
-            </ion-col>
-          </ion-row>
-          <ion-row>
-            <ion-col size="8">
-              <b>Housing: </b>
-            </ion-col>
-            <ion-col size="9">
-              {{ item.program.housing}}
-            </ion-col>
-          </ion-row>
-          <ion-row>
-            <ion-col size="8">
-              <b>Minimum GPA: </b>
-            </ion-col>
-            <ion-col size="9">
-              {{ item.program.GPA}}
-            </ion-col>
-          </ion-row>
-          <ion-row>
-            <ion-col size="8">
-              <b>Academic Features: </b>
-            </ion-col>
-            <ion-col size="9">
-              {{ item.program.academicFeatures}}
-            </ion-col>
-          </ion-row>
-
-        </ion-card-content>
-      </ion-card>
+      Program: {{ item.Program }} <br>
+      Language: {{ item.Language }} <br>
+      Recommended By: {{ item.Recommended }} <br>
+      Location: {{ item.LocationName}} <br>
+      Housing: {{ item.Housing}} <br>
+      Minimum GPA Requirement: {{ item.MinimumGPARequirement}} <br>
+      Academic Features: {{ item.AcademicFeatures}} <br>
+  
     </ion-item>
   </ion-item-sliding>
+
 </ion-content>

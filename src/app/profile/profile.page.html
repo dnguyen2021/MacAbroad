@@ -20,7 +20,7 @@
               <ion-label class="fw700">Form</ion-label>
             </ion-list-header>
 
-            <form [formGroup]="validations_form" (ngSubmit)="onSubmit(validations_form.value)">
+            <form>[formGroup]="validations_form" (ngSubmit)="onSubmit(validations_form.value)">
               <ion-item>
                 <ion-label position="floating" color="primary">Name</ion-label>
                 <ion-input type="text" formControlName="Name"></ion-input>
@@ -30,6 +30,19 @@
                 <ion-label position="floating" color="primary">Email</ion-label>
                 <ion-input type="text" formControlName="email"></ion-input>
               </ion-item>
+
+                  
+              <ion-item>
+                <ion-label position="floating" color="primary">GPA</ion-label>
+                <ion-input type="text" formControlName="GPA"></ion-input>
+              </ion-item>
+
+              <ion-item>
+                <ion-label position="floating" color="primary">Major</ion-label>
+                <ion-input type="text" formControlName="Major"></ion-input>
+              </ion-item>
+
+            </form> 
     
             <ion-item>
               <ion-label color="dark">Programs of Interest</ion-label>
@@ -42,26 +55,3 @@
 
           <ion-button class="submit-btn" expand="block" type="submit" [disabled]="!validations_form.valid">Save Preferences</ion-button>
         
-        </form>
-          <ion-list>
-            <ion-radio-group>
-              <ion-list-header color="light">
-                <ion-label class="fw700">User Type</ion-label>
-              </ion-list-header>
-          
-              <ion-item>
-                <ion-label color="primary">Student</ion-label>
-                <ion-radio slot="start" value="customer" checked></ion-radio>
-              </ion-item>
-          
-              <ion-item>
-                <ion-label color="primary">Other</ion-label>
-                <ion-radio slot="start" value="agent"></ion-radio>
-              </ion-item>
-            </ion-radio-group>
-
-            <ion-item>
-              <ion-label class="text-1x">Checkbox test</ion-label>
-              <ion-checkbox></ion-checkbox>
-            </ion-item>
-          </ion-list>

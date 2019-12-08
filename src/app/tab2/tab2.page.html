@@ -12,15 +12,10 @@
   </ion-toolbar>
 </ion-header>
 
-<!-- <mbsc-listview [options]="settings">
-  <mbsc-listview-item mbsc-card *ngFor="let item of items2">
-    <mbsc-card-content>
-      <mbsc-avatar src="/assets/icon/{{item.program.img}}" draggable="false"></mbsc-avatar>
-      <mbsc-card-title class="mbsc-bold">{{item.program.programName}}</mbsc-card-title>
-      <mbsc-card-subtitle>{{item.prorgram.summary}}</mbsc-card-subtitle>
-    </mbsc-card-content>
-  </mbsc-listview-item>
-</mbsc-listview> -->
+<ion-toolbar *toolbar secondary>
+  <img src="/assets/icon/mockupMacAbroad3.png" width="40px" style="display:inline-block" height="40px">
+  <ion-title class="titleicon" style="display:inline-block" >Home</ion-title>
+</ion-toolbar>
 
 
 <ion-content padding class="bg-class">
@@ -115,11 +110,6 @@
         <i class="icon" ng-class="isItemShown(item) ?
         'ion-minus' : 'ion-plus'"></i>
         {{item.program.programName}}
-        </ion-item> -->
-        <!-- <ion-item class="item-accordion"
-        ng-repeat="" -->
-        <!-- </div> -->
-  <!-- </ion-list>
         </ion-item>
         <ion-item class="item-accordion"
             ng-repeat="name in item.programName"
@@ -128,4 +118,5 @@
           </ion-item>
         </div> -->
   </ion-list>
+
 </ion-content>
