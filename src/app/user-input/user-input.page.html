@@ -1,60 +1,25 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar class="bg-class">
     <ion-row>
-    <ion-col size="0.1">
-    <ion-button (click)="show()">
+      <img src="/assets/icon/mockupMacAbroad3.png" width="65px" style="display:inline-block" height="65px">
+
+      <ion-title style = "font-family:Bebas Neue; font-size:25px; text-align: center">
+          <div class="fadeIn">Programs</div>
+      </ion-title>
+
+      <ion-button (click)="show()">
       <ion-icon name="menu"></ion-icon>
-    </ion-button>
-    </ion-col>
-    <ion-col>
-    <ion-title style = "font-family:Bebas Neue; font-size:25px; text-align: center">
-        <div class="fadeIn">Programs</div>
-    </ion-title>
-    </ion-col>
+      </ion-button>
+
     </ion-row>
 </ion-toolbar>
 </ion-header>
 
 
-<ion-header>
-
-  <ion-toolbar color="primary">
-    <ion-row>
-      <ion-col size="auto">
-        <ion-button (click)="goToFavourites()">
-          <ion-icon slot="icon-only" name="star" fill="clear"></ion-icon>
-        </ion-button>
-      </ion-col>
-      <ion-col>
-        <ion-title style = "font-family:Bebas Neue; font-size:25px; text-align: center">
-            <div class="pad"><div class="fadeIn">Programs</div></div>
-        </ion-title>
-      </ion-col>
-    </ion-row>
-
-  <ion-toolbar color="primary">
-      <img src="/assets/icon/mockupMacAbroad3.png" width="65px" style="display:inline-block" height="65px">
-      <ion-title class="titleicon" style = "font-size:25px; text-align: center; display:inline-block">
-        <div class="fadeIn">
-          Programs
-        </div>
-      </ion-title>
-  </ion-toolbar>
-<!--
-  <div>
-      <ion-button ion-button shape="round" fill="clear" shape="round" (click)="goToProfile()">
-          Profile Page
-      </ion-button>
-   </div> -->
-
-
-  </ion-toolbar>
-</ion-header>
-
-<ion-content>
+<ion-content class="bg-class">
   <ion-list>
-  <ion-list-header style = "font-family:Bebas Neue; font-size:20px"><div class="fadeIn">Please select your major(s):</div></ion-list-header>
-  <ion-item>
+  <ion-list-header class="bg-class" style = "font-family:Bebas Neue; font-size:20px"><div class="fadeIn">Please select your major(s):</div></ion-list-header>
+  <ion-item class="bg-class2">
     <ion-label style="font-family:Bebas Neue"><div class="fadeIn">Major</div></ion-label>
     <ion-select [(ngModel)] = "searchTerm" multiple="true" (ionChange)="setStars(); setFilteredItems(); createSort()">
       <ion-select-option value="any">Any</ion-select-option>
@@ -100,8 +65,8 @@
   </ion-list>
 
   <ion-list>
-  <ion-list-header style = "font-family:Bebas Neue; font-size:20px"><div class="fadeIn">Please select your preferred language(s) of instruction:</div></ion-list-header>
-  <ion-item>
+  <ion-list-header class="bg-class" style = "font-family:Bebas Neue; font-size:20px"><div class="fadeIn">Please select your preferred language(s) of instruction:</div></ion-list-header>
+  <ion-item class="bg-class2">
     <ion-label style="font-family:Bebas Neue"><div class="fadeIn">Language</div></ion-label>
     <ion-select [(ngModel)] ="searchTerm2" multiple="true" (ionChange)="setStars(); setFilteredItems(); createSort()">
       <ion-select-option value="any">Any</ion-select-option>
@@ -125,8 +90,8 @@
 
 
   <ion-list>
-  <ion-list-header style = "font-family:Bebas Neue; font-size:20px"><div class="fadeIn">Please select your preferred country(s) to visit:</div></ion-list-header>
-  <ion-item>
+  <ion-list-header class="bg-class" style = "font-family:Bebas Neue; font-size:20px"><div class="fadeIn">Please select your preferred country(s) to visit:</div></ion-list-header>
+  <ion-item class="bg-class2">
     <ion-label style="font-family:Bebas Neue;"><div class="fadeIn">Country</div></ion-label>
     <ion-select [(ngModel)] = "searchTerm3" multiple="true" (ionChange)="setStars(); setFilteredItems(); createSort()">
       <ion-select-option value="Any">Any</ion-select-option>
@@ -192,7 +157,6 @@
       <div class="fadeIn">
         Search <ion-icon name = "search"></ion-icon>
       </div>
-
     </ion-button>
   </div>
 
@@ -223,7 +187,7 @@
       </ion-card-header>
       <!-- <ion-item href="{{item.program.img}}" class="activated">
       </ion-item> -->
-      <img src="/assets/icon/{{item.program.img}}" alt="img" width="100" height="200"> -->
+      <img src="/assets/icon/{{item.program.img}}" alt="img" width="100" height="200"> 
 
       <ion-card-content>
         <!-- <ion-col size="9"> -->
