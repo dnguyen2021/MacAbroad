@@ -1,6 +1,18 @@
+
 <ion-header>
+
   <ion-toolbar class="bg-class">
     <ion-row>
+      <ion-col size="auto">
+        <ion-button (click)="goToFavourites()">
+          <ion-icon slot="icon-only" name="star" fill="clear"></ion-icon>
+        </ion-button>
+      </ion-col>
+      </ion-row>
+
+    </ion-toolbar>
+
+  <ion-toolbar color="primary">
       <img src="/assets/icon/mockupMacAbroad3.png" width="65px" style="display:inline-block" height="65px">
 
       <ion-title style = "font-family:Bebas Neue; font-size:25px; text-align: center">
@@ -11,7 +23,6 @@
       <ion-icon name="menu"></ion-icon>
       </ion-button>
 
-    </ion-row>
 </ion-toolbar>
 </ion-header>
 
@@ -187,7 +198,7 @@
       </ion-card-header>
       <!-- <ion-item href="{{item.program.img}}" class="activated">
       </ion-item> -->
-      <img src="/assets/icon/{{item.program.img}}" alt="img" width="100" height="200"> 
+      <img src="/assets/icon/{{item.program.img}}" alt="img" width="100" height="200">
 
       <ion-card-content>
         <!-- <ion-col size="9"> -->

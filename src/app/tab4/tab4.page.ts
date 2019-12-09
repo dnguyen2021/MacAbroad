@@ -17,11 +17,11 @@ import { DataService } from '../services/data.service';
   templateUrl: './tab4.page.html',
   styleUrls: ['./tab4.page.scss'],
 
-}) 
+})
 
 export class Tab4Page {
 
-  items = [ 
+  items = [
     {
       title: 'Application Deadline',
       description: 'Online Application for Mac Study Abroad applications Deadline',
@@ -89,26 +89,26 @@ export class Tab4Page {
 //     endTime: '',
 //     allDay: false
 //   };
- 
+
 //   minDate = new Date().toISOString();
- 
+
 //   eventSource = [];
 //   viewTitle;
- 
+
 //   calendar = {
 //     mode: 'month',
 //     currentDate: new Date(),
 //   };
-  
+
 //   // @ViewChild(CalendarComponent) myCal: CalendarComponent;
 //   @ViewChild(CalendarComponent, { read: true, static: false}) myCal: CalendarComponent;
- 
+
 //   constructor(private alertCtrl: AlertController, @Inject(LOCALE_ID) private locale: string) { }
- 
+
 //   ngOnInit() {
 //     this.resetEvent();
 //   }
- 
+
 //   resetEvent() {
 //     this.event = {
 //       title: '',
@@ -118,7 +118,7 @@ export class Tab4Page {
 //       allDay: false
 //     };
 //   }
- 
+
 //   // Create the right event format and reload source
 //   addEvent() {
 //     let eventCopy = {
@@ -128,15 +128,15 @@ export class Tab4Page {
 //       allDay: this.event.allDay,
 //       desc: this.event.desc
 //     }
- 
+
 //     if (eventCopy.allDay) {
 //       let start = eventCopy.startTime;
 //       let end = eventCopy.endTime;
- 
+
 //       eventCopy.startTime = new Date(Date.UTC(start.getUTCFullYear(), start.getUTCMonth(), start.getUTCDate()));
 //       eventCopy.endTime = new Date(Date.UTC(end.getUTCFullYear(), end.getUTCMonth(), end.getUTCDate() + 1));
 //     }
- 
+
 //     this.eventSource.push(eventCopy);
 //     // this.myCal.loadEvents();
 //     this.resetEvent();
@@ -146,33 +146,33 @@ export class Tab4Page {
 //   var swiper = document.querySelector('.swiper-container')['swiper'];
 //   swiper.slideNext();
 // }
- 
+
 // back() {
 //   var swiper = document.querySelector('.swiper-container')['swiper'];
 //   swiper.slidePrev();
 // }
- 
+
 // // Change between month/week/day
 // changeMode(mode) {
 //   this.calendar.mode = mode;
 // }
- 
+
 // // Focus today
 // today() {
 //   this.calendar.currentDate = new Date();
 // }
- 
+
 // // Selected date reange and hence title changed
 // onViewTitleChanged(title) {
 //   this.viewTitle = title;
 // }
- 
+
 // // Calendar event was clicked
 // async onEventSelected(event) {
 //   // Use Angular date pipe for conversion
 //   let start = formatDate(event.startTime, 'medium', this.locale);
 //   let end = formatDate(event.endTime, 'medium', this.locale);
- 
+
 //   const alert = await this.alertCtrl.create({
 //     header: event.title,
 //     subHeader: event.desc,
@@ -181,7 +181,7 @@ export class Tab4Page {
 //   });
 //   alert.present();
 // }
- 
+
 // // Time slot was clicked
 // onTimeSelected(ev) {
 //   let selected = new Date(ev.selectedTime);

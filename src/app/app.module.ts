@@ -44,6 +44,17 @@ import { TimelineItemComponent } from '../app/timeline/timeline.component';
 
 import * as firebase from 'firebase';
 
+import { HttpModule } from '@angular/http';
+import { SwingModule } from 'angular2-swing';
+import {
+ StackConfig,
+ Stack,
+ Card,
+ ThrowEvent,
+ DragEvent,
+ SwingStackComponent,
+ SwingCardComponent} from 'angular2-swing';
+
 firebase.initializeApp(environment.config);
 
 @NgModule({
@@ -56,16 +67,17 @@ firebase.initializeApp(environment.config);
   entryComponents: [
   ],
   imports: [BrowserModule, AngularFirestoreModule, IonicModule.forRoot(), AppRoutingModule, HttpClientModule,
-  FormsModule, ReactiveFormsModule, AngularFireAuthModule, AngularFireModule.initializeApp(environment.config)
+    FormsModule, ReactiveFormsModule, AngularFireAuthModule, AngularFireModule.initializeApp(environment.config)
 
-  , IonicStorageModule.forRoot(), AngularFireDatabaseModule, AngularFireDatabaseModule, HttpModule,
-    SwingModule],
+    , IonicStorageModule.forRoot(), AngularFireDatabaseModule, AngularFireDatabaseModule, HttpModule,
+      SwingModule],
+
   providers: [
     StatusBar,
     SplashScreen,
     FirebaseService,
-    AngularFirestore,
-    { provide: [RouteReuseStrategy, RecommenderService] , useClass: IonicRouteStrategy},
+     AngularFirestore,
+     { provide: [RouteReuseStrategy, RecommenderService] , useClass: IonicRouteStrategy},
   ],
   bootstrap: [AppComponent],
 

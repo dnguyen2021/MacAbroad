@@ -6,6 +6,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 
 import { RecommendationPage } from './recommendation.page';
+import {SwingModule} from 'angular2-swing';
+import {Http} from '@angular/http'
 
 import {SwingModule} from 'angular2-swing';
 import {Http} from '@angular/http'

@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { IonicModule, NavController } from '@ionic/angular';
 import { DataService } from '../services/data.service';
-import { InAppBrowser } from '@ionic-native/in-app-browser/ngx'
+// import { InAppBrowser } from '@ionic-native/in-app-browser/ngx'
 // import {MatExpansionModule} from '@angular/material/expansion'
 // import { MbscFormOptions } from '@mobiscroll/angular-lite'
 
@@ -58,6 +58,8 @@ export class Tab2Page implements OnInit{
 
   setSearchedItems() {
     this.items2 = this.dataService.searchItems(this.searchTerm4);
+    console.log('these are items');
+    console.log(this.items2);
   }
 
   setSortSearch(){

@@ -3,6 +3,8 @@ import { IonicModule, NavController} from '@ionic/angular'; //ItemSliding
 import { DataService } from "../services/data.service";
 // import { Http } from '@angular/http';
 import 'rxjs/Rx';
+import * as firebase from 'firebase/app';
+import { FirebaseService } from '../database.service';
 
 import {
   StackConfig,
@@ -32,7 +34,7 @@ export class RecommendationPage { //implements OnInit
   stackConfig: StackConfig;
   // recentCard: string= '';
 
-  constructor(public navCtrl: NavController, private dataService: DataService) { //private menu: MenuController, , private http:Http
+  constructor(public navCtrl: NavController, private dataService: DataService, private fireBaseService: FirebaseService) { //private menu: MenuController, , private http:Http
     this.stackConfig = {
       throwOutConfidence: (offsetX, offsetY, element) => {
         return Math.min(Math.abs(offsetX) / (element.offsetWidth/2), 1);
@@ -119,6 +121,29 @@ decimalToHex(d, padding) {
   }
 
   addItem(item, i){
+
+    let currentUser = firebase.auth().currentUser;
+    let data = {
+      Name: currentUser.email,
+      email: currentUser.email,
+      Program: item.program.programName,
+      Language: '',
+      Recommended : item.program.areaName,
+      Location: item.program.locationName,
+      Housing: item.program.housing,
+      MinimumGPARequirement: item.program.GPA,
+      AcademicFeatures: item.program.academicFeatures,
+      Value: item.program.value,
+      img: item.program.img
+    }
+    this.fireBaseService.createTask(data)
+
+    .then(
+      // res => {
+      //   this.router.navigate(["/forum"]);
+      // }
+    )
+
     this.dataService.save(item);
     this.items2.splice(i, 1);
   }

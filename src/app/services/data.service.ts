@@ -1,4 +1,7 @@
 import { Injectable } from '@angular/core';
+import * as firebase from 'firebase/app';
+import 'firebase/storage'
+import { AngularFirestore } from 'angularfire2/firestore';
 
 @Injectable({
   providedIn: 'root'
@@ -11,7 +14,7 @@ export class DataService {
   // public savedItems: any = [];
   // public stars: any = [];
 
-  constructor() {
+  constructor(public afs: AngularFirestore) {
     // this.stars = [1, 2, 3]
     // this.items2 = [...this.items]
     this.items = [
@@ -1392,6 +1395,7 @@ export class DataService {
       }
    ];
  }
+ 
 
  sort(){
    return this.items.sort((a,b) => {
@@ -1440,17 +1444,57 @@ export class DataService {
  //   return this.items;
  // }
 
+ //will save to database now
  save(item){
-   this.savedItems.push(item);
+
+  //  this.savedItems.push(item);
+   console.log('this item is being saved'); 
+   console.log(item)
+
+   return new Promise<any>((resolve, reject) => {
+    let currentUser = firebase.auth().currentUser;
+    console.log('ARE YOU HERE'); 
+    this.afs.collection('users').doc(currentUser.email).collection('User Data').add({
+      Program: item.program.programName,
+      Language: item.program.language,
+      Recommended : item.program.areaName,
+      Location: item.program.locationName,
+      Housing: item.program.housing,
+      MinimumGPARequirement: item.program.GPA,
+      AcademicFeatures: item.program.academicFeatures,
+      Value: item.program.value, 
+      img: item.program.img, 
+      GroupName: item.program.programGroup
+    })
+    .then(
+      res => resolve(res),
+      err => reject(err)
+    )
+  })
+
  }
 
 // setShow(){
 //   this.boolean = true;
 // }
 
+saved: any; 
 
- getSaved(){
-   return this.savedItems;
+createSavedList(){
+  let currentUser = firebase.auth().currentUser;
+  this.saved = this.afs.firestore.collection('users').doc(currentUser.email).collection('User Data');  
+  this.saved.get().then((querySnapshot) => {
+    querySnapshot.forEach((doc) => {
+      this.savedItems.push((doc.id, 
+        "=>",
+        doc.data()
+      
+      )); 
+})})
+}
+
+getSaved(){
+  return this.savedItems;
  }
 
  getItems(){

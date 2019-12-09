@@ -29,7 +29,9 @@ export class FirebaseService {
         Location: value.Location,
         Housing: value.Housing,
         MinimumGPARequirement: value.MinimumGPARequirement,
-        AcademicFeatures: value.AcademicFeatures
+        AcademicFeatures: value.AcademicFeatures, 
+        Value: value.value,
+        img: value.img
       })
       .then(
         res => resolve(res),
