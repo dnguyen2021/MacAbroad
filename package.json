@@ -210,5 +210,6 @@
     },
     "config": {
         "ionic_copy": "./scripts/copy-mobiscroll-css.js"
-    }
+    }}
 }
+

@@ -14,16 +14,16 @@ import { AppComponent } from './app.component';
 import { HttpClientModule, HttpClientJsonpModule } from '@angular/common/http';
 import { RecommenderService } from './recommender.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
-import { SwingModule } from 'angular2-swing';
-import {
-StackConfig,
-Stack,
-Card,
-ThrowEvent,
-DragEvent,
-SwingStackComponent,
-SwingCardComponent} from 'angular2-swing';
+// import { HttpModule } from '@angular/http';
+// import { SwingModule } from 'angular2-swing';
+// import {
+// StackConfig,
+// Stack,
+// Card,
+// ThrowEvent,
+// DragEvent,
+// SwingStackComponent,
+// SwingCardComponent} from 'angular2-swing';
 
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireAuthModule } from 'angularfire2/auth';

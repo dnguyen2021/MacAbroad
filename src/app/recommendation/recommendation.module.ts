@@ -9,8 +9,8 @@ import { RecommendationPage } from './recommendation.page';
 import {SwingModule} from 'angular2-swing';
 import {Http} from '@angular/http'
 
-import {SwingModule} from 'angular2-swing';
-import {Http} from '@angular/http'
+// import {SwingModule} from 'angular2-swing';
+// import {Http} from '@angular/http'
 
 const routes: Routes = [
   {
