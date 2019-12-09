@@ -38,6 +38,8 @@ export class UserInputPage implements OnInit {
   public Housing: string; 
   public MinimumGPARequirement: string; 
   public AcademicFeatures: string; 
+  public Value: string; 
+  public img: string; 
 
 
   ngOnInit(
@@ -52,7 +54,10 @@ export class UserInputPage implements OnInit {
       Location: new FormControl(''),
       Housing: new FormControl(''),
       MinimumGPARequirement: new FormControl(''),
-      AcademicFeatures: new FormControl('')
+      AcademicFeatures: new FormControl(''), 
+      Value: new FormControl(''), 
+      img: new FormControl('')
+
     });
 
 
@@ -81,28 +86,7 @@ export class UserInputPage implements OnInit {
 
 
   saveData(item){
-    // this.savedItems.push(item);
     this.dataService.save(item);
-    let currentUser = firebase.auth().currentUser;
-    let data = {
-      Name: currentUser.email, 
-      email: currentUser.email,
-      Program: item.program.programName,
-      Language: '',
-      Recommended : item.program.areaName,
-      Location: item.program.locationName,
-      Housing: item.program.housing,
-      MinimumGPARequirement: item.program.GPA,
-      AcademicFeatures: item.program.academicFeatures
-    }
-    this.fireBaseService.createTask(data)
-
-    .then(
-      // res => {
-      //   this.router.navigate(["/forum"]);
-      // }
-    )
-
   }
 
   goToFavourites(){
