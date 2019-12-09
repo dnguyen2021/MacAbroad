@@ -48,6 +48,7 @@ export class SavedProgramsPage implements OnInit {
   }
 
   goForum(){
+    console.log('hello?')
     this.navCtrl.navigateForward('/tabs/forum')
   }
 }

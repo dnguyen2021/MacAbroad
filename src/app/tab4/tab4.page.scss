@@ -1,0 +1,203 @@
+@import '~bootstrap/scss/_functions.scss';
+@import '~bootstrap/scss/_variables.scss';
+@import '~bootstrap/scss/mixins/_breakpoints';
+@import "~bootstrap/scss/bootstrap";
+
+img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+@keyframes fadeIn {
+from {
+  opacity: 0;
+}
+
+to {
+  opacity: 1;
+}
+}
+
+.fadeIn {
+animation-name: fadeIn;
+animation-duration: 4s;
+}
+
+
+.bg-class{
+  --background: linear-gradient(197deg, rgb(40, 138, 230) 0%, rgb(33, 105, 172) 13.5%, rgb(53, 113, 170) 33.33%, rgb(3, 34, 59) 100%) !important;
+}
+
+.bg-class2{
+  --background: linear-gradient(197deg, rgb(8, 133, 250) 0%, rgb(3, 117, 211) 13.5%, rgb(36, 115, 189) 33.33%, rgb(33, 97, 156) 100%) !important;
+}
+
+ion-checkbox{
+  --background-checked: "green"
+}
+
+.list .item.item-accordion {
+line-height: 38px;
+padding-top: 0;
+padding-bottom: 0;
+transition: 0.09s all linear;
+}
+.list .item.item-accordion.ng-hide {
+line-height: 0px;
+}
+.list .item.item-accordion.ng-hide-add,
+.list .item.item-accordion.ng-hide-remove {
+display: block !important;
+}
+
+
+$grid-breakpoints: (
+ xs: 0, // Phone (0px - 575px)
+ sm: 576px, // Phablet (576px - 767px)
+ md: 768px, // Tablet vertical (768px - 991px)
+ lg: 992px // Tablet horizontal, Desktop (992px and above)
+);
+
+.app-timeline {
+    margin: 30px 0 0 0;
+    padding: 0;
+    position: relative;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 10px;
+      background: #afdcf8;
+      left: 20%;
+      margin-left: -10px;
+    }
+    app-timeline-item {
+      position: relative;
+      display: inline-block;
+
+      app-timeline-date {
+        display: block;
+        width: 20%;
+        padding-right: 50px;
+        position: absolute;
+        span {
+          display: block;
+          text-align: right;
+          &:last-child {
+            font-size: 2.9em;
+            color: #3594cb;
+          }
+        }
+      }
+      /* Right content */
+      ion-card {
+        margin-left: 25% !important;
+        width: 75% !important;
+        position: relative;
+      }
+      ion-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 1.4em;
+        position: absolute;
+        color: #fff;
+        background: #46a4da;
+        border-radius: 50%;
+        box-shadow: 0 0 0 8px #afdcf8;
+        text-align: center;
+        left: 20%;
+        top: 0;
+        margin: 0 0 0 -25px;
+        line-height: 40px;
+        &:after {
+            left: 46px;
+            border: solid transparent;
+            content: " ";
+            height: 0;
+            width: 0;
+            position: absolute;
+            pointer-events: none;
+            border-left-color: #afdcf8;
+            border-width: 10px;
+            top: 10px;
+          }
+      }
+        &:last-child{
+          width: 100%;
+          ion-icon{
+            box-shadow: none;
+            &:after{
+              border-width: 0;
+            }
+          }
+        }
+    }
+    @media screen and (max-width: map-get($grid-breakpoints,'lg')){
+      app-timeline-item{
+        app-timeline-date{
+          font-size: 0.7em;
+        }
+      }
+    }
+    @media screen and (max-width: map-get($grid-breakpoints,'md')){
+      &:before{
+        left: 30px;
+      }
+      app-timeline-item{
+        ion-card{
+          margin-left: 80px !important;
+        }
+        ion-icon{
+          left: 30px;
+        }
+        app-timeline-date{
+          font-size: 0.8em;
+          width: 100%;
+          left: 80px;
+          position: relative;
+          span{
+            text-align: left;
+          }
+
+        }
+      }
+    }
+    @media screen and (max-width: map-get($grid-breakpoints, 'sm' )){
+      &:before{
+        display: none;
+      }
+      app-timeline-item{
+        &:last-child{
+          visibility: hidden;
+        }
+        ion-icon{
+          position: relative;
+          float: right;
+          left: auto;
+          margin: -55px 5px 0 0;
+          &:after{
+            border-left-color: transparent;
+            border-top-color: #afdcf8;
+            top: 46px;
+            left: 10px;
+          }
+        }
+        app-timeline-date{
+          width: 100%;
+          position: relative;
+          padding: 0 0 20px 0;
+          left: 20px;
+          span{
+            text-align: left;
+          }
+        }
+
+        ion-card{
+          width: calc(100% - 20px) !important;
+          margin-left: 10px !important;
+        }
+      }
+    }
+  }
