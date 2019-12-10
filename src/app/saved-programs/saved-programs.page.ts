@@ -30,10 +30,8 @@ export class SavedProgramsPage implements OnInit {
     this.saved = this.afs.firestore.collection('users').doc(currentUser.email).collection('User Data');  
     this.saved.get().then((querySnapshot) => {
       querySnapshot.forEach((doc) => {
-        this.savedItems.push((doc.id, 
-          "=>",
+        this.savedItems.push(( doc.id, "=>",
           doc.data()
-        
         )); 
 
   })})
@@ -44,11 +42,24 @@ export class SavedProgramsPage implements OnInit {
   }
 
   removeItem2(i){
-    this.savedItems.splice(i, 1);
+
+    let currentUser = firebase.auth().currentUser;
+    this.saved = this.afs.firestore.collection('users').doc(currentUser.email).collection('User Data');  
+    this.saved.get().then((querySnapshot) => {
+      querySnapshot.forEach((doc) => {
+        console.log(this.savedItems[i]);
+        console.log(doc.data());
+        if (doc.data().Program == this.savedItems[i].Program){
+          console.log('should get here'); 
+          this.afs.firestore.collection('users').doc(currentUser.email).collection('User Data').doc(doc.id).delete(); 
+        }
+      
+  })})
+
+  this.savedItems.splice(i, 1);
   }
 
   goForum(){
-    console.log('hello?')
     this.navCtrl.navigateForward('/tabs/forum')
   }
 }
