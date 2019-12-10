@@ -27,10 +27,10 @@ export class RecommendationPage { //implements OnInit
   @ViewChildren('mycards1') swingCards: QueryList<SwingCardComponent>;
 
   // public items2: any = [];
-  // cards: Array<any>;
+  public cards: Array<any>;
   public items2: Array<any>;
   stackConfig: StackConfig;
-  // recentCard: string= '';
+  recentCard: string= '';
 
   constructor(public navCtrl: NavController, private dataService: DataService) { //private menu: MenuController, , private http:Http
     this.stackConfig = {
@@ -53,8 +53,9 @@ export class RecommendationPage { //implements OnInit
       event.target.style.background = '#ffffff';
     });
 
-    this.items2 = [{programName: ''}];
-    // this.addNewCards(1);
+    this.cards = [{programName: ''}];
+    this.cards.pop();
+    this.addNewCards(0);
 
   }
 
@@ -75,20 +76,22 @@ export class RecommendationPage { //implements OnInit
 }
 
 // Connected through HTML
-// voteUp(like: boolean) {
-//   let removedCard = this.items2.pop();
-//   this.addNewCards(1);
-//   if (like) {
-//     this.recentCard = 'You liked: ' + removedCard.programName;
-//   } else {
-//     this.recentCard = 'You disliked: ' + removedCard.programName;
-//   }
-// }
+voteUp(like: boolean, i) {
+  let removedCard = this.cards.pop();
+  this.addNewCards(i);
+  if (like) {
+    this.recentCard = 'You liked: ' + removedCard.programName;
+    this.dataService.save(removedCard);
+  } else {
+    this.recentCard = 'You disliked: ' + removedCard.programName;
+  }
+}
 
 // Add new cards to our array
-// addNewCards(count: number) {
-//   this.items2 = this.dataService.getItems();
-// }
+addNewCards(i) {
+  this.cards.push(this.items2[0]);
+  this.items2.splice(i, 1);
+}
 
 // http://stackoverflow.com/questions/57803/how-to-convert-decimal-to-hex-in-javascript
 decimalToHex(d, padding) {
