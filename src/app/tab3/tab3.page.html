@@ -6,11 +6,46 @@
   </ion-toolbar>
 </ion-header>
 <ion-content>
-    <div class="fadeIn"><ion-searchbar color="primary" [(ngModel)]="searchTerm4" (ionChange)="setSearchedItems()"></ion-searchbar></div>
+  <div class="fadeIn">
+    <ion-searchbar color = "primary" [(ngModel)]="searchTerm4" (ionChange)="setSearchItems()">
+    </ion-searchbar>
+  </div>
   <ion-list>
-    <ion-card style="background-color: #4178ee;" *ngFor="let item of items2">
+    <ion-card style= "background-color: #4178ee;" *ngFor="let item of items2">
       <ion-card-header tappable (click)="collapseCard = !collapseCard">
-        <div class="fadeIn"><ion-card-title style="text-align: center;color: white;">{{item.program.programName}}</ion-card-title></div>
+        <div class="fadeIn">
+            <ion-card-title style="text-align: center;color: white;">{{item.programName}}</ion-card-title>
+          </div>
+          <div class="fadeIn"><ion-card-content *ngIf="!collapseCard">
+              <b>Major:</b> {{item.majors}} <br>
+              <b>Term:</b> {{ item.termyear}} <br>
+              <b>Particular Features that led to choose the program:</b> {{ item.whatParticularFeaturesOrComponentsLedYouToChooseYourProgram}} <br>
+              <b>Strongest Aspects:</b> {{ item.whatAreTheStrongestAspectsOfThisProgram}} <br>
+              <b>Weakest Aspects:</b> {{ item.whatAreAreTheWeakestAspectsOfThisProgram}} <br>
+              <b>Housing Arrangements:</b> {{ item.whatWereYourHousingArrangementsSelectedChoice}} <br>
+              <b>Meal Plan:</b> {{ item.whatWereYourPrimaryMealArrangementsSelectedChoice}} <br>
+              <b>Interactment with locals and customs, plus any tips for future students:</b> {{ item.didYourArrangementsAllowYouToInteractWithLocalsAndLearnLocalCustomsDidYourArrangementsPushYouInLearningMoreAboutYourselfWhatTipsWouldYouProvideFutureStudentsToMakeTheMostOfTheHousingAndMealArrangementsOnThisProgram}} <br>
+              <b>Things you wish you knew before chosing your program:</b> {{ item.whatDoYouWishYouHadKnownBeforeYouChoseThisProgramAndorLocation}} <br>
+              <b>How would you prepare for the trip if you were a future student:</b> {{ item.recallingTheTimePeriodPriorToYourDepartureHowWouldYouSuggestThatFutureStudentsFocusTheirPreparationsWhatWasMostHelpfulForYouWhatWouldYouDoDifferentlyPleaseExplain}} <br>
+              <b>How on-site staff impact your experience:</b> {{ item.howDidTheWorkOfOnsiteStaffEgResidentDirectorInternationalStudentOfficeImpactYourExperience}} <br>
+              <b>Any crime, harrassment, or security issues:</b> {{ item.didIssuesOfCrimeSecurityHarassmentOrPhysicalSafetyImpactYourExperienceIfSoPleaseExplainWhatShouldAStudentConsideringThisProgramKnowAboutSafetyAtThisLocation}} <br>
+              <b>Would you recommend this program:</b> {{ item.wouldYouRecommendThisProgramToOtherMacalesterStudentsPleaseExplain}} <br>
+          </ion-card-content>
+          </div>
+      </ion-card-header>
+    </ion-card>
+  </ion-list>
+</ion-content>
+<!-- <ion-content>
+  <div class="fadeIn"><ion-searchbar color="primary" [(ngModel)]="searchTerm4" (ionChange)="setSearchedItems()">
+      </ion-searchbar>
+  </div>
+  <ion-list>
+      <ion-card style="background-color: #4178ee;" *ngFor="let item of items2">
+      <ion-card-header tappable (click)="collapseCard = !collapseCard">
+        <div class="fadeIn">
+          <ion-card-title style="text-align: center;color: white;">{{item.program.programName}}</ion-card-title>
+        </div>
         <div class="fadeIn"><ion-card-content *ngIf="!collapseCard">
             <b>Program:</b> {{item.program.programGroup}} {{ item.program.programName}} <br>
             <b>Major:</b> {{ item.program.language }} <br>
@@ -19,8 +54,7 @@
             <b>Housing:</b> {{ item.program.housing}} <br>
             <b>Minimum GPA Requirement:</b> {{ item.program.GPA}} <br>
             <b>Academic Features:</b> {{ item.program.academicFeatures}} <br>
-          </ion-card-content>
+        </ion-card-content>
         </div>
       </ion-card-header>
-  <ion-list>
-</ion-content>
+</ion-content> -->

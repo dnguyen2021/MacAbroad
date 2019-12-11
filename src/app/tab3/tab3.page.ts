@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ReviewsService } from '../reviews.service';
 
 @Component({
   selector: 'app-tab3',
@@ -6,7 +7,23 @@ import { Component } from '@angular/core';
   styleUrls: ['tab3.page.scss']
 })
 export class Tab3Page {
+  
+  
+  public searchTerm4: string = "";
+  public items2: any;
+  
+  constructor(private reviewService: ReviewsService,) {}
+  
+  ngOnInit() {
+    this.setSearchItems();
+  }
 
-  constructor() {}
+  setSearchItems() {
+    this.items2 = this.reviewService.searchItems(this.searchTerm4);
+  }
 
+  setSortSearch(){
+    this.items2 = this.reviewService.sortSearch();
+  }
+ 
 }
