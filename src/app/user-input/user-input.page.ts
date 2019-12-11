@@ -104,8 +104,8 @@ export class UserInputPage implements OnInit {
       // res => {
       //   this.router.navigate(["/forum"]);
       // }
-    )
-
+    );
+    }
   goToFavourites(){
     this.navCtrl.navigateForward('/tabs/saved-programs');
   }
@@ -134,3 +134,4 @@ export class UserInputPage implements OnInit {
 
 
 }
+
