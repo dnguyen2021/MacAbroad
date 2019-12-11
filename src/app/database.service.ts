@@ -69,8 +69,9 @@ export class FirebaseService {
         email: value.email,
         Program: value.Program, 
         Review: value.Review,
-        Rating: value.Rating
-        
+        Rating: value.Rating,
+        WishToKnow: value.WishToKnow, 
+        Advice: value.Advice
       })
       .then(
 
@@ -86,7 +87,9 @@ export class FirebaseService {
         Program: value.Program, 
         Review: value.Review, 
         Date: value.Date,
-        Rating: value.Rating
+        Rating: value.Rating,
+        WishToKnow: value.WishToKnow, 
+        Advice: value.Advice
       })
       .then(
 
