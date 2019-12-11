@@ -49,6 +49,7 @@
     "ion2-calendar": "^2.2.0",
     "ionic": "^5.4.4",
     "ionic-angular": "^3.9.9",
+    "ionic-native": "^2.9.0",
     "ionic2-calendar": "^0.5.7",
     "moment": "^2.24.0",
     "node-sass": "^4.13.0",
