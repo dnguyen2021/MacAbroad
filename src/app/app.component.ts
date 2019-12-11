@@ -8,15 +8,15 @@ import { NgModule } from '@angular/core';
 import { RecommenderService } from './recommender.service';
 // import { MbscFormOptions, MbscPageOptions } from '@mobiscroll/angular-lite'
 
-import { mobiscroll, MbscScrollViewOptions, MbscNavOptions, MbscListviewOptions } from '@mobiscroll/angular';
+// import { mobiscroll, MbscScrollViewOptions, MbscNavOptions, MbscListviewOptions } from '@mobiscroll/angular';
 
 
 import { AuthService } from './authservice.service';
 
-mobiscroll.settings ={
-  theme: 'ios',
-  themeVariant: 'light'
-}
+// mobiscroll.settings ={
+//   theme: 'ios',
+//   themeVariant: 'light'
+// }
 
 @Component({
   selector: 'app-root',
@@ -53,22 +53,22 @@ export class AppComponent {
   // pageSettings: MbscPageOptions = {
   //   theme: 'ios',
   // }
-  settings: MbscListviewOptions = {
-    actionable: false,
-    stages: [{
-        percent: -20,
-        action: (event, inst) => {
-            inst.remove(event.target);
-            return false;
-        }
-    }, {
-        percent: 20,
-        action: (event, inst) => {
-            inst.remove(event.target);
-            return false;
-        }
-    }]
-};
+//   settings: MbscListviewOptions = {
+//     actionable: false,
+//     stages: [{
+//         percent: -20,
+//         action: (event, inst) => {
+//             inst.remove(event.target);
+//             return false;
+//         }
+//     }, {
+//         percent: 20,
+//         action: (event, inst) => {
+//             inst.remove(event.target);
+//             return false;
+//         }
+//     }]
+// };
   
 }
 

@@ -1,4 +1,4 @@
-import { MbscModule } from '@mobiscroll/angular';
+// import { MbscModule } from '@mobiscroll/angular';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouteReuseStrategy } from '@angular/router';
