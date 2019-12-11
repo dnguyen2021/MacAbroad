@@ -66,10 +66,10 @@ fontSize = "32px"
 
 <ion-input class="review" placeholder="Write Your Review" formControlName = Review></ion-input> 
 
-<ion-datetime formControlName="Date" displayFormat="DD-MM-YYYY" pickerFormat="DD-MM-YYYY" placeholder="Please Select Today's Date" ></ion-datetime>
+<ion-datetime formControlName="Date" displayFormat="MM-DD-YYYY" pickerFormat="MM-DD-YYYY" placeholder="Please Select Today's Date" ></ion-datetime>
 <ion-button text-center class="submit-btn" color="{{post.color}}" expand="block" type="submit" [disabled]="!validations_form.valid">{{post.message}}</ion-button> 
 
-<ion-button (click) = 'getRating()'>  </ion-button>
+<!-- <ion-button (click) = 'getRating()'>  </ion-button> -->
 
 
 
@@ -83,11 +83,21 @@ size="default"
     <ion-item-options side="end">
     </ion-item-options>
     <ion-item>
+      <ionic4-star-rating 
+      activeIcon = "ios-star"
+      defaultIcon = "ios-star-outline"
+      activeColor = "#488aff" 
+      defaultColor = "#f4f4f4"
+      readonly="true"
+      rating= "{{review.Rating}}"
+      fontSize = "32px">
+      </ionic4-star-rating>
+      <br>
       Name: {{ review.Name }} <br>
       email: {{ review.email }} <br>
       Program: {{ review.Program }} <br>
       Review: {{ review.Review }} <br>
-      Submitted at: {{ review.Date }}
+      Submitted at: {{ review.Date }} <br>
     </ion-item> 
 
    </ion-item-sliding>

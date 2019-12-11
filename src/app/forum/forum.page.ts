@@ -33,6 +33,7 @@ export class ForumPage implements OnInit {
   public Date: string;
 
   public post: any = {color: 'primary', message: 'Post to Forum'};
+  public storedStarRating: string; 
 
   validations_form: FormGroup;
 
@@ -77,12 +78,16 @@ export class ForumPage implements OnInit {
     this.post.color = 'light';
     this.post.message = 'Your post has been added (please refresh page)';
     this.splicedDate = this.dateConverter(value.Date); 
+    this.storedStarRating = this.getRating(); 
+    console.log("adding review"); 
+    console.log(this.storedStarRating); 
     let data = {
       Name: value.Name,
       email: value.email,
       Program: value.Program,
       Review: value.Review,
-      Date: this.splicedDate
+      Date: this.splicedDate,
+      Rating: this.storedStarRating
     };
     this.fireBaseService.createReview(data)
     .then(
@@ -99,16 +104,16 @@ export class ForumPage implements OnInit {
 
 
 
-  filterReviews() {
-    return this.reviews.filter(item => {
-      return item.Program == 'Sciences Po';
+  // filterReviews() {
+  //   return this.reviews.filter(item => {
+  //     return item.Program == 'Sciences Po';
 
-    });
-  }
+  //   });
+  // }
 
-  setFilteredItems() {
-    this.reviews = this.filterReviews();
-  }
+  // setFilteredItems() {
+  //   this.reviews = this.filterReviews();
+  // }
 
 
   show() {
@@ -124,7 +129,6 @@ export class ForumPage implements OnInit {
     this.navCtrl.navigateForward('/tabs/saved-programs');
   }
 
-  storedStarRating: string; 
   logRatingChange() {
     this.events.subscribe('star-rating:changed', (starRating) =>
     {console.log(starRating);
@@ -133,7 +137,7 @@ export class ForumPage implements OnInit {
  }
 
  getRating(){
-   console.log(this.storedStarRating); 
+   return this.storedStarRating; 
  }
 
 }
