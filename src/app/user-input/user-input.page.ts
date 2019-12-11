@@ -106,6 +106,8 @@ export class UserInputPage implements OnInit {
       // }
     )
 
+  goToFavourites(){
+    this.navCtrl.navigateForward('/tabs/saved-programs');
   }
 
   // goToFavourites(){
@@ -113,7 +115,7 @@ export class UserInputPage implements OnInit {
   // }
 
   goToRecommendation(){
-    this.navCtrl.navigateForward('/tabs/recommendation')
+    this.navCtrl.navigateForward('/tabs/recommendation');
   }
 
   // openFirst() {
