@@ -1,12 +1,18 @@
-<ion-header>
-    <ion-toolbar color="primary">
-    <ion-title style = "font-family:Bebas Neue; font-size:25px; text-align: center">
-        <div class="pad"><div class="fadeIn">Programs</div></div>
-    </ion-title>
+<ion-header style="color: #1c357a">
+    <ion-toolbar class="bg-class">
+  <img src="/assets/icon/mockupMacAbroad3.png" width="65px" style="display:inline-block" height="65px" (click)="goToHome()">
+      <ion-title class="titleicon" style = "font-size:25px; text-align: center; display:inline-block">
+        <div class="fadeIn">
+            Pick Your Preferences!
+        </div>
+      </ion-title>
+      <div class="fadeIn">
+          <ion-searchbar [(ngModel)]="searchTerm4" (ionChange)="setSearchedItems()"></ion-searchbar>
+      </div>
     </ion-toolbar>
-  </ion-header>
+</ion-header>
 
-  <ion-content>
+  <ion-content padding class="bg-class">
     <ion-list>
 
     <ion-list-header style = "font-family:Bebas Neue; font-size:20px"><div class="fadeIn">Please select your major(s):</div></ion-list-header>

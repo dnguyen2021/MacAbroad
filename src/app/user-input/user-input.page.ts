@@ -118,6 +118,10 @@ export class UserInputPage implements OnInit {
     this.navCtrl.navigateForward('/tabs/recommendation');
   }
 
+  goToHome(){
+    this.navCtrl.navigateForward('/tabs/tab1');
+  }
+
   // openFirst() {
   //   this.menu.enable(true, 'first');
   //   this.menu.open('first');

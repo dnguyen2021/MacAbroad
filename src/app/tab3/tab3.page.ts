@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { ReviewsService } from '../reviews.service';
+import { IonicModule, NavController } from '@ionic/angular';
+
 
 @Component({
   selector: 'app-tab3',
@@ -12,7 +14,7 @@ export class Tab3Page {
   public searchTerm4: string = "";
   public items2: any;
   
-  constructor(private reviewService: ReviewsService,) {}
+  constructor(private reviewService: ReviewsService, private navCtrl: NavController) {}
   
   ngOnInit() {
     this.setSearchItems();
@@ -24,6 +26,10 @@ export class Tab3Page {
 
   setSortSearch(){
     this.items2 = this.reviewService.sortSearch();
+  }
+
+  goToHome(){
+    this.navCtrl.navigateForward('/tabs/tab1');
   }
  
 }
