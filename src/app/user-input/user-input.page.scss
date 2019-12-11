@@ -1,24 +1,24 @@
 img{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-  }
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
 .center{
-    text-align: center;
+  text-align: center;
 }
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
+from {
+  opacity: 0;
+}
 
-  to {
-    opacity: 1;
-  }
+to {
+  opacity: 1;
+}
 }
 
 .fadeIn {
-  animation-name: fadeIn;
-  animation-duration: 4s;
+animation-name: fadeIn;
+animation-duration: 4s;
 }
 
 // div{
@@ -26,9 +26,9 @@ img{
 // }
 
 .my-custom-menu {
-  --width: 500px;
+--width: 500px;
 }
 
 .pad{
-  padding-top: 3px;
+padding-top: 3px;
 }

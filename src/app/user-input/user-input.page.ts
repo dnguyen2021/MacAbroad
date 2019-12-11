@@ -90,11 +90,11 @@ export class UserInputPage implements OnInit {
   }
 
   goToFavourites(){
-    this.navCtrl.navigateForward('/tabs/saved-programs')
+    this.navCtrl.navigateForward('/tabs/saved-programs');
   }
 
   goToRecommendation(){
-    this.navCtrl.navigateForward('/tabs/recommendation')
+    this.navCtrl.navigateForward('/tabs/recommendation');
   }
 
   // openFirst() {

@@ -3,8 +3,6 @@ import { IonicModule, NavController} from '@ionic/angular'; //ItemSliding
 import { DataService } from "../services/data.service";
 // import { Http } from '@angular/http';
 import 'rxjs/Rx';
-import * as firebase from 'firebase/app';
-import { FirebaseService } from '../database.service';
 
 import {
   StackConfig,
@@ -29,12 +27,12 @@ export class RecommendationPage { //implements OnInit
   @ViewChildren('mycards1') swingCards: QueryList<SwingCardComponent>;
 
   // public items2: any = [];
-  // cards: Array<any>;
+  public cards: Array<any>;
   public items2: Array<any>;
   stackConfig: StackConfig;
-  // recentCard: string= '';
+  recentCard: string= '';
 
-  constructor(public navCtrl: NavController, private dataService: DataService, private fireBaseService: FirebaseService) { //private menu: MenuController, , private http:Http
+  constructor(public navCtrl: NavController, private dataService: DataService) { //private menu: MenuController, , private http:Http
     this.stackConfig = {
       throwOutConfidence: (offsetX, offsetY, element) => {
         return Math.min(Math.abs(offsetX) / (element.offsetWidth/2), 1);
@@ -55,8 +53,9 @@ export class RecommendationPage { //implements OnInit
       event.target.style.background = '#ffffff';
     });
 
-    this.items2 = [{programName: ''}];
-    // this.addNewCards(1);
+    this.cards = [{programName: ''}];
+    this.cards.pop();
+    this.addNewCards(0);
 
   }
 
@@ -77,20 +76,22 @@ export class RecommendationPage { //implements OnInit
 }
 
 // Connected through HTML
-// voteUp(like: boolean) {
-//   let removedCard = this.items2.pop();
-//   this.addNewCards(1);
-//   if (like) {
-//     this.recentCard = 'You liked: ' + removedCard.programName;
-//   } else {
-//     this.recentCard = 'You disliked: ' + removedCard.programName;
-//   }
-// }
+voteUp(like: boolean, i) {
+  let removedCard = this.cards.pop();
+  this.addNewCards(i);
+  if (like) {
+    this.recentCard = 'You liked: ' + removedCard.programName;
+    this.dataService.save(removedCard);
+  } else {
+    this.recentCard = 'You disliked: ' + removedCard.programName;
+  }
+}
 
 // Add new cards to our array
-// addNewCards(count: number) {
-//   this.items2 = this.dataService.getItems();
-// }
+addNewCards(i) {
+  this.cards.push(this.items2[0]);
+  this.items2.splice(i, 1);
+}
 
 // http://stackoverflow.com/questions/57803/how-to-convert-decimal-to-hex-in-javascript
 decimalToHex(d, padding) {
@@ -118,34 +119,13 @@ decimalToHex(d, padding) {
 
   removeItem(i){
     this.items2.splice(i, 1);
+    
   }
 
   addItem(item, i){
-
-    let currentUser = firebase.auth().currentUser;
-    let data = {
-      Name: currentUser.email, 
-      email: currentUser.email,
-      Program: item.program.programName,
-      Language: '',
-      Recommended : item.program.areaName,
-      Location: item.program.locationName,
-      Housing: item.program.housing,
-      MinimumGPARequirement: item.program.GPA,
-      AcademicFeatures: item.program.academicFeatures,
-      Value: item.program.value, 
-      img: item.program.img
-    }
-    this.fireBaseService.createTask(data)
-
-    .then(
-      // res => {
-      //   this.router.navigate(["/forum"]);
-      // }
-    )
-
     this.dataService.save(item);
     this.items2.splice(i, 1);
+
   }
 
   // share(slidingItem: ItemSliding) {
