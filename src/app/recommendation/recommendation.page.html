@@ -1,4 +1,4 @@
-<!-- <ion-header>
+<ion-header>
   <ion-toolbar color="primary">
   <ion-row>
     <ion-col size="auto">
@@ -13,7 +13,7 @@
     </ion-col>
   </ion-row>
   </ion-toolbar>
-</ion-header> -->
+</ion-header>
 
 <!-- <ion-button menuToggle>Toggle Menu</ion-button>
 <ion-menu side="start" menuId="first" class="my-custom-menu">
@@ -67,102 +67,117 @@
     </div>
   </ion-content> -->
 
+<ion-content>
+  <div swing-stack #myswing1 [stackConfig]="stackConfig" (throwoutleft)="voteUp(false, 0); doAlert()" (throwoutright)="voteUp(true, 0); doAlert()" id="card-stack">
+  <!-- <ion-item-sliding #slidingItem>
+    <ion-item-options side="start">
+      <ion-item-option (click)="removeItem(0); share(slidingItem)" color="danger" expandable>
 
-  <ion-content>
-    <div swing-stack #myswing1 [stackConfig]="stackConfig" (throwoutleft)="removeItem(0)" (throwoutright)="addItem(items2[0], 0)" id="card-stack">
-    <!-- <ion-item-sliding #slidingItem>
-      <ion-item-options side="start">
-        <ion-item-option (click)="removeItem(0); share(slidingItem)" color="danger" expandable>
-          <ion-icon ios="ios-thumbs-down" md="md-thumbs-down" size="large"></ion-icon>
-        </ion-item-option>
-      </ion-item-options> -->
+        <ion-icon ios="ios-thumbs-down" md="md-thumbs-down" size="large"></ion-icon>
 
-      <div #mycards1 swing-card>
-      <ion-item>
+      </ion-item-option>
+    </ion-item-options> -->
 
-      <ion-card>
-      <ion-card-header>
-        <ion-card-subtitle style="font-size:15px">PROGRAM</ion-card-subtitle>
+    <div #mycards1 swing-card *ngFor="let c of cards">
+    <ion-item>
 
-        <ion-row>
-          <ion-col size="12">
-            <ion-card-title style="font-size:25px">{{items2[0].program.programGroup}}{{items2[0].program.programName}}</ion-card-title>
-          </ion-col>
-        </ion-row>
-        <ion-row>
-          <ion-col>
-            <ion-card-title><div style="font-size:20px">{{ items2[0].program.value}} / 3</div> <div style="font-size:16px">match</div></ion-card-title>
-          </ion-col>
+    <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle style="font-size:15px">PROGRAM</ion-card-subtitle>
 
-        </ion-row>
-      </ion-card-header>
+      <ion-row>
+        <ion-col size="12">
+          <ion-card-title style="font-size:35px">{{c.program.programGroup}}{{c.program.programName}}</ion-card-title>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-card-title><div style="font-size:20px">{{ c.program.value}} / 3</div> <div style="font-size:16px">match</div></ion-card-title>
+        </ion-col>
 
-      <img src="/assets/icon/{{items2[0].program.img}}" alt="img" style="width:100%; height:200px">
+      </ion-row>
+    </ion-card-header>
 
-      <ion-card-content>
-        <ion-row>
-          <ion-col size="20">
-            <b>Language: </b>
-          </ion-col>
-          <ion-col size="9">
-            {{ items2[0].program.language }}
-          </ion-col>
-        </ion-row>
-        <ion-row>
-          <ion-col size="8">
-            <b>Recommended By: </b>
-          </ion-col>
-          <ion-col size="9">
-            {{ items2[0].program.areaName}}
-          </ion-col>
-        </ion-row>
-        <ion-row>
-          <ion-col size="8">
-            <b>Location: </b>
-          </ion-col>
-          <ion-col size="9">
-            {{ items2[0].program.locationName}}
-          </ion-col>
-        </ion-row>
-        <ion-row>
-          <ion-col size="8">
-            <b>Housing: </b>
-          </ion-col>
-          <ion-col size="9">
-            {{ items2[0].program.housing}}
-          </ion-col>
-        </ion-row>
-        <ion-row>
-          <ion-col size="8">
-            <b>Minimum GPA: </b>
-          </ion-col>
-          <ion-col size="9">
-            {{ items2[0].program.GPA}}
-          </ion-col>
-        </ion-row>
-        <ion-row>
-          <ion-col size="8">
-            <b>Academic Features: </b>
-          </ion-col>
-          <ion-col size="9">
-            {{ items2[0].program.academicFeatures}}
-          </ion-col>
-        </ion-row>
-        <div class="spacing">
-        <ion-row>
-          <ion-col size="6">
-            <ion-button shape="round" color="danger" (click)="removeItem(0)"> <ion-icon ios="ios-thumbs-down" md="md-thumbs-down" size="large"></ion-icon> </ion-button>
-          </ion-col>
-          <ion-col size="6">
-            <ion-button shape="round" color="success" (click)="addItem(items2[0], 0)"> <ion-icon ios="ios-thumbs-up" md="md-thumbs-up" size="large"></ion-icon> </ion-button>
-          </ion-col>
-        </ion-row>
-        </div>
-      </ion-card-content>
-      </ion-card>
-      </ion-item>
+    <img src="/assets/icon/{{c.program.img}}" alt="img" style="width:100%; height:200px">
+
+    <ion-card-content>
+      <div class="box">
+      <ion-row>
+        <ion-col size="20">
+          <b>Language: </b>
+        </ion-col>
+        <ion-col size="9">
+          {{ c.program.language }}
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="8">
+          <b>Recommended By: </b>
+        </ion-col>
+        <ion-col size="9">
+          {{ c.program.areaName}}
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="8">
+          <b>Location: </b>
+        </ion-col>
+        <ion-col size="9">
+          {{ c.program.locationName}}
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="8">
+          <b>Housing: </b>
+        </ion-col>
+        <ion-col size="9">
+          {{ c.program.housing}}
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="8">
+          <b>Minimum GPA: </b>
+        </ion-col>
+        <ion-col size="9">
+          {{ c.program.GPA}}
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="8">
+          <b>Academic Features: </b>
+        </ion-col>
+        <ion-col size="9">
+          {{ c.program.academicFeatures}}
+        </ion-col>
+      </ion-row>
       </div>
+      <ion-footer>
+        <ion-toolbar>
+      <div class="spacing">
+      <ion-row>
+        <ion-col>
+          <ion-button class="red" shape="round" color="danger" (click)="voteUp(false, 0)"> <ion-icon ios="ios-thumbs-down" md="md-thumbs-down" size="large"></ion-icon> </ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button class="green" shape="round" color="success" (click)="voteUp(true, 0)"> <ion-icon ios="ios-thumbs-up" md="md-thumbs-up" size="large"></ion-icon> </ion-button>
+        </ion-col>
+      </ion-row>
       </div>
+      </ion-toolbar>
+      </ion-footer>
+    </ion-card-content>
+    </ion-card>
+    </ion-item>
+    </div>
+    </div>
+
+    <!-- <ion-item-options side="end">
+      <ion-item-option (click)="addItem(items2[0], 0); share(slidingItem)" color="success" expandable>
+
+         <ion-icon ios="ios-thumbs-up" md="md-thumbs-up" size="large"></ion-icon>
+
+      </ion-item-option>
+    </ion-item-options>
 
       <!-- <ion-item-options side="end">
         <ion-item-option (click)="addItem(items2[0], 0); share(slidingItem)" color="success" expandable>
