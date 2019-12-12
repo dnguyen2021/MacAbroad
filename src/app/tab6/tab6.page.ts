@@ -3,6 +3,8 @@ import { Validators, FormBuilder, FormGroup, FormControl } from '@angular/forms'
 import { AuthService } from '../authservice.service';
 import { Router } from '@angular/router';
 import {  } from './tab6.page';
+import { ModalController, NavController } from '@ionic/angular';
+
 
 
 @Component({
@@ -32,7 +34,8 @@ export class Tab6Page implements OnInit {
   constructor(
     private authService: AuthService,
     private formBuilder: FormBuilder,
-    private router: Router
+    private router: Router,
+    public navCtrl: NavController
   ) { }
 
   ngOnInit() {
@@ -63,6 +66,10 @@ export class Tab6Page implements OnInit {
 
   goLoginPage(){
     this.router.navigate(["/tabs/tab5"]);
+  }
+
+  goToHome(){
+    this.navCtrl.navigateForward('/tabs/tab1');
   }
 
 }

@@ -8,12 +8,18 @@ import { Validators, FormBuilder, FormGroup, FormControl } from '@angular/forms'
 import * as firebase from 'firebase/app';
 import 'firebase/storage'
 
+let alert = this.alertCtrl.create({
+  cssClass: 'myalert'
+});
 
 @Component({
   selector: 'app-user-input',
   templateUrl: './user-input.page.html',
   styleUrls: ['./user-input.page.scss'],
 })
+
+
+
 export class UserInputPage implements OnInit {
   public searchTerm: string = "";
   public searchTerm2: string = "";
@@ -122,6 +128,8 @@ export class UserInputPage implements OnInit {
     this.navCtrl.navigateForward('/tabs/tab1');
   }
 
+  
+
   // openFirst() {
   //   this.menu.enable(true, 'first');
   //   this.menu.open('first');
@@ -138,4 +146,6 @@ export class UserInputPage implements OnInit {
 
 
 }
+
+
 

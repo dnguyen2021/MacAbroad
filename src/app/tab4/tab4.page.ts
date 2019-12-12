@@ -78,6 +78,12 @@ export class Tab4Page {
     this.navCtrl.navigateForward('/tabs/tab1');
   }
 
+  boxBoolean = false;
+
+  onBoxBooleanChange(){
+    console.log(this.boxBoolean);
+  }
+
 }
 
 
