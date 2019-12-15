@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core'; 
+import { Component, OnInit } from '@angular/core';
 import { NavController, LoadingController, ToastController, Events, NavParams } from '@ionic/angular';
 import { DataService } from '../services/data.service';
 import { FirebaseService } from '../database.service'
@@ -26,7 +26,7 @@ export class ForumPage implements OnInit {
     private fireBaseService: FirebaseService,
     private formBuilder: FormBuilder,
     public afs: AngularFirestore,
-    public events: Events, 
+    public events: Events,
     private reviewService: ReviewsService
   ) {
   }
@@ -36,15 +36,15 @@ export class ForumPage implements OnInit {
   public Program: string;
   public Review: string;
   public Date: string;
-  public WishToKnow: string; 
-  public Advice: string; 
+  public WishToKnow: string;
+  public Advice: string;
 
   public post: any = {color: 'primary', message: 'Post to Forum'};
-  public storedStarRating: string; 
+  public storedStarRating: string;
 
   validations_form: FormGroup;
 
-  items2: string; 
+  items2: string;
   public searchTerm4: string = "";
 
   reviewSaver: string = "";
@@ -58,7 +58,7 @@ export class ForumPage implements OnInit {
       email: new FormControl(''),
       Program: new FormControl(''),
       Review: new FormControl(''),
-      Date: new FormControl(''), 
+      Date: new FormControl(''),
       WishToKnow: new FormControl(''),
       Advice: new FormControl('')
 
@@ -88,10 +88,10 @@ export class ForumPage implements OnInit {
   onSubmit(value) {
     this.post.color = 'light';
     this.post.message = 'Your post has been added (please refresh page)';
-    this.splicedDate = this.dateConverter(value.Date); 
-    this.storedStarRating = this.getRating(); 
-    console.log("adding review"); 
-    console.log(this.storedStarRating); 
+    this.splicedDate = this.dateConverter(value.Date);
+    this.storedStarRating = this.getRating();
+    console.log("adding review");
+    console.log(this.storedStarRating);
     let data = {
       Name: value.Name,
       email: value.email,
@@ -99,7 +99,7 @@ export class ForumPage implements OnInit {
       Review: value.Review,
       Date: this.splicedDate,
       Rating: this.storedStarRating,
-      WishToKnow: value.WishToKnow, 
+      WishToKnow: value.WishToKnow,
       Advice: value.Advice
 
     };
@@ -151,8 +151,11 @@ export class ForumPage implements OnInit {
  }
 
  getRating(){
-   return this.storedStarRating; 
+   return this.storedStarRating;
+ }
+
+ logout(){
+   this.navCtrl.navigateForward('/tabs/tab1')
  }
 
 }
-

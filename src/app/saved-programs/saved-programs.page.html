@@ -1,19 +1,28 @@
 <ion-header>
   <ion-toolbar color="primary">
-    <ion-buttons slot="start">
+    <ion-row>
+      <ion-col size="auto">
+        <ion-button (click)="goBack()">
+          <ion-icon ios="ios-arrow-round-back" md="md-arrow-round-back"></ion-icon>
+        </ion-button>
+      </ion-col>
+      <ion-col>
+    <!-- <ion-buttons slot="start">
       <ion-menu-toggle>
         <ion-button>
           <ion-icon slot="icon-only" name="menu"></ion-icon>
         </ion-button>
       </ion-menu-toggle>
-    </ion-buttons>
+    </ion-buttons> -->
     <ion-title style = "font-family:Bebas Neue; font-size:25px; text-align: center">
         <div class="pad"><div class="fadeIn">Saved Programs</div></div>
     </ion-title>
+    </ion-col>
+    </ion-row>
     </ion-toolbar>
   </ion-header>
 
-  <ion-menu side="start" menuId="first">
+  <!-- <ion-menu side="start" menuId="first">
     <ion-header>
       <ion-toolbar color="primary">
         <ion-title></ion-title>
@@ -30,7 +39,7 @@
     </ion-content>
   </ion-menu>
 
-<ion-router-outlet main></ion-router-outlet>
+<ion-router-outlet main></ion-router-outlet> -->
 
   <!-- <ion-button (click) = "goForum()"> <ion-icon name='ios-contacts'></ion-icon> <label>Go to Forums</label> </ion-button> -->
 
@@ -121,6 +130,14 @@
               </ion-col>
               <ion-col size="9">
                 {{ item.AcademicFeatures}}
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col size="8">
+                <b>Summary: </b>
+              </ion-col>
+              <ion-col size="9">
+                {{ item.Summary}}
               </ion-col>
             </ion-row>
 

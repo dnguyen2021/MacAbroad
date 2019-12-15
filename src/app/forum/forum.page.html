@@ -1,10 +1,16 @@
 <ion-header>
     <ion-toolbar color="primary">
       <ion-row>
-        <ion-button (click)="goBack()">
-            <ion-icon name="arrow-round-back"></ion-icon>
-        </ion-button>
-        <ion-title>Study Abroad Program Feedback</ion-title>
+        <ion-col size="50%">
+          <ion-title style = "font-size:25px; text-align: center">
+            Student Reviews
+          </ion-title>
+        </ion-col>
+        <ion-col size="500px">
+          <ion-button (click)="logout()" end>
+              <ion-icon name="log-out"></ion-icon>
+          </ion-button>
+        </ion-col>
       </ion-row>
     </ion-toolbar>
   </ion-header>
@@ -16,12 +22,12 @@
 
 <ion-input placeholder="Name" formControlName = Name> </ion-input>
 
-<ion-input placeholder="email" formControlName = email></ion-input>
+<ion-input placeholder="Email" formControlName = email></ion-input>
 
-<ionic4-star-rating 
+<ionic4-star-rating
 activeIcon = "ios-star"
 defaultIcon = "ios-star-outline"
-activeColor = "#488aff" 
+activeColor = "#488aff"
 defaultColor = "#f4f4f4"
 readonly="false"
 rating="3"
@@ -38,7 +44,7 @@ fontSize = "32px"
   </ion-select>
 </ion-item>
 
-<!-- 
+<!--
 <ion-toolbar>
   <ion-searchbar  [(ngModel)]="searchTerm4" (click)="setPrograms()" (ionChange)="setSearchedItems()" showCancelButton="focus" placeholder="Enter search query" formControlName = Program></ion-searchbar>
 </ion-toolbar>
@@ -64,18 +70,18 @@ fontSize = "32px"
 <!-- </ion-list>  -->
 
 
-<ion-input class="review" placeholder="Would you recommend this program?" formControlName = Review></ion-input> 
-<ion-input class="review" placeholder="What do you wish you had known before?" formControlName = WishToKnow></ion-input> 
-<ion-input class="review" placeholder="Advice for future study abroad students/students in this program?" formControlName = Advice></ion-input> 
+<ion-input class="review" placeholder="Would you recommend this program?" formControlName = Review></ion-input>
+<ion-input class="review" placeholder="What do you wish you had known before?" formControlName = WishToKnow></ion-input>
+<ion-input class="review" placeholder="Advice for future study abroad students/students in this program?" formControlName = Advice></ion-input>
 
 <ion-datetime formControlName="Date" displayFormat="MM-DD-YYYY" pickerFormat="MM-DD-YYYY" placeholder="Please Select Today's Date" ></ion-datetime>
-<ion-button text-center class="submit-btn" color="{{post.color}}" expand="block" type="submit" [disabled]="!validations_form.valid">{{post.message}}</ion-button> 
+<ion-button text-center class="submit-btn" color="{{post.color}}" expand="block" type="submit" [disabled]="!validations_form.valid">{{post.message}}</ion-button>
 
 <!-- <ion-button (click) = 'getRating()'>  </ion-button> -->
 
 
 
-<!-- 
+<!--
 <rating [(ngModel)]="rate"
 readonly="false"
 size="default"
@@ -83,15 +89,15 @@ size="default"
 
   <ion-item-sliding *ngFor="let review of reviews">
 
-      <ionic4-star-rating 
+      <ionic4-star-rating
       activeIcon = "ios-star"
       defaultIcon = "ios-star-outline"
-      activeColor = "#488aff" 
+      activeColor = "#488aff"
       defaultColor = "#f4f4f4"
       readonly="true"
       rating= "{{review.Rating}}"
       fontSize = "32px">
-      </ionic4-star-rating> 
+      </ionic4-star-rating>
 
     <ion-item-options side="end">
     </ion-item-options>
@@ -106,7 +112,7 @@ size="default"
 
       Submitted at: {{ review.Date }} <br>
 
-    </ion-item> 
+    </ion-item>
 
    </ion-item-sliding>
 
@@ -115,15 +121,15 @@ size="default"
 
 <ion-item-sliding *ngFor="let item of reviewItems">
 
-  <ionic4-star-rating 
+  <ionic4-star-rating
   activeIcon = "ios-star"
   defaultIcon = "ios-star-outline"
-  activeColor = "#488aff" 
+  activeColor = "#488aff"
   defaultColor = "#f4f4f4"
   readonly="true"
   rating= 3
   fontSize = "32px">
-  </ionic4-star-rating> 
+  </ionic4-star-rating>
 
 <ion-item-options side="end">
 </ion-item-options>
@@ -139,7 +145,7 @@ size="default"
 
   Submitted at: " "<br>
 
-</ion-item> 
+</ion-item>
 
 </ion-item-sliding>
 
@@ -157,6 +163,3 @@ size="default"
               <ion-card-title style="font-size:25px">{{review.Review}}{{item.Time}}</ion-card-title>
             </ion-col>
           </ion-row> -->
-
-
- 

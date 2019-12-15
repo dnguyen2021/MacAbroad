@@ -39,7 +39,7 @@ export class SavedProgramsPage implements OnInit {
   }
 
   goBack(){
-    this.navCtrl.navigateForward('/tabs/user-input')
+    this.navCtrl.navigateForward('/tabs/recommendation')
   }
 
   removeItem2(i){
@@ -64,29 +64,29 @@ export class SavedProgramsPage implements OnInit {
   //   this.navCtrl.navigateForward('/tabs/forum')
   // }
 
-  goToHome(){
-    this.menu.close();
-    this.navCtrl.navigateForward('/tabs/recommendation')
-  }
-
-  goToProgramSearch(){
-    this.navCtrl.navigateForward('/tabs/tab2')
-  }
-
-  goToTimeline(){
-    this.navCtrl.navigateForward('/tabs/tab4')
-  }
-
-  goToStudentReviews(){
-    this.navCtrl.navigateForward('/tabs/forum')
-  }
-
-  goToLogout(){
-    this.navCtrl.navigateForward('tabs/tab1')
-  }
-
-  openFirst() {
-    this.menu.enable(true, 'first');
-    this.menu.open('first');
-  }
+  // goToHome(){
+  //   this.menu.close();
+  //   this.navCtrl.navigateForward('/tabs/recommendation')
+  // }
+  //
+  // goToProgramSearch(){
+  //   this.navCtrl.navigateForward('/tabs/tab2')
+  // }
+  //
+  // goToTimeline(){
+  //   this.navCtrl.navigateForward('/tabs/tab4')
+  // }
+  //
+  // goToStudentReviews(){
+  //   this.navCtrl.navigateForward('/tabs/forum')
+  // }
+  //
+  // goToLogout(){
+  //   this.navCtrl.navigateForward('tabs/tab1')
+  // }
+  // 
+  // openFirst() {
+  //   this.menu.enable(true, 'first');
+  //   this.menu.open('first');
+  // }
 }
