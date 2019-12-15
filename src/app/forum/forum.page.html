@@ -117,11 +117,10 @@ size="default"
 (ngModelChange)="onRateChange($event)"> </rating> -->
 
 
-<!-- <ion-searchbar -->
-
-<ion-searchbar type="text" (ionChange)="filterList($event.target.value)">
-Filter Search By Program
-</ion-searchbar>
+<ion-searchbar
+type="text"
+(ionChange)="filterList($event.target.value)"
+>Filter Search By Program</ion-searchbar>
 
 
   <!-- <ion-item-sliding *ngFor="let review of reviews">
