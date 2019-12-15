@@ -3,6 +3,7 @@ import { IonicModule, NavController} from '@ionic/angular'; //ItemSliding
 import { DataService } from "../services/data.service";
 // import { Http } from '@angular/http';
 import 'rxjs/Rx';
+import { MenuController } from '@ionic/angular';
 
 import {
   StackConfig,
@@ -12,8 +13,6 @@ import {
   DragEvent,
   SwingStackComponent,
   SwingCardComponent} from 'angular2-swing';
-
-  import { MenuController } from '@ionic/angular';
 
 
 @Component({
@@ -32,7 +31,7 @@ export class RecommendationPage { //implements OnInit
   stackConfig: StackConfig;
   recentCard: string= '';
 
-  constructor(public navCtrl: NavController, private dataService: DataService) { //private menu: MenuController, , private http:Http
+  constructor(public navCtrl: NavController, private dataService: DataService, private menu: MenuController) { //private menu: MenuController, , private http:Http
     this.stackConfig = {
       throwOutConfidence: (offsetX, offsetY, element) => {
         return Math.min(Math.abs(offsetX) / (element.offsetWidth/2), 1);
@@ -66,9 +65,9 @@ export class RecommendationPage { //implements OnInit
   let hexCode = this.decimalToHex(min, 2);
 
   if (x < 0) {
-    color = '#FF' + hexCode + hexCode;
+    color = '#CC' + hexCode + hexCode;
   } else {
-    color = '#' + hexCode + 'FF' + hexCode;
+    color = '#' + hexCode + 'CC' + hexCode;
   }
 
   element.style.background = color;
@@ -105,21 +104,56 @@ decimalToHex(d, padding) {
   return hex;
 }
 
-  // ngOnInit() {
-  //   this.createItems();
-  // }
-
   createItems(){
     this.items2 = this.dataService.getItems();
   }
 
   goToFavourites(){
+    this.menu.close();
     this.navCtrl.navigateForward('/tabs/saved-programs')
+  }
+
+  goToProgramSearch(){
+    this.menu.close();
+    this.navCtrl.navigateForward('/tabs/tab2')
+  }
+
+  goToTimeline(){
+    this.menu.close();
+    this.navCtrl.navigateForward('/tabs/tab4')
+  }
+
+  goToStudentReviews(){
+    this.menu.close();
+    this.navCtrl.navigateForward('/tabs/forum')
+  }
+
+  goToLogout(){
+    this.menu.close();
+    this.navCtrl.navigateForward('tabs/tab1')
+  }
+
+  openFirst() {
+    this.menu.enable(true, 'first');
+    this.menu.open('first');
+  }
+
+  checkOpen(){
+    if (this.menu.isOpen()){
+      return true;
+    }
+    else{
+      return false;
+    }
+  }
+
+  open(){
+    this.menu.open();
   }
 
   removeItem(i){
     this.items2.splice(i, 1);
-    
+
   }
 
   addItem(item, i){
@@ -127,15 +161,6 @@ decimalToHex(d, padding) {
     this.items2.splice(i, 1);
 
   }
-
-  // share(slidingItem: ItemSliding) {
-  //   slidingItem.close();
-  // }
-
-  // openFirst() {
-  //   this.menu.enable(true, 'first');
-  //   this.menu.open('first');
-  // }
 
 
 

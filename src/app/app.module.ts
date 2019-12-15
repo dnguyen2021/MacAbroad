@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouteReuseStrategy } from '@angular/router';
 
+
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
@@ -13,14 +14,14 @@ import { RecommenderService } from './recommender.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AngularFireModule } from 'angularfire2';
-import { AngularFireAuthModule } from 'angularfire2/auth'; 
+import { AngularFireAuthModule } from 'angularfire2/auth';
 import { AngularFireDatabase} from 'angularfire2/database';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 
 
 import { IonicStorageModule } from '@ionic/storage';
 
-import { environment } from '../environments/environment'; 
+import { environment } from '../environments/environment';
 import { FirebaseService } from './database.service';
 import { AngularFirestore } from 'angularfire2/firestore';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
@@ -38,7 +39,7 @@ import {
  SwingStackComponent,
  SwingCardComponent} from 'angular2-swing';
 
-firebase.initializeApp(environment.config); 
+firebase.initializeApp(environment.config);
 
 @NgModule({
   declarations: [AppComponent],
@@ -46,7 +47,7 @@ firebase.initializeApp(environment.config);
   ],
   imports: [BrowserModule, AngularFirestoreModule, IonicModule.forRoot(), AppRoutingModule, HttpClientModule,
     FormsModule, ReactiveFormsModule, AngularFireAuthModule, AngularFireModule.initializeApp(environment.config)
- 
+
     , IonicStorageModule.forRoot(), AngularFireDatabaseModule, AngularFireDatabaseModule, HttpModule,
       SwingModule],
 
@@ -55,11 +56,11 @@ firebase.initializeApp(environment.config);
     SplashScreen,
     FirebaseService,
      AngularFirestore,
-     { provide: [RouteReuseStrategy, RecommenderService] , useClass: IonicRouteStrategy}, 
+     { provide: [RouteReuseStrategy, RecommenderService] , useClass: IonicRouteStrategy},
   ],
-  bootstrap: [AppComponent], 
-  
-  exports: [ReactiveFormsModule] 
+  bootstrap: [AppComponent],
+
+  exports: [ReactiveFormsModule]
 
 })
 export class AppModule {}
