@@ -58,8 +58,8 @@ export class Tab2Page implements OnInit{
 
   setSearchedItems() {
     this.items2 = this.dataService.searchItems(this.searchTerm4);
-    console.log('these are items'); 
-    console.log(this.items2); 
+    console.log('these are items');
+    console.log(this.items2);
   }
 
   setSortSearch(){

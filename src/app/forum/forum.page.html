@@ -10,8 +10,16 @@
   </ion-header>
 
 <ion-content padding class="form-content">
+  <ion-card class="bg-class2">
+      <ion-card-header tappable (click)="collapseCard = !collapseCard">
+          <ion-card-title style="text-align: center;color: white;" >Post A Review</ion-card-title>
+        </ion-card-header>
 
-<div>
+  <ion-card-content *ngIf="!collapseCard">
+        <ion-card-title style="text-align: center; text-decoration: underline; font-weight: bold;"></ion-card-title>
+
+
+
 <form [formGroup]="validations_form" (ngSubmit)="onSubmit(validations_form.value)">
 
 <ion-input placeholder="Name" formControlName = Name> </ion-input>
@@ -72,6 +80,11 @@ fontSize = "32px"
 
 <ion-button text-center class="submit-btn" color="{{post.color}}" expand="block" type="submit" [disabled]="!validations_form.valid">{{post.message}}</ion-button> 
 
+
+</form>
+</ion-card-content>
+</ion-card>
+
 <!-- <ion-button (click) = 'getRating()'>  </ion-button> -->
 
 <!-- 
@@ -79,6 +92,7 @@ fontSize = "32px"
 readonly="false"
 size="default"
 (ngModelChange)="onRateChange($event)"> </rating> -->
+
 
 <ion-searchbar 
 type="text"
@@ -113,11 +127,8 @@ type="text"
       Submitted at: {{ review.Date }} <br>
 
     </ion-item> 
-
    </ion-item-sliding>
 
-</form>
-</div>
 
 <ion-item-sliding *ngFor="let item of reviewItems">
 

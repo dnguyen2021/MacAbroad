@@ -60,6 +60,6 @@ export class Tab5Page implements OnInit {
   }
 
   goToUserInput(){
-    this.navCtrl.navigateForward("/tabs/user-input")
+    this.navCtrl.navigateForward("/user-input")
   }
 }

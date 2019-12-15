@@ -1,40 +1,49 @@
 <ion-header>
-  <ion-toolbar color="primary">
-    <ion-title style = "text-align: center">Register</ion-title>
+  <ion-toolbar class="bg-class">
+    <img src="/assets/icon/mockupMacAbroad3.png" width="65px" style="display:inline-block" height="65px" (click)="goToHome()">
+    <ion-title class="titleicon" style = "font-size:25px; text-align: center; display:inline-block">
+      <div class="fadeIn">
+        Register
+      </div>
+    </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content padding class="form-content">
-  <form class="form" [formGroup]="validations_form" (ngSubmit)="tryRegister(validations_form.value)">
+<ion-content padding class="form-content" class="bg-class">
+<form class="form" [formGroup]="validations_form" (ngSubmit)="tryRegister(validations_form.value)">
 
-    <ion-item>
-      <ion-label position="floating" color="primary">Macalester email</ion-label>
-      <ion-input type="text" formControlName="email"></ion-input>
-    </ion-item>
-    <div class="validation-errors">
-      <ng-container *ngFor="let validation of validation_messages.email">
-        <div class="error-message" *ngIf="validations_form.get('email').hasError(validation.type) && (validations_form.get('email').dirty || validations_form.get('email').touched)">
-          {{ validation.message }}
-        </div>
-      </ng-container>
+  <ion-item>
+    <ion-label position="floating" color="primary" style="font-size:20px"><div class="fadeIn">Macalester email</div></ion-label>
+    <div class="pad">
+        <ion-input type="text" formControlName="email"></ion-input>
     </div>
+  </ion-item>
+  <div class="validation-errors">
+    <ng-container *ngFor="let validation of validation_messages.email">
+      <div class="error-message" *ngIf="validations_form.get('email').hasError(validation.type) && (validations_form.get('email').dirty || validations_form.get('email').touched)">
+        {{ validation.message }}
+      </div>
+    </ng-container>
+  </div>
 
-    <ion-item>
-      <ion-label position="floating" color="primary">Password</ion-label>
-      <ion-input type="password" formControlName="password"></ion-input>
-    </ion-item>
-    <div class="validation-errors">
-      <ng-container *ngFor="let validation of validation_messages.password">
-        <div class="error-message" *ngIf="validations_form.get('password').hasError(validation.type) && (validations_form.get('password').dirty || validations_form.get('password').touched)">
-          {{ validation.message }}
-        </div>
-      </ng-container>
-    </div>
+  <ion-item>
+      <ion-label position="floating" color="primary" style="font-size:20px"><div class="fadeIn">Password</div></ion-label>
+      <div class="pad">
+          <ion-input type="password" formControlName="password"></ion-input>
+      </div>
+  </ion-item>
+  <div class="validation-errors">
+    <ng-container *ngFor="let validation of validation_messages.password">
+      <div class="error-message" *ngIf="validations_form.get('password').hasError(validation.type) && (validations_form.get('password').dirty || validations_form.get('password').touched)">
+        {{ validation.message }}
+      </div>
+    </ng-container>
+  </div>
 
-    <ion-button class="submit-btn" expand="block" type="submit" [disabled]="!validations_form.valid">Register</ion-button>
-    <label class="error-message">{{errorMessage}}</label>
-    <label class="success-message">{{successMessage}}</label>
-  </form>
-  <p class="go-to-login">Already have an account? <a (click)="goLoginPage()">Try to Log In.</a></p>
+  <ion-button class="submit-btn" expand="block" type="submit" [disabled]="!validations_form.valid">Register</ion-button>
+  <label class="error-message">{{errorMessage}}</label>
+  <label class="success-message">{{successMessage}}</label>
+</form>
+<p class="go-to-login" style="color: #e9f1f8">Already have an account? <a (click)="goLoginPage()" style="color: #e9f1f8"><u>Try to Log In.</u></a></p>
 
 </ion-content>
