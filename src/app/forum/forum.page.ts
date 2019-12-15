@@ -7,6 +7,7 @@ import { Validators, FormBuilder, FormGroup, FormControl } from '@angular/forms'
 import { ModalController } from '@ionic/angular';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { ReviewsService } from '../reviews.service';
+import { AstMemoryEfficientTransformer } from '@angular/compiler';
 
 @Component({
   selector: 'app-forum',
@@ -17,6 +18,9 @@ export class ForumPage implements OnInit {
   boolean: any;
   public reviewSearchTermFor: string = "";
   public reviewItems: any;
+  public oldreview: any; 
+
+  public searchTerm4: string = "";
 
   constructor(
     public navCtrl: NavController,
@@ -44,8 +48,14 @@ export class ForumPage implements OnInit {
 
   validations_form: FormGroup;
 
+<<<<<<< HEAD
   items2: string;
   public searchTerm4: string = "";
+=======
+  items2: string; 
+  public willYouShow: string = "";
+  public searchReview: string = '';
+>>>>>>> 0d57f3e240c2fe2849b68f38f9706d6d4e413e28
 
   reviewSaver: string = "";
 
@@ -53,6 +63,7 @@ export class ForumPage implements OnInit {
   public review: any;
 
   ngOnInit() {
+
     this.validations_form = this.formBuilder.group({
       Name: new FormControl(''),
       email: new FormControl(''),
@@ -64,16 +75,7 @@ export class ForumPage implements OnInit {
 
     });
 
-
-    this.review = this.afs.firestore.collection('reviews');
-    this.review.get().then((querySnapshot) => {
-      querySnapshot.forEach((doc) => {
-        this.reviews.push((doc.id,"=>",
-          doc.data()
-        ));
-  })})
-
-    this.reviewItems = this.reviewService.items;
+    this.resetSelections(); 
 }
 
   setPrograms() {
@@ -85,6 +87,7 @@ export class ForumPage implements OnInit {
   }
 
   splicedDate: string;
+
   onSubmit(value) {
     this.post.color = 'light';
     this.post.message = 'Your post has been added (please refresh page)';
@@ -113,27 +116,57 @@ export class ForumPage implements OnInit {
 
   }
 
+  resetSelections(){
+    this.review = this.afs.firestore.collection('reviews');
+    this.review.get().then((querySnapshot) => {
+      querySnapshot.forEach((doc) => {
+        this.reviews.push((doc.id,"=>",
+          doc.data()
+        ));
+  })})
+
+    this.reviewItems = this.reviewService.items;
+  }
+
+  filterList(evt) {
+
+    const searchTerm = evt;
+    console.log(searchTerm);
+    this.filterPrior(evt); 
+
+    if (!searchTerm) {
+      this.resetSelections();
+  
+      return;
+    }
+    this.reviews = this.reviews.filter(review => {
+      if (review.Program.toLowerCase() && searchTerm) {
+        if (review.Program.toLowerCase().indexOf(searchTerm.toLowerCase()) > -1) {
+          return true;
+        }
+        return false;
+      }
+
+    });
+  }
+
+  filterPrior(evt) {
+    const searchTerm = evt;
+    console.log('REVIEWS FROM PREVIOUS YEARS');
+    console.log(this.reviewItems);
+    this.reviewItems = this.reviewItems.filter(review => {
+      if (review.programName.toLowerCase() && searchTerm) {
+        if (review.programName.toLowerCase().indexOf(searchTerm.toLowerCase()) > -1) {
+          return true;
+        }
+        return false;
+      }
+    });
+  }
+
   getReviews() {
   console.log(this.reviews); }
 
-
-
-  // filterReviews() {
-  //   return this.reviews.filter(item => {
-  //     return item.Program == 'Sciences Po';
-
-  //   });
-  // }
-
-  // setFilteredItems() {
-  //   this.reviews = this.filterReviews();
-  // }
-
-
-  show() {
-    this.boolean = true;
-    // this.dataService.setShow();
-  }
 
   dateConverter(date) {
     return date.substring(0, 10);
@@ -150,7 +183,11 @@ export class ForumPage implements OnInit {
     });
  }
 
+<<<<<<< HEAD
  getRating(){
+=======
+ getRating() {
+>>>>>>> 0d57f3e240c2fe2849b68f38f9706d6d4e413e28
    return this.storedStarRating;
  }
 

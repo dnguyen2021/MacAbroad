@@ -75,6 +75,7 @@ fontSize = "32px"
 <ion-input class="review" placeholder="Advice for future study abroad students/students in this program?" formControlName = Advice></ion-input>
 
 <ion-datetime formControlName="Date" displayFormat="MM-DD-YYYY" pickerFormat="MM-DD-YYYY" placeholder="Please Select Today's Date" ></ion-datetime>
+<<<<<<< HEAD
 <ion-button text-center class="submit-btn" color="{{post.color}}" expand="block" type="submit" [disabled]="!validations_form.valid">{{post.message}}</ion-button>
 
 <!-- <ion-button (click) = 'getRating()'>  </ion-button> -->
@@ -82,10 +83,24 @@ fontSize = "32px"
 
 
 <!--
+=======
+
+<ion-button text-center class="submit-btn" color="{{post.color}}" expand="block" type="submit" [disabled]="!validations_form.valid">{{post.message}}</ion-button> 
+
+<!-- <ion-button (click) = 'getRating()'>  </ion-button> -->
+
+<!-- 
+>>>>>>> 0d57f3e240c2fe2849b68f38f9706d6d4e413e28
 <rating [(ngModel)]="rate"
 readonly="false"
 size="default"
 (ngModelChange)="onRateChange($event)"> </rating> -->
+
+<ion-searchbar 
+type="text"
+(ionChange)="filterList($event.target.value)"
+>Filter Search By Program</ion-searchbar>
+
 
   <ion-item-sliding *ngFor="let review of reviews">
 
@@ -101,7 +116,8 @@ size="default"
 
     <ion-item-options side="end">
     </ion-item-options>
-    <ion-item>
+    <ion-item >
+        <!-- *ngIf = "willYouShow == true" -->
 
       Name: {{ review.Name }} <br>
       email: {{ review.email }} <br>
@@ -139,9 +155,12 @@ size="default"
   Name: " " <br>
   email: " " <br>
   Program: {{ item.programName }} <br>
-  Would you recommend this program?: {{ item.wouldYouRecommendThisProgramToOtherMacalesterStudentsPleaseExplain}} <br>
-  What do you wish you known before studying abroad?: {{ item.whatDoYouWishYouHadKnownBeforeYouChoseThisProgramAndorLocation}}  <br>
-  Do you have any advice for future students in the program or studying abroad?:  {{ item.recallingTheTimePeriodPriorToYourDepartureHowWouldYouSuggestThatFutureStudentsFocusTheirPreparationsWhatWasMostHelpfulForYouWhatWouldYouDoDifferentlyPleaseExplain}} <br>
+  Would you recommend this program? <br>
+  {{ item.wouldYouRecommendThisProgramToOtherMacalesterStudentsPleaseExplain}} <br>
+  What do you wish you known before studying abroad? <br>
+  {{ item.whatDoYouWishYouHadKnownBeforeYouChoseThisProgramAndorLocation}}  <br>
+  Do you have any advice for future students in the program or studying abroad? <br>
+  {{ item.recallingTheTimePeriodPriorToYourDepartureHowWouldYouSuggestThatFutureStudentsFocusTheirPreparationsWhatWasMostHelpfulForYouWhatWouldYouDoDifferentlyPleaseExplain}} <br>
 
   Submitted at: " "<br>
 
