@@ -1,12 +1,18 @@
 
 <ion-header>
   <ion-toolbar class="bg-class">
+    <ion-row>
+    <ion-col size="auto">
     <img src="/assets/icon/mockupMacAbroad3.png" width="65px" style="display:inline-block" height="65px" (click)="goToHome()">
+    </ion-col>
+    <ion-col>
     <ion-title class="titleicon" style = "font-size:25px; text-align: center; display:inline-block">
       <div class="fadeIn">
         Timeline
       </div>
     </ion-title>
+    </ion-col>
+    </ion-row>
   </ion-toolbar>
 </ion-header>
 
@@ -15,7 +21,7 @@
     <ion-card style="background-color: #e9f1f8;">
       <ion-card-header class="bg-class2">
         <ion-card-title style="text-align: center; font-weight: bold;orientation: center; color: white;">
-            <div class="fadeIn"><u>{{item.title}}</u></div>        
+            <div class="fadeIn"><u>{{item.title}}</u></div>
             <ion-checkbox style="background-color: #1c357a; align-content: center;" [(ngModel)]="boxBoolean" (ionChange)="onBoxBooleanChange()">Completed</ion-checkbox>
         </ion-card-title>
       </ion-card-header>
