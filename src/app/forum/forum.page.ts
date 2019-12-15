@@ -18,8 +18,7 @@ export class ForumPage implements OnInit {
   boolean: any;
   public reviewSearchTermFor: string = "";
   public reviewItems: any;
-  public oldreview: any; 
-
+  public oldreview: any;
   public searchTerm4: string = "";
 
   constructor(
@@ -48,7 +47,12 @@ export class ForumPage implements OnInit {
 
   validations_form: FormGroup;
 
-  items2: string; 
+
+  items2: string;
+
+
+
+
   public willYouShow: string = "";
   public searchReview: string = '';
 
@@ -67,10 +71,9 @@ export class ForumPage implements OnInit {
       Date: new FormControl(''),
       WishToKnow: new FormControl(''),
       Advice: new FormControl('')
-
     });
 
-    this.resetSelections(); 
+    this.resetSelections();
 }
 
   setPrograms() {
@@ -131,11 +134,11 @@ export class ForumPage implements OnInit {
 
     const searchTerm = evt;
     console.log(searchTerm);
-    this.filterPrior(evt); 
+    this.filterPrior(evt);
 
     if (!searchTerm) {
       this.resetSelections();
-  
+
       return;
     }
     this.reviews = this.reviews.filter(review => {

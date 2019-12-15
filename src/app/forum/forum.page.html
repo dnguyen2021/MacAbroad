@@ -10,7 +10,7 @@
       </ion-toolbar>
     </ion-header>
 
-  <ion-searchbar 
+  <ion-searchbar
   type="text"
   (ionChange)="filterList($event.target.value)"
   >Filter Search By Program</ion-searchbar>
@@ -21,12 +21,13 @@
           <ion-card-title style="text-align: center;color: white;" >Post A Review</ion-card-title>
         </ion-card-header>
 
+
   <ion-card-content *ngIf="!collapseCard">
         <ion-card-title style="text-align: center; text-decoration: underline; font-weight: bold;"></ion-card-title>
 
 
 
-<form [formGroup]="validations_form" (ngSubmit)="onSubmit(validations_form.value)">
+<form [formGroup]="validations_form" (ngSubmit)="onSubmit(validations_form.value)"></form>
 
 <ion-input style = "color: white" placeholder="Name" formControlName = Name> </ion-input>
 
@@ -84,25 +85,46 @@ fontSize = "32px"
 
 <ion-datetime formControlName="Date" displayFormat="MM-DD-YYYY" pickerFormat="MM-DD-YYYY" placeholder="Please Select Today's Date" ></ion-datetime>
 
-<ion-button text-center class="submit-btn" color="{{post.color}}" expand="block" type="submit" [disabled]="!validations_form.valid">{{post.message}}</ion-button> 
+
+<ion-button text-center class="submit-btn" color="{{post.color}}" expand="block" type="submit" [disabled]="!validations_form.valid">{{post.message}}</ion-button>
+
+<!-- <ion-button (click) = 'getRating()'>  </ion-button> -->
 
 
+<ion-button text-center class="submit-btn" color="{{post.color}}" expand="block" type="submit" [disabled]="!validations_form.valid">{{post.message}}</ion-button>
+
+
+<ion-button text-center class="submit-btn" color="{{post.color}}" expand="block" type="submit" [disabled]="!validations_form.valid">{{post.message}}</ion-button>
+
+</ion-card-content>
+
+<!-- <ion-button (click) = 'getRating()'>  </ion-button> -->
+
+<!--
+>>>>>>> 0d57f3e240c2fe2849b68f38f9706d6d4e413e28
+=======
 </form>
 </ion-card-content>
 </ion-card>
 
-<!-- <ion-button (click) = 'getRating()'>  </ion-button> -->
+<ion-button (click) = 'getRating()'>  </ion-button> -->
 
-<!-- 
+<!--
+>>>>>>> ae0a6a426efbc0a0ec1ff4e320b42682364e092e
 <rating [(ngModel)]="rate"
 readonly="false"
 size="default"
 (ngModelChange)="onRateChange($event)"> </rating> -->
 
 
+<!-- <ion-searchbar -->
+
+<ion-searchbar type="text" (ionChange)="filterList($event.target.value)">
+Filter Search By Program
+</ion-searchbar>
 
 
-  <ion-item-sliding *ngFor="let review of reviews">
+  <!-- <ion-item-sliding *ngFor="let review of reviews">
 
       <ionic4-star-rating
       activeIcon = "ios-star"
@@ -117,9 +139,9 @@ size="default"
     <ion-item-options side="end">
     </ion-item-options>
     <ion-item class="bg-class">
-        <!-- *ngIf = "willYouShow == true" -->
+        *ngIf = "willYouShow == true" -->
 
-      <b>Name:</b> {{ review.Name }} <br>
+      <!-- <b>Name:</b> {{ review.Name }} <br>
       <b>Email:</b> {{ review.email }} <br>
       <b>Program:</b> {{ review.Program }} <br>
       <b>Would you recommend this program?:</b> {{ review.Review }} <br>
@@ -130,7 +152,7 @@ size="default"
 
     </ion-item>
 
-   </ion-item-sliding>
+   </ion-item-sliding> -->
 
 
 <ion-item-sliding *ngFor="let item of reviewItems">
@@ -148,7 +170,7 @@ size="default"
 <ion-item-options side="end">
 </ion-item-options>
 
-<ion-item>
+<ion-item class="bg-class">
 
   Name: " " <br>
   email: " " <br>
