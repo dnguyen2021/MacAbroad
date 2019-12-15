@@ -1,16 +1,11 @@
 <ion-header style="color: #1c357a">
   <ion-toolbar class="bg-class">
-    <img src="/assets/icon/mockupMacAbroad3.png" width="65px" style="display:inline-block" height="65px">
+    <img src="/assets/icon/mockupMacAbroad3.png" width="65px" style="display:inline-block" height="65px" (click)="goToHome()">
     <ion-title class="titleicon" style = "font-size:25px; text-align: center; display:inline-block">
       <div class="fadeIn">
           Program Search
       </div>
     </ion-title>
-    <ion-col size="500px">
-      <ion-button (click)="logout()" end>
-          <ion-icon name="log-out"></ion-icon>
-      </ion-button>
-    </ion-col>
     <div class="fadeIn">
         <ion-searchbar [(ngModel)]="searchTerm4" (ionChange)="setSearchedItems()"></ion-searchbar>
     </div>
@@ -76,54 +71,39 @@
                 </mat-expansion-panel>
               </mat-accordion> -->
 
-          <div class="fadeIn">
-              <img src="/assets/icon/{{item.program.img}}" alt="img" width="fill" height="fill" >
-
-          </div>
-
-          <ion-card-header tappable (click)="collapseCard = !collapseCard">
-            <div class="fadeIn"><ion-card-title style="text-align: center;color: white;">{{item.program.programName}}</ion-card-title></div>
-          </ion-card-header>
-
-          <div class="fadeIn"><ion-card-content style="background-color: #ffffff;" *ngIf="!collapseCard">
-            <ion-card-title style="text-align: center; text-decoration: underline; font-weight: bold;">
-              Summary <br>
-
-              {{item.program.summary}}
-            </ion-card-title>
-
-            <ion-card-title style="text-align: center; text-decoration: underline; font-weight: bold;">
-              Quick Look <br>
-
-              <b>Program:</b> {{item.program.programGroup}} {{ item.program.programName}} <br>
-              <b>Language:</b> {{ item.program.language }} <br>
-              <b>Recommended By:</b> {{ item.program.areaName}} <br>
-              <b>Location:</b> {{ item.program.locationName}} <br>
-              <b>Housing:</b> {{ item.program.housing}} <br>
-              <b>Minimum GPA Requirement:</b> {{ item.program.GPA}} <br>
-              <b>Academic Features:</b> {{ item.program.academicFeatures}} <br>
-
-            </ion-card-title>
-
-            <ion-card-content>
-                  <b>Program:</b> {{item.program.programGroup}} {{ item.program.programName}} <br>
-                  <b>Language:</b> {{ item.program.language }} <br>
-                  <b>Recommended By:</b> {{ item.program.areaName}} <br>
-                  <b>Location:</b> {{ item.program.locationName}} <br>
-                  <b>Housing:</b> {{ item.program.housing}} <br>
-                  <b>Minimum GPA Requirement:</b> {{ item.program.GPA}} <br>
-                  <b>Academic Features:</b> {{ item.program.academicFeatures}} <br>
-          </ion-card-content>
-
-          </ion-card-content>
-
-          </div>
-
+              <div class="fadeIn">
+                <img src="/assets/icon/{{item.program.img}}" alt="img" width="fill" height="fill" >
+            </div>
+  
+            <ion-card-header tappable (click)="collapseCard = !collapseCard">
+              <div class="fadeIn"><ion-card-title style="text-align: center;color: white;">{{item.program.programName}}</ion-card-title></div>
+            </ion-card-header>
+  
+            <div class="fadeIn"><ion-card-content style="background-color: #e9f1f8;" *ngIf="!collapseCard">
+              <ion-card-title style="text-align: center; text-decoration: underline; font-weight: bold;">
+                Summary
+  
+              </ion-card-title>
+  
+                {{item.program.summary}}
+  
+              <ion-card-title style="text-align: center; text-decoration: underline; font-weight: bold;">
+                Quick Look
+  
+              </ion-card-title>
+                    <b>Program:</b> {{item.program.programGroup}} {{ item.program.programName}} <br>
+                    <b>Language:</b> {{ item.program.language }} <br>
+                    <b>Recommended By:</b> {{ item.program.areaName}} <br>
+                    <b>Location:</b> {{ item.program.locationName}} <br>
+                    <b>Housing:</b> {{ item.program.housing}} <br>
+                    <b>Minimum GPA Requirement:</b> {{ item.program.GPA}} <br>
+                    <b>Academic Features:</b> {{ item.program.academicFeatures}} <br>
+            </ion-card-content>
+            </div>
           </ion-card>
           </ion-list>
 
 </ion-content>
-
 
           <!-- </div> -->
         <!-- </ion-card> -->

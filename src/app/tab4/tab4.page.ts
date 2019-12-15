@@ -74,7 +74,7 @@ export class Tab4Page {
   constructor(public navCtrl: NavController){
 
   }
-  logout(){
+  goToHome(){
     this.navCtrl.navigateForward('/tabs/tab1');
   }
 
