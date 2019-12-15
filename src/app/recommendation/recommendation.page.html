@@ -1,33 +1,36 @@
 <ion-header>
     <ion-toolbar color="primary">
-      <ion-buttons slot="start">
-        <div *ngIf="checkOpen() === false">
-          <ion-menu-button (click)="open()"></ion-menu-button>
-        </div>
+      <!-- <ion-buttons slot="start">
+          <ion-menu-button></ion-menu-button> -->
 
         <!-- <ion-menu-toggle>
           <ion-button>
             <ion-icon slot="icon-only" name="menu"></ion-icon>
           </ion-button>
         </ion-menu-toggle> -->
-      </ion-buttons>
+      <!-- </ion-buttons> -->
 
-        <ion-title style = "font-family:Bebas Neue; font-size:25px; text-align: center">
+        <!-- <ion-title style = "font-family:Bebas Neue; font-size:25px; text-align: center">
             <div class="pad"><div class="fadeIn">Recommendations</div></div>
-        </ion-title>
+        </ion-title> -->
 
-    <!-- <ion-row>
+    <ion-row>
       <ion-col size="auto">
         <ion-button (click)="goToFavourites()">
           <ion-icon slot="icon-only" name="star" fill="clear"></ion-icon>
         </ion-button>
       </ion-col>
       <ion-col>
-        <ion-title style = "font-family:Bebas Neue; font-size:25px; text-align: center">
+        <ion-title style = "font-size:25px; text-align: center">
             <div class="pad"><div class="fadeIn">Recommendations</div></div>
         </ion-title>
       </ion-col>
-    </ion-row> -->
+      <ion-col size="500px">
+        <ion-button (click)="logout()" end>
+            <ion-icon name="log-out"></ion-icon>
+        </ion-button>
+      </ion-col>
+    </ion-row>
     </ion-toolbar>
   </ion-header>
 
@@ -43,7 +46,7 @@
   </ion-buttons>
 </ion-toolbar> -->
 
-  <ion-menu side="start" menuId="first">
+  <!-- <ion-menu side="start" menuId="first">
     <ion-header>
       <ion-toolbar color="primary">
         <ion-title></ion-title>
@@ -60,7 +63,7 @@
     </ion-content>
   </ion-menu>
 
-<ion-router-outlet main></ion-router-outlet>
+<ion-router-outlet main></ion-router-outlet> -->
 
   <!-- <ion-content>
     <div swing-stack #myswing1 [stackConfig]="stackConfig" (throwoutleft)="voteUp(true)" (throwoutright)="voteUp(false)" id="card-stack">
@@ -96,7 +99,7 @@
     </ion-content> -->
 
   <ion-content>
-    <div swing-stack #myswing1 [stackConfig]="stackConfig" (throwoutleft)="voteUp(false, 0); doAlert()" (throwoutright)="voteUp(true, 0); doAlert()" id="card-stack">
+    <div swing-stack #myswing1 [stackConfig]="stackConfig" (throwoutleft)="voteUp(false, 0)" (throwoutright)="voteUp(true, 0)" id="card-stack">
     <!-- <ion-item-sliding #slidingItem>
       <ion-item-options side="start">
         <ion-item-option (click)="removeItem(0); share(slidingItem)" color="danger" expandable>

@@ -8,21 +8,137 @@
     </ion-title>
   </ion-toolbar>
 </ion-header>
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>
+      {{ viewTitle }}
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="today()">Today</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
 
-<ion-content padding class="bg-class">
-  <ion-list *ngFor="let item of items">
-    <ion-card style="background-color: #e9f1f8;">
-      <ion-card-header class="bg-class2">
-        <ion-card-title style="text-align: center; font-weight: bold;orientation: center; color: white;">
-            <div class="fadeIn"><u>{{item.title}}</u></div>        
-            <ion-checkbox style="background-color: #1c357a; align-content: center;" [(ngModel)]="boxBoolean" (ionChange)="onBoxBooleanChange()">Completed</ion-checkbox>
-        </ion-card-title>
-      </ion-card-header>
-      <ion-card-content style="background-color: #e9f1f8;">
-        <br>
-        <div class="fadeIn">{{item.description}}<br>
-        <b>Deadline: </b>{{item.date.subtitle}} {{item.date.title}}</div>
-      </ion-card-content>
-    </ion-card>
-  </ion-list>
-</ion-content>
+<ion-content>
+
+  Card for adding a new event
+  <ion-card>
+    <ion-card-header color="primary" (click)="collapseCard = !collapseCard">
+      <ion-card-title>New Event</ion-card-title>
+    </ion-card-header>
+    <ion-card-content *ngIf="!collapseCard">
+
+      <ion-item>
+        <ion-input type="text" placeholder="Title" [(ngModel)]="event.title"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input type="text" placeholder="Description" [(ngModel)]="event.desc"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Start</ion-label>
+        <ion-datetime displayFormat="MM/DD/YYYY HH:mm" pickerFormat="MMM D:HH:mm" [(ngModel)]="event.startTime" [min]="minDate"></ion-datetime>
+      </ion-item>
+      <ion-item>
+        <ion-label>End</ion-label>
+        <ion-datetime displayFormat="MM/DD/YYYY HH:mm" pickerFormat="MMM D:HH:mm" [(ngModel)]="event.endTime" [min]="minDate"></ion-datetime>
+      </ion-item>
+      <ion-item>
+        <ion-label>All Day?</ion-label>
+        <ion-checkbox [(ngModel)]="event.allDay"></ion-checkbox>
+      </ion-item>
+      <ion-button fill="outline" expand="block" (click)="addEvent()" [disabled]="event.title == ''">Add Event</ion-button>
+
+    </ion-card-content>
+  </ion-card>
+
+  <ion-row>
+    Change the displayed calendar mode
+    <ion-col size="4">
+      <ion-button expand="block" [color]="calendar.mode == 'month' ? 'primary' : 'secondary'" (click)="changeMode('month')">Month</ion-button>
+    </ion-col>
+    <ion-col size="4">
+      <ion-button expand="block" [color]="calendar.mode == 'week' ? 'primary' : 'secondary'" (click)="changeMode('week')">Week</ion-button>
+    </ion-col>
+    <ion-col size="4">
+      <ion-button expand="block" [color]="calendar.mode == 'day' ? 'primary' : 'secondary'" (click)="changeMode('day')">Day</ion-button>
+    </ion-col>
+
+    Move back one screen of the slides
+    <ion-col size="6" text-left>
+      <ion-button fill="clear" (click)="back()">
+        <ion-icon name="arrow-back" slot="icon-only"></ion-icon>
+      </ion-button>
+    </ion-col>
+
+    Move forward one screen of the slides
+    <ion-col size="6" text-right>
+      <ion-button fill="clear" (click)="next()">
+        <ion-icon name="arrow-forward" slot="icon-only"></ion-icon>
+      </ion-button>
+    </ion-col>
+  </ion-row>
+
+  <calendar
+  [eventSource]="eventSource"
+  [calendarMode]="calendar.mode"
+  [currentDate]="calendar.currentDate"
+  (onEventSelected)="onEventSelected($event)"
+  (onTitleChanged)="onViewTitleChanged($event)"
+  (onTimeSelected)="onTimeSelected($event)"
+  startHour="6"
+  endHour="20"
+  step="30"
+  startingDayWeek="1">
+  </calendar>
+
+</ion-content> -->
+
+<ion-header>
+    <ion-toolbar class="bg-class">
+      <img src="/assets/icon/mockupMacAbroad3.png" width="65px" style="display:inline-block" height="65px">
+      <ion-title class="titleicon" style = "font-size:25px; text-align: center; display:inline-block">
+        <div class="fadeIn">
+          Timeline
+        </div>
+      </ion-title>
+      <ion-col size="500px">
+        <ion-button (click)="logout()" end>
+            <ion-icon name="log-out"></ion-icon>
+        </ion-button>
+      </ion-col>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content padding class="bg-class">
+    <ion-list *ngFor="let item of items">
+      <ion-card style="background-color: #041625;">
+        <ion-card-header class="bg-class2">
+          <ion-card-title style="text-align: center; font-weight: bold;orientation: center; color: white;">
+              <div class="fadeIn"><u>{{item.title}}</u> <ion-checkbox style="background-color: #1c357a;" ionChange="Completed">Completed</ion-checkbox></div>
+          </ion-card-title>
+        </ion-card-header>
+        <ion-card-content style="background-color: #0d3f6b;">
+          <br>
+          <div class="fadeIn">{{item.description}}<br>
+          <b>Deadline: </b>{{item.date.subtitle}} {{item.date.title}}</div>
+        </ion-card-content>
+      </ion-card>
+    </ion-list>
+  </ion-content>
+
+<!-- <ion-content padding>
+  <app-timeline endIcon="call">
+    <app-timeline-item *ngFor="let item of items">
+    <app-timeline-date [date]="item.date"></app-timeline-date>
+    <ion-icon [name]="item.icon"></ion-icon>
+      <ion-card>
+        <ion-card-header>
+          {{item.title}}
+        </ion-card-header>
+        <ion-card-content>
+          {{item.description}}
+        </ion-card-content>
+      </ion-card>
+    </app-timeline-item>
+  </app-timeline>
+</ion-content> -->
