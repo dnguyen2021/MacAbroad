@@ -26,98 +26,46 @@
 
 
 
-<form [formGroup]="validations_form" (ngSubmit)="onSubmit(validations_form.value)">
+        <form [formGroup]="validations_form" (ngSubmit)="onSubmit(validations_form.value)">
 
-<ion-input placeholder="Name" formControlName = Name> </ion-input>
+        <ion-input placeholder="Name" formControlName = Name> </ion-input>
 
-<ion-input placeholder="Email" formControlName = email></ion-input>
+        <ion-input placeholder="Email" formControlName = email></ion-input>
 
-<ionic4-star-rating
-activeIcon = "ios-star"
-defaultIcon = "ios-star-outline"
-activeColor = "#488aff"
-defaultColor = "#f4f4f4"
-readonly="false"
-rating="3"
-fontSize = "32px"
-(ratingChanged)="logRatingChange($event)">
-</ionic4-star-rating>
+        <ionic4-star-rating
+        activeIcon = "ios-star"
+        defaultIcon = "ios-star-outline"
+        activeColor = "#488aff"
+        defaultColor = "#f4f4f4"
+        readonly="false"
+        rating="3"
+        fontSize = "32px"
+        (ratingChanged)="logRatingChange($event)">
+        </ionic4-star-rating>
 
-<ion-item>
-  <ion-label color="white">Please Select Your Program</ion-label>
-  <ion-select [(ngModel)]="searchTerm4" (click)="setPrograms()" type = 'text' formControlName = Program>
-      <ion-select-option *ngFor="let item of items2">
-          {{ item.program.programName }}
-      </ion-select-option>
-  </ion-select>
-</ion-item>
-
-<!--
-<ion-toolbar>
-  <ion-searchbar  [(ngModel)]="searchTerm4" (click)="setPrograms()" (ionChange)="setSearchedItems()" showCancelButton="focus" placeholder="Enter search query" formControlName = Program></ion-searchbar>
-</ion-toolbar>
-
-<ion-list>
-  <ion-label style="background-color: #4178ee;" *ngFor="let item of items2">
-    {{ item.program.programName}}
-  </ion-label> -->
-  <!-- <div ng-repeat="item in items2">
-    <ion-item class="item-stable"
-    ng-click="toggleItem(item)"
-    ng-class="{active: isItemShown(item)}">
-  <i class="icon" ng-class="isItemShown(item) ?
-  'ion-minus' : 'ion-plus'"></i>
-  {{item.program.programName}}
-  </ion-item>
-  <ion-item class="item-accordion"
-      ng-repeat="name in item.programName"
-      ng-show="isItemShown(item)">
-    {{name}}
-    </ion-item>
-  </div> -->
-<!-- </ion-list>  -->
+        <ion-item>
+          <ion-label color="white">Please Select Your Program</ion-label>
+          <ion-select [(ngModel)]="searchTerm4" (click)="setPrograms()" type = 'text' formControlName = Program>
+              <ion-select-option *ngFor="let item of items2">
+                  {{ item.program.programName }}
+              </ion-select-option>
+          </ion-select>
+        </ion-item>
 
 
-<ion-input class="review" placeholder="Would you recommend this program?" formControlName = Review></ion-input>
-<ion-input class="review" placeholder="What do you wish you had known before?" formControlName = WishToKnow></ion-input>
-<ion-input class="review" placeholder="Advice for future study abroad students/students in this program?" formControlName = Advice></ion-input>
+      <ion-input class="review" placeholder="Would you recommend this program?" formControlName = Review></ion-input>
+      <ion-input class="review" placeholder="What do you wish you had known before?" formControlName = WishToKnow></ion-input>
+      <ion-input class="review" placeholder="Advice for future study abroad students/students in this program?" formControlName = Advice></ion-input>
 
-<ion-datetime formControlName="Date" displayFormat="MM-DD-YYYY" pickerFormat="MM-DD-YYYY" placeholder="Please Select Today's Date" ></ion-datetime>
-
-
-<ion-button text-center class="submit-btn" color="{{post.color}}" expand="block" type="submit" [disabled]="!validations_form.valid">{{post.message}}</ion-button>
-
-<!-- <ion-button (click) = 'getRating()'>  </ion-button> -->
-
-
-<ion-button text-center class="submit-btn" color="{{post.color}}" expand="block" type="submit" [disabled]="!validations_form.valid">{{post.message}}</ion-button>
-
-
-<ion-button text-center class="submit-btn" color="{{post.color}}" expand="block" type="submit" [disabled]="!validations_form.valid">{{post.message}}</ion-button>
-
-<!-- <ion-button (click) = 'getRating()'>  </ion-button> -->
-
-<!--
->>>>>>> 0d57f3e240c2fe2849b68f38f9706d6d4e413e28
-=======
-</form>
-</ion-card-content>
-</ion-card>
-
-<!-- <ion-button (click) = 'getRating()'>  </ion-button> -->
-
-<!--
->>>>>>> ae0a6a426efbc0a0ec1ff4e320b42682364e092e
-<rating [(ngModel)]="rate"
-readonly="false"
-size="default"
-(ngModelChange)="onRateChange($event)"> </rating> -->
-
-
-<ion-searchbar
-type="text"
-(ionChange)="filterList($event.target.value)"
->Filter Search By Program</ion-searchbar>
+      <ion-datetime formControlName="Date" displayFormat="MM-DD-YYYY" pickerFormat="MM-DD-YYYY" placeholder="Please Select Today's Date" ></ion-datetime>
+      <ion-button text-center class="submit-btn" color="{{post.color}}" expand="block" type="submit" [disabled]="!validations_form.valid">{{post.message}}</ion-button>
+      <ion-searchbar
+      type="text"
+      (ionChange)="filterList($event.target.value)"
+      >Filter Search By Program</ion-searchbar>
+      </form>
+      </ion-card-content>
+      </ion-card>
 
 
   <ion-item-sliding *ngFor="let review of reviews">
