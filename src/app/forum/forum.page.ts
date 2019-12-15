@@ -6,6 +6,7 @@ import { Router } from '@angular/router';
 import { Validators, FormBuilder, FormGroup, FormControl } from '@angular/forms';
 import { ModalController } from '@ionic/angular';
 import { AngularFirestore } from '@angular/fire/firestore';
+import { ReviewsService } from '../reviews.service';
 
 @Component({
   selector: 'app-forum',
@@ -14,6 +15,9 @@ import { AngularFirestore } from '@angular/fire/firestore';
 })
 export class ForumPage implements OnInit {
   boolean: any;
+  public reviewSearchTermFor: string = "";
+  public reviewItems: any;
+
   constructor(
     public navCtrl: NavController,
     public loadingCtrl: LoadingController,
@@ -22,7 +26,8 @@ export class ForumPage implements OnInit {
     private fireBaseService: FirebaseService,
     private formBuilder: FormBuilder,
     public afs: AngularFirestore,
-    public events: Events
+    public events: Events, 
+    private reviewService: ReviewsService
   ) {
   }
 
@@ -31,6 +36,8 @@ export class ForumPage implements OnInit {
   public Program: string;
   public Review: string;
   public Date: string;
+  public WishToKnow: string; 
+  public Advice: string; 
 
   public post: any = {color: 'primary', message: 'Post to Forum'};
   public storedStarRating: string; 
@@ -51,7 +58,9 @@ export class ForumPage implements OnInit {
       email: new FormControl(''),
       Program: new FormControl(''),
       Review: new FormControl(''),
-      Date: new FormControl('')
+      Date: new FormControl(''), 
+      WishToKnow: new FormControl(''),
+      Advice: new FormControl('')
 
     });
 
@@ -63,6 +72,8 @@ export class ForumPage implements OnInit {
           doc.data()
         ));
   })})
+
+    this.reviewItems = this.reviewService.items;
 }
 
   setPrograms() {
@@ -87,7 +98,10 @@ export class ForumPage implements OnInit {
       Program: value.Program,
       Review: value.Review,
       Date: this.splicedDate,
-      Rating: this.storedStarRating
+      Rating: this.storedStarRating,
+      WishToKnow: value.WishToKnow, 
+      Advice: value.Advice
+
     };
     this.fireBaseService.createReview(data)
     .then(
