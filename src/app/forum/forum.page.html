@@ -59,15 +59,15 @@
 
       <ion-datetime formControlName="Date" displayFormat="MM-DD-YYYY" pickerFormat="MM-DD-YYYY" placeholder="Please Select Today's Date" ></ion-datetime>
       <ion-button text-center class="submit-btn" color="{{post.color}}" expand="block" type="submit" [disabled]="!validations_form.valid">{{post.message}}</ion-button>
-      <ion-searchbar
-      type="text"
-      (ionChange)="filterList($event.target.value)"
-      >Filter Search By Program</ion-searchbar>
+
       </form>
       </ion-card-content>
       </ion-card>
 
-
+      <ion-searchbar
+      type="text"
+      (ionChange)="filterList($event.target.value)"
+      >Filter Search By Program</ion-searchbar>
   <ion-item-sliding *ngFor="let review of reviews">
 
       <ionic4-star-rating
