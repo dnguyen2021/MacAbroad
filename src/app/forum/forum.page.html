@@ -75,7 +75,7 @@ fontSize = "32px"
 <ion-input class="review" placeholder="Advice for future study abroad students/students in this program?" formControlName = Advice></ion-input>
 
 <ion-datetime formControlName="Date" displayFormat="MM-DD-YYYY" pickerFormat="MM-DD-YYYY" placeholder="Please Select Today's Date" ></ion-datetime>
-<<<<<<< HEAD
+
 <ion-button text-center class="submit-btn" color="{{post.color}}" expand="block" type="submit" [disabled]="!validations_form.valid">{{post.message}}</ion-button>
 
 <!-- <ion-button (click) = 'getRating()'>  </ion-button> -->
@@ -85,18 +85,18 @@ fontSize = "32px"
 <!--
 =======
 
-<ion-button text-center class="submit-btn" color="{{post.color}}" expand="block" type="submit" [disabled]="!validations_form.valid">{{post.message}}</ion-button> 
+<ion-button text-center class="submit-btn" color="{{post.color}}" expand="block" type="submit" [disabled]="!validations_form.valid">{{post.message}}</ion-button>
 
 <!-- <ion-button (click) = 'getRating()'>  </ion-button> -->
 
-<!-- 
+<!--
 >>>>>>> 0d57f3e240c2fe2849b68f38f9706d6d4e413e28
 <rating [(ngModel)]="rate"
 readonly="false"
 size="default"
 (ngModelChange)="onRateChange($event)"> </rating> -->
 
-<ion-searchbar 
+<ion-searchbar
 type="text"
 (ionChange)="filterList($event.target.value)"
 >Filter Search By Program</ion-searchbar>

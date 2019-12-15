@@ -18,7 +18,7 @@ export class ForumPage implements OnInit {
   boolean: any;
   public reviewSearchTermFor: string = "";
   public reviewItems: any;
-  public oldreview: any; 
+  public oldreview: any;
 
   public searchTerm4: string = "";
 
@@ -48,14 +48,11 @@ export class ForumPage implements OnInit {
 
   validations_form: FormGroup;
 
-<<<<<<< HEAD
   items2: string;
   public searchTerm4: string = "";
-=======
-  items2: string; 
+
   public willYouShow: string = "";
   public searchReview: string = '';
->>>>>>> 0d57f3e240c2fe2849b68f38f9706d6d4e413e28
 
   reviewSaver: string = "";
 
@@ -72,10 +69,9 @@ export class ForumPage implements OnInit {
       Date: new FormControl(''),
       WishToKnow: new FormControl(''),
       Advice: new FormControl('')
-
     });
 
-    this.resetSelections(); 
+    this.resetSelections();
 }
 
   setPrograms() {
@@ -132,11 +128,11 @@ export class ForumPage implements OnInit {
 
     const searchTerm = evt;
     console.log(searchTerm);
-    this.filterPrior(evt); 
+    this.filterPrior(evt);
 
     if (!searchTerm) {
       this.resetSelections();
-  
+
       return;
     }
     this.reviews = this.reviews.filter(review => {
@@ -183,11 +179,8 @@ export class ForumPage implements OnInit {
     });
  }
 
-<<<<<<< HEAD
- getRating(){
-=======
  getRating() {
->>>>>>> 0d57f3e240c2fe2849b68f38f9706d6d4e413e28
+
    return this.storedStarRating;
  }
 
