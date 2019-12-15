@@ -16,8 +16,16 @@
   </ion-header>
 
 <ion-content padding class="form-content">
+  <ion-card class="bg-class2">
+      <ion-card-header tappable (click)="collapseCard = !collapseCard">
+          <ion-card-title style="text-align: center;color: white;" >Post A Review</ion-card-title>
+        </ion-card-header>
 
-<div>
+  <ion-card-content *ngIf="!collapseCard">
+        <ion-card-title style="text-align: center; text-decoration: underline; font-weight: bold;"></ion-card-title>
+
+
+
 <form [formGroup]="validations_form" (ngSubmit)="onSubmit(validations_form.value)">
 
 <ion-input placeholder="Name" formControlName = Name> </ion-input>
@@ -75,28 +83,45 @@ fontSize = "32px"
 <ion-input class="review" placeholder="Advice for future study abroad students/students in this program?" formControlName = Advice></ion-input>
 
 <ion-datetime formControlName="Date" displayFormat="MM-DD-YYYY" pickerFormat="MM-DD-YYYY" placeholder="Please Select Today's Date" ></ion-datetime>
+<<<<<<< HEAD
 
 <ion-button text-center class="submit-btn" color="{{post.color}}" expand="block" type="submit" [disabled]="!validations_form.valid">{{post.message}}</ion-button>
 
 <!-- <ion-button (click) = 'getRating()'>  </ion-button> -->
 
-
-
-<!--
 =======
+>>>>>>> ae0a6a426efbc0a0ec1ff4e320b42682364e092e
 
+<ion-button text-center class="submit-btn" color="{{post.color}}" expand="block" type="submit" [disabled]="!validations_form.valid">{{post.message}}</ion-button> 
+
+
+<<<<<<< HEAD
 <ion-button text-center class="submit-btn" color="{{post.color}}" expand="block" type="submit" [disabled]="!validations_form.valid">{{post.message}}</ion-button>
 
 <!-- <ion-button (click) = 'getRating()'>  </ion-button> -->
 
 <!--
 >>>>>>> 0d57f3e240c2fe2849b68f38f9706d6d4e413e28
+=======
+</form>
+</ion-card-content>
+</ion-card>
+
+<!-- <ion-button (click) = 'getRating()'>  </ion-button> -->
+
+<!-- 
+>>>>>>> ae0a6a426efbc0a0ec1ff4e320b42682364e092e
 <rating [(ngModel)]="rate"
 readonly="false"
 size="default"
 (ngModelChange)="onRateChange($event)"> </rating> -->
 
+<<<<<<< HEAD
 <ion-searchbar
+=======
+
+<ion-searchbar 
+>>>>>>> ae0a6a426efbc0a0ec1ff4e320b42682364e092e
 type="text"
 (ionChange)="filterList($event.target.value)"
 >Filter Search By Program</ion-searchbar>
@@ -132,8 +157,6 @@ type="text"
 
    </ion-item-sliding>
 
-</form>
-</div>
 
 <ion-item-sliding *ngFor="let item of reviewItems">
 
