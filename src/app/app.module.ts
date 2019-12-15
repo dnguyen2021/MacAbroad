@@ -3,6 +3,7 @@ import { ErrorHandler, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouteReuseStrategy } from '@angular/router';
 
+
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import {IonicApp, IonicErrorHandler } from 'ionic-angular';
 
@@ -32,6 +33,7 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
 
 
 import { IonicStorageModule } from '@ionic/storage';
+
 import { environment } from '../environments/environment';
 import { FirebaseService } from './database.service';
 import { AngularFirestore } from 'angularfire2/firestore';

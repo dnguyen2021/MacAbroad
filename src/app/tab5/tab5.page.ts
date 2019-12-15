@@ -11,6 +11,7 @@ import { IonicModule, NavController } from '@ionic/angular';
 })
 export class Tab5Page implements OnInit {
 
+  count: number = 0;
   validations_form: FormGroup;
   errorMessage: string = '';
 
@@ -59,7 +60,16 @@ export class Tab5Page implements OnInit {
     this.router.navigate(["/tab6"]);
   }
 
-  goToUserInput(){
-    this.navCtrl.navigateForward("/user-input")
+  countup(){
+   this.count++;  //instead of reinitializing, we are using already initialized variable
+ }
+
+  go(){
+    if (this.count == 1){
+    this.navCtrl.navigateForward("/tabs/user-input")
+    }
+    else{
+      this.navCtrl.navigateForward("/tabs/recommendation")
+    }
   }
 }

@@ -3,6 +3,7 @@ import { IonicModule, NavController } from '@ionic/angular';
 import { UserInputPage } from "../user-input/user-input.page";
 import { DataService } from "../services/data.service";
 import { AngularFirestore } from 'angularfire2/firestore';
+import { MenuController } from '@ionic/angular';
 import * as firebase from 'firebase/app';
 import 'firebase/storage';
 
@@ -15,7 +16,7 @@ export class SavedProgramsPage implements OnInit {
 
 
 
-  constructor(public navCtrl: NavController, private dataService: DataService, public afs: AngularFirestore) {
+  constructor(public navCtrl: NavController, private dataService: DataService, public afs: AngularFirestore, private menu: MenuController) {
   }
 
   ngOnInit() {
@@ -38,13 +39,13 @@ export class SavedProgramsPage implements OnInit {
   }
 
   goBack(){
-    this.navCtrl.navigateForward('/tabs/user-input')
+    this.navCtrl.navigateForward('/tabs/recommendation')
   }
 
   removeItem2(i){
 
     let currentUser = firebase.auth().currentUser;
-    this.saved = this.afs.firestore.collection('users').doc(currentUser.email).collection('User Data');  
+    this.saved = this.afs.firestore.collection('users').doc(currentUser.email).collection('User Data');
     this.saved.get().then((querySnapshot) => {
       querySnapshot.forEach((doc) => {
         console.log(this.savedItems[i]);
@@ -59,7 +60,33 @@ export class SavedProgramsPage implements OnInit {
   this.savedItems.splice(i, 1);
   }
 
-  goForum(){
-    this.navCtrl.navigateForward('/tabs/forum')
-  }
+  // goToForum(){
+  //   this.navCtrl.navigateForward('/tabs/forum')
+  // }
+
+  // goToHome(){
+  //   this.menu.close();
+  //   this.navCtrl.navigateForward('/tabs/recommendation')
+  // }
+  //
+  // goToProgramSearch(){
+  //   this.navCtrl.navigateForward('/tabs/tab2')
+  // }
+  //
+  // goToTimeline(){
+  //   this.navCtrl.navigateForward('/tabs/tab4')
+  // }
+  //
+  // goToStudentReviews(){
+  //   this.navCtrl.navigateForward('/tabs/forum')
+  // }
+  //
+  // goToLogout(){
+  //   this.navCtrl.navigateForward('tabs/tab1')
+  // }
+  //
+  // openFirst() {
+  //   this.menu.enable(true, 'first');
+  //   this.menu.open('first');
+  // }
 }

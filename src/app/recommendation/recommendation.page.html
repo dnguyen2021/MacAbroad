@@ -1,5 +1,19 @@
 <ion-header>
     <ion-toolbar color="primary">
+      <!-- <ion-buttons slot="start">
+          <ion-menu-button></ion-menu-button> -->
+
+        <!-- <ion-menu-toggle>
+          <ion-button>
+            <ion-icon slot="icon-only" name="menu"></ion-icon>
+          </ion-button>
+        </ion-menu-toggle> -->
+      <!-- </ion-buttons> -->
+
+        <!-- <ion-title style = "font-family:Bebas Neue; font-size:25px; text-align: center">
+            <div class="pad"><div class="fadeIn">Recommendations</div></div>
+        </ion-title> -->
+
     <ion-row>
       <ion-col size="auto">
         <ion-button (click)="goToFavourites()">
@@ -7,32 +21,49 @@
         </ion-button>
       </ion-col>
       <ion-col>
-        <ion-title style = "font-family:Bebas Neue; font-size:25px; text-align: center">
+        <ion-title style = "font-size:25px; text-align: center">
             <div class="pad"><div class="fadeIn">Recommendations</div></div>
         </ion-title>
+      </ion-col>
+      <ion-col size="500px">
+        <ion-button (click)="logout()" end>
+            <ion-icon name="log-out"></ion-icon>
+        </ion-button>
       </ion-col>
     </ion-row>
     </ion-toolbar>
   </ion-header>
 
-  <!-- <ion-button menuToggle>Toggle Menu</ion-button>
-  <ion-menu side="start" menuId="first" class="my-custom-menu">
+<!-- <ion-menu-button></ion-menu-button> -->
+
+<!-- <ion-toolbar>
+  <ion-buttons slot="start">
+    <ion-menu-toggle>
+      <ion-button>
+        <ion-icon slot="icon-only" name="menu"></ion-icon>
+      </ion-button>
+    </ion-menu-toggle>
+  </ion-buttons>
+</ion-toolbar> -->
+
+  <!-- <ion-menu side="start" menuId="first">
     <ion-header>
       <ion-toolbar color="primary">
-        <ion-title>Custom Menu</ion-title>
+        <ion-title></ion-title>
       </ion-toolbar>
     </ion-header>
     <ion-content>
       <ion-list>
-        <ion-item>Menu Item</ion-item>
-        <ion-item>Menu Item</ion-item>
-        <ion-item>Menu Item</ion-item>
-        <ion-item>Menu Item</ion-item>
-        <ion-item>Menu Item</ion-item>
+        <ion-item class = "button" (click)="goToFavourites()">Saved Programs<ion-icon ios="ios-star" md="md-star"></ion-icon></ion-item>
+        <ion-item class = "button"(click)="goToProgramSearch()">Program Search <ion-icon ios="ios-search" md="md-search"></ion-icon></ion-item>
+        <ion-item class = "button" (click)="goToTimeline()">Timeline <ion-icon ios="ios-clock" md="md-clock"></ion-icon></ion-item>
+        <ion-item class = "button"(click)="goToStudentReviews()">Student Reviews <ion-icon ios="ios-create" md="md-create"></ion-icon></ion-item>
+        <ion-item class = "button"(click)="goToLogout()">Logout<ion-icon ios="ios-contact" md="md-contact"></ion-icon></ion-item>
       </ion-list>
     </ion-content>
-  </ion-menu> -->
+  </ion-menu>
 
+<ion-router-outlet main></ion-router-outlet> -->
 
   <!-- <ion-content>
     <div swing-stack #myswing1 [stackConfig]="stackConfig" (throwoutleft)="voteUp(true)" (throwoutright)="voteUp(false)" id="card-stack">
@@ -68,7 +99,7 @@
     </ion-content> -->
 
   <ion-content>
-    <div swing-stack #myswing1 [stackConfig]="stackConfig" (throwoutleft)="voteUp(false, 0); doAlert()" (throwoutright)="voteUp(true, 0); doAlert()" id="card-stack">
+    <div swing-stack #myswing1 [stackConfig]="stackConfig" (throwoutleft)="voteUp(false, 0)" (throwoutright)="voteUp(true, 0)" id="card-stack">
     <!-- <ion-item-sliding #slidingItem>
       <ion-item-options side="start">
         <ion-item-option (click)="removeItem(0); share(slidingItem)" color="danger" expandable>
@@ -77,14 +108,25 @@
       </ion-item-options> -->
 
       <div #mycards1 swing-card *ngFor="let c of cards">
-      <ion-item>
 
       <ion-card>
+      <ion-item>
       <ion-card-header>
-        <ion-card-subtitle style="font-size:15px">PROGRAM</ion-card-subtitle>
-
         <ion-row>
-          <ion-col size="12">
+          <ion-col size=auto>
+        <ion-card-subtitle style="font-size:15px">PROGRAM</ion-card-subtitle>
+        </ion-col>
+        <ion-col>
+          <div class="tooltip"><ion-icon name="information-circle-outline"></ion-icon>
+            <span class="tooltiptext">{{c.program.programGroup}} {{c.program.group}}</span>
+          </div>
+          </ion-col>
+        </ion-row>
+        <!-- <ion-row id="tip"> -->
+
+        <!-- </ion-row> -->
+        <ion-row>
+          <ion-col size="12" id="pgroup">
             <ion-card-title style="font-size:35px">{{c.program.programGroup}}{{c.program.programName}}</ion-card-title>
           </ion-col>
         </ion-row>
@@ -92,14 +134,16 @@
           <ion-col>
             <ion-card-title><div style="font-size:20px">{{ c.program.value}} / 3</div> <div style="font-size:16px">match</div></ion-card-title>
           </ion-col>
-
+        </ion-row>
+        <ion-row size="100%">
+            <img src="/assets/icon/{{c.program.img}}" alt="img" style="width:100%; height:200px">
         </ion-row>
       </ion-card-header>
+      </ion-item>
 
-      <img src="/assets/icon/{{c.program.img}}" alt="img" style="width:100%; height:200px">
 
       <ion-card-content>
-        <div class="box">
+        <div id="box">
         <ion-row>
           <ion-col size="20">
             <b>Language: </b>
@@ -148,9 +192,17 @@
             {{ c.program.academicFeatures}}
           </ion-col>
         </ion-row>
+        <ion-row>
+          <ion-col size="8">
+            <b>Summary: </b>
+          </ion-col>
+          <ion-col size="12">
+            {{ c.program.summary}}
+          </ion-col>
+        </ion-row>
         </div>
         <ion-footer>
-          <ion-toolbar>
+          <!-- <ion-toolbar> -->
         <div class="spacing">
         <ion-row>
           <ion-col>
@@ -161,11 +213,11 @@
           </ion-col>
         </ion-row>
         </div>
-        </ion-toolbar>
+        <!-- </ion-toolbar> -->
         </ion-footer>
       </ion-card-content>
       </ion-card>
-      </ion-item>
+      <!-- </ion-item> -->
       </div>
       <ion-footer>
         <ion-toolbar>
@@ -179,21 +231,6 @@
         </ion-col>
       </ion-row>
       </div>
-      </ion-toolbar>
-      </ion-footer>
-    <!-- </ion-card-content>
-    </ion-card>
-    </ion-item> -->
-    </div>
-    <!-- </div> -->
-
-    <!-- <ion-item-options side="end">
-      <ion-item-option (click)="addItem(items2[0], 0); share(slidingItem)" color="success" expandable>
-
-         <ion-icon ios="ios-thumbs-up" md="md-thumbs-up" size="large"></ion-icon>
-
-      </ion-item-option>
-    </ion-item-options>
 
       <!-- <ion-item-options side="end">
         <ion-item-option (click)="addItem(items2[0], 0); share(slidingItem)" color="success" expandable>

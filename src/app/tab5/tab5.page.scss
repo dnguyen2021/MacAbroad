@@ -1,16 +1,24 @@
 img{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-  }
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
+from {
+  opacity: 0;
+}
 
-  to {
-    opacity: 1;
-  }
+to {
+  opacity: 1;
+}
+}
+
+.bg-class{
+--background: linear-gradient(197deg, rgb(40, 138, 230) 0%, rgb(33, 105, 172) 13.5%, rgb(53, 113, 170) 33.33%, rgb(3, 34, 59) 100%) !important;
+}
+
+.bg-class2{
+--background: linear-gradient(197deg, rgb(8, 133, 250) 0%, rgb(3, 117, 211) 13.5%, rgb(36, 115, 189) 33.33%, rgb(33, 97, 156) 100%) !important;
 }
 
 .bg-class{
@@ -22,10 +30,10 @@ img{
 }
 
 .fadeIn {
-  animation-name: fadeIn;
-  animation-duration: 4s;
+animation-name: fadeIn;
+animation-duration: 4s;
 }
 
 .pad{
-  padding-top: 12px;
+padding-top: 12px;
 }

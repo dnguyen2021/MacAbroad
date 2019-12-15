@@ -20,6 +20,8 @@
   text-align: center;
 }
 
+
+
 // .box{
 //   border-radius: 5px;
 //   border: 2px solid #cfdcec;
@@ -28,6 +30,9 @@
 //
 // }
 
+.button:hover{
+  --background: rgba(181, 188, 249, 0.50);
+}
 
 .red{
 width: 80px;
@@ -36,7 +41,7 @@ border-radius: 50%;
 border:2px solid #cfdcec;
 overflow:hidden;
 box-shadow: 0 0 3px gray;
---background-hover: var(--ion-color-light-shade);
+--background-hover: rgba(181, 188, 249, 0.20);
 }
 
 .green{
@@ -46,16 +51,52 @@ border-radius: 50%;
 border:2px solid #cfdcec;
 overflow:hidden;
 box-shadow: 0 0 3px gray;
-  --background-hover: var(--ion-color-light-shade);
+  --background-hover: rgba(181, 188, 249, 0.20);
 
 }
 
 ion-card{
   box-shadow: 0px 14px 25px rgba(9, 43, 97, 0.50);
   border-radius: 15px;
+  // height: 500px;
+  // width: 500px;
+
 }
 
 
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  height: 10px;
+  background-color: #3171e0;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+#tip{
+  padding-top: 3px;
+  height: 12px;
+}
+
+#pgroup{
+  padding-left:15px;
+}
 
 
 

@@ -26,7 +26,7 @@ const routes: Routes = [
     FormsModule,
     IonicModule,
     RouterModule.forChild(routes),
-    SwingModule
+    SwingModule,
   ],
   declarations: [RecommendationPage]
 })

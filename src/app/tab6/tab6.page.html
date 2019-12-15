@@ -25,25 +25,33 @@
         </div>
       </ng-container>
     </div>
+  </ion-item>
+  <div class="validation-errors">
+    <ng-container *ngFor="let validation of validation_messages.email">
+      <div class="error-message" *ngIf="validations_form.get('email').hasError(validation.type) && (validations_form.get('email').dirty || validations_form.get('email').touched)">
+        {{ validation.message }}
+      </div>
+    </ng-container>
+  </div>
 
-    <ion-item>
-        <ion-label position="floating" color="primary" style="font-size:20px"><div class="fadeIn">Password</div></ion-label>
-        <div class="pad">
-            <ion-input type="password" formControlName="password"></ion-input>
-        </div>
-    </ion-item>
-    <div class="validation-errors">
-      <ng-container *ngFor="let validation of validation_messages.password">
-        <div class="error-message" *ngIf="validations_form.get('password').hasError(validation.type) && (validations_form.get('password').dirty || validations_form.get('password').touched)">
-          {{ validation.message }}
-        </div>
-      </ng-container>
-    </div>
+  <ion-item>
+      <ion-label position="floating" color="primary" style="font-size:20px"><div class="fadeIn">Password</div></ion-label>
+      <div class="pad">
+          <ion-input type="password" formControlName="password"></ion-input>
+      </div>
+  </ion-item>
+  <div class="validation-errors">
+    <ng-container *ngFor="let validation of validation_messages.password">
+      <div class="error-message" *ngIf="validations_form.get('password').hasError(validation.type) && (validations_form.get('password').dirty || validations_form.get('password').touched)">
+        {{ validation.message }}
+      </div>
+    </ng-container>
+  </div>
 
-    <ion-button class="submit-btn" expand="block" type="submit" [disabled]="!validations_form.valid">Register</ion-button>
-    <label class="error-message">{{errorMessage}}</label>
-    <label class="success-message">{{successMessage}}</label>
-  </form>
-  <p class="go-to-login" style="color: #e9f1f8">Already have an account? <a (click)="goLoginPage()" style="color: #e9f1f8"><u>Try to Log In.</u></a></p>
+  <ion-button class="submit-btn" expand="block" type="submit" [disabled]="!validations_form.valid">Register</ion-button>
+  <label class="error-message">{{errorMessage}}</label>
+  <label class="success-message">{{successMessage}}</label>
+</form>
+<p class="go-to-login" style="color: #e9f1f8">Already have an account? <a (click)="goLoginPage()" style="color: #e9f1f8"><u>Try to Log In.</u></a></p>
 
 </ion-content>

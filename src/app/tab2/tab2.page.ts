@@ -70,9 +70,11 @@ export class Tab2Page implements OnInit{
     this.navCtrl.navigateForward('/profile')
   }
 
-  goToHome(){
+  logout(){
     this.navCtrl.navigateForward('/tabs/tab1');
   }
+
+
 
 
   // goToProgramWebsite(){

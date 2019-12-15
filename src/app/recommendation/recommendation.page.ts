@@ -13,8 +13,6 @@ import {
   SwingStackComponent,
   SwingCardComponent} from 'angular2-swing';
 
-  import { MenuController } from '@ionic/angular';
-
 
 @Component({
   selector: 'app-recommendation',
@@ -66,9 +64,9 @@ export class RecommendationPage { //implements OnInit
   let hexCode = this.decimalToHex(min, 2);
 
   if (x < 0) {
-    color = '#FF' + hexCode + hexCode;
+    color = '#CC' + hexCode + hexCode;
   } else {
-    color = '#' + hexCode + 'FF' + hexCode;
+    color = '#' + hexCode + 'CC' + hexCode;
   }
 
   element.style.background = color;
@@ -105,10 +103,6 @@ decimalToHex(d, padding) {
   return hex;
 }
 
-  // ngOnInit() {
-  //   this.createItems();
-  // }
-
   createItems(){
     this.items2 = this.dataService.getItems();
   }
@@ -116,6 +110,28 @@ decimalToHex(d, padding) {
   goToFavourites(){
     this.navCtrl.navigateForward('/tabs/saved-programs')
   }
+
+  logout(){
+    this.navCtrl.navigateForward('tabs/tab1')
+  }
+
+  // openFirst() {
+  //   this.menu.enable(true, 'first');
+  //   this.menu.open('first');
+  // }
+  //
+  // checkOpen(){
+  //   if (this.menu.isOpen()){
+  //     return true;
+  //   }
+  //   else{
+  //     return false;
+  //   }
+  // }
+
+  // open(){
+  //   this.menu.open();
+  // }
 
   removeItem(i){
     this.items2.splice(i, 1);
@@ -127,15 +143,6 @@ decimalToHex(d, padding) {
     this.items2.splice(i, 1);
 
   }
-
-  // share(slidingItem: ItemSliding) {
-  //   slidingItem.close();
-  // }
-
-  // openFirst() {
-  //   this.menu.enable(true, 'first');
-  //   this.menu.open('first');
-  // }
 
 
 

@@ -31,6 +31,7 @@ export class DataService {
           ,"value": 0
           ,"img": "ashesi.jpg",
           "website": "https://www.ashesi.edu.gh/join-our-annual-trip/180-academics/office-of-diversity-and-international-programmes/1804-for-international-students.html"
+          ,"group": "Macalester Faculty-Led and Exchange Programs"
         }
       }, {
         "program":{
@@ -46,6 +47,7 @@ export class DataService {
           ,"value": 0
           ,"img": "isep.jpg",
           "website":"https://www.isepstudyabroad.org/"
+          ,"group": "Macalester Faculty-Led and Exchange Programs"
         }
       },{
         "program":{
@@ -61,10 +63,11 @@ export class DataService {
           ,"value": 0
           ,"img": "ntu.jpg",
           "website":"http://global.ntu.edu.sg/GMP/GEMTrailblazer/GEMTrailblazerexchange/Pages/index.aspx"
+          ,"group": "Macalester Faculty-Led and Exchange Programs"
         }
       },{
         "program":{
-          "locationName":"France\nFrance\nFrance\nFrance\nFrance\nFrance\nFrance",
+          "locationName":"France",
           "housing":"Marcus Carrigan",
           "programGroup": "Group A - Exchange:",
           "programName":"Sciences Po",
@@ -76,6 +79,7 @@ export class DataService {
           ,"value": 0
           ,"img": "sciences.jpg",
           "website":"http://www.sciencespo.fr/en/about/our-campuses"
+          ,"group": "Macalester Faculty-Led and Exchange Programs"
         }
       },{
         "program":{
@@ -91,6 +95,7 @@ export class DataService {
           ,"value":0
           ,"img": "german.jpg",
           "website":"https://www.macalester.edu/german/studyabroad/#/0"
+          ,"group": "Macalester Faculty-Led and Exchange Programs"
         }
       },{
         "program":{
@@ -106,6 +111,7 @@ export class DataService {
           ,"value":0
           ,"img": "globalization.jpg",
           "website":"https://macalester-csa.terradotta.com/index.cfm?FuseAction=Programs.ViewProgramAngular&id=10074",
+          "group": "Macalester Faculty-Led and Exchange Programs"
         }
       },{
         "program":{
@@ -121,6 +127,7 @@ export class DataService {
           ,"value":0
           ,"img": "perspectives.jpg",
           "website":"https://macalester-csa.terradotta.com/index.cfm?FuseAction=Programs.ViewProgramAngular&id=10000"
+          ,"group": "Macalester Faculty-Led and Exchange Programs"
         }
       },{
         "program":{
@@ -136,6 +143,7 @@ export class DataService {
           ,"value":0
           ,"img": "acm.jpeg",
           "website":"https://www.acm.edu/programs/14/newberry/index.html"
+          ,"group": "Macalester Approved Study Away Programs"
         }
       },{
         "program":{
@@ -151,6 +159,7 @@ export class DataService {
           ,"value":0
           ,"img": "ait.jpg",
           "website":"http://www.ait-budapest.com/"
+          ,"group": "Macalester Approved Study Away Programs"
         }
       },{
         "program":{
@@ -167,6 +176,7 @@ export class DataService {
           ,"img": "acouncils.jpg",
           "website":"https://acstudyabroad.org/rlasp/",
           "SECwebsite":"http://www.acstudyabroad.org/heritage/"
+          ,"group": "Macalester Approved Study Away Programs"
         }
       },{
         "program":{
@@ -183,6 +193,7 @@ export class DataService {
           ,"img": "amideast.JPG",
           "website":"https://www.amideast.org/our-work/education-abroad-in-the-mena/abroad-programs/semester-programs/area-and-arabic-language-studies/morocco",
           "SECwebsite":"https://www.amideast.org/our-work/education-abroad-in-the-mena/abroad-programs/semester-programs/regional-studies-in-french"
+          ,"group": "Macalester Approved Study Away Programs"
         }
       },{
         "program":{
@@ -198,6 +209,7 @@ export class DataService {
           ,"value":0
           ,"img": "budapest.jpg",
           "website":"http://www.budapestsemesters.com/"
+          ,"group": "Macalester Approved Study Away Programs"
         }
       },{
         "program":{
@@ -213,6 +225,7 @@ export class DataService {
           ,"value":0
           ,"img": "cetb.jpg",
           "website":"https://cetacademicprograms.com/programs/brazil/portuguese-language-brazil/"
+          ,"group": "Macalester Approved Study Away Programs"
         }
       },{
         "program":{
@@ -228,6 +241,7 @@ export class DataService {
           ,"value":0
           ,"img": "cetj.jpg",
           "website":"https://cetacademicprograms.com/programs/japan/japanese-language-osaka-japan/"
+          ,"group": "Macalester Approved Study Away Programs"
         }
       },{
         "program":{
@@ -243,6 +257,7 @@ export class DataService {
           ,"value":0
           ,"img": "cetp.jpg",
           "website":"https://cetacademicprograms.com/college-study-abroad/programs/czech-republic/cet-prague/"
+          ,"group": "Macalester Approved Study Away Programs"
         }
       },{
         "program":{
@@ -258,6 +273,7 @@ export class DataService {
           ,"value":0
           ,"img": "china.jpg",
           "website":"https://csi-prod.chinacloudsites.cn/"
+          ,"group": "Macalester Approved Study Away Programs"
         }
       },{
         "program":{
@@ -273,6 +289,7 @@ export class DataService {
           ,"value":0
           ,"img": "cieea.jpg",
           "website":"https://www.ciee.org/go-abroad/college-study-abroad/programs/japan/tokyo/arts-sciences"
+          ,"group": "Macalester Approved Study Away Programs"
         }
       },{
         "program":{
@@ -288,6 +305,7 @@ export class DataService {
           ,"value":0
           ,"img": "cieei.jpg",
           "website":"https://www.ciee.org/go-abroad/college-study-abroad/programs/china/nanjing/intensive-chinese-language-culture"
+          ,"group": "Macalester Approved Study Away Programs"
         }
       },{
         "program":{
@@ -303,6 +321,7 @@ export class DataService {
           ,"value":0
           ,"img": "cieelc.jpg",
           "website":"https://www.ciee.org/go-abroad/college-study-abroad/programs/portugal/lisbon/language-culture"
+          ,"group": "Macalester Approved Study Away Programs"
         }
       },{
         "program":{
@@ -318,6 +337,7 @@ export class DataService {
           ,"value":0
           ,"img": "cieelar.jpg",
           "website":"https://www.ciee.org/go-abroad/college-study-abroad/programs/brazil/rio-de-janeiro/liberal-arts"
+          ,"group": "Macalester Approved Study Away Programs"
         }
       },{
         "program":{
@@ -333,6 +353,7 @@ export class DataService {
           ,"value":0
           ,"img": "cieelas.jpg",
           "website":"https://www.ciee.org/go-abroad/college-study-abroad/programs/dominican-republic/santiago-de-los-caballeros/liberal-arts"
+          ,"group": "Macalester Approved Study Away Programs"
         }
       },{
         "program":{
@@ -348,6 +369,7 @@ export class DataService {
           ,"value":0
           ,"img": "cieeme.jpg",
           "website":"https://www.ciee.org/go-abroad/college-study-abroad/programs/jordan/amman/middle-east-studies"
+          ,"group": "Macalester Approved Study Away Programs"
         }
       },{
         "program":{
@@ -364,6 +386,7 @@ export class DataService {
           ,"img": "cieeg.jpeg",
           "website":"https://www.ciee.org/go-abroad/college-study-abroad/programs/botswana/gaborone/arts-sciences",
           "SECwebsite":"https://www.ciee.org/go-abroad/college-study-abroad/programs/botswana/gaborone/community-public-health"
+          ,"group": "Macalester Approved Study Away Programs"
         }
       },{
         "program":{
@@ -379,6 +402,7 @@ export class DataService {
           ,"value":0
           ,"img": "cieek.jpg",
           "website":"https://www.ciee.org/go-abroad/college-study-abroad/programs/thailand/khon-kaen/development-globalization"
+          ,"group": "Macalester Approved Study Away Programs"
         }
       },{
         "program":{
@@ -395,6 +419,7 @@ export class DataService {
           ,"img": "cieem.jpeg",
           "website":"https://www.ciee.org/go-abroad/college-study-abroad/programs/costa-rica/monteverde/sustainability-environment",
           "SECwebsite":"https://www.ciee.org/go-abroad/college-study-abroad/programs/costa-rica/monteverde/tropical-ecology-conservation"
+          ,"group": "Macalester Approved Study Away Programs"
         }
       },{
         "program":{
@@ -410,6 +435,7 @@ export class DataService {
           ,"value":0
           ,"img": "ciees.JPG",
           "website":"http://www.us.es/"
+          ,"group": "Macalester Approved Study Away Programs"
         }
       },
         {
@@ -426,6 +452,7 @@ export class DataService {
           ,"value":0
           ,"img": "college.jpg",
           "website":"http://www.cyathens.org/"
+          ,"group": "Macalester Approved Study Away Programs"
         }
       },{
         "program":{
@@ -441,6 +468,7 @@ export class DataService {
           ,"value":0
           ,"img": "cuny.jpg",
           "website":"https://slu.cuny.edu/labor-studies/union-semester/#1521831256712-37288c1d-83b8"
+          ,"group": "Macalester Approved Study Away Programs"
         }
       },{
         "program":{
@@ -456,6 +484,7 @@ export class DataService {
           ,"value":0
           ,"img": "auni.jpg",
           "website":"https://www.aucegypt.edu/index.php/admissions/international-students/study-abroad"
+          ,"group": "Macalester Approved Study Away Programs"
         }
       },{
         "program":{
@@ -471,6 +500,7 @@ export class DataService {
           ,"value":0
           ,"img": "hebrew.jpg",
           "website":"https://overseas.huji.ac.il/academics/undergraduate-programs/ugrad-usap/"
+          ,"group": "Macalester Approved Study Away Programs"
         }
       },{
         "program":{
@@ -486,6 +516,7 @@ export class DataService {
           ,"value":0
           ,"img": "james.jpg",
           "website":"https://www.jcu.edu.au/international-students"
+          ,"group": "Macalester Approved Study Away Programs"
         }
       },{
         "program":{
@@ -501,6 +532,7 @@ export class DataService {
           ,"value":0
           ,"img": "kansai.jpg",
           "website":"https://www.kansaigaidai.ac.jp/asp/"
+          ,"group": "Macalester Approved Study Away Programs"
         }
       },{
         "program":{
@@ -516,6 +548,7 @@ export class DataService {
           ,"value":0
           ,"img": "kings.jpg",
           "website":"https://www.kcl.ac.uk/abroad/study-in-london/index.aspx"
+          ,"group": "Macalester Approved Study Away Programs"
         }
       },{
         "program":{
@@ -531,6 +564,7 @@ export class DataService {
           ,"value":0
           ,"img": "ucollege.jpg",
           "website":"http://www.ucc.ie/en/international/studyatucc/visitingusandnoneustudents/"
+          ,"group": "Macalester Approved Study Away Programs"
         }
       },{
         "program":{
@@ -546,6 +580,7 @@ export class DataService {
           ,"value":0
           ,"img": "uedin.jpg",
           "website":"https://www.ed.ac.uk/global/study-abroad"
+          ,"group": "Macalester Approved Study Away Programs"
         }
       },{
         "program":{
@@ -561,6 +596,7 @@ export class DataService {
           ,"value":0
           ,"img": "uglas.jpg",
           "website":"http://www.gla.ac.uk/study/visiting/studyabroadexchange/studyabroadprogramme/"
+          ,"group": "Macalester Approved Study Away Programs"
         }
       },{
         "program":{
@@ -576,6 +612,7 @@ export class DataService {
           ,"value":0
           ,"img": "uhaif.jpg",
           "website":"http://overseas.haifa.ac.il/index.php/study-abroad"
+          ,"group": "Macalester Approved Study Away Programs"
         }
       },{
         "program":{
@@ -591,6 +628,7 @@ export class DataService {
           ,"value":0
           ,"img": "uotago.jpg",
           "website":"https://www.otago.ac.nz/international/index.html"
+          ,"group": "Macalester Approved Study Away Programs"
         }
       },{
         "program":{
@@ -606,6 +644,7 @@ export class DataService {
           ,"value":0
           ,"img": "ustandrews.jpg",
           "website":"http://www.st-andrews.ac.uk/studyabroad/incomingstudents/"
+          ,"group": "Macalester Approved Study Away Programs"
         }
       },{
         "program":{
@@ -621,6 +660,7 @@ export class DataService {
           ,"value":0
           ,"img": "hecuaireland.jpg",
           "website":"https://hecua.org/study-abroad/northern-ireland/"
+          ,"group": "Macalester Approved Study Away Programs"
         }
       },{
         "program":{
@@ -636,6 +676,7 @@ export class DataService {
           ,"value":0
           ,"img": "hecuanorway.jpg",
           "website":"https://hecua.org/study-abroad/norway/"
+          ,"group": "Macalester Approved Study Away Programs"
         }
       },{
         "program":{
@@ -651,6 +692,7 @@ export class DataService {
           ,"value":0
           ,"img": "iau.jpg",
           "website":"https://www.iaufrance.org/studyabroad/programs/aix/marchutz/coreprogram"
+          ,"group": "Macalester Approved Study Away Programs"
         }
       },{
         "program":{
@@ -666,6 +708,7 @@ export class DataService {
           ,"value":0
           ,"img": "iesberlin.jpg",
           "website":"http://www.iesabroad.org/study-abroad/programs/berlin-metropolitan-studies"
+          ,"group": "Macalester Approved Study Away Programs"
         }
       },{
         "program":{
@@ -681,6 +724,7 @@ export class DataService {
           ,"value":0
           ,"img": "iesdublin.JPG",
           "website":"https://www.iesabroad.org/programs/dublin-direct-enrollment-national-theatre-school-ireland-gaiety-school-acting"
+          ,"group": "Macalester Approved Study Away Programs"
         }
       },{
         "program":{
@@ -696,6 +740,7 @@ export class DataService {
           ,"value":0
           ,"img": "iesfrench.jpg",
           "website":"https://www.iesabroad.org/programs/nantes-french-language-immersion-area-studies"
+          ,"group": "Macalester Approved Study Away Programs"
         }
       },{
         "program":{
@@ -711,6 +756,7 @@ export class DataService {
           ,"value":0
           ,"img": "iesgranada.jpg",
           "website":"https://www.iesabroad.org/programs/granada-study-granada"
+          ,"group": "Macalester Approved Study Away Programs"
         }
       },{
         "program":{
@@ -727,6 +773,7 @@ export class DataService {
           ,"img": "iesmadrid.jpg",
           "website":"https://www.iesabroad.org/programs/madrid-language-area-studies",
           "SECwebsite":"https://www.iesabroad.org/programs/madrid-engineering-math-science"
+          ,"group": "Macalester Approved Study Away Programs"
         }
       },{
         "program":{
@@ -743,6 +790,7 @@ export class DataService {
           ,"img": "iesmilan.jpg",
           "website":"http://www.iesabroad.org/study-abroad/programs/milan-music-tradition-innovation",
           "SECwebsite":"https://www.iesabroad.org/programs/milan-italy-today"
+          ,"group": "Macalester Approved Study Away Programs"
         }
       },{
         "program":{
@@ -758,6 +806,7 @@ export class DataService {
           ,"value":0
           ,"img": "iesnagoya.jpg",
           "website":"https://www.iesabroad.org/programs/nagoya-direct-enrollment-nanzan-university"
+          ,"group": "Macalester Approved Study Away Programs"
         }
       },{
         "program":{
@@ -775,6 +824,7 @@ export class DataService {
           "website":"https://www.iesabroad.org/programs/amsterdam-social-sciences-humanities",
           "SECwebsite":"https://www.iesabroad.org/study-abroad/programs/amsterdam-psychology-sciences",
           "THIRwebsite":"https://www.iesabroad.org/programs/amsterdam-law-criminology"
+          ,"group": "Macalester Approved Study Away Programs"
         }
       },{
         "program":{
@@ -790,6 +840,7 @@ export class DataService {
           ,"value":0
           ,"img": "iesctown.jpg",
           "website":"https://www.iesabroad.org/programs/cape-town-university-cape-town"
+          ,"group": "Macalester Approved Study Away Programs"
         }
       },{
         "program":{
@@ -805,6 +856,7 @@ export class DataService {
           ,"value":0
           ,"img": "ife.jpg",
           "website":"http://www.ife-edu.eu/Programs"
+          ,"group": "Macalester Approved Study Away Programs"
         }
       },{
         "program":{
@@ -820,6 +872,7 @@ export class DataService {
           ,"value":0
           ,"img": "ifsaargentine.jpg",
           "website":"https://www.ifsa-butler.org/program/argentine-universities-program/"
+          ,"group": "Macalester Approved Study Away Programs"
         }
       },{
         "program":{
@@ -835,6 +888,7 @@ export class DataService {
           ,"value":0
           ,"img": "ifsachile.jpg",
           "website":"https://www.ifsa-butler.org/program/chilean-universities-program-santiago/"
+          ,"group": "Macalester Approved Study Away Programs"
         }
       },{
         "program":{
@@ -850,6 +904,7 @@ export class DataService {
           ,"value":0
           ,"img": "ifsaindiac.jpg",
           "website":"https://www.ifsa-butler.org/program/contemporary-india/"
+          ,"group": "Macalester Approved Study Away Programs"
         }
       },{
         "program":{
@@ -865,6 +920,7 @@ export class DataService {
           ,"value":0
           ,"img": "ifsaindiag.JPG",
           "website":"https://www.ifsa-butler.org/program/global-and-public-health/"
+          ,"group": "Macalester Approved Study Away Programs"
         }
       },{
         "program":{
@@ -880,6 +936,7 @@ export class DataService {
           ,"value":0
           ,"img": "ifsam.jpg",
           "website":"https://www.ifsa-butler.org/program/merida-universities-program/"
+          ,"group": "Macalester Approved Study Away Programs"
         }
       },{
         "program":{
@@ -895,6 +952,7 @@ export class DataService {
           ,"value":0
           ,"img": "ifsap.jpg",
           "website":"https://www.ifsa-butler.org/program/pontificia-universidad-catolica-del-peru-partnership/"
+          ,"group": "Macalester Approved Study Away Programs"
         }
       },{
         "program":{
@@ -910,6 +968,7 @@ export class DataService {
           ,"value":0
           ,"img": "ifsas.jpg",
           "website":"https://www.ifsa-butler.org/programs/?fwp_program_country=china&method=menu"
+          ,"group": "Macalester Approved Study Away Programs"
         }
       },{
         "program":{
@@ -925,6 +984,7 @@ export class DataService {
           ,"value":0
           ,"img": "ifsauh.jpg",
           "website":"https://www.ifsa-butler.org/program/universidad-de-la-habana-partnership/"
+          ,"group": "Macalester Approved Study Away Programs"
         }
       },{
         "program":{
@@ -940,6 +1000,7 @@ export class DataService {
           ,"value":0
           ,"img": "ifsaun.JPG",
           "website":"https://www.ifsa-butler.org/program/universidad-nacional-partnership/"
+          ,"group": "Macalester Approved Study Away Programs"
         }
       },{
         "program":{
@@ -955,6 +1016,7 @@ export class DataService {
           ,"value":0
           ,"img": "middlebury.jpg",
           "website":"http://www.middlebury.edu/study-abroad/russia"
+          ,"group": "Macalester Approved Study Away Programs"
         }
       },{
         "program":{
@@ -970,6 +1032,7 @@ export class DataService {
           ,"value":0
           ,"img": "saci.jpg",
           "website":"https://saci-florence.edu/year-semester-abroad-programs-italy"
+          ,"group": "Macalester Approved Study Away Programs"
         }
       },{
         "program":{
@@ -985,6 +1048,7 @@ export class DataService {
           ,"value":0
           ,"img": "sitbolivia.png",
           "website":"https://studyabroad.sit.edu/programs/semester/spring-2020/blr/"
+          ,"group": "Macalester Approved Study Away Programs"
         }
       },{
         "program":{
@@ -1000,6 +1064,7 @@ export class DataService {
           ,"value":0
           ,"img": "sitcameroon.jpg",
           "website":"https://studyabroad.sit.edu/programs/semester/fall-2020/cmr/"
+          ,"group": "Macalester Approved Study Away Programs"
         }
       },{
         "program": {
@@ -1015,6 +1080,7 @@ export class DataService {
           ,"value":0
           ,"img": "sitchile.jpg",
           "website":"https://studyabroad.sit.edu/programs/semester/spring-2020/cih/"
+          ,"group": "Macalester Approved Study Away Programs"
         }
       },{
         "program":{
@@ -1030,6 +1096,7 @@ export class DataService {
           ,"value":0
           ,"img": "sitchina.jpeg",
           "website":"https://studyabroad.sit.edu/programs/semester/fall-2020/chr/"
+          ,"group": "Macalester Approved Study Away Programs"
         }
       },{
         "program":{
@@ -1045,6 +1112,7 @@ export class DataService {
           ,"value":0
           ,"img": "sitecuador.jpg",
           "website":"https://studyabroad.sit.edu/programs/semester/spring-2020/ece/"
+          ,"group": "Macalester Approved Study Away Programs"
         }
       },{
         "program":{
@@ -1060,6 +1128,7 @@ export class DataService {
           ,"value":0
           ,"img": "sitghana.jpeg",
           "website":"https://studyabroad.sit.edu/programs/semester/fall-2019/ghr/"
+          ,"group": "Macalester Approved Study Away Programs"
         }
       },{
         "program":{
@@ -1075,6 +1144,7 @@ export class DataService {
           ,"value":0
           ,"img": "sitjordan.jpg",
           "website":"https://studyabroad.sit.edu/programs/semester/fall-2019/jor/"
+          ,"group": "Macalester Approved Study Away Programs"
         }
       },{
         "program":{
@@ -1090,6 +1160,7 @@ export class DataService {
           ,"value":0
           ,"img": "sitmadagascar.jpg",
           "website":"https://studyabroad.sit.edu/programs/semester/fall-2020/mge/"
+          ,"group": "Macalester Approved Study Away Programs"
         }
       },{
         "program":{
@@ -1105,6 +1176,7 @@ export class DataService {
           ,"value":0
           ,"img": "sitmongolia.jpg",
           "website":"http://www.sit.edu/mfr"
+          ,"group": "Macalester Approved Study Away Programs"
         }
       },{
         "program":{
@@ -1120,6 +1192,7 @@ export class DataService {
           ,"value":0
           ,"img": "sitnepal.jpg",
           "website":"https://studyabroad.sit.edu/programs/semester/fall-2020/npt/"
+          ,"group": "Macalester Approved Study Away Programs"
         }
       },{
         "program":{
@@ -1135,6 +1208,7 @@ export class DataService {
           ,"value":0
           ,"img": "sitperu.jpg",
           "website":"https://studyabroad.sit.edu/programs/semester/spring-2020/per/"
+          ,"group": "Macalester Approved Study Away Programs"
         }
       },{
         "program":{
@@ -1150,6 +1224,7 @@ export class DataService {
           ,"value":0
           ,"img": "sitserbia.jpg",
           "website":"https://studyabroad.sit.edu/programs/semester/fall-2020/hrr/"
+          ,"group": "Macalester Approved Study Away Programs"
         }
       },{
         "program":{
@@ -1165,6 +1240,7 @@ export class DataService {
           ,"value":0
           ,"img": "uofmecuador.jpg",
           "website":"https://umabroad.umn.edu/programs/americas/msid-ecuador/"
+          ,"group": "Macalester Approved Study Away Programs"
         }
       },{
         "program":{
@@ -1180,6 +1256,7 @@ export class DataService {
           ,"value":0
           ,"img": "uofmkenya.jpg",
           "website":"https://umabroad.umn.edu/programs/africa/msid-kenya/"
+          ,"group": "Macalester Approved Study Away Programs"
         }
       },{
         "program":{
@@ -1195,6 +1272,7 @@ export class DataService {
           ,"value":0
           ,"img": "uofmsenegal.jpg",
           "website":"https://umabroad.umn.edu/programs/africa/msid-senegal/"
+          ,"group": "Macalester Approved Study Away Programs"
         }
       },{
         "program":{
@@ -1210,6 +1288,7 @@ export class DataService {
           ,"value":0
           ,"img": "bada.JPG",
           "website":"http://www.bada.org.uk/study/london-theatre-program/"
+          ,"group": "Macalester Competitive Study Away Programs"
         }
       },{
         "program":{
@@ -1225,6 +1304,8 @@ export class DataService {
           ,"value":0
           ,"img": "bard.jpg",
           "website":"http://smolny.bard.edu/"
+          ,"group": "Macalester Competitive Study Away Programs"
+
         }
       },{
         "program":{
@@ -1240,6 +1321,7 @@ export class DataService {
           ,"value":0
           ,"img": "cupa.jpg",
           "website":"https://cupa.paris.edu/"
+          ,"group": "Macalester Competitive Study Away Programs"
         }
       },{
         "program":{
@@ -1255,6 +1337,7 @@ export class DataService {
           ,"value":0
           ,"img": "oxford.jpg",
           "website":"https://www.stcatz.ox.ac.uk/prospective-students/visiting-students/"
+          ,"group": "Macalester Competitive Study Away Programs"
         }
       },{
         "program":{
@@ -1270,6 +1353,7 @@ export class DataService {
           ,"value":0
           ,"img": "dis.jpg",
           "website":"https://disabroad.org/"
+          ,"group": "Macalester Competitive Study Away Programs"
         }
       },{
         "program":{
@@ -1285,6 +1369,7 @@ export class DataService {
           ,"value":0
           ,"img": "earlham.jpg",
           "website":"https://earlham.edu/border-studies/"
+          ,"group": "Macalester Competitive Study Away Programs"
         }
       },{
         "program":{
@@ -1300,6 +1385,7 @@ export class DataService {
           ,"value":0
           ,"img": "hecuanz.jpg",
           "website":"https://hecua.org/study-abroad/new-zealand/"
+          ,"group": "Macalester Competitive Study Away Programs"
         }
       },{
         "program":{
@@ -1315,6 +1401,7 @@ export class DataService {
           ,"value":0
           ,"img": "iesamsterdamc.JPG",
           "website":"https://www.iesabroad.org/programs/amsterdam-direct-enrollment-conservatorium-van-amsterdam"
+          ,"group": "Macalester Competitive Study Away Programs"
         }
       },{
         "program":{
@@ -1330,6 +1417,7 @@ export class DataService {
           ,"value":0
           ,"img": "waseda.jpg",
           "website":"https://japanstudy.earlham.edu/about/"
+          ,"group": "Macalester Competitive Study Away Programs"
         }
       },{
         "program":{
@@ -1345,6 +1433,7 @@ export class DataService {
           ,"value":0
           ,"img": "middleburychina.jpg"
           ,"website": "http://www.middlebury.edu/study-abroad/china/hangzhou",
+          "group": "Macalester Competitive Study Away Programs"
         }
       },{
         "program":{
@@ -1360,6 +1449,7 @@ export class DataService {
           ,"value":0
           ,"img": "pitzer.jpg",
           "website":"https://www.pitzer.edu/study-abroad/pitzer-students/nepal/"
+          ,"group": "Macalester Competitive Study Away Programs"
         }
       },{
         "program":{
@@ -1375,6 +1465,7 @@ export class DataService {
           ,"value":0
           ,"img": "sea.jpg",
           "website":"https://www.sea.edu/voyages"
+          ,"group": "Macalester Competitive Study Away Programs"
         }
       },{
         "program":{
@@ -1391,11 +1482,12 @@ export class DataService {
           ,"img": "sitcities.jpg",
           "website":"http://studyabroad.sit.edu/ctc/",
           "SECwebsite":"http://studyabroad.sit.edu/ctb"
+          ,"group": "Macalester Competitive Study Away Programs"
         }
       }
    ];
  }
- 
+
 
  sort(){
    return this.items.sort((a,b) => {
@@ -1448,12 +1540,12 @@ export class DataService {
  save(item){
 
   //  this.savedItems.push(item);
-   console.log('this item is being saved'); 
+   console.log('this item is being saved');
    console.log(item)
 
    return new Promise<any>((resolve, reject) => {
     let currentUser = firebase.auth().currentUser;
-    console.log('ARE YOU HERE'); 
+    console.log('ARE YOU HERE');
     this.afs.collection('users').doc(currentUser.email).collection('User Data').add({
       Program: item.program.programName,
       Language: item.program.language,
@@ -1462,8 +1554,8 @@ export class DataService {
       Housing: item.program.housing,
       MinimumGPARequirement: item.program.GPA,
       AcademicFeatures: item.program.academicFeatures,
-      Value: item.program.value, 
-      img: item.program.img, 
+      Value: item.program.value,
+      img: item.program.img,
       GroupName: item.program.programGroup
     })
     .then(
@@ -1478,18 +1570,18 @@ export class DataService {
 //   this.boolean = true;
 // }
 
-saved: any; 
+saved: any;
 
 createSavedList(){
   let currentUser = firebase.auth().currentUser;
-  this.saved = this.afs.firestore.collection('users').doc(currentUser.email).collection('User Data');  
+  this.saved = this.afs.firestore.collection('users').doc(currentUser.email).collection('User Data');
   this.saved.get().then((querySnapshot) => {
     querySnapshot.forEach((doc) => {
-      this.savedItems.push((doc.id, 
+      this.savedItems.push((doc.id,
         "=>",
         doc.data()
-      
-      )); 
+
+      ));
 })})
 }
 
