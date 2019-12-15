@@ -19,7 +19,6 @@ export class ForumPage implements OnInit {
   public reviewSearchTermFor: string = "";
   public reviewItems: any;
   public oldreview: any;
-
   public searchTerm4: string = "";
 
   constructor(
@@ -48,13 +47,12 @@ export class ForumPage implements OnInit {
 
   validations_form: FormGroup;
 
-<<<<<<< HEAD
-  items2: string;
-  public searchTerm4: string = "";
 
-=======
   items2: string;
->>>>>>> ae0a6a426efbc0a0ec1ff4e320b42682364e092e
+
+
+
+
   public willYouShow: string = "";
   public searchReview: string = '';
 
