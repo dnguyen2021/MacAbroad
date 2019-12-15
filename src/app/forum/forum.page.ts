@@ -81,6 +81,10 @@ export class ForumPage implements OnInit {
     this.items2 = this.dataService.searchItems(this.searchTerm4);
   }
 
+  goToHome(){
+    this.navCtrl.navigateForward('/tabs/tab1');
+  }
+  
   splicedDate: string;
 
   onSubmit(value) {

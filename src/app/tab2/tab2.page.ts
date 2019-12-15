@@ -74,6 +74,10 @@ export class Tab2Page implements OnInit{
     this.navCtrl.navigateForward('/tabs/tab1');
   }
 
+  goToHome(){
+    this.navCtrl.navigateForward('/tabs/tab1');
+  }
+
 
 
 

@@ -1,22 +1,22 @@
-<ion-header>
-    <ion-toolbar color="primary">
-      <ion-row>
-        <ion-col size="50%">
-          <ion-title style = "font-size:25px; text-align: center">
-            Student Reviews
-          </ion-title>
-        </ion-col>
-        <ion-col size="500px">
-          <ion-button (click)="logout()" end>
-              <ion-icon name="log-out"></ion-icon>
-          </ion-button>
-        </ion-col>
-      </ion-row>
-    </ion-toolbar>
-  </ion-header>
 
-<ion-content padding class="form-content">
-  <ion-card class="bg-class2">
+  <ion-header style="color: #1c357a">
+      <ion-toolbar class="bg-class">
+        <img src="/assets/icon/mockupMacAbroad3.png" width="65px" style="display:inline-block" height="65px" (click)="goToHome()">
+        <ion-title class="titleicon" style = "font-size:25px; text-align: center; display:inline-block">
+          <div class="fadeIn">
+              Student Reviews
+          </div>
+        </ion-title>
+      </ion-toolbar>
+    </ion-header>
+
+  <ion-searchbar 
+  type="text"
+  (ionChange)="filterList($event.target.value)"
+  >Filter Search By Program</ion-searchbar>
+
+<ion-content padding class="form-content" class="bg-class">
+  <ion-card class="bg-class">
       <ion-card-header tappable (click)="collapseCard = !collapseCard">
           <ion-card-title style="text-align: center;color: white;" >Post A Review</ion-card-title>
         </ion-card-header>
@@ -28,9 +28,9 @@
 
 <form [formGroup]="validations_form" (ngSubmit)="onSubmit(validations_form.value)">
 
-<ion-input placeholder="Name" formControlName = Name> </ion-input>
+<ion-input style = "color: white" placeholder="Name" formControlName = Name> </ion-input>
 
-<ion-input placeholder="Email" formControlName = email></ion-input>
+<ion-input style = "color: white" placeholder="Email" formControlName = email></ion-input>
 
 <ionic4-star-rating
 activeIcon = "ios-star"
@@ -100,10 +100,6 @@ size="default"
 (ngModelChange)="onRateChange($event)"> </rating> -->
 
 
-<ion-searchbar 
-type="text"
-(ionChange)="filterList($event.target.value)"
->Filter Search By Program</ion-searchbar>
 
 
   <ion-item-sliding *ngFor="let review of reviews">
@@ -120,17 +116,17 @@ type="text"
 
     <ion-item-options side="end">
     </ion-item-options>
-    <ion-item >
+    <ion-item class="bg-class">
         <!-- *ngIf = "willYouShow == true" -->
 
-      Name: {{ review.Name }} <br>
-      email: {{ review.email }} <br>
-      Program: {{ review.Program }} <br>
-      Would you recommend this program?: {{ review.Review }} <br>
-      What do you wish you known before studying abroad?: {{ review.WishToKnow }} <br>
-      Do you have any advice for future students in the program or studying abroad?: {{ review.Advice }} <br>
+      <b>Name:</b> {{ review.Name }} <br>
+      <b>Email:</b> {{ review.email }} <br>
+      <b>Program:</b> {{ review.Program }} <br>
+      <b>Would you recommend this program?:</b> {{ review.Review }} <br>
+      <b>What do you wish you known before studying abroad?:</b> {{ review.WishToKnow }} <br>
+      <b>Do you have any advice for future students in the program or studying abroad?:</b> {{ review.Advice }} <br>
 
-      Submitted at: {{ review.Date }} <br>
+      <b>Submitted at:</b> {{ review.Date }} <br>
 
     </ion-item>
 
