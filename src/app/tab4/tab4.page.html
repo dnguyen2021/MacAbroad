@@ -16,7 +16,7 @@
         <ion-card-header class="bg-class2">
           <ion-card-title style="text-align: center; font-weight: bold;orientation: center; color: white;">
               <div class="fadeIn"><u>{{item.title}}</u></div>        
-              <ion-checkbox style="background-color: #1c357a; align-content: center;" [(ngModel)]="boxBoolean" (ionChange)="onBoxBooleanChange()">Completed</ion-checkbox>
+              <ion-checkbox class="{{item.title}}" style="background-color: #1c357a; align-content: center;" [(ngModel)]="boxBoolean" (ionChange)="onBoxBooleanChange()">Completed</ion-checkbox>
           </ion-card-title>
         </ion-card-header>
         <ion-card-content style="background-color: #e9f1f8;">
