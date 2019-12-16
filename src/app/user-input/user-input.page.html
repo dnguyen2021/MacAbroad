@@ -90,7 +90,7 @@
 
     <ion-list>
     <ion-list-header class="bg-class2" style = "font-family:Bebas Neue; font-size:20px"><div class="fadeIn">Please select your preferred country(s) to visit:</div></ion-list-header>
-    <ion-item>
+    <ion-item style="color: #1c357a">
       <ion-label style="color: #1c357a"><div class="fadeIn">Country</div></ion-label>
       <ion-select style="color: #1c357a" [(ngModel)] = "searchTerm3" (ionChange)="setStars(); setFilteredItems(); createSort()" placeholder="Select a Country (Optional)">
         <ion-select-option value="Any">Any</ion-select-option>

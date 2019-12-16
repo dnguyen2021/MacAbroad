@@ -21,7 +21,7 @@
   placeholder="Filter Search By Program"></ion-searchbar>
 
 <ion-content padding class="form-content" class="bg-class">
-  <ion-card class="bg-class2">
+  <div class="fadeIn"><ion-card class="bg-class2">
       <ion-card-header tappable (click)="collapseCard = !collapseCard">
           <ion-card-title style="text-align: center;color: white;" >Post A Review</ion-card-title>
         </ion-card-header>
@@ -67,6 +67,8 @@
       </form>
       </ion-card-content>
       </ion-card>
+    </div>
+      
 
   <ion-item-sliding *ngFor="let review of reviews">
 
