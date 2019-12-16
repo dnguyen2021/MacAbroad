@@ -1,4 +1,4 @@
-<ion-header>
+<!-- <ion-header>
   <ion-toolbar color="primary">
     <ion-row>
       <ion-col size="auto">
@@ -6,7 +6,7 @@
           <ion-icon ios="ios-arrow-round-back" md="md-arrow-round-back"></ion-icon>
         </ion-button>
       </ion-col>
-      <ion-col>
+      <ion-col> -->
     <!-- <ion-buttons slot="start">
       <ion-menu-toggle>
         <ion-button>
@@ -14,13 +14,40 @@
         </ion-button>
       </ion-menu-toggle>
     </ion-buttons> -->
-    <ion-title style = "font-family:Bebas Neue; font-size:25px; text-align: center">
+    <!-- <ion-title style = "font-family:Bebas Neue; font-size:25px; text-align: center">
         <div class="pad"><div class="fadeIn">Saved Programs</div></div>
     </ion-title>
     </ion-col>
     </ion-row>
     </ion-toolbar>
-  </ion-header>
+  </ion-header> -->
+
+  <ion-header style="color: #1c357a">
+      <ion-toolbar class="bg-class">
+        <ion-row>
+        <ion-col size="auto">
+        <img src="/assets/icon/mockupMacAbroad3.png" width="65px" style="display:inline-block" height="65px" (click)="logout()">
+        </ion-col>
+        <ion-col size="0px">
+          <div class= "faveButton">
+            <ion-button class="save" expand="full" shape="round" (click)="goBack()">
+              <ion-icon ios="ios-arrow-round-back" md="md-arrow-round-back" size="large"></ion-icon>
+            </ion-button>
+          </div>
+        </ion-col>
+        <ion-col>
+        <ion-title class="titleicon" style = "font-size:25px; text-align: center; display:inline-block">
+          <div class="fadeIn">
+              Saved Programs
+          </div>
+        </ion-title>
+        </ion-col>
+        </ion-row>
+
+      </ion-toolbar>
+    </ion-header>
+
+
 
   <!-- <ion-menu side="start" menuId="first">
     <ion-header>
