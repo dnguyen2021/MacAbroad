@@ -22,10 +22,14 @@ export class SavedProgramsPage implements OnInit {
   ngOnInit() {
     this.savedItems = this.dataService.getSaved(); 
     // this.removeDuplicates();
-    this.createSavedItems(); 
+    // this.createSavedItems(); 
+
+    //to run normally
+    this.createSavedItems();
   }
 
-  savedItems;
+
+  savedItems = [];
   saved: any;
 
   createSavedItems(){
