@@ -79,10 +79,4 @@ export class Tab2Page implements OnInit{
   }
 
 
-
-
-  // goToProgramWebsite(){
-  //   this.navCtrl.navigateForward()
-  // }
-
 }
