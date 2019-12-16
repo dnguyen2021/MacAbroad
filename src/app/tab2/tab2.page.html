@@ -18,64 +18,12 @@
   </ion-toolbar>
 </ion-header>
 
-<!-- <ion-toolbar *toolbar secondary>
-  <img src="/assets/icon/mockupMacAbroad3.png" width="40px" style="display:inline-block" height="40px">
-  <ion-title class="titleicon" style="display:inline-block" >Home</ion-title>
-</ion-toolbar> -->
 
 
 <ion-content padding class="bg-class">
-  <!-- <div class="mbsc-padding">
-    <mbsc-scrollview [options]="settings">
-        <mbsc-scrollview-item class="bg-class2" *ngFor="let item of items2">
-          <img [src]="/assets/icon/{{item.program.img}}" draggabale ="false">
-          <mbsc-card-content>{{item.program.programName}}</mbsc-card-content>
-        </mbsc-scrollview-item>
-    </mbsc-scrollview>
-  </div> -->
-<!--
-  <mbsc-card collapsible>
-      <mbsc-card-header class="mbsc-card-header">
-          <div>
-              <mbsc-card-subtitle class="mbsc-bold mbsc-txt-s">27/07/2018</mbsc-card-subtitle>
-              <div class="mbsc-bold">FRIDAY AFTERNOON RUN</div>
-              <div class="mbsc-grid mbsc-margin mbsc-txt-muted mbsc-bold mbsc-txt-s">
-                  <div class="mbsc-row mbsc-no-padding">
-                      <div class="mbsc-col">5.43km</div>
-                      <div class="mbsc-col">5'44"/km</div>
-                      <div class="mbsc-col">30:45</div>
-                  </div>
-              </div>
-          </div>
-      </mbsc-card-header>
-      <mbsc-card-content class="mbsc-no-padding">
-          <img src="/assets/icon/{{item.program.img}}" />
-          <div class="mbsc-btn-group-block">
-              <button class="mbsc-btn-primary">View details</button>
-              <button class="mbsc-btn-secondary">Share your run</button>
-          </div>
-      </mbsc-card-content>
-  </mbsc-card> -->
 
   <ion-list>
         <ion-card class="bg-class2" *ngFor="let item of items2">
-            <!-- <mat-accordion>
-                <mat-expansion-panel>
-                  <mat-expansion-panel-header>
-                    <div class="fadeIn">
-                          <img src="/assets/icon/{{item.program.img}}" alt="img" width="100" height="200">
-                    </div>
-                    <mat-panel-title style="text-align: center;color: white;">
-                        <div class="fadeIn">{{item.program.programName}}</div>
-                    </mat-panel-title>
-                    <mat-panel-description>
-                      {{item.program.locationName}}
-                    </mat-panel-description>
-                  </mat-expansion-panel-header>
-                  Summary
-                  {{item.program.summary}}
-                </mat-expansion-panel>
-              </mat-accordion> -->
 
               <div class="fadeIn">
                 <img src="/assets/icon/{{item.program.img}}" alt="img" width="fill" height="fill" >

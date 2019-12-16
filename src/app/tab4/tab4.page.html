@@ -8,7 +8,7 @@
     <ion-col>
     <ion-title class="titleicon" style = "font-size:25px; text-align: center; display:inline-block">
       <div class="fadeIn">
-        Timeline
+        Checklist
       </div>
     </ion-title>
     </ion-col>
@@ -16,19 +16,21 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content padding class="bg-class">
+<ion-content padding class="bg-class" fullscreen>
+  Please complete the following steps in order of priority listed by the deadlines below. New material will be posted throughout the pre-departure process and you will be notified accordingly. Additional information will be posted in the attached documents section of your application or emailed to you. Please read these documents carefully. If you have general questions, contact the Mac Study Abroad Office at +1(651)696-6300 or email . You may also contact your Study Away advisor if you have any specific questions.
+<br>
   <ion-list *ngFor="let item of items">
     <ion-card style="background-color: #e9f1f8;">
       <ion-card-header class="bg-class2">
         <ion-card-title style="text-align: center; font-weight: bold;orientation: center; color: white;">
-            <div class="fadeIn"><u>{{item.title}}</u></div>
-            <ion-checkbox style="background-color: #1c357a; align-content: center;" [(ngModel)]="boxBoolean" (ionChange)="onBoxBooleanChange()">Completed</ion-checkbox>
+            <div class="fadeIn"><u>{{item.description}}</u>          
+              <ion-checkbox style="align-content: center;" (ionChange)="onBoxBooleanChange()">Completed</ion-checkbox>
+            </div>
         </ion-card-title>
       </ion-card-header>
       <ion-card-content style="background-color: #e9f1f8;">
         <br>
-        <div class="fadeIn">{{item.description}}<br>
-        <b>Deadline: </b>{{item.date.subtitle}} {{item.date.title}}</div>
+        <div class="fadeIn">{{item.title}}'s  Deadline is <b>{{item.date.subtitle}} {{item.date.title}}</b></div>
       </ion-card-content>
     </ion-card>
   </ion-list>

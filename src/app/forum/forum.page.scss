@@ -13,6 +13,7 @@ ion-card-header {
     background-color: rgb(16, 55, 105);
 }
 
+
 img{
     display: block;
     margin-left: auto;
@@ -27,10 +28,15 @@ img{
     opacity: 1;
   }
   }
+
+  .titleicon{
+    padding-top: 15px;
+  }
   
   ion-searchbar{
     --background: #e9f1f8;
     --ion-color-base: #e9f1f8 !important;
+    
   }
   ion-list{
     --background: transparent;
@@ -50,6 +56,11 @@ img{
   .bg-class2{
     --background: linear-gradient(197deg, rgb(8, 133, 250) 0%, rgb(3, 117, 211) 13.5%, rgb(36, 115, 189) 33.33%, rgb(33, 97, 156) 100%) !important;
     box-shadow: black;
+  }
+
+  ion-item{
+    --background: #1c357a;
+    
   }
 
 //   ion-input{

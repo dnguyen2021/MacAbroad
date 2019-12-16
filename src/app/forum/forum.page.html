@@ -1,189 +1,160 @@
-
-  <ion-header style="color: #1c357a">
-      <ion-toolbar class="bg-class">
-        <img src="/assets/icon/mockupMacAbroad3.png" width="65px" style="display:inline-block" height="65px" (click)="goToHome()">
-        <ion-title class="titleicon" style = "font-size:25px; text-align: center; display:inline-block">
-          <div class="fadeIn">
-              Student Reviews
-          </div>
-        </ion-title>
-      </ion-toolbar>
-    </ion-header>
-
-  <ion-searchbar
+<ion-header style="color: #1c357a">
+    <ion-toolbar class="bg-class">
+      <ion-row>
+      <ion-col size="auto">
+      <img src="/assets/icon/mockupMacAbroad3.png" width="65px" style="display:inline-block" height="65px" (click)="logout()">
+      </ion-col>
+      <ion-col>
+          <ion-title class="titleicon" style = "font-size:25px; text-align: center; display:inline-block">
+        <div class="fadeIn">
+            Student Reviews
+        </div>
+      </ion-title>
+      </ion-col>
+      </ion-row>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-searchbar style="color:#1c357a"
   type="text"
   (ionChange)="filterList($event.target.value)"
-  >Filter Search By Program</ion-searchbar>
+  placeholder="Filter Search By Program"></ion-searchbar>
 
 <ion-content padding class="form-content" class="bg-class">
-  <ion-card class="bg-class">
+  <ion-card class="bg-class2">
       <ion-card-header tappable (click)="collapseCard = !collapseCard">
           <ion-card-title style="text-align: center;color: white;" >Post A Review</ion-card-title>
         </ion-card-header>
+        
 
-
-  <ion-card-content *ngIf="!collapseCard">
+  <ion-card-content style="background-color: #e9f1f8" *ngIf="!collapseCard">
         <ion-card-title style="text-align: center; text-decoration: underline; font-weight: bold;"></ion-card-title>
 
+        <form [formGroup]="validations_form" (ngSubmit)="onSubmit(validations_form.value)">
+
+        <ion-input placeholder="Name" formControlName = Name> </ion-input>
+
+        <ion-input placeholder="Email" formControlName = email></ion-input>
+        
+        <ionic4-star-rating
+        activeIcon = "ios-star"
+        defaultIcon = "ios-star-outline"
+        activeColor = "#1c357a"
+        defaultColor = "#1c357a"
+        readonly="false"
+        rating="3"
+        fontSize = "32px"
+        (ratingChanged)="logRatingChange($event)">
+        </ionic4-star-rating>
+
+        <ion-item>
+          <ion-label style="color: white; text-align: center;">Please Select Your Program</ion-label>
+          <ion-select [(ngModel)]="searchTerm4" (click)="setPrograms()" type = 'text' formControlName = Program>
+              <ion-select-option *ngFor="let item of items2">
+                  {{ item.program.programName }}
+              </ion-select-option>
+          </ion-select>
+        </ion-item>
 
 
-<form [formGroup]="validations_form" (ngSubmit)="onSubmit(validations_form.value)">
+      <ion-input class="review" placeholder="Would you recommend this program?" formControlName = Review></ion-input>
+      <ion-input class="review" placeholder="What do you wish you had known before?" formControlName = WishToKnow></ion-input>
+      <ion-input class="review" placeholder="Advice for future study abroad students/students in this program?" formControlName = Advice></ion-input>
 
-<ion-input style = "color: white" placeholder="Name" formControlName = Name> </ion-input>
+      <ion-datetime formControlName="Date" displayFormat="MM-DD-YYYY" pickerFormat="MM-DD-YYYY" placeholder="Please Select Today's Date" ></ion-datetime>
+      <ion-button text-center class="submit-btn" color="{{post.color}}" expand="block" type="submit" [disabled]="!validations_form.valid">{{post.message}}</ion-button>
 
-<ion-input style = "color: white" placeholder="Email" formControlName = email></ion-input>
+      </form>
+      </ion-card-content>
+      </ion-card>
 
-<ionic4-star-rating
-activeIcon = "ios-star"
-defaultIcon = "ios-star-outline"
-activeColor = "#488aff"
-defaultColor = "#f4f4f4"
-readonly="false"
-rating="3"
-fontSize = "32px"
-(ratingChanged)="logRatingChange($event)">
-</ionic4-star-rating>
-
-<ion-item>
-  <ion-label color="white">Please Select Your Program</ion-label>
-  <ion-select [(ngModel)]="searchTerm4" (click)="setPrograms()" type = 'text' formControlName = Program>
-      <ion-select-option *ngFor="let item of items2">
-          {{ item.program.programName }}
-      </ion-select-option>
-  </ion-select>
-</ion-item>
-
-<!--
-<ion-toolbar>
-  <ion-searchbar  [(ngModel)]="searchTerm4" (click)="setPrograms()" (ionChange)="setSearchedItems()" showCancelButton="focus" placeholder="Enter search query" formControlName = Program></ion-searchbar>
-</ion-toolbar>
-
-<ion-list>
-  <ion-label style="background-color: #4178ee;" *ngFor="let item of items2">
-    {{ item.program.programName}}
-  </ion-label> -->
-  <!-- <div ng-repeat="item in items2">
-    <ion-item class="item-stable"
-    ng-click="toggleItem(item)"
-    ng-class="{active: isItemShown(item)}">
-  <i class="icon" ng-class="isItemShown(item) ?
-  'ion-minus' : 'ion-plus'"></i>
-  {{item.program.programName}}
-  </ion-item>
-  <ion-item class="item-accordion"
-      ng-repeat="name in item.programName"
-      ng-show="isItemShown(item)">
-    {{name}}
-    </ion-item>
-  </div> -->
-<!-- </ion-list>  -->
+  <ion-item-sliding *ngFor="let review of reviews">
 
 
-<ion-input class="review" placeholder="Would you recommend this program?" formControlName = Review></ion-input>
-<ion-input class="review" placeholder="What do you wish you had known before?" formControlName = WishToKnow></ion-input>
-<ion-input class="review" placeholder="Advice for future study abroad students/students in this program?" formControlName = Advice></ion-input>
-
-<ion-datetime formControlName="Date" displayFormat="MM-DD-YYYY" pickerFormat="MM-DD-YYYY" placeholder="Please Select Today's Date" ></ion-datetime>
-
-
-<ion-button text-center class="submit-btn" color="{{post.color}}" expand="block" type="submit" [disabled]="!validations_form.valid">{{post.message}}</ion-button>
-
-<!-- <ion-button (click) = 'getRating()'>  </ion-button> -->
-
-
-<ion-button text-center class="submit-btn" color="{{post.color}}" expand="block" type="submit" [disabled]="!validations_form.valid">{{post.message}}</ion-button>
-
-
-<ion-button text-center class="submit-btn" color="{{post.color}}" expand="block" type="submit" [disabled]="!validations_form.valid">{{post.message}}</ion-button>
-
-</ion-card-content>
-
-<!-- <ion-button (click) = 'getRating()'>  </ion-button> -->
-
-<!--
->>>>>>> 0d57f3e240c2fe2849b68f38f9706d6d4e413e28
-=======
-</form>
-</ion-card-content>
-</ion-card>
-
-<ion-button (click) = 'getRating()'>  </ion-button> -->
-
-<!--
->>>>>>> ae0a6a426efbc0a0ec1ff4e320b42682364e092e
-<rating [(ngModel)]="rate"
-readonly="false"
-size="default"
-(ngModelChange)="onRateChange($event)"> </rating> -->
-
-
-<ion-searchbar
-type="text"
-(ionChange)="filterList($event.target.value)"
->Filter Search By Program</ion-searchbar>
-
-
-  <!-- <ion-item-sliding *ngFor="let review of reviews">
-
-      <ionic4-star-rating
-      activeIcon = "ios-star"
-      defaultIcon = "ios-star-outline"
-      activeColor = "#488aff"
-      defaultColor = "#f4f4f4"
-      readonly="true"
-      rating= "{{review.Rating}}"
-      fontSize = "32px">
-      </ionic4-star-rating>
 
     <ion-item-options side="end">
     </ion-item-options>
-    <ion-item class="bg-class">
-        *ngIf = "willYouShow == true" -->
+    <ion-card-header class="bg-class2">
+        <div class="fadeIn"><ion-card-title style="text-align: center;color: #e9f1f8;">{{review.Program}} 
+            <ionic4-star-rating
+            activeIcon = "ios-star"
+            defaultIcon = "ios-star-outline"
+            activeColor = "#f4f4f4"
+            defaultColor = "#f4f4f4"
+            readonly="true"
+            rating= "{{review.Rating}}"
+            fontSize = "32px">
+            </ionic4-star-rating>
+        </ion-card-title></div>
+      </ion-card-header>
 
-      <!-- <b>Name:</b> {{ review.Name }} <br>
-      <b>Email:</b> {{ review.email }} <br>
-      <b>Program:</b> {{ review.Program }} <br>
-      <b>Would you recommend this program?:</b> {{ review.Review }} <br>
-      <b>What do you wish you known before studying abroad?:</b> {{ review.WishToKnow }} <br>
-      <b>Do you have any advice for future students in the program or studying abroad?:</b> {{ review.Advice }} <br>
+      <div class="fadeIn">
+        <ion-card-content style="background-color: #e9f1f8;color:#1c357a ;">
+            <i>Submitted through MacAbroad</i><br>
 
-      <b>Submitted at:</b> {{ review.Date }} <br>
 
-    </ion-item>
+      <b><u>Name:</u></b> {{ review.Name }} <br>
+      <b><u>Email:</u></b> {{ review.email }} <br>
+      <b><u>Program:</u></b> {{ review.Program }} <br>
+      <b><u>Would you recommend this program?:</u></b> {{ review.Review }} <br>
+      <b><u>What do you wish you known before studying abroad?:</u></b> {{ review.WishToKnow }} <br>
+      <b><u>Do you have any advice for future students in the program or studying abroad?:</u></b> {{ review.Advice }} <br>
 
-   </ion-item-sliding> -->
+      <b><u>Submitted at:</u></b> {{ review.Date }} 
+    </ion-card-content>
+    </div>
 
+    <!-- </ion-item> -->
+   </ion-item-sliding>
 
 <ion-item-sliding *ngFor="let item of reviewItems">
 
-  <ionic4-star-rating
+  <!-- <ionic4-star-rating
   activeIcon = "ios-star"
   defaultIcon = "ios-star-outline"
-  activeColor = "#488aff"
+  activeColor = "#f4f4f4"
   defaultColor = "#f4f4f4"
   readonly="true"
   rating= 3
   fontSize = "32px">
-  </ionic4-star-rating>
+  </ionic4-star-rating> -->
+
+  <ion-item-options side="end">
+    </ion-item-options>
+    <ion-card-header class="bg-class2">
+        <div class="fadeIn"><ion-card-title style="text-align: center;color: #e9f1f8;">{{item.programName}} 
+        </ion-card-title></div>
+      </ion-card-header>
+
+      <div class="fadeIn">
+        <ion-card-content style="background-color: #e9f1f8;color:#1c357a ;">
+            <i>Submitted through Mac Study Abroad Website</i><br>
+
+      <b><u>Program:</u></b> {{ item.programName }} <br>
+      <b><u>Would you recommend this program?:</u></b> {{ item.wouldYouRecommendThisProgramToOtherMacalesterStudentsPleaseExplain}} <br>
+      <b><u>What do you wish you known before studying abroad?:</u></b>   {{ item.whatDoYouWishYouHadKnownBeforeYouChoseThisProgramAndorLocation}} <br>
+      <b><u>Do you have any advice for future students in the program or studying abroad?:</u></b> {{ item.recallingTheTimePeriodPriorToYourDepartureHowWouldYouSuggestThatFutureStudentsFocusTheirPreparationsWhatWasMostHelpfulForYouWhatWouldYouDoDifferentlyPleaseExplain}} <br>
+
+    </ion-card-content>
+    </div>
 
 <ion-item-options side="end">
 </ion-item-options>
 
-<ion-item class="bg-class">
+<!-- <ion-item class="bg-class2">
+  <ion-card style="color: #e9f1f8">
+    <ion-col><b><u>Submitted through Website </u></b><br></ion-col>
 
-  Name: " " <br>
-  email: " " <br>
-  Program: {{ item.programName }} <br>
-  Would you recommend this program? <br>
+    <b><u></u></b>Program: {{ item.programName }} <br>
+    <b><u></u></b>Would you recommend this program? <br>
   {{ item.wouldYouRecommendThisProgramToOtherMacalesterStudentsPleaseExplain}} <br>
-  What do you wish you known before studying abroad? <br>
+  <b><u></u></b>What do you wish you known before studying abroad? <br>
   {{ item.whatDoYouWishYouHadKnownBeforeYouChoseThisProgramAndorLocation}}  <br>
-  Do you have any advice for future students in the program or studying abroad? <br>
+  <b><u></u></b>Do you have any advice for future students in the program or studying abroad? <br>
   {{ item.recallingTheTimePeriodPriorToYourDepartureHowWouldYouSuggestThatFutureStudentsFocusTheirPreparationsWhatWasMostHelpfulForYouWhatWouldYouDoDifferentlyPleaseExplain}} <br>
 
-  Submitted at: " "<br>
-
-</ion-item>
+</ion-card>
+</ion-item> -->
 
 </ion-item-sliding>
 
