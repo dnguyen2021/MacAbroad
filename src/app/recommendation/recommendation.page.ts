@@ -3,7 +3,6 @@ import { IonicModule, NavController} from '@ionic/angular'; //ItemSliding
 import { DataService } from "../services/data.service";
 // import { Http } from '@angular/http';
 import 'rxjs/Rx';
-
 import {
   StackConfig,
   Stack,
@@ -12,6 +11,7 @@ import {
   DragEvent,
   SwingStackComponent,
   SwingCardComponent} from 'angular2-swing';
+import { ViewController } from '@ionic/core';
 
 
 @Component({
@@ -29,6 +29,8 @@ export class RecommendationPage { //implements OnInit
   public items2: Array<any>;
   stackConfig: StackConfig;
   recentCard: string= '';
+  public savedItems: any = []
+
 
   constructor(public navCtrl: NavController, private dataService: DataService) { //private menu: MenuController, , private http:Http
     this.stackConfig = {
@@ -55,6 +57,7 @@ export class RecommendationPage { //implements OnInit
     this.cards.pop();
     this.addNewCards(0);
 
+
   }
 
   onItemMove(element, x, y, r) {
@@ -79,6 +82,7 @@ voteUp(like: boolean, i) {
   this.addNewCards(i);
   if (like) {
     this.recentCard = 'You liked: ' + removedCard.programName;
+    
     this.dataService.save(removedCard);
   } else {
     this.recentCard = 'You disliked: ' + removedCard.programName;
@@ -108,12 +112,14 @@ decimalToHex(d, padding) {
   }
 
   goToFavourites(){
+    
     this.navCtrl.navigateForward('/tabs/saved-programs')
   }
 
   logout(){
     this.navCtrl.navigateForward('tabs/tab1')
   }
+
 
   // openFirst() {
   //   this.menu.enable(true, 'first');

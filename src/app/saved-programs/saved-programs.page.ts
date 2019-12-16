@@ -20,13 +20,15 @@ export class SavedProgramsPage implements OnInit {
   }
 
   ngOnInit() {
-    this.createSavedItems();
+    this.savedItems = this.dataService.getSaved(); 
+    // this.removeDuplicates();
+    this.createSavedItems(); 
   }
 
-  savedItems: any = [];
+  savedItems;
   saved: any;
-  createSavedItems(){
 
+  createSavedItems(){
     let currentUser = firebase.auth().currentUser;
     this.saved = this.afs.firestore.collection('users').doc(currentUser.email).collection('User Data');
     this.saved.get().then((querySnapshot) => {
@@ -36,11 +38,25 @@ export class SavedProgramsPage implements OnInit {
         ));
 
   })})
+
   }
 
   goBack(){
-    this.navCtrl.navigateForward('/tabs/recommendation')
+    this.navCtrl.navigateForward('/tabs/recommendation');
   }
+
+//   removeDuplicates(){
+//     let currArray = []; 
+//     for (let i = 0; i <= this.savedItems.length; i++){ 
+//       for (let j = 0; i <= this.savedItems.length; j++){
+//           if (currArray[j] != this.savedItems[i])
+//           {currArray.push(this.savedItems[i])}
+//       }
+  
+//   }
+//     currArray = this.savedItems; 
+
+// }
 
   removeItem2(i){
 
