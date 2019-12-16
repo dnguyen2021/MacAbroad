@@ -9,6 +9,10 @@ import { Observable } from 'rxjs/Observable';
 import { Subject } from 'rxjs/Subject';
 import { IonicModule } from '@ionic/angular';
 import { DataService } from '../services/data.service';
+import { isCheckedProperty } from 'ionic-angular/umd/util/util';
+import { disableDebugTools } from '@angular/platform-browser';
+import { checkAvailability } from '@ionic-native/core';
+import { Checkbox } from 'ionic-angular';
 
 
 
@@ -283,9 +287,11 @@ export class Tab4Page {
   }
 
   boxBoolean = false;
+  completed = false;
 
   onBoxBooleanChange(){
     console.log(this.boxBoolean);
+    
   }
 
 }

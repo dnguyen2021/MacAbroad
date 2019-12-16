@@ -23,8 +23,11 @@
     <ion-card style="background-color: #e9f1f8;">
       <ion-card-header class="bg-class2">
         <ion-card-title style="text-align: center; font-weight: bold;orientation: center; color: white;">
-            <div class="fadeIn">{{item.description}}
-              <ion-checkbox style="align-content: center;" (ionChange)="onBoxBooleanChange()">Completed</ion-checkbox>
+            <div class="fadeIn"><u>{{item.description}}</u>
+              <div float-right class="my-checkbox">
+                <ion-checkbox [disabled]="completed ? 'true' : 'false' " *ngIf="!completed" (ionChange)="onBoxBooleanChange()">
+              </ion-checkbox>
+            </div>
             </div>
         </ion-card-title>
       </ion-card-header>

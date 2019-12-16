@@ -59,6 +59,9 @@ export class Tab5Page implements OnInit {
   goRegisterPage(){
     this.router.navigate(["/tab6"]);
   }
+    goToHome(){
+    this.navCtrl.navigateForward('/tabs/tab1');
+  }
 
   countup(){
    this.count++;
