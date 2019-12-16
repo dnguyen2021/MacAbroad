@@ -1,14 +1,17 @@
 <ion-header style="color: #1c357a">
-    <ion-toolbar class="bg-class">
-  <img src="/assets/icon/mockupMacAbroad3.png" width="65px" style="display:inline-block" height="65px" (click)="goToHome()">
+  <ion-toolbar class="bg-class">
+  <ion-row>
+  <ion-col size="auto">
+    <img src="/assets/icon/mockupMacAbroad3.png" width="65px" style="display:inline-block" height="65px" (click)="goToHome()">
+  </ion-col>
+  <ion-col>
       <ion-title class="titleicon" style = "font-size:25px; text-align: center; display:inline-block">
         <div class="fadeIn">
             Pick Your Preferences!
         </div>
       </ion-title>
-      <div class="fadeIn">
-          <ion-searchbar [(ngModel)]="searchTerm4" (ionChange)="setSearchedItems()"></ion-searchbar>
-      </div>
+      </ion-col>
+    </ion-row>
     </ion-toolbar>
 </ion-header>
 
@@ -147,7 +150,6 @@
   </ion-item>
   </ion-list>
 
-
   <div class="center">
     <ion-button (click)="goToRecommendation()">
         <div class="fadeIn">
@@ -160,6 +162,7 @@
         </div>
     </ion-button> -->
   </div>
+
 
 
   <!-- <ion-list>
