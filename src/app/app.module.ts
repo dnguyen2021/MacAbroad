@@ -47,7 +47,8 @@ import { TimelineItemComponent } from '../app/timeline/timeline.component';
 import * as firebase from 'firebase';
 
 import { HttpModule } from '@angular/http';
-import { SwingModule } from 'angular2-swing';
+import { SwingModule} from 'angular2-swing';
+
 import {
  StackConfig,
  Stack,
