@@ -61,7 +61,7 @@ export class Tab5Page implements OnInit {
   }
 
   countup(){
-   this.count++;  //instead of reinitializing, we are using already initialized variable
+   this.count++;
  }
 
   go(){

@@ -31,8 +31,15 @@
     <ion-item>
     <ion-card-header>
       <ion-row>
-        <ion-col size=auto>
-      <ion-card-subtitle style="font-size:15px">PROGRAM</ion-card-subtitle>
+      <ion-col size="auto">
+      <img src="/assets/icon/mockupMacAbroad3.png" width="65px" style="display:inline-block" height="65px" (click)="logout()">
+      </ion-col>
+      <ion-col size="0px">
+        <div class= "faveButton">
+        <ion-button expand="full" class="save" shape="round" (click)="goToFavourites()">
+          <ion-icon name="star" size="large"></ion-icon>
+        </ion-button>
+        </div>
       </ion-col>
       <ion-col>
         <div class="tooltip"><ion-icon class="icon" name="information-circle-outline"></ion-icon>
@@ -41,21 +48,44 @@
         </ion-col>
       </ion-row>
 
-      <ion-row>
-        <ion-col size="12" id="pgroup">
-          <ion-card-title style="font-size:35px">{{c.program.programGroup}}{{c.program.programName}}</ion-card-title>
+    </ion-toolbar>
+  </ion-header>
+
+
+  <ion-content>
+    <div swing-stack #myswing1 [stackConfig]="stackConfig" (throwoutleft)="voteUp(false, 0)" (throwoutright)="voteUp(true, 0)" id="card-stack">
+      <div #mycards1 swing-card *ngFor="let c of cards">
+      <ion-card>
+      <ion-item>
+      <ion-card-header>
+        <ion-row>
+          <ion-col size=auto>
+        <ion-card-subtitle style="font-size:15px">PROGRAM</ion-card-subtitle>
         </ion-col>
       </ion-row>
       <ion-row>
         <ion-col>
-          <ion-card-title><div style="font-size:20px">{{ c.program.value}} / 3</div> <div style="font-size:16px">match</div></ion-card-title>
-        </ion-col>
-      </ion-row>
-      <ion-row size="100%">
-          <img src="/assets/icon/{{c.program.img}}" alt="img" style="width:100%; height:200px">
-      </ion-row>
-    </ion-card-header>
-    </ion-item>
+          <div class="tooltip"><ion-icon class="icon" name="information-circle-outline"></ion-icon>
+            <span class="tooltiptext">{{c.program.programGroup}} {{c.program.group}}</span>
+          </div>
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col size="12" id="pgroup">
+            <ion-card-title style="font-size:35px">{{c.program.programGroup}}{{c.program.programName}}</ion-card-title>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-card-title><div style="font-size:20px">{{ c.program.value}} / 3</div> <div style="font-size:16px">match</div></ion-card-title>
+          </ion-col>
+        </ion-row>
+        <ion-row size="100%">
+            <img src="/assets/icon/{{c.program.img}}" alt="img" style="width:100%; height:200px">
+        </ion-row>
+      </ion-card-header>
+      </ion-item>
 
 
     <ion-card-content>
@@ -117,8 +147,10 @@
         </ion-col>
       </ion-row>
       </div>
-      <ion-footer>
-        <!-- <ion-toolbar> -->
+      </div>
+      </ion-content>
+      <!-- <ion-footer>
+        <ion-toolbar>
       <div class="spacing">
       <ion-row>
         <ion-col>
@@ -128,24 +160,4 @@
           <ion-button class="green" shape="round" color="success" (click)="voteUp(true, 0)"> <ion-icon ios="ios-thumbs-up" md="md-thumbs-up" size="large"></ion-icon> </ion-button>
         </ion-col>
       </ion-row>
-      </div>
-      <!-- </ion-toolbar> -->
-      </ion-footer>
-    </ion-card-content>
-    </ion-card>
-    <!-- </ion-item> -->
-    </div>
-    </div>
-    </ion-content>
-    <!-- <ion-footer>
-      <ion-toolbar>
-    <div class="spacing">
-    <ion-row>
-      <ion-col>
-        <ion-button class="red" shape="round" color="danger" (click)="voteUp(false, 0)"> <ion-icon ios="ios-thumbs-down" md="md-thumbs-down" size="large"></ion-icon> </ion-button>
-      </ion-col>
-      <ion-col>
-        <ion-button class="green" shape="round" color="success" (click)="voteUp(true, 0)"> <ion-icon ios="ios-thumbs-up" md="md-thumbs-up" size="large"></ion-icon> </ion-button>
-      </ion-col>
-    </ion-row>
-    </div> -->
+      </div> -->
