@@ -11,7 +11,7 @@ Download NodeJS and Ionic and Cordova CLI
 
 ### Installing
 
-To install ionic and Cordova cli type the following command in terminal: 
+To install ionic and Cordova CLI, type the following command in terminal: 
 npm i -g angular ionic 
 
 To get access to the code itself, feel free to use a text editor of your choice! (We used VisualStudio) 
