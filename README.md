@@ -17,7 +17,7 @@ To install dependencies and devDependencies:
 npm install 
 
 To install plugs and platforms as per package.json: 
-ionic angular prepare
+ionic cordova prepare
 
 ## Deployment
 
