@@ -1539,9 +1539,19 @@ export class DataService {
  //will save to database now
  save(item){
 
-  //  this.savedItems.push(item);
    console.log('this item is being saved');
    console.log(item)
+   this.savedItems.push({
+    Program: item.program.programName,
+    Language: item.program.language,
+    Recommended : item.program.areaName,
+    Location: item.program.locationName,
+    Housing: item.program.housing,
+    MinimumGPARequirement: item.program.GPA,
+    AcademicFeatures: item.program.academicFeatures,
+    Value: item.program.value,
+    img: item.program.img,
+    GroupName: item.program.programGroup})
 
    return new Promise<any>((resolve, reject) => {
     let currentUser = firebase.auth().currentUser;
@@ -1563,6 +1573,7 @@ export class DataService {
       err => reject(err)
     )
   })
+
 
  }
 
