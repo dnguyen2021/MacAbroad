@@ -1,13 +1,15 @@
 # MacAbroad
 
-Welcome to MacAbroad, your study away tool intended to streamline the application process through real people's reviews of those programs and a Tinder-inspired recommendation interface. 
+Welcome to MacAbroad, your study away tool intended to streamline the application process through real people's reviews of those programs and a Tinder-inspired recommendation interface. The application includes the ability to register only through Macalester email. 
+
+Note: When adding a review or saving a program, you may have to reload the application to update the page. 
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. 
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. Application should be compatible with Macs and Windows computers. 
 
 ### Prerequisites
-Download NodeJS and Ionic and Cordova CLI
+Download NodeJS with the following link: https://nodejs.org/en/
 
 ### Installing
 
@@ -23,19 +25,11 @@ There MAY be a import {DOCUMENT} error and according to stackoverflow, the only 
 
 ## Deployment
 
-Add additional notes about how to deploy this on a live system
+With further development of the app to make it compatible with iOS and android, will update this section. 
 
 ## Built With
 
 * Ionic 4.10.0 Angular 8.1.3
 
-## Contributing
-
-## Versioning
-
 ## Authors
 Angel Sylvester, Anji Moorthy, Duane Nguyen, Daniel Beidelschies 
-
-## License
-
-## Acknowledgments
