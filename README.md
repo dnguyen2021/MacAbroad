@@ -6,7 +6,7 @@ Note: When adding a review or saving a program, you may have to reload the appli
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. 
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. Application should be compatible with Macs and Windows computers. 
 
 ### Prerequisites
 Download NodeJS with the following link: https://nodejs.org/en/
