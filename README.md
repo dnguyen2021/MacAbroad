@@ -1,13 +1,15 @@
 # MacAbroad
 
-Welcome to MacAbroad, your study away tool intended to streamline the application process through real people's reviews of those programs and a Tinder-inspired recommendation interface. 
+Welcome to MacAbroad, your study away tool intended to streamline the application process through real people's reviews of those programs and a Tinder-inspired recommendation interface. The application includes the ability to register only through Macalester email. 
+
+Note: When adding a review or saving a program, you may have to reload the application to update the page. 
 
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. 
 
 ### Prerequisites
-Download NodeJS and Ionic and Cordova CLI
+Download NodeJS with the following link: https://nodejs.org/en/
 
 ### Installing
 
@@ -19,7 +21,7 @@ To get access to the code itself, feel free to use a text editor of your choice!
 Clone this repo and use the following command to initialize project: 
 ionic start "github link" --type=ionic-angular
   
-There WILL be a import {DOCUMENT} error and according to stackoverflow, the only way to remedy this pesky bug is to directly locate instances of {DOCUMENT} as eluciated in the error message and moving its instance to a new line so that rather than "export {DOCUMENT} from 'angular-platform-browser'" we add "import { DOCUMENT } from '@angular/common'". 
+There MAY be a import {DOCUMENT} error and according to stackoverflow, the only way to remedy this pesky bug is to directly locate instances of {DOCUMENT} as eluciated in the error message and moving its instance to a new line so that rather than "export {DOCUMENT} from 'angular-platform-browser'" we add "import { DOCUMENT } from '@angular/common'". 
 
 ## Deployment
 
