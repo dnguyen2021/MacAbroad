@@ -49,7 +49,8 @@ Once project environment has been created, use "ionic serve" to reload your proj
 
 
 (This error was encountered when Angel (one of the developers) attempted to recreate the environment)  
-There MAY be a import {DOCUMENT} error and according to stackoverflow, the only way to remedy this pesky bug is to directly locate instances of {DOCUMENT} as eluciated in the error message and moving its instance to a new line so that rather than "export {DOCUMENT} from 'angular-platform-browser'" we add "import { DOCUMENT } from '@angular/common'". 
+There MAY be a "import {DOCUMENT} error" and according to stackoverflow, the only way to remedy this pesky bug is to directly locate instances of {DOCUMENT} as eluciated in the error message and moving its instance to a new line so that rather than "export {DOCUMENT} from 'angular-platform-browser'" we add "import { DOCUMENT } from '@angular/common'". 
+
 
 ## Deployment
 
