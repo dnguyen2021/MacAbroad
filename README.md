@@ -13,14 +13,23 @@ forum: student reviews page
 profile: currently not incorporated into application, but is intended to later be used for additional features (if deployed)
 saved-programs: displays saved user preferences (which are extracted from firebase backend)
 services/data.service: stores all Macalester study away programs and possesses associated functions to filter/save certain programs 
-tab1: home page  
+
+tab1: home page 
+
 tab2: search page 
+
 tab4: timeline 
+
 tab5: login page 
+
 tab6: register page 
+
 user-input: tinder inspired recommendation page 
+
 authservice: service that handles user profile creation
+
 database: service that handles user preferences and review creation 
+
 reviews: service that handles old and new reviews 
 
 ### Prerequisites
