@@ -5,7 +5,7 @@ import { Platform, Config } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { NgModule } from '@angular/core'; 
-import { RecommenderService } from './recommender.service';
+// import { RecommenderService } from './recommender.service';
 // import { MbscFormOptions, MbscPageOptions } from '@mobiscroll/angular-lite'
 
 // import { mobiscroll, MbscScrollViewOptions, MbscNavOptions, MbscListviewOptions } from '@mobiscroll/angular';
@@ -22,14 +22,14 @@ import { AuthService } from './authservice.service';
   selector: 'app-root',
   templateUrl: 'app.component.html',
   styleUrls: ['app.component.scss'],
-  providers: [RecommenderService]
+  
 })
 export class AppComponent {
   constructor(
     private platform: Platform,
     private splashScreen: SplashScreen,
     private statusBar: StatusBar, 
-    public recommender: RecommenderService,
+    // public recommender: RecommenderService,
     private authenticationService: AuthService,
     private router: Router
   ) {

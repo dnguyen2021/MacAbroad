@@ -13,7 +13,7 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule, HttpClientJsonpModule } from '@angular/common/http';
-import { RecommenderService } from './recommender.service';
+// import { RecommenderService } from './recommender.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 // import { HttpModule } from '@angular/http';
 // import { SwingModule } from 'angular2-swing';
@@ -40,9 +40,9 @@ import { AngularFirestore } from 'angularfire2/firestore';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
 
 import { Tab4Page } from '../app/tab4/tab4.page';
-import { TimelineComponent } from '../app/timeline/timeline.component';
-import { TimelineDateComponent } from '../app/timeline/timeline.component';
-import { TimelineItemComponent } from '../app/timeline/timeline.component';
+// import { TimelineComponent } from '../app/timeline/timeline.component';
+// import { TimelineDateComponent } from '../app/timeline/timeline.component';
+// import { TimelineItemComponent } from '../app/timeline/timeline.component';
 
 import * as firebase from 'firebase';
 
@@ -63,16 +63,16 @@ firebase.initializeApp(environment.config);
 @NgModule({
   declarations: [
   AppComponent,
-  TimelineComponent,
-  TimelineItemComponent,
-  TimelineDateComponent
+  // TimelineComponent,
+  // TimelineItemComponent,
+  // TimelineDateComponent
 ],
   entryComponents: [
   ],
   imports: [BrowserModule, AngularFirestoreModule, IonicModule.forRoot(), AppRoutingModule, HttpClientModule,
     FormsModule, ReactiveFormsModule, AngularFireAuthModule, AngularFireModule.initializeApp(environment.config)
 
-    , IonicStorageModule.forRoot(), AngularFireDatabaseModule, AngularFireDatabaseModule, HttpModule,
+    , IonicStorageModule.forRoot(), AngularFireDatabaseModule, AngularFireDatabaseModule,HttpModule,
       SwingModule],
 
   providers: [
@@ -80,7 +80,8 @@ firebase.initializeApp(environment.config);
     SplashScreen,
     FirebaseService,
      AngularFirestore,
-     { provide: [RouteReuseStrategy, RecommenderService] , useClass: IonicRouteStrategy},
+     { provide: [RouteReuseStrategy],
+      useClass: IonicRouteStrategy},
   ],
   bootstrap: [AppComponent],
 
