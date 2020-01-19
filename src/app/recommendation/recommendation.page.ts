@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild, ViewChildren, QueryList } from '@angular/core';
-import { IonicModule, NavController} from '@ionic/angular'; 
+import { IonicModule, NavController} from '@ionic/angular';
 import { DataService } from "../services/data.service";
 
 import 'rxjs/Rx';
@@ -32,7 +32,7 @@ export class RecommendationPage {
   public savedItems: any = []
 
 
-  constructor(public navCtrl: NavController, private dataService: DataService) { //private menu: MenuController, , private http:Http
+  constructor(public navCtrl: NavController, private dataService: DataService) { 
     this.stackConfig = {
       throwOutConfidence: (offsetX, offsetY, element) => {
         return Math.min(Math.abs(offsetX) / (element.offsetWidth/2), 1);

@@ -2,12 +2,12 @@
   <ion-toolbar class="bg-class">
   <ion-row>
   <ion-col size="auto">
-    <img src="/assets/icon/mockupMacAbroad3.png" width="65px" style="display:inline-block" height="65px" (click)="goToHome()">
+    <img src="/assets/icon/mockupMacAbroad3.png" width="58px" style="display:inline-block" height="58px" (click)="goToHome()">
   </ion-col>
-  <ion-col>
+  <ion-col size="auto">
       <ion-title class="titleicon" style = "font-size:25px; text-align: center; display:inline-block">
         <div class="fadeIn">
-            Pick Your Preferences!
+            Pick Your Preferences
         </div>
       </ion-title>
       </ion-col>
@@ -18,7 +18,7 @@
   <ion-content padding class="bg-class">
     <ion-list>
 
-    <ion-list-header  class="bg-class2" style = "font-family:Bebas Neue; font-size:20px"><div class="fadeIn">Please select your major(s):</div></ion-list-header>
+    <ion-list-header  class="bg-class2" style = "font-family:Bebas Neue; font-size:20px"><div class="fadeIn">Select your major:</div></ion-list-header>
     <ion-item style="color: #1c357a">
       <ion-label style="color: #1c357a;"><div class="fadeIn">Major</div></ion-label>
       <ion-select style="color: #1c357a" [(ngModel)] = "searchTerm" (ionChange)="setStars(); setFilteredItems(); createSort()" placeholder="Select a Major (Optional)">
@@ -65,7 +65,7 @@
     </ion-list>
 
     <ion-list>
-    <ion-list-header class="bg-class2" style = "font-family:Bebas Neue; font-size:20px"><div class="fadeIn">Please select your preferred language(s) of instruction:</div></ion-list-header>
+    <ion-list-header class="bg-class2" style = "font-family:Bebas Neue; font-size:20px"><div class="fadeIn">Select your preferred language of instruction:</div></ion-list-header>
     <ion-item style="color: #1c357a">
       <ion-label style="color: #1c357a"><div class="fadeIn">Language</div></ion-label>
       <ion-select style="color: #1c357a" [(ngModel)] ="searchTerm2" (ionChange)="setStars(); setFilteredItems(); createSort()" placeholder="Select a Language (Optional)">
@@ -89,7 +89,7 @@
     </ion-list>
 
     <ion-list>
-    <ion-list-header class="bg-class2" style = "font-family:Bebas Neue; font-size:20px"><div class="fadeIn">Please select your preferred country(s) to visit:</div></ion-list-header>
+    <ion-list-header class="bg-class2" style = "font-family:Bebas Neue; font-size:20px"><div class="fadeIn">Select your preferred country to visit:</div></ion-list-header>
     <ion-item style="color: #1c357a">
       <ion-label style="color: #1c357a"><div class="fadeIn">Country</div></ion-label>
       <ion-select style="color: #1c357a" [(ngModel)] = "searchTerm3" (ionChange)="setStars(); setFilteredItems(); createSort()" placeholder="Select a Country (Optional)">
@@ -158,7 +158,3 @@
     </ion-button>
 
   </div>
-
-
-
- 
