@@ -12,16 +12,13 @@
 }
 
 .save{
-  width: 85%;
-  height: 85%;
-  border-radius: 900px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  transform: scale(0.68);
   border:2px solid #cfdcec;
   overflow:hidden;
   box-shadow: 0 0 3px gray;
   --background-hover: rgba(181, 188, 249, 0.20);
 
-}
-
-.faveButton{
-  padding-top: 10px;
 }

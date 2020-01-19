@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewChild, ViewChildren, QueryList } from '@angular/core';
-import { IonicModule, NavController} from '@ionic/angular'; //ItemSliding
+import { IonicModule, NavController} from '@ionic/angular'; 
 import { DataService } from "../services/data.service";
-// import { Http } from '@angular/http';
+
 import 'rxjs/Rx';
 import {
   StackConfig,
@@ -20,11 +20,11 @@ import { ViewController } from '@ionic/core';
   styleUrls: ['./recommendation.page.scss'],
 })
 
-export class RecommendationPage { //implements OnInit
+export class RecommendationPage {
   @ViewChild('myswing1', {static:true}) swingStack: SwingStackComponent;
   @ViewChildren('mycards1') swingCards: QueryList<SwingCardComponent>;
 
-  // public items2: any = [];
+
   public cards: Array<any>;
   public items2: Array<any>;
   stackConfig: StackConfig;
@@ -82,7 +82,7 @@ voteUp(like: boolean, i) {
   this.addNewCards(i);
   if (like) {
     this.recentCard = 'You liked: ' + removedCard.programName;
-    
+
     this.dataService.save(removedCard);
   } else {
     this.recentCard = 'You disliked: ' + removedCard.programName;
@@ -112,32 +112,13 @@ decimalToHex(d, padding) {
   }
 
   goToFavourites(){
-    
+
     this.navCtrl.navigateForward('/tabs/saved-programs')
   }
 
   logout(){
     this.navCtrl.navigateForward('tabs/tab1')
   }
-
-
-  // openFirst() {
-  //   this.menu.enable(true, 'first');
-  //   this.menu.open('first');
-  // }
-  //
-  // checkOpen(){
-  //   if (this.menu.isOpen()){
-  //     return true;
-  //   }
-  //   else{
-  //     return false;
-  //   }
-  // }
-
-  // open(){
-  //   this.menu.open();
-  // }
 
   removeItem(i){
     this.items2.splice(i, 1);

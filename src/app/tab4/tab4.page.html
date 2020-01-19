@@ -17,13 +17,13 @@
 </ion-header>
 
 <ion-content padding class="bg-class" fullscreen>
-  Please complete the following steps in order of priority listed by the deadlines below. New material will be posted throughout the pre-departure process and you will be notified accordingly. Additional information will be posted in the attached documents section of your application or emailed to you. If you have general questions, contact the Mac Study Abroad Office at +1(651)696-6300 or email.
+  Please complete the following steps in order of priority listed by the deadlines below. If you have general questions, contact the Mac Study Abroad Office at +1(651)696-6300 or email.
 <br>
   <ion-list *ngFor="let item of items">
     <ion-card style="background-color: #e9f1f8;">
       <ion-card-header class="bg-class2">
         <ion-card-title style="text-align: center; font-weight: bold;orientation: center; color: white;">
-            <div class="fadeIn"><u>{{item.description}}</u>
+            <div class="fadeIn">{{item.description}}
               <div float-right class="my-checkbox">
                 <ion-checkbox [disabled]="completed ? 'true' : 'false' " *ngIf="!completed" (ionChange)="onBoxBooleanChange()">
               </ion-checkbox>

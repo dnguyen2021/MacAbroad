@@ -7,12 +7,12 @@ import * as firebase from 'firebase';
 export const environment = {
   production: false,
   config: {
-    apiKey: "API KEY”,
-    authDomain: “AUTHDOMAIN”,
-    databaseURL: “DATABASEURL”,
-    projectId: “PROJECTID”,
-    storageBucket: “STORAGEBUCKET”,
-    messagingSenderId: “MESSENGERSENDERID”
+    apiKey: "API KEY",
+    authDomain: "AUTHDOMAIN",
+    databaseURL: "DATABASEURL",
+    projectId: "PROJECTID",
+    storageBucket: "STORAGEBUCKET",
+    messagingSenderId: "MESSENGERSENDERID"
   }
 
  };

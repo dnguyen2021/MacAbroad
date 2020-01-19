@@ -1,10 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { IonicModule, NavController } from '@ionic/angular';
 import { DataService } from '../services/data.service';
-// import { InAppBrowser } from '@ionic-native/in-app-browser/ngx'
-// import {MatExpansionModule} from '@angular/material/expansion'
-// import { MbscFormOptions } from '@mobiscroll/angular-lite'
-
 
 @Component({
   selector: 'app-tab2',
@@ -12,32 +8,6 @@ import { DataService } from '../services/data.service';
   styleUrls: ['tab2.page.scss']
 
 })
-
-// .controller('MyCtrl', function($scope) {
-//   $scope.items2 = [];
-//   for (var i=0; i<10; i++) {
-//     $scope.items2[i] = {
-//       name: i,
-//       items: [],
-//       show: false
-//     };
-//     for (var j=0; j<3; j++) {
-//       $scope.items2[i].items.push(i + '-' + j);
-//     }
-//   }
-
-//   /*
-//    * if given group is the selected group, deselect it
-//    * else, select the given group
-//    */
-//   $scope.toggleItem = function(item) {
-//     item.show = !item.show;
-//   };
-//   $scope.isItemShown = function(item) {
-//     return item.show;
-//   };
-
-// });
 
 export class Tab2Page implements OnInit{
 
@@ -47,10 +17,6 @@ export class Tab2Page implements OnInit{
   constructor(private dataService: DataService, private navCtrl: NavController) {
 
     }
-  // panelOpenState = false;
-
-
-
 
   ngOnInit() {
     this.setSearchedItems();

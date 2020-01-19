@@ -1,16 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { IonicModule, NavController } from '@ionic/angular';
 import { DataService } from "../services/data.service";
-import { MenuController } from '@ionic/angular';
 import { FirebaseService } from '../database.service'
 import { Router } from '@angular/router';
 import { Validators, FormBuilder, FormGroup, FormControl } from '@angular/forms';
 import * as firebase from 'firebase/app';
 import 'firebase/storage';
-
-// let alert = this.alertCtrl.create({
-//   cssClass: 'myalert'
-// });
 
 @Component({
   selector: 'app-user-input',
@@ -26,7 +21,7 @@ export class UserInputPage implements OnInit {
   public searchTerm3: string = "";
   public saveTerm: string = "";
   public items: any = [];
-  public boolean = false; 
+  public boolean = false;
 
   constructor(public navCtrl: NavController, private dataService: DataService,
               private fireBaseService: FirebaseService, private formBuilder: FormBuilder) {
@@ -69,7 +64,7 @@ export class UserInputPage implements OnInit {
     this.createSort();
     this.setFilteredItems();
   }
-  
+
 
   setStars(){
     this.items = this.dataService.createStars(this.searchTerm, this.searchTerm2, this.searchTerm3);
@@ -106,18 +101,13 @@ export class UserInputPage implements OnInit {
     this.fireBaseService.createTask(data)
 
     .then(
-      // res => {
-      //   this.router.navigate(["/forum"]);
-      // }
+
     );
     }
   goToFavourites(){
     this.navCtrl.navigateForward('/tabs/saved-programs');
   }
 
-  // goToFavourites(){
-  //   this.navCtrl.navigateForward('/tabs/saved-programs')
-  // }
 
   goToRecommendation(){
     this.navCtrl.navigateForward('/tabs/recommendation');
@@ -127,24 +117,5 @@ export class UserInputPage implements OnInit {
     this.navCtrl.navigateForward('/tabs/tab1');
   }
 
-  
-
-  // openFirst() {
-  //   this.menu.enable(true, 'first');
-  //   this.menu.open('first');
-  // }
-  //
-  // openEnd() {
-  //   this.menu.open('end');
-  // }
-  //
-  // openCustom() {
-  //   this.menu.enable(true, 'custom');
-  //   this.menu.open('custom');
-  // }
-
 
 }
-
-
-
