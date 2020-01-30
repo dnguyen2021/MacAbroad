@@ -1,6 +1,6 @@
 # MacAbroad
 
-Welcome to MacAbroad, your study away tool intended to streamline the application process through real people's reviews of those programs and a Tinder-inspired recommendation interface. The application includes the ability to register only through Macalester email. 
+Welcome to MacAbroad, your study away tool intended to streamline the application process through real people's reviews of those programs and a Tinder-inspired recommendation interface. The application includes the ability to register only through Macalester email. The associated API information for the Firebase backend are stored by the contributors of this app. 
 
 Note: When adding a review or saving a program, you may have to reload the application to update the page. 
 
